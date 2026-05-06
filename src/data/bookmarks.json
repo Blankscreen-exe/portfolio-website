@@ -1,9 +1,27 @@
 [
   {
+    "title": "Bug Me Not",
+    "url": "https://bugmenot.com/",
+    "description": "Get free, shared logins from the BugMeNot community",
+    "category": "tool",
+    "tags": ["shared logins", "login evasion"],
+    "featured": false,
+    "icon": "https://bugmenot.com/favicon.ico"
+  },
+  {
+    "title": "Z Library",
+    "url": "https://z-library.im/",
+    "description": "Free e-books",
+    "category": "library",
+    "tags": ["multiple topics", "learning resources"],
+    "featured": false,
+    "icon": "https://z-library.im/img/favicons/favicon-32x32.svg?v=2"
+  },
+  {
     "title": "The Linux Foundation",
     "url": "https://training.linuxfoundation.org/",
     "description": "Free and paid Linux Courses",
-    "category": "docs",
+    "category": "courses",
     "tags": ["linux", "networking", "cyber security", "learning resources"],
     "featured": false,
     "icon": "https://www.google.com/s2/favicons?domain=training.linuxfoundation.org"
