@@ -408,21 +408,29 @@
     },
     {
         "title": "The Duck Council",
-        "description": "The Duck Council is a playful take on the classic 'rubber-duck debugging' technique: instead of explaining your problem to a single rubber duck, you bring it before a whole council. You describe a problem and the council reflects on it from multiple angles to help you think it through.\n\nIt uses CrewAI to orchestrate several AI agents that act as the council members and discuss the problem together. The backend is a Python/Flask service with MongoDB, and the frontend is built in React.js with Vite.js.",
+        "description": "Describe a situation and what you're about to do, and a council of opinionated AI ducks judges it. Each duck has its own worldview and a blind spot, so they genuinely disagree: every verdict stamps onto a quest board as it streams in, with a final score from 0 to 100. A local FastAPI app that works with Claude Code, the Anthropic and OpenAI APIs, or offline models through Ollama.",
         "tags": [
-            "Crew.ai", 
+            "OpenAI", 
+            "Claude", 
+            "Ollama", 
             "Python",
-            "Flask",
-            "React.js",
-            "Vite.js",
-            "MongoDB"
+            "FastAPI",
+            "SQLite",
+            "htmx",
+            "LLM"
         ],
         "projUrl": null,
         "githubUrl": "https://github.com/Blankscreen-exe/The-Duck-Council",
         "publishDate": null,
-        "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/The-Duck-Council/refs/heads/main/docs/assets/thumbnail.png",
+        "thumbnailUrl":[
+            "project:duck_council_0",
+            "project:duck_council_1",
+            "project:duck_council_2",
+            "project:duck_council_3",
+            "project:duck_council_4"
+        ],
         "category":"hobby",
-        "status": "ongoing",
+        "status": "finished",
         "openToContrib": true
     },
     {

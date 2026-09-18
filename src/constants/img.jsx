@@ -199,6 +199,11 @@ import notty0 from './images/projects/notty-0.png'
 import notty1 from './images/projects/notty-1.png'
 import tempo0 from './images/projects/tempo-0.png'
 import tempo1 from './images/projects/tempo-1.png'
+import duckcouncil0 from './images/projects/duck_council_0.png'
+import duckcouncil1 from './images/projects/duck_council_1.png'
+import duckcouncil2 from './images/projects/duck_council_2.png'
+import duckcouncil3 from './images/projects/duck_council_3.png'
+import duckcouncil4 from './images/projects/duck_council_4.png'
 
 // communities
 import dit from './images/communities/dit.png'
@@ -419,6 +424,11 @@ export default {
         notty1,
         tempo0,
         tempo1,
+        duckcouncil0,
+        duckcouncil1,
+        duckcouncil2,
+        duckcouncil3,
+        duckcouncil4,
     },
     lazyNote,
     communities: {
