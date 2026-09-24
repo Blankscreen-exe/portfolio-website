@@ -423,11 +423,11 @@
         "githubUrl": "https://github.com/Blankscreen-exe/The-Duck-Council",
         "publishDate": null,
         "thumbnailUrl":[
-            "project:duck_council_0",
-            "project:duck_council_1",
-            "project:duck_council_2",
-            "project:duck_council_3",
-            "project:duck_council_4"
+            "project:duckcouncil0",
+            "project:duckcouncil1",
+            "project:duckcouncil2",
+            "project:duckcouncil3",
+            "project:duckcouncil4"
         ],
         "category":"hobby",
         "status": "finished",
@@ -577,11 +577,11 @@
         "githubUrl": "https://github.com/Blankscreen-exe/content-machine",
         "publishDate": "Sept 2026",
         "thumbnailUrl": [
-            "project:contentmachine_1",
-            "project:contentmachine_2",
-            "project:contentmachine_3",
-            "project:contentmachine_4",
-            "project:contentmachine_5"
+            "project:contentmachine1",
+            "project:contentmachine2",
+            "project:contentmachine3",
+            "project:contentmachine4",
+            "project:contentmachine5"
         ],
         "category":"hobby",
         "status": "finished",
