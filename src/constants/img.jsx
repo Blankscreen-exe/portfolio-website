@@ -204,6 +204,10 @@ import duckcouncil1 from './images/projects/duck_council_1.png'
 import duckcouncil2 from './images/projects/duck_council_2.png'
 import duckcouncil3 from './images/projects/duck_council_3.png'
 import duckcouncil4 from './images/projects/duck_council_4.png'
+import jevil0 from './images/projects/jevil_0.png'
+import jevil1 from './images/projects/jevil_1.png'
+import jevil2 from './images/projects/jevil_2.png'
+import jevil3 from './images/projects/jevil_3.png'
 
 // communities
 import dit from './images/communities/dit.png'
@@ -429,6 +433,10 @@ export default {
         duckcouncil2,
         duckcouncil3,
         duckcouncil4,
+        jevil0,
+        jevil1,
+        jevil2,
+        jevil3,
     },
     lazyNote,
     communities: {

@@ -388,6 +388,28 @@
         "status": "finished",
         "openToContrib": false
     },
+        {
+        "title": "Jevil's Dilemma",
+        "description": "A pixel-art take on the Dilemma party card game, hosted by Jevil from Deltarune.\n\nEach card puts you in an awkward situation with two choices. There are no right answers, but Jevil is keeping track: every pick nudges you across a Lawful ↔ Chaotic and Good ↔ Evil alignment chart, and at the end he gives you his reading of who you really are. Save the result as an image.",
+        "tags": [
+            "React.js", 
+            "Node",
+            "TypeScript",
+            "PWA"
+        ],
+        "projUrl": "https://jevils-dilemma.vercel.app/",
+        "githubUrl": "https://github.com/Blankscreen-exe/jevils-dilemma",
+        "publishDate": "Sept 2025",
+        "thumbnailUrl": [
+            "project:jevil0",
+            "project:jevil1",
+            "project:jevil2",
+            "project:jevil3"
+        ],
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
     {
         "title": "Minecraft Server Discovery & Auction Platform",
         "description": "This platform lets users discover Minecraft servers and buy or sell them through auctions. It brings server browsing and a real marketplace together, so owners can list their servers and interested buyers can bid on them.\n\nIt is built with a Python/Django backend and PostgreSQL, with a JavaScript frontend, and integrates Stripe to handle the real payments behind the auction transactions.",
