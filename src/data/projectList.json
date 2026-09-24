@@ -388,7 +388,29 @@
         "status": "finished",
         "openToContrib": false
     },
-        {
+    {
+        "title": "Memento Mori",
+        "description": "Remember that you will die. A quiet, mobile-first web app that shows the time you have left as a slowly turning 3D hourglass, and asks you, once a week, what that week was.\n\nMost \"life in weeks\" apps show a static grid of 4,000 boxes. This one is a low-poly 3D hourglass that turns slowly on its own and leans when you drag it or tilt your phone, and it's built around a few rules",
+        "tags": [
+            "React.js", 
+            "Node",
+            "TypeScript",
+            "PWA"
+        ],
+        "projUrl": "https://mementomori-app.vercel.app/",
+        "githubUrl": "https://github.com/Blankscreen-exe/MementoMori",
+        "publishDate": "Sept 2026",
+        "thumbnailUrl": [
+            "project:memento0",
+            "project:memento1",
+            "project:memento2",
+            "project:memento3"
+        ],
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
         "title": "Jevil's Dilemma",
         "description": "A pixel-art take on the Dilemma party card game, hosted by Jevil from Deltarune.\n\nEach card puts you in an awkward situation with two choices. There are no right answers, but Jevil is keeping track: every pick nudges you across a Lawful ↔ Chaotic and Good ↔ Evil alignment chart, and at the end he gives you his reading of who you really are. Save the result as an image.",
         "tags": [
