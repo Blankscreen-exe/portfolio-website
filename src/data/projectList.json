@@ -389,50 +389,6 @@
         "openToContrib": false
     },
     {
-        "title": "Memento Mori",
-        "description": "Remember that you will die. A quiet, mobile-first web app that shows the time you have left as a slowly turning 3D hourglass, and asks you, once a week, what that week was.\n\nMost \"life in weeks\" apps show a static grid of 4,000 boxes. This one is a low-poly 3D hourglass that turns slowly on its own and leans when you drag it or tilt your phone, and it's built around a few rules",
-        "tags": [
-            "React.js", 
-            "Node",
-            "TypeScript",
-            "PWA"
-        ],
-        "projUrl": "https://mementomori-app.vercel.app/",
-        "githubUrl": "https://github.com/Blankscreen-exe/MementoMori",
-        "publishDate": "Sept 2026",
-        "thumbnailUrl": [
-            "project:memento0",
-            "project:memento1",
-            "project:memento2",
-            "project:memento3"
-        ],
-        "category":"hobby",
-        "status": "finished",
-        "openToContrib": true
-    },
-    {
-        "title": "Jevil's Dilemma",
-        "description": "A pixel-art take on the Dilemma party card game, hosted by Jevil from Deltarune.\n\nEach card puts you in an awkward situation with two choices. There are no right answers, but Jevil is keeping track: every pick nudges you across a Lawful ↔ Chaotic and Good ↔ Evil alignment chart, and at the end he gives you his reading of who you really are. Save the result as an image.",
-        "tags": [
-            "React.js", 
-            "Node",
-            "TypeScript",
-            "PWA"
-        ],
-        "projUrl": "https://jevils-dilemma.vercel.app/",
-        "githubUrl": "https://github.com/Blankscreen-exe/jevils-dilemma",
-        "publishDate": "Sept 2025",
-        "thumbnailUrl": [
-            "project:jevil0",
-            "project:jevil1",
-            "project:jevil2",
-            "project:jevil3"
-        ],
-        "category":"hobby",
-        "status": "finished",
-        "openToContrib": true
-    },
-    {
         "title": "Minecraft Server Discovery & Auction Platform",
         "description": "This platform lets users discover Minecraft servers and buy or sell them through auctions. It brings server browsing and a real marketplace together, so owners can list their servers and interested buyers can bid on them.\n\nIt is built with a Python/Django backend and PostgreSQL, with a JavaScript frontend, and integrates Stripe to handle the real payments behind the auction transactions.",
         "tags": [
@@ -571,6 +527,66 @@
         "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/ExpenTable/refs/heads/main/docs/assets/logo.png",
         "category":"hobby",
         "status": "ongoing",
+        "openToContrib": true
+    },
+    {
+        "title": "Prompt Cache",
+        "description": "Write, find and fill reusable AI prompts in seconds — from the terminal.\n\nMost prompting is assembly work: pasting the same standing context, the same instructions and one new piece of text into a chat window, over and over, then doing it again for the follow-up. prompt-cache keeps the fixed parts, pulls the changing part off your clipboard, and hands you the finished prompt ready to paste.",
+        "tags": [
+            "python", 
+            "TUI",
+            "Textual"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/prompt-cache",
+        "publishDate": "Sept 2026",
+        "thumbnailUrl": "project:promptcache1",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "Memento Mori",
+        "description": "Remember that you will die. A quiet, mobile-first web app that shows the time you have left as a slowly turning 3D hourglass, and asks you, once a week, what that week was.\n\nMost \"life in weeks\" apps show a static grid of 4,000 boxes. This one is a low-poly 3D hourglass that turns slowly on its own and leans when you drag it or tilt your phone, and it's built around a few rules",
+        "tags": [
+            "React.js", 
+            "Node",
+            "TypeScript",
+            "PWA"
+        ],
+        "projUrl": "https://mementomori-app.vercel.app/",
+        "githubUrl": "https://github.com/Blankscreen-exe/MementoMori",
+        "publishDate": "Sept 2026",
+        "thumbnailUrl": [
+            "project:memento0",
+            "project:memento1",
+            "project:memento2",
+            "project:memento3"
+        ],
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "Jevil's Dilemma",
+        "description": "A pixel-art take on the Dilemma party card game, hosted by Jevil from Deltarune.\n\nEach card puts you in an awkward situation with two choices. There are no right answers, but Jevil is keeping track: every pick nudges you across a Lawful ↔ Chaotic and Good ↔ Evil alignment chart, and at the end he gives you his reading of who you really are. Save the result as an image.",
+        "tags": [
+            "React.js", 
+            "Node",
+            "TypeScript",
+            "PWA"
+        ],
+        "projUrl": "https://jevils-dilemma.vercel.app/",
+        "githubUrl": "https://github.com/Blankscreen-exe/jevils-dilemma",
+        "publishDate": "Sept 2025",
+        "thumbnailUrl": [
+            "project:jevil0",
+            "project:jevil1",
+            "project:jevil2",
+            "project:jevil3"
+        ],
+        "category":"hobby",
+        "status": "finished",
         "openToContrib": true
     },
     {
