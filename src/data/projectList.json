@@ -576,7 +576,13 @@
         "projUrl": null,
         "githubUrl": "https://github.com/Blankscreen-exe/content-machine",
         "publishDate": "Sept 2026",
-        "thumbnailUrl": "project:content_machine_1",
+        "thumbnailUrl": [
+            "project:contentmachine_1",
+            "project:contentmachine_2",
+            "project:contentmachine_3",
+            "project:contentmachine_4",
+            "project:contentmachine_5"
+        ],
         "category":"hobby",
         "status": "finished",
         "openToContrib": true
