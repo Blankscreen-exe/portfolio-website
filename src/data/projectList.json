@@ -563,6 +563,25 @@
         "openToContrib": true
     },
     {
+        "title": "Content Machine",
+        "description": "A local tool for running a content pipeline: an idea pool, the pieces made from each idea, and the state of each one on its way to being published. Everything runs on your machine and nothing is sent anywhere.\n\nIt replaces a Notion database, so it has to do three things Notion could not: work offline, raise its own reminders, and sit next to the files and generation steps that produce the work.",
+        "tags": [
+            "python", 
+            "Jinja2",
+            "fastAPI",
+            "HTML",
+            "JavaScript",
+            "TailwindCSS"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/content-machine",
+        "publishDate": "Sept 2026",
+        "thumbnailUrl": "project:content_machine_1",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
         "title": "Memento Mori",
         "description": "Remember that you will die. A quiet, mobile-first web app that shows the time you have left as a slowly turning 3D hourglass, and asks you, once a week, what that week was.\n\nMost \"life in weeks\" apps show a static grid of 4,000 boxes. This one is a low-poly 3D hourglass that turns slowly on its own and leans when you drag it or tilt your phone, and it's built around a few rules",
         "tags": [
