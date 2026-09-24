@@ -530,6 +530,23 @@
         "openToContrib": true
     },
     {
+        "title": "KIT",
+        "description": "A personal toolbox for the terminal. One command, kit, lists every tool, shows its docs and runs it, from PowerShell, cmd, or a Linux/macOS shell. kit hub does the same from a dashboard in your browser.",
+        "tags": [
+            "python", 
+            "TUI",
+            "Textual",
+            "Web"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/kit",
+        "publishDate": "Sept 2026",
+        "thumbnailUrl": "project:kit0",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
         "title": "Prompt Cache",
         "description": "Write, find and fill reusable AI prompts in seconds — from the terminal.\n\nMost prompting is assembly work: pasting the same standing context, the same instructions and one new piece of text into a chat window, over and over, then doing it again for the follow-up. prompt-cache keeps the fixed parts, pulls the changing part off your clipboard, and hands you the finished prompt ready to paste.",
         "tags": [

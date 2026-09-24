@@ -213,6 +213,7 @@ import memento1 from './images/projects/memento_1.png'
 import memento2 from './images/projects/memento_2.png'
 import memento3 from './images/projects/memento_3.png'
 import promptcache1 from './images/projects/prompt-cache-1.png'
+import kit0 from './images/projects/kit_0.png'
 
 // communities
 import dit from './images/communities/dit.png'
@@ -447,6 +448,7 @@ export default {
         memento2,
         memento3,
         promptcache1,
+        kit0,
     },
     lazyNote,
     communities: {
