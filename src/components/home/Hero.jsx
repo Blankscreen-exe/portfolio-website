@@ -23,12 +23,12 @@ function Hero(props) {
           </h1>
 
           <div className='mt-5 text-2xl font-bold text-content/80'>
-            <p className="">Senior Full-Stack Engineer</p>
+            <p className="">Product Engineer</p>
             <p className="">Technical Consultant</p>
           </div>
 
           <p className='mt-5 text-base text-content/70 max-w-md'>
-            I help teams design, build, and stabilize production-grade systems — from backend services and integrations to long-term maintainability.
+            I help teams turn ideas into shipped products — owning features end-to-end, from user problem and design through backend, integrations, and long-term maintainability.
           </p>
 
           <div className='flex flex-row flex-wrap gap-2 mt-5'>
