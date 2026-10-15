@@ -15,7 +15,7 @@ function About(props) {
     <div>
       <PageTitle title={"Who Am I?"} />
 
-      <BlockQuote text="<span class='font-italic'>I am an Engineer by profession. But what I take most pride in are the people I have met, befriended, helped grow, supported and who come back to share their journey" />
+      <BlockQuote text="<span class='font-italic'>I am a Product Engineer by profession. But what I take most pride in are the people I have met, befriended, helped grow, supported and who come back to share their journey" />
 {/* 
       <SectionHeading title="Education Timeline" />
       <Education />
