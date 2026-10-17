@@ -587,6 +587,26 @@
         "status": "finished",
         "openToContrib": true
     },
+	{
+        "title": "Ghost Cue",
+        "description": "A live-call assistant and a teleprompter for software demos, in a window that screen shares, recordings and screenshots cannot see.",
+        "tags": [
+            "python", 
+            "pyQt",
+            "transcription",
+            "speech-to-text",
+            "teleprompter",
+            "meeting assisstant",
+            "wasapi"
+        ],
+        "projUrl": "https://blankscreen-exe.github.io/ghostcue",
+        "githubUrl": "https://github.com/Blankscreen-exe/ghostcue",
+        "publishDate": "Oct 2026",
+        "thumbnailUrl": "project:ghostcue0",
+        "category":"hobby",
+        "status": "ongoing",
+        "openToContrib": true
+    },
     {
         "title": "Memento Mori",
         "description": "Remember that you will die. A quiet, mobile-first web app that shows the time you have left as a slowly turning 3D hourglass, and asks you, once a week, what that week was.\n\nMost \"life in weeks\" apps show a static grid of 4,000 boxes. This one is a low-poly 3D hourglass that turns slowly on its own and leans when you drag it or tilt your phone, and it's built around a few rules",

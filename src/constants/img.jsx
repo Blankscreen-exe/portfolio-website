@@ -219,6 +219,7 @@ import contentmachine2 from './images/projects/contentmachine_2.png'
 import contentmachine3 from './images/projects/contentmachine_3.png'
 import contentmachine4 from './images/projects/contentmachine_4.png'
 import contentmachine5 from './images/projects/contentmachine_5.png'
+import ghostcue0 from './images/projects/ghostcue_0.png'
 
 // communities
 import dit from './images/communities/dit.png'
@@ -459,6 +460,7 @@ export default {
         contentmachine3,
         contentmachine4,
         contentmachine5,
+        ghostcue0,
     },
     lazyNote,
     communities: {
