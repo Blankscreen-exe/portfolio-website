@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import appConstants from '../../../constants/appConstants'
@@ -15,6 +15,8 @@ import PageHero from '../../sheet/PageHero'
 import SectionHeading, { Bar } from '../../sheet/SectionHeading'
 import CtaBand from '../../sheet/CtaBand'
 import Accordion from '../../sheet/Accordion'
+import Drawer from '../../sheet/Drawer'
+import ProfilePhoto from '../../sheet/ProfilePhoto'
 
 // HTML in these strings is authored in src/data/*.json (the old About page renders it the same way)
 const html = (s) => ({ __html: s })
@@ -28,15 +30,41 @@ const resolveCommunityImage = (url) => {
 
 function Portrait() {
   return (
-    <figure className="group border border-ink bg-paper p-3">
-      <div className="ss-shutter relative" data-reveal="shutter">
-        <div className="ss-scan" />
-        <img src="/profile_pic.png" alt="M. Hammad Hassan" className="ss-shot aspect-square w-full border border-ink/15 object-cover" />
-      </div>
+    <figure className="border border-ink bg-paper p-3">
+      <ProfilePhoto />
       <figcaption className="mt-3 flex justify-between font-jet text-[10px] uppercase tracking-widest text-ash">
         <span>Fig. 01</span><span>M. Hammad Hassan</span>
       </figcaption>
     </figure>
+  )
+}
+
+const awardKind = (a) => (a.type === 'workshop' ? 'Workshop' : 'Award')
+
+// Full details of one award, shown in the right-hand drawer
+function AwardDetails({ award }) {
+  return (
+    <div className="p-6 sm:p-8">
+      <div className="aspect-[16/10] overflow-hidden border border-ink">
+        <img src={imgList.awards[award.imgUrl]} alt={award.title} className="h-full w-full object-cover contrast-[1.05] grayscale" />
+      </div>
+      <div className="mt-6 flex flex-wrap gap-2 font-jet text-[10px] uppercase tracking-[.15em]">
+        <span className="bg-primary px-2 py-0.5 text-onprimary">{awardKind(award)}</span>
+        <span className="border border-ink px-2 py-0.5">{award.date}</span>
+      </div>
+      <h3 className="ss-display mt-5 text-4xl leading-[.95]">{award.title}</h3>
+      <p className="mt-5 text-lg leading-relaxed text-ash">{award.description}</p>
+      {award.publishLinks?.length > 0 && (
+        <div className="mt-8 border-t border-ink">
+          {award.publishLinks.map((href, i) => (
+            <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="ss-wipe flex justify-between border-b border-ink/15 px-1 py-4">
+              <span className="ss-display ss-cond text-xl">{award.publishLinks.length > 1 ? `View post ${i + 1}` : 'View the post'}</span>
+              <span className="ss-arrow font-jet text-primary">↗</span>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -47,6 +75,12 @@ const orderedLanguages = [...languages].sort((a, b) => (a.language === 'code') -
 // not answer every question a recruiter might have.
 function AboutPage() {
   const { paragraphs, facts } = homeContent.about
+  const [activeAward, setActiveAward] = useState(null) // index of the award shown in the drawer
+  const award = activeAward === null ? null : awards[activeAward]
+  // Keep the last award rendered while the drawer slides closed
+  const [shownAward, setShownAward] = useState(null)
+  if (award && award !== shownAward) setShownAward(award)
+  const step = (d) => setActiveAward((i) => (i + d + awards.length) % awards.length)
 
   return (
     <>
@@ -84,27 +118,25 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
           <SectionHeading label="[ recognition ]">Awards &amp; <Bar>talks.</Bar></SectionHeading>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {awards.map((a, i) => {
-              const Wrapper = a.publishLinks?.[0] ? 'a' : 'div'
-              const props = a.publishLinks?.[0] ? { href: a.publishLinks[0], target: '_blank', rel: 'noopener noreferrer' } : {}
-              return (
-                <Wrapper key={a.title} {...props} className="ss-spot ss-finder group flex flex-col border border-ink bg-stock" data-reveal="up" style={{ '--i': i % 3 }}>
-                  <span className="ss-glow" />
-                  <div className="relative aspect-[16/9] overflow-hidden border-b border-ink">
-                    {/* Award photos stay grayscale on hover (only the zoom remains), unlike other cards */}
-                    <img src={imgList.awards[a.imgUrl]} alt="" loading="lazy" className="h-full w-full object-cover contrast-[1.05] grayscale transition-transform duration-500 group-hover:scale-[1.03]" />
+            {awards.map((a, i) => (
+              <article key={a.title} className="ss-spot ss-finder group relative flex flex-col border border-ink bg-stock" data-reveal="up" style={{ '--i': i % 3 }}>
+                <span className="ss-glow" />
+                <div className="relative aspect-[16/9] overflow-hidden border-b border-ink">
+                  {/* Award photos stay grayscale on hover (only the zoom remains), unlike other cards */}
+                  <img src={imgList.awards[a.imgUrl]} alt="" loading="lazy" className="h-full w-full object-cover contrast-[1.05] grayscale transition-transform duration-500 group-hover:scale-[1.03]" />
+                </div>
+                <div className="relative z-[2] flex flex-1 flex-col p-5">
+                  <div className="flex justify-between font-jet text-[10px] uppercase tracking-[.15em] text-ash">
+                    <span>{awardKind(a)} · {a.date}</span>
+                    <span className="text-primary opacity-0 transition-opacity group-hover:opacity-100">details →</span>
                   </div>
-                  <div className="relative z-[2] flex flex-1 flex-col p-5">
-                    <div className="flex justify-between font-jet text-[10px] uppercase tracking-[.15em] text-ash">
-                      <span>{a.type === 'workshop' ? 'Workshop' : 'Award'} · {a.date}</span>
-                      {Wrapper === 'a' && <span className="text-primary">↗</span>}
-                    </div>
-                    <h3 className="ss-display ss-cond mt-3 text-xl leading-tight">{a.title}</h3>
-                    <p className="mt-2 line-clamp-4 text-sm text-ash">{a.description}</p>
-                  </div>
-                </Wrapper>
-              )
-            })}
+                  <h3 className="ss-display ss-cond mt-3 text-xl leading-tight">{a.title}</h3>
+                  <p className="mt-2 line-clamp-4 text-sm text-ash">{a.description}</p>
+                </div>
+                {/* Whole card opens the drawer */}
+                <button type="button" onClick={() => setActiveAward(i)} aria-haspopup="dialog" aria-label={`Details: ${a.title}`} className="absolute inset-0 z-[3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" />
+              </article>
+            ))}
           </div>
           <Link to={appConstants.routes.experienceCertificates} className="ss-chev-btn mt-8 inline-block font-jet text-xs font-bold uppercase tracking-[.16em] text-primary hover:underline" data-reveal="up">
             Certificates <span className="ss-chev">▸▸▸</span>
@@ -178,6 +210,21 @@ function AboutPage() {
       </section>
 
       <CtaBand title={<>Let&apos;s work <Bar>together.</Bar></>} />
+
+      <Drawer
+        open={award !== null}
+        onClose={() => setActiveAward(null)}
+        label={`recognition / ${String(awards.indexOf(shownAward) + 1).padStart(2, '0')} of ${String(awards.length).padStart(2, '0')}`}
+        title={shownAward?.title}
+        footer={
+          <div className="grid grid-cols-2">
+            <button type="button" onClick={() => step(-1)} className="border-r border-ink px-5 py-4 text-left font-jet text-xs uppercase tracking-[.16em] transition-colors hover:bg-ink hover:text-stock">← Previous</button>
+            <button type="button" onClick={() => step(1)} className="px-5 py-4 text-right font-jet text-xs uppercase tracking-[.16em] transition-colors hover:bg-primary hover:text-onprimary">Next →</button>
+          </div>
+        }
+      >
+        {shownAward && <AwardDetails key={shownAward.title} award={shownAward} />}
+      </Drawer>
     </>
   )
 }

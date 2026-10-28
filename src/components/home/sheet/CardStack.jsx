@@ -5,6 +5,7 @@ import appConstants from '../../../constants/appConstants'
 import homeContent from '../../../data/homeContent.json'
 import metrics from '../../../data/metrics.json'
 import { prefersReducedMotion } from '../../../helpers/sheetMotion'
+import ProfilePhoto from '../../sheet/ProfilePhoto'
 
 // "20+ Production Systems Delivered"
 const delivered = metrics[0]
@@ -68,7 +69,7 @@ function CardStack() {
   return (
     <div className="mx-auto w-full max-w-[360px] self-end lg:col-span-4 lg:mx-0 lg:max-w-none" data-reveal="up" style={{ '--i': 3 }}>
       <div
-        className="ss-stack group"
+        className="ss-stack"
         role="button"
         tabIndex={0}
         aria-label="Profile cards. Press to show the next card."
@@ -78,12 +79,7 @@ function CardStack() {
         {/* 01 — Who */}
         <article {...cardProps(0, 'border border-ink bg-paper p-3')}>
           <div className="mb-2 flex justify-between font-jet text-[10px] uppercase tracking-widest text-ash"><span>ID card</span><span>01/03</span></div>
-          <div className="ss-shutter" data-reveal="shutter">
-            <div className="relative">
-              <div className="ss-scan" />
-              <img src="/profile_pic.png" alt="M. Hammad Hassan" className="ss-shot aspect-square w-full border border-ink/15 object-cover" />
-            </div>
-          </div>
+          <ProfilePhoto />
           <div className="ss-display ss-cond mt-4 text-[34px] leading-none">Product Engineer</div>
           <div className="mt-1 font-jet text-xs text-ash">&amp; Technical Consultant</div>
           <div className="mt-3 flex items-center justify-between border-t border-ink/15 pt-3">

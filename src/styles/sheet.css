@@ -213,6 +213,21 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
 .ss-swap { animation: ss-swap .5s var(--ss-ease) both; }
 @keyframes ss-swap { from { opacity: 0; filter: blur(6px); translate: 0 8px; } }
 
+/* Drawer (components/sheet/Drawer.jsx): slides in from the right over a fading backdrop */
+.ss-drawer-backdrop { opacity: 0; transition: opacity .4s ease; }
+.ss-drawer { isolation: isolate; transform: translateX(100%); transition: transform .5s var(--ss-ease); box-shadow: -20px 0 50px -20px rgba(0,0,0,.35); }
+.ss-drawer-root[data-shown] .ss-drawer-backdrop { opacity: 1; }
+.ss-drawer-root[data-shown] .ss-drawer { transform: none; }
+.ss-drawer::before { /* the signature grid continues inside the drawer */
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-color: rgb(var(--ss-stock));
+  background-image:
+    linear-gradient(rgb(var(--ss-ink) / .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--ss-ink) / .07) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+@media (prefers-reduced-motion: reduce) { .ss-drawer, .ss-drawer-backdrop { transition: none; } }
+
 /* Links inside authored HTML (about page data) */
 .ss-about-html a, .ss-faq-body a { color: rgb(var(--color-primary)); text-decoration: underline; text-underline-offset: 3px; }
 
