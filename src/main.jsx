@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 // Styles
 import './index.css'
-import './tailwind-compiled.css'
+// Compiled on the fly by Vite's PostCSS (tailwind) pipeline, so new classes need no manual `npm run tc`
+import './tailwind.css'
+import './styles/sheet.css'
 // Redux
 import { store, persister } from './redux/store.jsx'
 import { PersistGate } from 'redux-persist/integration/react';

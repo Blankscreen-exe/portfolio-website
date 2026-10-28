@@ -15,6 +15,11 @@ module.exports = {
         'normal': ['"CourierPrime-Regular"'],
         'bold': ['"CourierPrime-Bold"'],
         'italic': ['"CourierPrime-Italic"'],
+
+        // Spec-sheet redesign
+        'archivo': ['Archivo', 'system-ui', 'sans-serif'],
+        'jet': ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        'inter': ['Inter', 'system-ui', 'sans-serif'],
       },
       extend: {
         colors:{
@@ -32,6 +37,14 @@ module.exports = {
           
           "bg1": "rgb(var(--color-bg1) / <alpha-value>)",
           "bg2": "rgb(var(--color-bg2) / <alpha-value>)",
+
+          // Spec-sheet redesign (values live in src/styles/sheet.css, light + dark)
+          "stock": "rgb(var(--ss-stock) / <alpha-value>)",
+          "paper": "rgb(var(--ss-paper) / <alpha-value>)",
+          "ink": "rgb(var(--ss-ink) / <alpha-value>)",
+          "ash": "rgb(var(--ss-ash) / <alpha-value>)",
+          "frame": "rgb(var(--ss-frame) / <alpha-value>)",
+          "onprimary": "rgb(var(--ss-onprimary) / <alpha-value>)",
 
         },
 

@@ -7,17 +7,30 @@ import { increment, decrement } from './redux/reducers/commonSlice'
 
 import "tw-elements-react/dist/css/tw-elements-react.min.css";
 
+import { useLocation } from 'react-router-dom'
+
 // Components
-import NavBar from './components/common/Navbar'
-import Footer from './components/common/Footer';
+// import NavBar from './components/common/Navbar' //REF: replaced by SheetHeader (redesign)
+// import Footer from './components/common/Footer'; //REF: replaced by SheetFooter (redesign)
+import SheetHeader from './components/sheet/SheetHeader'
+import SheetFooter from './components/sheet/SheetFooter'
 // import CalFloatingButton from './components/common/CalFloatingButton'; //REF: disabled for now
 // import ChatWidget from './components/common/ChatWidget'; //REF: not needed anymore
 
 //data
 import RoutesList from './components/Routes.jsx';
+import appConstants from './constants/appConstants'
+import { useSheetMotion } from './helpers/sheetMotion'
+
+// Routes already rebuilt in the spec-sheet layout render full width; every other page
+// keeps its old centred container (.ss-legacy) until it is redesigned.
+const REDESIGNED_ROUTES = [appConstants.routes.home]
 
 function App() {
-    
+  const location = useLocation()
+  const isRedesigned = REDESIGNED_ROUTES.includes(location.pathname)
+  useSheetMotion()
+
   const count = useSelector((state) => {
     // console.log(state)
     return state.persistedReducer.common.myValue
@@ -31,9 +44,13 @@ function App() {
 
   return (
     <>
-    <NavBar/>
-    <RoutesList/>
-    <Footer/>
+    <div className="ss-sheet">
+      <SheetHeader/>
+      <main className={isRedesigned ? '' : 'ss-legacy'}>
+        <RoutesList/>
+      </main>
+      <SheetFooter/>
+    </div>
     {/* <CalFloatingButton/> //REF: disabled for now */}
     {/* <ChatWidget/> //REF: not needed  */}
 

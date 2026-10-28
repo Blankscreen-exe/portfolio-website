@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept 03 — Swiss Grid / Editorial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#03BCCF', ink: '#111111' },
+          fontFamily: {
+            sans: ['"Inter Tight"', 'sans-serif'],
+            serif: ['"Instrument Serif"', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    /* Signature grid = the layout grid. 80px cells, vertical lines centred so the
+       1280px container edges land exactly on grid lines. */
+    body {
+      background-color: #ffffff;
+      background-image:
+        linear-gradient(rgba(17,17,17,.07) 1px, transparent 1px),
+        linear-gradient(90deg, transparent 39px, rgba(17,17,17,.07) 39px, rgba(17,17,17,.07) 40px, transparent 40px);
+      background-size: 80px 80px;
+      background-position: 0 0, 50% 0;
+    }
+    /* Cursor-snapped cyan cell */
+    #cell {
+      position: absolute; width: 80px; height: 80px; pointer-events: none; z-index: 0;
+      background: rgba(3,188,207,.16); outline: 1px solid rgba(3,188,207,.6);
+      transition: left .08s linear, top .08s linear, opacity .2s; opacity: 0;
+    }
+    .row-flood { position: relative; isolation: isolate; }
+    .row-flood::before {
+      content: ''; position: absolute; inset: 0; background: #03BCCF; z-index: -1;
+      transform: scaleY(0); transform-origin: bottom; transition: transform .35s cubic-bezier(.7,0,.2,1);
+    }
+    .row-flood:hover::before { transform: scaleY(1); }
+    .row-flood:hover .row-arrow { transform: rotate(-45deg); }
+    .row-arrow { transition: transform .35s cubic-bezier(.7,0,.2,1); }
+  </style>
+</head>
+<body class="relative font-sans text-ink antialiased">
+  <div id="cell"></div>
+
+  <div class="relative z-10 mx-auto max-w-[1280px] border-x border-ink/15">
+
+    <!-- NAV: 80px tall, sits on the grid -->
+    <header class="sticky top-0 z-30 grid h-20 border-b border-ink bg-white/85 backdrop-blur" style="grid-template-columns: repeat(16, minmax(0, 1fr));">
+      <a href="#" class="col-span-8 flex items-center px-5 text-lg font-extrabold tracking-tight md:col-span-4">M. Hammad Hassan<span class="text-primary">●</span></a>
+      <nav class="col-span-8 hidden items-center gap-8 font-mono text-xs uppercase md:flex">
+        <a href="#work" class="hover:text-primary">Work</a><a href="#services" class="hover:text-primary">Services</a><a href="#xp" class="hover:text-primary">Experience</a><a href="#" class="hover:text-primary">Writing</a>
+      </nav>
+      <a href="#contact" class="col-span-8 flex items-center justify-center bg-ink font-mono text-xs uppercase text-white hover:bg-primary hover:text-ink md:col-span-4">Available for work →</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="border-b border-ink px-5 pb-10 pt-20 md:pt-28">
+      <div class="flex items-start justify-between font-mono text-xs uppercase">
+        <span>(01) Introduction</span><span class="hidden md:block">Product Engineer / Technical Consultant</span><span>2026</span>
+      </div>
+      <h1 class="mt-10 text-[17vw] font-black leading-[0.8] tracking-[-0.06em] md:text-[200px]">
+        Hammad<span class="text-primary">.</span>
+      </h1>
+      <p class="mt-14 max-w-[720px] text-3xl font-medium leading-tight tracking-tight md:text-[44px]">
+        I help teams turn <em class="font-serif font-normal italic">ideas</em> into <span class="bg-primary px-1">shipped products</span>, owning features end to end, from the user problem through backend, integrations and long-term upkeep.
+      </p>
+      <div class="mt-14 grid grid-cols-2 gap-px border border-ink bg-ink md:grid-cols-4">
+        <div class="bg-white p-5"><div class="font-mono text-[11px] uppercase text-ink/60">Engagement</div><div class="mt-1 font-bold">Contract · Full-time · Consulting</div></div>
+        <div class="bg-white p-5"><div class="font-mono text-[11px] uppercase text-ink/60">Focus</div><div class="mt-1 font-bold">Backend · AI · Full-stack</div></div>
+        <div class="bg-white p-5"><div class="font-mono text-[11px] uppercase text-ink/60">Experience</div><div class="mt-1 font-bold">~5 years in production</div></div>
+        <div class="bg-primary p-5"><div class="font-mono text-[11px] uppercase">Status</div><div class="mt-1 font-bold">Open to opportunities</div></div>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section class="grid grid-cols-2 border-b border-ink md:grid-cols-6">
+      <div class="border-b border-r border-ink/15 p-5 md:border-b-0"><div class="text-6xl font-black tracking-tighter">20<span class="text-primary">+</span></div><p class="mt-6 text-sm">Production systems delivered</p></div>
+      <div class="border-b border-ink/15 p-5 md:border-b-0 md:border-r"><div class="text-6xl font-black tracking-tighter">~5</div><p class="mt-6 text-sm">Years in production</p></div>
+      <div class="border-b border-r border-ink/15 p-5 md:border-b-0"><div class="text-6xl font-black tracking-tighter">10<span class="text-primary">+</span></div><p class="mt-6 text-sm">Systems stabilized</p></div>
+      <div class="border-b border-ink/15 p-5 md:border-b-0 md:border-r"><div class="text-6xl font-black tracking-tighter">4</div><p class="mt-6 text-sm">Communities served</p></div>
+      <div class="border-r border-ink/15 p-5"><div class="text-6xl font-black tracking-tighter">99<span class="text-primary">%</span></div><p class="mt-6 text-sm">Uptime maintained</p></div>
+      <div class="p-5"><div class="text-6xl font-black tracking-tighter">50<span class="text-primary">+</span></div><p class="mt-6 text-sm">Clients &amp; teams</p></div>
+    </section>
+
+    <!-- WORK: index list with flood hover -->
+    <section id="work" class="border-b border-ink">
+      <div class="flex items-end justify-between px-5 pb-6 pt-20">
+        <h2 class="text-6xl font-black tracking-tighter md:text-8xl">Work</h2>
+        <span class="font-mono text-xs uppercase">(02) Selected · 06 of 12</span>
+      </div>
+      <ul class="border-t border-ink">
+        <li><a href="#" class="row-flood grid grid-cols-12 items-center gap-4 border-b border-ink/15 px-5 py-6">
+          <span class="col-span-1 font-mono text-xs">01</span>
+          <span class="col-span-9 text-2xl font-bold tracking-tight md:col-span-5 md:text-4xl">Clinic AI Voice Agent</span>
+          <span class="col-span-4 hidden text-sm md:block">Scheduling, intake &amp; specialist routing over voice</span>
+          <span class="col-span-2 text-right md:col-span-2"><span class="row-arrow inline-block text-3xl">→</span></span>
+        </a></li>
+        <li><a href="#" class="row-flood grid grid-cols-12 items-center gap-4 border-b border-ink/15 px-5 py-6">
+          <span class="col-span-1 font-mono text-xs">02</span>
+          <span class="col-span-9 text-2xl font-bold tracking-tight md:col-span-5 md:text-4xl">LinkedIn Automation &amp; CRM</span>
+          <span class="col-span-4 hidden text-sm md:block">AI outreach engine with CRM sync, built as Go and Python microservices</span>
+          <span class="col-span-2 text-right md:col-span-2"><span class="row-arrow inline-block text-3xl">→</span></span>
+        </a></li>
+        <li><a href="#" class="row-flood grid grid-cols-12 items-center gap-4 border-b border-ink/15 px-5 py-6">
+          <span class="col-span-1 font-mono text-xs">03</span>
+          <span class="col-span-9 text-2xl font-bold tracking-tight md:col-span-5 md:text-4xl">Business Simulator</span>
+          <span class="col-span-4 hidden text-sm md:block">Training young entrepreneurs in business &amp; finance</span>
+          <span class="col-span-2 text-right md:col-span-2"><span class="row-arrow inline-block text-3xl">→</span></span>
+        </a></li>
+        <li><a href="#" class="row-flood grid grid-cols-12 items-center gap-4 border-b border-ink/15 px-5 py-6">
+          <span class="col-span-1 font-mono text-xs">04</span>
+          <span class="col-span-9 text-2xl font-bold tracking-tight md:col-span-5 md:text-4xl">ATS Resume Parser</span>
+          <span class="col-span-4 hidden text-sm md:block">LLM pipeline from resume to vector store</span>
+          <span class="col-span-2 text-right md:col-span-2"><span class="row-arrow inline-block text-3xl">→</span></span>
+        </a></li>
+        <li><a href="#" class="row-flood grid grid-cols-12 items-center gap-4 border-b border-ink/15 px-5 py-6">
+          <span class="col-span-1 font-mono text-xs">05</span>
+          <span class="col-span-9 text-2xl font-bold tracking-tight md:col-span-5 md:text-4xl">NFT Showroom</span>
+          <span class="col-span-4 hidden text-sm md:block">A safe, friendly gateway to digital assets</span>
+          <span class="col-span-2 text-right md:col-span-2"><span class="row-arrow inline-block text-3xl">→</span></span>
+        </a></li>
+        <li><a href="#" class="row-flood grid grid-cols-12 items-center gap-4 px-5 py-6">
+          <span class="col-span-1 font-mono text-xs">06</span>
+          <span class="col-span-9 text-2xl font-bold tracking-tight md:col-span-5 md:text-4xl">The Duck Council</span>
+          <span class="col-span-4 hidden text-sm md:block">Rubber-duck debugging, run by a crew of AI agents</span>
+          <span class="col-span-2 text-right md:col-span-2"><span class="row-arrow inline-block text-3xl">→</span></span>
+        </a></li>
+      </ul>
+    </section>
+
+    <!-- SERVICES: asymmetric split -->
+    <section id="services" class="grid border-b border-ink md:grid-cols-12">
+      <div class="border-b border-ink/15 px-5 py-20 md:col-span-5 md:border-b-0 md:border-r">
+        <span class="font-mono text-xs uppercase">(03) Services</span>
+        <h2 class="mt-6 text-5xl font-black leading-[0.9] tracking-tighter md:text-7xl">From <em class="font-serif font-normal italic">problem</em> to production.</h2>
+      </div>
+      <ol class="md:col-span-7">
+        <li class="grid grid-cols-7 border-b border-ink/15 px-5 py-8"><span class="col-span-1 font-mono text-xs text-primary">A</span><div class="col-span-6"><h3 class="text-2xl font-bold tracking-tight">Backend &amp; APIs</h3><p class="mt-2 text-ink/70">Django, FastAPI, Gin, Express and Laravel services built to last.</p></div></li>
+        <li class="grid grid-cols-7 border-b border-ink/15 px-5 py-8"><span class="col-span-1 font-mono text-xs text-primary">B</span><div class="col-span-6"><h3 class="text-2xl font-bold tracking-tight">Full-stack products</h3><p class="mt-2 text-ink/70">React and Next.js front ends, from scope to shipped.</p></div></li>
+        <li class="grid grid-cols-7 border-b border-ink/15 px-5 py-8"><span class="col-span-1 font-mono text-xs text-primary">C</span><div class="col-span-6"><h3 class="text-2xl font-bold tracking-tight">AI &amp; machine learning</h3><p class="mt-2 text-ink/70">Agents, voice AI, RAG and classic ML.</p></div></li>
+        <li class="grid grid-cols-7 border-b border-ink/15 px-5 py-8"><span class="col-span-1 font-mono text-xs text-primary">D</span><div class="col-span-6"><h3 class="text-2xl font-bold tracking-tight">Consulting &amp; stabilization</h3><p class="mt-2 text-ink/70">Refactoring, documentation and maintainability.</p></div></li>
+        <li class="grid grid-cols-7 px-5 py-8"><span class="col-span-1 font-mono text-xs text-primary">E</span><div class="col-span-6"><h3 class="text-2xl font-bold tracking-tight">Mentorship</h3><p class="mt-2 text-ink/70">Workshops and intern training.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="xp" class="border-b border-ink px-5 py-20">
+      <div class="flex items-end justify-between">
+        <h2 class="text-6xl font-black tracking-tighter md:text-8xl">Experience</h2>
+        <span class="font-mono text-xs uppercase">(04)</span>
+      </div>
+      <div class="mt-12 grid gap-px border border-ink bg-ink md:grid-cols-3">
+        <article class="bg-white p-6"><div class="font-mono text-xs uppercase text-primary">2023 — Present</div><h3 class="mt-8 text-2xl font-bold tracking-tight">Siliconplex</h3><p class="text-sm font-medium">Associate Software Developer</p><p class="mt-4 text-sm text-ink/70">Simulators, NFT platforms, smart contracts, deployments, documentation and training interns.</p></article>
+        <article class="bg-white p-6"><div class="font-mono text-xs uppercase text-ink/60">2022</div><h3 class="mt-8 text-2xl font-bold tracking-tight">Pump Jack Dataworks</h3><p class="text-sm font-medium">Software Developer &amp; Data Miner</p><p class="mt-4 text-sm text-ink/70">Led a team of 5 on MERN backends and built ML for table-tennis analytics.</p></article>
+        <article class="bg-white p-6"><div class="font-mono text-xs uppercase text-ink/60">2022</div><h3 class="mt-8 text-2xl font-bold tracking-tight">The Sparks Foundation</h3><p class="text-sm font-medium">Data Science Intern</p><p class="mt-4 text-sm text-ink/70">Trend analysis with PowerBI, TensorFlow and statistics.</p></article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-primary px-5 py-24">
+      <span class="font-mono text-xs uppercase">(05) Contact</span>
+      <a href="mailto:" class="group mt-6 block text-[13vw] font-black leading-[0.85] tracking-[-0.05em] md:text-[150px]">
+        Let's talk<span class="inline-block transition-transform duration-300 group-hover:translate-x-4">→</span>
+      </a>
+      <div class="mt-16 grid gap-6 border-t border-ink pt-6 font-mono text-xs uppercase md:grid-cols-4">
+        <a href="https://www.linkedin.com/in/hammadai/" class="hover:underline">LinkedIn ↗</a>
+        <a href="https://github.com/Blankscreen-exe" class="hover:underline">GitHub ↗</a>
+        <a href="https://medium.com/@hammad.ai" class="hover:underline">Medium ↗</a>
+        <span class="md:text-right">© 2026 M. Hammad Hassan</span>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Snap a cyan cell to whichever grid square the cursor is over
+    const cell = document.getElementById('cell');
+    const S = 80;
+    document.addEventListener('mousemove', (e) => {
+      const W = document.body.clientWidth;
+      const cx = W / 2;
+      const x = cx + Math.floor((e.pageX - cx) / S) * S;
+      const y = Math.floor(e.pageY / S) * S;
+      cell.style.left = x + 'px';
+      cell.style.top = y + 'px';
+      cell.style.opacity = 1;
+    });
+    document.addEventListener('mouseleave', () => (cell.style.opacity = 0));
+  </script>
+</body>
+</html>

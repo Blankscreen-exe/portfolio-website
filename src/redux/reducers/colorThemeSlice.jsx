@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toggleTheme } from "../actions/colorThemeActions";
 
-const initialValue = {
-    isDarkMode: false,
-}
+// A plain boolean: the store mounts this slice as `persistedReducer.isDarkMode`, so an
+// object here (the old `{ isDarkMode: false }`) was always truthy and forced dark mode.
+const initialValue = false
 
 export const colorTheme = createSlice({
     name: "isDarkMode",

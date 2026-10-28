@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept 04 — Terminal / Tiling WM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#30C3D2',
+            void: '#080B0D',
+            pane: '#0D1215',
+            edge: '#1E2A30',
+            dim: '#6B7F88',
+          },
+          fontFamily: {
+            sans: ['Geist', 'sans-serif'],
+            mono: ['"Geist Mono"', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    :root { --mx: 50vw; --my: 30vh; }
+    body { background: #080B0D; }
+    /* Signature grid, two layers: a faint base grid plus a bright cyan copy revealed around the cursor */
+    .grid-base, .grid-glow { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+    .grid-base {
+      background-image:
+        linear-gradient(rgba(48,195,210,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(48,195,210,.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .grid-glow {
+      background-image:
+        linear-gradient(rgba(48,195,210,.45) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(48,195,210,.45) 1px, transparent 1px);
+      background-size: 32px 32px;
+      -webkit-mask-image: radial-gradient(260px circle at var(--mx) var(--my), #000 0%, transparent 70%);
+              mask-image: radial-gradient(260px circle at var(--mx) var(--my), #000 0%, transparent 70%);
+    }
+    .pane { background: rgba(13,18,21,.88); backdrop-filter: blur(2px); }
+    .pane:hover, .pane:focus-within { border-color: rgba(48,195,210,.7); }
+    .pane:hover .pane-title { color: #30C3D2; }
+    .caret::after { content: '▋'; color: #30C3D2; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0 } }
+    kbd { font-family: 'Geist Mono', monospace; font-size: 10px; padding: 1px 5px; border: 1px solid #1E2A30; color: #30C3D2; }
+  </style>
+</head>
+<body class="font-sans text-slate-200 antialiased selection:bg-primary selection:text-void">
+  <div class="grid-base"></div>
+  <div class="grid-glow"></div>
+
+  <!-- TOP BAR (polybar style) -->
+  <header class="sticky top-0 z-40 border-b border-edge bg-void/90 backdrop-blur">
+    <div class="mx-auto flex h-10 max-w-[1400px] items-stretch font-mono text-xs">
+      <a href="#" class="flex items-center gap-2 bg-primary px-4 font-semibold text-void">⌘ hammad</a>
+      <nav class="flex items-stretch">
+        <a href="#top" class="flex items-center gap-2 border-r border-edge px-4 text-primary"><kbd>1</kbd> home</a>
+        <a href="#work" class="flex items-center gap-2 border-r border-edge px-4 hover:text-primary"><kbd>2</kbd> work</a>
+        <a href="#services" class="hidden items-center gap-2 border-r border-edge px-4 hover:text-primary sm:flex"><kbd>3</kbd> services</a>
+        <a href="#xp" class="hidden items-center gap-2 border-r border-edge px-4 hover:text-primary sm:flex"><kbd>4</kbd> log</a>
+      </nav>
+      <div class="ml-auto hidden items-center gap-5 px-4 text-dim md:flex">
+        <span><span class="text-emerald-400">●</span> open_to_work</span>
+        <span>main ✓</span>
+        <span id="clock">--:--</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="relative z-10 mx-auto max-w-[1400px] p-3 md:p-4">
+
+    <!-- TILING ROW 1 -->
+    <div class="grid gap-3 md:gap-4 lg:grid-cols-12">
+      <!-- whoami -->
+      <section class="pane border border-edge lg:col-span-8">
+        <div class="pane-title flex items-center justify-between border-b border-edge px-4 py-2 font-mono text-[11px] text-dim">
+          <span>~/ — zsh</span><span>1:1</span>
+        </div>
+        <div class="p-6 md:p-10">
+          <p class="font-mono text-sm text-dim"><span class="text-primary">❯</span> whoami</p>
+          <h1 class="mt-4 text-5xl font-extrabold leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            M. Hammad Hassan
+          </h1>
+          <p class="mt-3 font-mono text-lg text-primary md:text-xl">product_engineer &amp;&amp; technical_consultant</p>
+          <p class="mt-8 font-mono text-sm text-dim"><span class="text-primary">❯</span> cat mission.txt</p>
+          <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-300">
+            I help teams turn ideas into shipped products. I own features end to end, from the user problem and design through backend, integrations and long-term maintainability.
+          </p>
+          <p class="mt-8 font-mono text-sm text-dim"><span class="text-primary">❯</span> <span id="typed"></span><span class="caret"></span></p>
+          <div class="mt-8 flex flex-wrap gap-3 font-mono text-sm">
+            <a href="#work" class="border border-primary bg-primary px-5 py-2.5 font-semibold text-void hover:bg-transparent hover:text-primary">./view-work</a>
+            <a href="#contact" class="border border-edge px-5 py-2.5 hover:border-primary hover:text-primary">./contact --now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- stats / htop -->
+      <section class="pane flex flex-col border border-edge lg:col-span-4">
+        <div class="pane-title flex items-center justify-between border-b border-edge px-4 py-2 font-mono text-[11px] text-dim">
+          <span>htop — stats</span><span>1:2</span>
+        </div>
+        <div class="flex-1 space-y-4 p-6 font-mono text-xs">
+          <div><div class="flex justify-between"><span>production_systems</span><span class="text-white">20+</span></div><div class="mt-1.5 h-2 bg-edge"><div class="h-full w-[85%] bg-primary"></div></div></div>
+          <div><div class="flex justify-between"><span>years_in_prod</span><span class="text-white">~5</span></div><div class="mt-1.5 h-2 bg-edge"><div class="h-full w-[55%] bg-primary"></div></div></div>
+          <div><div class="flex justify-between"><span>systems_stabilized</span><span class="text-white">10+</span></div><div class="mt-1.5 h-2 bg-edge"><div class="h-full w-[65%] bg-primary"></div></div></div>
+          <div><div class="flex justify-between"><span>communities_served</span><span class="text-white">4</span></div><div class="mt-1.5 h-2 bg-edge"><div class="h-full w-[35%] bg-primary"></div></div></div>
+          <div><div class="flex justify-between"><span>uptime</span><span class="text-emerald-400">99%</span></div><div class="mt-1.5 h-2 bg-edge"><div class="h-full w-[99%] bg-emerald-400"></div></div></div>
+          <div><div class="flex justify-between"><span>clients_and_teams</span><span class="text-white">50+</span></div><div class="mt-1.5 h-2 bg-edge"><div class="h-full w-[92%] bg-primary"></div></div></div>
+        </div>
+        <div class="border-t border-edge px-6 py-3 font-mono text-[11px] text-dim">load avg: <span class="text-primary">shipping</span> · <span class="text-primary">learning</span> · <span class="text-primary">mentoring</span></div>
+      </section>
+    </div>
+
+    <!-- TILING ROW 2: projects -->
+    <section id="work" class="pane mt-3 border border-edge md:mt-4">
+      <div class="pane-title flex items-center justify-between border-b border-edge px-4 py-2 font-mono text-[11px] text-dim">
+        <span>~/projects — ls -la</span><span>2:1</span>
+      </div>
+      <div class="grid md:grid-cols-2 xl:grid-cols-3">
+        <a href="#" class="group border-b border-edge p-6 hover:bg-primary/5 md:border-r">
+          <div class="flex items-center justify-between font-mono text-[11px] text-dim"><span>drwxr-xr-x · ai/voice</span><span class="text-primary opacity-0 transition group-hover:opacity-100">open ↗</span></div>
+          <div class="my-5 aspect-video border border-edge bg-void/60"><div class="grid h-full place-items-center font-mono text-xs text-dim">[ screenshot ]</div></div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-primary">clinic-ai-voice-agent/</h3>
+          <p class="mt-2 text-sm text-slate-400">Voice agent for scheduling, patient intake and specialist routing.</p>
+          <p class="mt-4 font-mono text-[11px] text-dim">python · openai · vapi · twilio · postgres</p>
+        </a>
+        <a href="#" class="group border-b border-edge p-6 hover:bg-primary/5 xl:border-r">
+          <div class="flex items-center justify-between font-mono text-[11px] text-dim"><span>drwxr-xr-x · ai/automation</span><span class="text-primary opacity-0 transition group-hover:opacity-100">open ↗</span></div>
+          <div class="my-5 aspect-video border border-edge bg-void/60"><div class="grid h-full place-items-center font-mono text-xs text-dim">[ screenshot ]</div></div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-primary">linkedin-crm-automation/</h3>
+          <p class="mt-2 text-sm text-slate-400">AI outreach with CRM integration, built as microservices.</p>
+          <p class="mt-4 font-mono text-[11px] text-dim">go · gin · fastapi · nest.js · aws</p>
+        </a>
+        <a href="#" class="group border-b border-edge p-6 hover:bg-primary/5 md:border-r xl:border-r-0">
+          <div class="flex items-center justify-between font-mono text-[11px] text-dim"><span>drwxr-xr-x · ai/ml</span><span class="text-primary opacity-0 transition group-hover:opacity-100">open ↗</span></div>
+          <div class="my-5 aspect-video border border-edge bg-void/60"><div class="grid h-full place-items-center font-mono text-xs text-dim">[ screenshot ]</div></div>
+          <h3 class="text-xl font-semibold text-white group-hover:text-primary">ats-resume-parser/</h3>
+          <p class="mt-2 text-sm text-slate-400">Resume parsing pipeline with LLMs and a vector DB.</p>
+          <p class="mt-4 font-mono text-[11px] text-dim">fastapi · langchain · vectordb</p>
+        </a>
+      </div>
+      <!-- compact listing -->
+      <div class="divide-y divide-edge font-mono text-sm">
+        <a href="#" class="flex items-center gap-4 px-6 py-3 hover:bg-primary/5 hover:text-primary"><span class="w-24 text-[11px] text-dim">web/edu</span><span class="flex-1">business-simulator/</span><span class="hidden text-[11px] text-dim md:inline">django · postgres</span></a>
+        <a href="#" class="flex items-center gap-4 px-6 py-3 hover:bg-primary/5 hover:text-primary"><span class="w-24 text-[11px] text-dim">web3</span><span class="flex-1">nft-showroom/</span><span class="hidden text-[11px] text-dim md:inline">drf · solidity · web3.js</span></a>
+        <a href="#" class="flex items-center gap-4 px-6 py-3 hover:bg-primary/5 hover:text-primary"><span class="w-24 text-[11px] text-dim">ai/agents</span><span class="flex-1">the-duck-council/</span><span class="hidden text-[11px] text-dim md:inline">crewai · flask · react</span></a>
+        <a href="#" class="flex items-center gap-4 px-6 py-3 text-dim hover:bg-primary/5 hover:text-primary"><span class="w-24 text-[11px]">…</span><span class="flex-1">+ 6 more → ls ~/projects --all</span></a>
+      </div>
+    </section>
+
+    <!-- TILING ROW 3 -->
+    <div class="mt-3 grid gap-3 md:mt-4 md:gap-4 lg:grid-cols-12">
+      <!-- services -->
+      <section id="services" class="pane border border-edge lg:col-span-5">
+        <div class="pane-title flex items-center justify-between border-b border-edge px-4 py-2 font-mono text-[11px] text-dim">
+          <span>services.yml</span><span>3:1</span>
+        </div>
+        <pre class="overflow-x-auto p-6 font-mono text-[13px] leading-7"><span class="text-dim"># what I can do for you</span>
+<span class="text-primary">services</span>:
+  - <span class="text-primary">backend</span>: <span class="text-amber-300">"APIs, services, integrations"</span>
+  - <span class="text-primary">full_stack</span>: <span class="text-amber-300">"React / Next.js products"</span>
+  - <span class="text-primary">ai_ml</span>: <span class="text-amber-300">"agents, voice AI, RAG, ML"</span>
+  - <span class="text-primary">consulting</span>: <span class="text-amber-300">"stabilize &amp; refactor"</span>
+  - <span class="text-primary">mentorship</span>: <span class="text-amber-300">"workshops, intern training"</span>
+<span class="text-primary">engagement</span>: [contract, full_time, consulting]</pre>
+      </section>
+
+      <!-- experience as git log -->
+      <section id="xp" class="pane border border-edge lg:col-span-7">
+        <div class="pane-title flex items-center justify-between border-b border-edge px-4 py-2 font-mono text-[11px] text-dim">
+          <span>career — git log --graph</span><span>3:2</span>
+        </div>
+        <div class="space-y-6 p-6 font-mono text-[13px]">
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center"><span class="h-3 w-3 bg-primary"></span><span class="w-px flex-1 bg-edge"></span></div>
+            <div class="pb-2"><span class="text-amber-300">a91f3c2</span> <span class="text-primary">(HEAD → present)</span> <span class="text-dim">feb 2023</span>
+              <p class="mt-1 font-sans text-base font-semibold text-white">Siliconplex · Associate Software Developer</p>
+              <p class="mt-1 font-sans text-sm text-slate-400">Simulators, NFT platforms, smart contracts, deployments, docs, workshops and intern training.</p></div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center"><span class="h-3 w-3 border border-primary"></span><span class="w-px flex-1 bg-edge"></span></div>
+            <div class="pb-2"><span class="text-amber-300">7c04be1</span> <span class="text-dim">may 2022</span>
+              <p class="mt-1 font-sans text-base font-semibold text-white">Pump Jack Dataworks · Software Dev &amp; Data Miner</p>
+              <p class="mt-1 font-sans text-sm text-slate-400">Led a team of 5 on MERN backends and built table-tennis ML.</p></div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center"><span class="h-3 w-3 border border-primary"></span></div>
+            <div><span class="text-amber-300">e2d81a0</span> <span class="text-dim">apr 2022 · initial commit</span>
+              <p class="mt-1 font-sans text-base font-semibold text-white">The Sparks Foundation · Data Science Intern</p>
+              <p class="mt-1 font-sans text-sm text-slate-400">PowerBI, TensorFlow and statistical analysis.</p></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="pane mt-3 border border-primary/60 md:mt-4">
+      <div class="flex items-center justify-between border-b border-primary/40 bg-primary/10 px-4 py-2 font-mono text-[11px] text-primary">
+        <span>./contact.sh</span><span>4:1 · focused</span>
+      </div>
+      <div class="grid gap-8 p-6 md:grid-cols-2 md:p-10">
+        <div>
+          <h2 class="text-4xl font-extrabold tracking-tight text-white md:text-6xl">Let's talk<span class="text-primary">_</span></h2>
+          <p class="mt-4 max-w-md text-slate-400">Have a product to ship, a system to stabilize or an AI feature to build? Send me a message.</p>
+          <div class="mt-8 flex gap-5 font-mono text-sm">
+            <a href="https://github.com/Blankscreen-exe" class="text-dim hover:text-primary">github ↗</a>
+            <a href="https://www.linkedin.com/in/hammadai/" class="text-dim hover:text-primary">linkedin ↗</a>
+            <a href="https://medium.com/@hammad.ai" class="text-dim hover:text-primary">medium ↗</a>
+          </div>
+        </div>
+        <form class="space-y-3 font-mono text-sm">
+          <label class="flex items-center border border-edge focus-within:border-primary"><span class="border-r border-edge px-3 py-3 text-primary">--name</span><input class="flex-1 bg-transparent px-3 outline-none" /></label>
+          <label class="flex items-center border border-edge focus-within:border-primary"><span class="border-r border-edge px-3 py-3 text-primary">--email</span><input class="flex-1 bg-transparent px-3 outline-none" /></label>
+          <label class="flex border border-edge focus-within:border-primary"><span class="border-r border-edge px-3 py-3 text-primary">--msg</span><textarea rows="3" class="flex-1 resize-none bg-transparent px-3 py-3 outline-none"></textarea></label>
+          <button type="button" class="w-full border border-primary bg-primary py-3 font-semibold text-void hover:bg-transparent hover:text-primary">⏎ execute</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="py-6 text-center font-mono text-[11px] text-dim">
+      press <kbd>1</kbd>–<kbd>4</kbd> to jump · © 2026 M. Hammad Hassan · exit 0
+    </footer>
+  </main>
+
+  <script>
+    // Spotlight follows the cursor
+    document.addEventListener('mousemove', (e) => {
+      document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+      document.documentElement.style.setProperty('--my', e.clientY + 'px');
+    });
+
+    // Keyboard workspace switching
+    const targets = { '1': '#top', '2': '#work', '3': '#services', '4': '#xp' };
+    document.addEventListener('keydown', (e) => {
+      if (e.target.closest('input, textarea')) return;
+      const t = targets[e.key];
+      if (t) document.querySelector(t).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Clock
+    const clock = document.getElementById('clock');
+    const tick = () => (clock.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+    tick(); setInterval(tick, 30000);
+
+    // Cycling typed commands
+    const cmds = ['ship --feature "end-to-end"', 'deploy --env production', 'mentor --interns', 'refactor --legacy --safely'];
+    const el = document.getElementById('typed');
+    let ci = 0, li = 0, del = false;
+    (function type() {
+      const c = cmds[ci];
+      el.textContent = c.slice(0, li);
+      if (!del && li < c.length) li++;
+      else if (!del) { del = true; return setTimeout(type, 1600); }
+      else if (li > 0) li--;
+      else { del = false; ci = (ci + 1) % cmds.length; }
+      setTimeout(type, del ? 30 : 70);
+    })();
+  </script>
+</body>
+</html>

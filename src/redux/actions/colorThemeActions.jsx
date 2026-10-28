@@ -1,3 +1,5 @@
 export const toggleTheme = (state, payload) => {
-    return !state
+    // Older persisted state may hold the object `{ isDarkMode: false }` (truthy), so only a
+    // literal `true` counts as dark.
+    return state !== true
 }

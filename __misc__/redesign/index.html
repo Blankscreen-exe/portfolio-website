@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redesign concepts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#03BCCF' } } } }</script>
+  <style>
+    body {
+      background-color: #fff;
+      background-image:
+        linear-gradient(rgba(3,188,207,.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(3,188,207,.12) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+<body class="font-mono text-slate-900">
+  <main class="mx-auto max-w-4xl px-6 py-16">
+    <h1 class="text-3xl font-bold">Redesign concepts<span class="text-primary">_</span></h1>
+    <p class="mt-2 text-sm text-slate-600">All four keep the grid background and the cyan primary. Corners are sharp everywhere.</p>
+    <div class="mt-10 grid gap-px border border-slate-900 bg-slate-900 md:grid-cols-2">
+      <a href="01-neo-brutal.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">01</div>
+        <h2 class="mt-1 text-xl font-bold">Neo-Brutal Cyan</h2>
+        <p class="mt-2 text-sm">Thick ink borders, hard offset shadows and buttons that press in. Adds yellow and pink accents. Heavy 40px grid on cream paper.</p>
+      </a>
+      <a href="02-blueprint.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">02</div>
+        <h2 class="mt-1 text-xl font-bold">Blueprint / Drafting Sheet</h2>
+        <p class="mt-2 text-sm">The site as an engineering drawing: cyan graph paper, dimension lines, callouts and a title block. Has a light "drafting" mode and a navy "blueprint" mode.</p>
+      </a>
+      <a href="03-swiss-grid.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">03</div>
+        <h2 class="mt-1 text-xl font-bold">Swiss Grid / Editorial</h2>
+        <p class="mt-2 text-sm">The background grid is the layout grid. Huge type, cyan rows that flood in on hover, and a cell that snaps to the cursor.</p>
+      </a>
+      <a href="04-terminal-tiling.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">04</div>
+        <h2 class="mt-1 text-xl font-bold">Terminal / Tiling WM</h2>
+        <p class="mt-2 text-sm">Dark mode built from tiled panes. A spotlight lights up the grid around the cursor, keys 1–4 jump between sections, and experience reads as a git log.</p>
+      </a>
+    </div>
+
+    <h2 class="mt-16 text-xl font-bold">Minimal &amp; non-technical friendly<span class="text-primary">_</span></h2>
+    <p class="mt-2 text-sm text-slate-600">Plain-language copy, few navigation choices, one obvious next step on every screen.</p>
+    <div class="mt-6 grid gap-px border border-slate-900 bg-slate-900 md:grid-cols-3">
+      <a href="05-quiet-paper.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">05</div>
+        <h2 class="mt-1 text-xl font-bold">Quiet Paper</h2>
+        <p class="mt-2 text-sm">One calm reading column. Services are written as the visitor's own problems, plus a three-step "how we work" section. The grid only shows at the page edges.</p>
+      </a>
+      <a href="06-choose-your-path.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">06</div>
+        <h2 class="mt-1 text-xl font-bold">Choose Your Path</h2>
+        <p class="mt-2 text-sm">"What brings you here?" Four big choices, each showing a tailored answer and pre-filling the contact form. Includes a plain-language FAQ.</p>
+      </a>
+      <a href="07-split-panel.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">07</div>
+        <h2 class="mt-1 text-xl font-bold">Split Panel</h2>
+        <p class="mt-2 text-sm">A fixed cyan grid panel on the left holds your name, the nav and the main button, and stays visible while the simple content scrolls on the right.</p>
+      </a>
+    </div>
+
+    <h2 class="mt-16 text-xl font-bold">Inspired by alex-j-website<span class="text-primary">_</span></h2>
+    <div class="mt-6 grid gap-px border border-slate-900 bg-slate-900">
+      <a href="08-spec-sheet.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">08</div>
+        <h2 class="mt-1 text-xl font-bold">Spec Sheet</h2>
+        <p class="mt-2 text-sm">That site's print style rebuilt around your cyan: a grid sheet inside a dark frame, chunky uppercase headings with solid cyan bars on accent words, small <code>[ bracket ]</code> labels, a stats strip, viewfinder corners and a spotlight on hover, a dossier-style About card and a night mode. The copy stays plain and easy to read.</p>
+      </a>
+      <a href="08-spec-sheet-v2.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">08 · v2</div>
+        <h2 class="mt-1 text-xl font-bold">Spec Sheet, animated</h2>
+        <p class="mt-2 text-sm">The same page with motion: the header drops in on load, headings sharpen into focus, cyan bars wipe in, labels scramble, stats count up, image shutters slide open, the chevron strip moves, the "Open to work" stamp thumps onto the About card, and night mode switches with a curtain sweep.</p>
+      </a>
+      <a href="08-spec-sheet-v3.html" class="group bg-white p-6 hover:bg-primary">
+        <div class="text-xs text-slate-500 group-hover:text-slate-900">08 · v3</div>
+        <h2 class="mt-1 text-xl font-bold">Spec Sheet, card stack</h2>
+        <p class="mt-2 text-sm">v2 with the portrait swapped for three shuffleable cards: an ID card, Industries I've built for, and Why work with me. Click, tap or press Enter to send the front card to the back.</p>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

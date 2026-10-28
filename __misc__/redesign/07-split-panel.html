@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept 07 — Split Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#03BCCF', ink: '#13181C' },
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Signature grid inverted: white lines on a solid cyan panel */
+    .cyan-grid {
+      background-color: #03BCCF;
+      background-image:
+        linear-gradient(rgba(255,255,255,.28) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.28) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .navlink { position: relative; }
+    .navlink .bar { width: 24px; transition: width .25s ease; }
+    .navlink.active .bar, .navlink:hover .bar { width: 56px; }
+    .navlink.active { font-weight: 800; }
+  </style>
+</head>
+<body class="font-sans text-ink antialiased">
+  <div class="lg:flex">
+
+    <!-- LEFT: fixed identity panel -->
+    <aside class="cyan-grid flex flex-col justify-between p-8 lg:sticky lg:top-0 lg:h-screen lg:w-[42%] lg:p-14">
+      <div>
+        <div class="flex items-center gap-4">
+          <div class="grid h-16 w-16 place-items-center border-2 border-ink bg-white text-[10px] text-ink/40">photo</div>
+          <div class="text-sm font-semibold"><span class="mr-1.5 inline-block h-2 w-2 bg-ink"></span>Available for work</div>
+        </div>
+        <h1 class="mt-10 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl xl:text-6xl">M. Hammad<br />Hassan</h1>
+        <p class="mt-4 text-lg font-semibold">Product Engineer &amp; Technical Consultant</p>
+        <p class="mt-4 max-w-sm leading-relaxed text-ink/80">I turn ideas into working software and look after it once it's live.</p>
+
+        <nav class="mt-12 hidden space-y-4 lg:block" id="sidenav">
+          <a href="#about" class="navlink active flex items-center gap-4 text-sm uppercase tracking-widest"><span class="bar h-0.5 bg-ink"></span>About</a>
+          <a href="#services" class="navlink flex items-center gap-4 text-sm uppercase tracking-widest"><span class="bar h-0.5 bg-ink"></span>Services</a>
+          <a href="#work" class="navlink flex items-center gap-4 text-sm uppercase tracking-widest"><span class="bar h-0.5 bg-ink"></span>Work</a>
+          <a href="#experience" class="navlink flex items-center gap-4 text-sm uppercase tracking-widest"><span class="bar h-0.5 bg-ink"></span>Experience</a>
+          <a href="#contact" class="navlink flex items-center gap-4 text-sm uppercase tracking-widest"><span class="bar h-0.5 bg-ink"></span>Contact</a>
+        </nav>
+      </div>
+
+      <div class="mt-10 flex flex-wrap items-center gap-3">
+        <a href="#contact" class="border-2 border-ink bg-ink px-5 py-3 font-bold text-white hover:bg-white hover:text-ink">Start a project</a>
+        <a href="https://www.linkedin.com/in/hammadai/" class="border-2 border-ink bg-white px-4 py-3 font-bold hover:bg-ink hover:text-white" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/Blankscreen-exe" class="border-2 border-ink bg-white px-4 py-3 font-bold hover:bg-ink hover:text-white" aria-label="GitHub">gh</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT: simple scrolling content -->
+    <main class="bg-white px-8 py-16 lg:w-[58%] lg:px-16 lg:py-24">
+
+      <!-- mobile quick nav -->
+      <nav class="-mx-8 mb-12 flex gap-6 overflow-x-auto border-b border-ink/10 px-8 pb-4 text-sm font-semibold lg:hidden">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </nav>
+
+      <section id="about" class="max-w-xl scroll-mt-24">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-ink/50">About</h2>
+        <p class="mt-6 text-2xl font-semibold leading-snug tracking-tight">
+          I help businesses and teams turn ideas into <span class="bg-primary/30 px-1">real, working products</span>, and I handle the technical side so you don't have to.
+        </p>
+        <p class="mt-6 leading-relaxed text-ink/70">
+          For about five years I've built software used in healthcare, sales, hiring, education and food delivery. I take full ownership, from understanding the problem to launching and maintaining the result, and I keep you informed in plain language the whole way.
+        </p>
+        <div class="mt-10 grid grid-cols-3 border-y border-ink/10 py-6">
+          <div><div class="text-3xl font-extrabold">20+</div><div class="text-xs text-ink/60">projects launched</div></div>
+          <div><div class="text-3xl font-extrabold">50+</div><div class="text-xs text-ink/60">clients &amp; teams</div></div>
+          <div><div class="text-3xl font-extrabold">99%</div><div class="text-xs text-ink/60">uptime maintained</div></div>
+        </div>
+      </section>
+
+      <section id="services" class="mt-28 max-w-xl scroll-mt-24">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-ink/50">What I can do for you</h2>
+        <ul class="mt-6 divide-y divide-ink/10 border-y border-ink/10">
+          <li class="flex gap-5 py-5"><span class="mt-1.5 h-3 w-3 shrink-0 bg-primary"></span><div><h3 class="font-bold">Build your app or website</h3><p class="mt-1 text-ink/70">From the first sketch to launch day and beyond.</p></div></li>
+          <li class="flex gap-5 py-5"><span class="mt-1.5 h-3 w-3 shrink-0 bg-primary"></span><div><h3 class="font-bold">Add AI to your business</h3><p class="mt-1 text-ink/70">Assistants and automations that take repetitive work off your team.</p></div></li>
+          <li class="flex gap-5 py-5"><span class="mt-1.5 h-3 w-3 shrink-0 bg-primary"></span><div><h3 class="font-bold">Fix and improve existing software</h3><p class="mt-1 text-ink/70">Make it stable, faster and easier to maintain.</p></div></li>
+          <li class="flex gap-5 py-5"><span class="mt-1.5 h-3 w-3 shrink-0 bg-primary"></span><div><h3 class="font-bold">Advise and mentor your team</h3><p class="mt-1 text-ink/70">Technical guidance, workshops and training.</p></div></li>
+        </ul>
+      </section>
+
+      <section id="work" class="mt-28 scroll-mt-24">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-ink/50">Selected work</h2>
+        <div class="mt-6 space-y-4">
+          <a href="#" class="group flex gap-5 border border-transparent p-3 -mx-3 hover:border-ink/15 hover:bg-primary/5">
+            <div class="grid h-24 w-32 shrink-0 place-items-center border border-ink/10 bg-primary/15 text-[10px] text-ink/40">image</div>
+            <div><div class="text-xs font-semibold text-ink/50">Healthcare · AI</div><h3 class="mt-1 text-lg font-bold group-hover:underline group-hover:decoration-primary group-hover:decoration-2">AI receptionist for clinics</h3><p class="mt-1 text-sm text-ink/70">Answers calls, books appointments and directs patients to the right doctor.</p></div>
+          </a>
+          <a href="#" class="group flex gap-5 border border-transparent p-3 -mx-3 hover:border-ink/15 hover:bg-primary/5">
+            <div class="grid h-24 w-32 shrink-0 place-items-center border border-ink/10 bg-primary/15 text-[10px] text-ink/40">image</div>
+            <div><div class="text-xs font-semibold text-ink/50">Sales · Automation</div><h3 class="mt-1 text-lg font-bold group-hover:underline group-hover:decoration-primary group-hover:decoration-2">LinkedIn outreach &amp; CRM sync</h3><p class="mt-1 text-sm text-ink/70">Handles LinkedIn conversations automatically and keeps sales records up to date.</p></div>
+          </a>
+          <a href="#" class="group flex gap-5 border border-transparent p-3 -mx-3 hover:border-ink/15 hover:bg-primary/5">
+            <div class="grid h-24 w-32 shrink-0 place-items-center border border-ink/10 bg-primary/15 text-[10px] text-ink/40">image</div>
+            <div><div class="text-xs font-semibold text-ink/50">Food · Health</div><h3 class="mt-1 text-lg font-bold group-hover:underline group-hover:decoration-primary group-hover:decoration-2">Nutritionist-led meal ordering</h3><p class="mt-1 text-sm text-ink/70">Customers order meal plans built around their dietary needs.</p></div>
+          </a>
+          <a href="#" class="group flex gap-5 border border-transparent p-3 -mx-3 hover:border-ink/15 hover:bg-primary/5">
+            <div class="grid h-24 w-32 shrink-0 place-items-center border border-ink/10 bg-primary/15 text-[10px] text-ink/40">image</div>
+            <div><div class="text-xs font-semibold text-ink/50">Education</div><h3 class="mt-1 text-lg font-bold group-hover:underline group-hover:decoration-primary group-hover:decoration-2">Business simulator</h3><p class="mt-1 text-sm text-ink/70">Teaches young entrepreneurs how to run a business and manage finances.</p></div>
+          </a>
+        </div>
+        <a href="#" class="mt-6 inline-flex items-center gap-2 font-bold hover:gap-3 transition-all">View all projects <span class="text-primary">→</span></a>
+      </section>
+
+      <section id="experience" class="mt-28 max-w-xl scroll-mt-24">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-ink/50">Experience</h2>
+        <ol class="mt-6 space-y-8">
+          <li class="grid grid-cols-4 gap-4"><span class="text-sm text-ink/50">2023 — now</span><div class="col-span-3"><h3 class="font-bold">Associate Software Developer · Siliconplex</h3><p class="mt-1 text-sm text-ink/70">Building and launching client platforms, writing documentation, running workshops and training interns.</p></div></li>
+          <li class="grid grid-cols-4 gap-4"><span class="text-sm text-ink/50">2022</span><div class="col-span-3"><h3 class="font-bold">Software Developer · Pump Jack Dataworks</h3><p class="mt-1 text-sm text-ink/70">Led a team of five and built a system that scores table-tennis players by tracking the ball.</p></div></li>
+          <li class="grid grid-cols-4 gap-4"><span class="text-sm text-ink/50">2022</span><div class="col-span-3"><h3 class="font-bold">Data Science Intern · The Sparks Foundation</h3><p class="mt-1 text-sm text-ink/70">Turned business data into clear reports and insights.</p></div></li>
+        </ol>
+        <a href="#" class="mt-8 inline-block border-2 border-ink px-5 py-2.5 text-sm font-bold hover:bg-ink hover:text-white">Download CV</a>
+      </section>
+
+      <section id="contact" class="mt-28 scroll-mt-24">
+        <div class="cyan-grid border-2 border-ink p-8 md:p-10">
+          <h2 class="text-3xl font-extrabold tracking-tight md:text-4xl">Have a project in mind?</h2>
+          <p class="mt-3 max-w-md text-ink/80">Tell me a little about it. No technical details needed.</p>
+          <form class="mt-6 grid gap-3">
+            <input class="border-2 border-ink bg-white px-4 py-3 outline-none" placeholder="Your name" />
+            <input type="email" class="border-2 border-ink bg-white px-4 py-3 outline-none" placeholder="Email" />
+            <textarea rows="3" class="resize-none border-2 border-ink bg-white px-4 py-3 outline-none" placeholder="What would you like to build or fix?"></textarea>
+            <button type="button" class="border-2 border-ink bg-ink py-3.5 font-bold text-white hover:bg-white hover:text-ink">Send message</button>
+          </form>
+        </div>
+        <p class="mt-10 text-sm text-ink/50">© 2026 M. Hammad Hassan</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Highlight the side-nav item for the section in view
+    const links = document.querySelectorAll('#sidenav .navlink');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    document.querySelectorAll('main section[id]').forEach((s) => obs.observe(s));
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+    "hero": {
+        "label": "[ Product engineer · Technical consultant ]",
+        "intro": "Bring me an idea, a messy system or a job you want automated. I take care of the technical side from start to finish and keep you updated in plain language."
+    },
+    "metricIndexes": [0, 5, 1, 4],
+    "services": [
+        {
+            "key": "A",
+            "title": "Build your app or website",
+            "description": "From the first idea to launch day, and improving it once real people use it."
+        },
+        {
+            "key": "B",
+            "title": "Put AI to work",
+            "description": "Assistants that answer calls and book appointments, and tools that read and sort documents for you."
+        },
+        {
+            "key": "C",
+            "title": "Fix what's broken",
+            "description": "Make slow or unreliable software stable, clean and documented, so it stops being a headache."
+        },
+        {
+            "key": "D",
+            "title": "Guide your team",
+            "description": "Technical advice, workshops and mentoring."
+        }
+    ],
+    "industries": [
+        { "name": "Healthcare", "built": "AI clinic receptionist" },
+        { "name": "Sales", "built": "LinkedIn outreach + CRM" },
+        { "name": "Recruiting", "built": "Automatic resume sorting" },
+        { "name": "Food & health", "built": "Nutritionist meal ordering" },
+        { "name": "Home services", "built": "On-demand booking, lawn care" },
+        { "name": "Education", "built": "Business simulator" }
+    ],
+    "whyMe": [
+        { "title": "Plain language, no jargon", "text": "Every decision explained in words that make sense." },
+        { "title": "A clear plan first", "text": "You know what's being built, and when, before work starts." },
+        { "title": "Progress you can see", "text": "Regular updates you can click through and try." },
+        { "title": "I stay after launch", "text": "Fixes, upkeep and improvements once it's live." }
+    ],
+    "process": [
+        { "title": "We talk", "text": "You tell me what you need. I ask questions until the goal is clear." },
+        { "title": "I plan & build", "text": "A clear plan first, then regular updates you can see and try." },
+        { "title": "We launch", "text": "It goes live, and I stay on to maintain and improve it." }
+    ],
+    "about": {
+        "paragraphs": [
+            "I'm a product engineer and technical consultant. For about five years I've built software for clients and teams in healthcare, sales, hiring, education and food delivery.",
+            "I take full ownership of the work, from understanding the problem to launch and upkeep. I write things down and explain decisions clearly, so you're never left guessing."
+        ],
+        "facts": [
+            { "key": "Role", "value": "Product Engineer & Consultant" },
+            { "key": "Currently", "value": "Siliconplex, since 2023" },
+            { "key": "Available for", "value": "Contract · Full-time · Consulting" },
+            { "key": "Also", "value": "Workshops, team lead, intern training" }
+        ]
+    },
+    "faqIndexes": [3, 0, 5, 7, 8],
+    "contactTopics": ["Build an app or website", "AI & automation", "Fix existing software", "Advice & mentoring", "Hiring / a role", "Something else"]
+}

@@ -1,0 +1,228 @@
+/* ============================================================================
+   SPEC-SHEET REDESIGN
+   Design tokens, utilities and motion for the new layout.
+   Every class is prefixed `ss-` so nothing collides with daisyUI / tw-elements
+   (daisyUI already ships a `.label`, for example).
+   Colours are RGB channels so Tailwind can apply opacity: `bg-ink/10` etc.
+   The cyan accent is the existing --color-primary (light + dark aware).
+   ========================================================================== */
+
+:root {
+  --ss-stock: 220 225 225;   /* page: cool grey print stock */
+  --ss-paper: 241 243 242;   /* cards / paper objects */
+  --ss-ink: 18 21 21;        /* type, borders, dark panels */
+  --ss-ash: 76 84 84;        /* secondary text */
+  --ss-frame: 18 21 21;      /* dark frame around the sheet */
+  --ss-onprimary: 18 21 21;  /* text on cyan, always dark */
+  --ss-ease: cubic-bezier(.16, .84, .24, 1);
+}
+:root[data-theme="dark"] {
+  --ss-stock: 13 17 18;
+  --ss-paper: 20 27 28;
+  --ss-ink: 226 235 235;
+  --ss-ash: 140 156 157;
+  --ss-frame: 6 8 9;
+}
+
+html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
+::selection { background: rgb(var(--color-primary)); color: rgb(var(--ss-onprimary)); }
+
+/* ---------- The sheet ---------- */
+.ss-sheet {
+  margin: 12px;
+  min-height: calc(100vh - 24px);
+  position: relative;
+  overflow-x: clip;
+  color: rgb(var(--ss-ink));
+  font-family: Inter, system-ui, sans-serif;
+  background-color: rgb(var(--ss-stock));
+  /* Signature grid: 48px hairlines in "print" ink */
+  background-image:
+    linear-gradient(rgb(var(--ss-ink) / .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--ss-ink) / .07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  transition: background-color .5s ease, color .5s ease;
+}
+@media (max-width: 640px) { .ss-sheet { margin: 6px; } }
+
+/* App.css redefines Tailwind's `.sticky` as position:fixed for the old navbar, so the
+   new header uses its own class */
+.ss-sticky { position: sticky; top: 0; }
+
+/* Old pages render inside the sheet until they are redesigned */
+.ss-legacy { width: 91.666%; max-width: 1280px; margin: 0 auto; padding: 2.5rem 0; }
+
+/* ---------- Type ---------- */
+.ss-display { font-family: Archivo, system-ui, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -.025em; line-height: .9; }
+.ss-cond { font-stretch: 70%; }
+.ss-label { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--ss-ash)); }
+
+/* Accent words become a solid cyan bar (wipes in when its section is revealed) */
+.ss-bar {
+  padding: 0 .12em;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+  background: linear-gradient(rgb(var(--color-primary)), rgb(var(--color-primary))) no-repeat left / 100% 100%;
+  color: rgb(var(--ss-onprimary));
+}
+.js .ss-bar { background-size: 0% 100%; color: inherit; transition: background-size .7s var(--ss-ease) .55s, color .3s ease .8s; }
+.js [data-in] .ss-bar, .js .ss-bar[data-in] { background-size: 100% 100%; color: rgb(var(--ss-onprimary)); }
+
+/* ============================================================================
+   REVEAL ON SCROLL — useSheetMotion() sets [data-in] when an element enters view.
+   Hidden states are scoped to html.js so content still shows without JS.
+   `translate` (not `transform`) is used so reveals never fight tilt/shake.
+   ========================================================================== */
+.js [data-reveal="up"] {
+  opacity: 0; translate: 0 24px;
+  transition: opacity .8s var(--ss-ease), translate .8s var(--ss-ease), transform .4s var(--ss-ease);
+  transition-delay: calc(var(--i, 0) * 90ms), calc(var(--i, 0) * 90ms), 0s;
+}
+.js [data-reveal="up"][data-in] { opacity: 1; translate: none; }
+
+.js [data-reveal="focus"] { opacity: 0; }
+.js [data-reveal="focus"][data-in] { animation: ss-focus-pull 1.3s var(--ss-ease) both; animation-delay: calc(var(--i, 0) * 120ms); }
+@keyframes ss-focus-pull {
+  0% { opacity: 0; filter: blur(14px); letter-spacing: .06em; transform: scaleX(1.06); }
+  40% { opacity: .55; filter: blur(5px); }
+  65% { opacity: .9; filter: blur(1.5px); }
+  100% { opacity: 1; filter: blur(0); transform: none; }
+}
+
+.js [data-reveal="rows"] > * { opacity: 0; translate: -20px 0; transition: opacity .6s var(--ss-ease), translate .6s var(--ss-ease); }
+.js [data-reveal="rows"][data-in] > * { opacity: 1; translate: none; }
+.js [data-reveal="rows"][data-in] > *:nth-child(2) { transition-delay: .08s; }
+.js [data-reveal="rows"][data-in] > *:nth-child(3) { transition-delay: .16s; }
+.js [data-reveal="rows"][data-in] > *:nth-child(4) { transition-delay: .24s; }
+.js [data-reveal="rows"][data-in] > *:nth-child(5) { transition-delay: .32s; }
+.js [data-reveal="rows"][data-in] > *:nth-child(6) { transition-delay: .40s; }
+
+/* Image reveal: a cyan shutter slides off */
+.ss-shutter { position: relative; overflow: hidden; }
+.js .ss-shutter::after { content: ''; position: absolute; inset: 0; background: rgb(var(--color-primary)); transform-origin: right; transition: transform 1s var(--ss-ease) .2s; z-index: 2; }
+.js .ss-shutter[data-in]::after { transform: scaleX(0); }
+
+/* Header cells drop in on first load */
+.js .ss-drop { opacity: 0; transform: translateY(-100%); animation: ss-drop .6s var(--ss-ease) both; animation-delay: calc(var(--i, 0) * 70ms + .1s); }
+@keyframes ss-drop { to { opacity: 1; transform: none; } }
+
+/* Stamp thump + card shake */
+.ss-stamp { position: absolute; border: 2px solid rgb(var(--color-primary)); color: rgb(var(--color-primary)); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; padding: 5px 12px; transform: rotate(-8deg); }
+.js .ss-stamp { opacity: 0; }
+.js [data-in] .ss-stamp { animation: ss-thump .55s cubic-bezier(.3, 1.6, .5, 1) .5s both; }
+@keyframes ss-thump {
+  0% { opacity: 0; transform: scale(2.4) rotate(-22deg); }
+  60% { opacity: 1; transform: scale(.92) rotate(-7deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-8deg); }
+}
+.js .ss-shake[data-in] { animation: ss-shake .3s ease .78s; }
+@keyframes ss-shake { 25% { transform: translate(2px, 1px) } 50% { transform: translate(-2px, -1px) } 75% { transform: translate(1px, -1px) } }
+.ss-stamp-inline { display: inline-block; border: 2px solid rgb(var(--color-primary)); color: rgb(var(--color-primary)); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; padding: 3px 8px; transform: rotate(-4deg); }
+
+/* ---------- Hover effects ---------- */
+/* Row fills with cyan from the left */
+.ss-wipe { position: relative; isolation: isolate; }
+.ss-wipe::before { content: ''; position: absolute; inset: 0; background: rgb(var(--color-primary)); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ss-ease); z-index: -1; }
+.ss-wipe:hover::before, .ss-wipe:focus-visible::before { transform: scaleX(1); }
+.ss-wipe:hover, .ss-wipe:hover .ss-dim, .ss-wipe:hover .text-primary { color: rgb(var(--ss-onprimary)); }
+.ss-wipe .ss-arrow { display: inline-block; transition: transform .45s var(--ss-ease); }
+.ss-wipe:hover .ss-arrow { transform: translate(4px, -4px); }
+.ss-dim { color: rgb(var(--ss-ash)); }
+
+/* Viewfinder corners fly in */
+.ss-finder { position: relative; }
+.ss-finder::before, .ss-finder::after { content: ''; position: absolute; width: 18px; height: 18px; opacity: 0; transition: all .35s var(--ss-ease); pointer-events: none; z-index: 3; }
+.ss-finder::before { top: -4px; left: -4px; border-top: 2px solid rgb(var(--ss-ink)); border-left: 2px solid rgb(var(--ss-ink)); }
+.ss-finder::after { bottom: -4px; right: -4px; border-bottom: 2px solid rgb(var(--ss-ink)); border-right: 2px solid rgb(var(--ss-ink)); }
+.ss-finder:hover::before { opacity: 1; top: 10px; left: 10px; }
+.ss-finder:hover::after { opacity: 1; bottom: 10px; right: 10px; }
+
+/* Cursor spotlight + gentle tilt (vars set by useSpotlight) */
+.ss-spot { position: relative; overflow: hidden; transition: transform .4s var(--ss-ease); transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); }
+.ss-spot > .ss-glow { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s; z-index: 1;
+  background: radial-gradient(320px circle at var(--x, 50%) var(--y, 50%), rgb(var(--color-primary) / .2), transparent 65%); }
+.ss-spot:hover > .ss-glow { opacity: 1; }
+
+/* Images: grayscale until hovered */
+.ss-shot { filter: grayscale(1) contrast(1.05); transition: filter .6s ease, transform .6s var(--ss-ease); }
+.group:hover .ss-shot { filter: none; transform: scale(1.03); }
+.ss-hatch { background-image: repeating-linear-gradient(45deg, rgb(var(--ss-ink) / .14) 0 2px, transparent 2px 10px); }
+
+/* Arrows inside buttons slide */
+.ss-chev-btn .ss-chev { display: inline-block; transition: transform .3s var(--ss-ease); }
+.ss-chev-btn:hover .ss-chev { transform: translateX(5px); }
+
+/* ---------- Ambient motion ---------- */
+.ss-scan { position: absolute; left: 0; right: 0; height: 2px; background: rgb(var(--color-primary)); box-shadow: 0 0 12px rgb(var(--color-primary)); animation: ss-scan 3.6s ease-in-out infinite; z-index: 3; }
+@keyframes ss-scan { 0%, 100% { top: 4% } 50% { top: 94% } }
+
+@keyframes ss-blink { 50% { opacity: 0 } }
+.ss-blink { animation: ss-blink 1.2s steps(2, start) infinite; }
+
+/* Chevron conveyor: a repeating mask shifted by exactly one tile, so it loops seamlessly */
+.ss-conveyor {
+  --chev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 24'%3E%3Cpath d='M0 0h9l12 12L9 24H0l12-12z'/%3E%3C/svg%3E");
+  height: 16px;
+  background: rgb(var(--color-primary));
+  -webkit-mask: var(--chev) 0 50% / 20px 16px repeat-x;
+          mask: var(--chev) 0 50% / 20px 16px repeat-x;
+  animation: ss-convey .35s linear infinite;
+}
+@keyframes ss-convey { to { -webkit-mask-position: 20px 50%; mask-position: 20px 50%; } }
+
+/* Dossier punch holes */
+.ss-punch { position: absolute; top: 24px; bottom: 24px; left: 14px; width: 14px;
+  background-image: radial-gradient(circle, rgb(var(--ss-stock)) 0 4px, transparent 4.5px); background-size: 14px 56px; background-repeat: repeat-y; }
+
+/* Barcode bars grow in */
+.js .ss-barcode rect { transform: scaleY(0); transform-origin: bottom; transform-box: fill-box; transition: transform .5s var(--ss-ease); }
+.js .ss-barcode[data-in] rect { transform: scaleY(1); }
+
+/* Scroll progress + process connector (driven by CSS vars from JS) */
+.ss-progress { transform-origin: left; transform: scaleX(var(--p, 0)); }
+
+/* Theme switch: a cyan curtain sweeps across */
+.ss-curtain { position: fixed; inset: 0; background: rgb(var(--color-primary)); z-index: 200; transform: scaleX(0); pointer-events: none; }
+.ss-curtain.go { animation: ss-curtain .7s var(--ss-ease) both; }
+@keyframes ss-curtain {
+  0% { transform: scaleX(0); transform-origin: left; }
+  50% { transform: scaleX(1); transform-origin: left; }
+  50.1% { transform-origin: right; }
+  100% { transform: scaleX(0); transform-origin: right; }
+}
+
+/* ============================================================================
+   HERO CARD STACK — all cards share one grid cell; data-pos 0 = front.
+   ========================================================================== */
+.ss-stack { display: grid; cursor: pointer; outline: none; padding: 0 28px 28px 0; }
+.ss-card { grid-area: 1 / 1; transition: transform .6s var(--ss-ease), box-shadow .4s ease; will-change: transform; }
+.ss-card[data-pos="0"] { z-index: 3; transform: none; box-shadow: 0 10px 30px -12px rgba(0,0,0,.35); }
+.ss-card[data-pos="1"] { z-index: 2; transform: translate(14px, 14px) rotate(2.5deg); }
+.ss-card[data-pos="2"] { z-index: 1; transform: translate(28px, 28px) rotate(5deg); }
+.ss-stack:hover .ss-card[data-pos="0"], .ss-stack:focus-visible .ss-card[data-pos="0"] { transform: translate(-3px, -3px) rotate(-1deg); }
+.ss-stack:hover .ss-card[data-pos="1"], .ss-stack:focus-visible .ss-card[data-pos="1"] { transform: translate(18px, 16px) rotate(4deg); }
+.ss-stack:hover .ss-card[data-pos="2"], .ss-stack:focus-visible .ss-card[data-pos="2"] { transform: translate(36px, 30px) rotate(8deg); }
+.ss-stack:focus-visible .ss-card[data-pos="0"] { outline: 3px solid rgb(var(--color-primary)); outline-offset: 4px; }
+/* Shuffle step 1: front card is pulled up and out; step 2 (JS) sends it to data-pos="2" */
+.ss-card.fly { transform: translate(-38%, -10%) rotate(-11deg) !important; transition-duration: .38s; transition-timing-function: cubic-bezier(.5, 0, .75, 0); }
+
+/* Content swap (testimonials): blur-fade in on change */
+.ss-swap { animation: ss-swap .5s var(--ss-ease) both; }
+@keyframes ss-swap { from { opacity: 0; filter: blur(6px); translate: 0 8px; } }
+
+/* FAQ accordion */
+.ss-faq summary { list-style: none; cursor: pointer; }
+.ss-faq summary::-webkit-details-marker { display: none; }
+.ss-faq .ss-faq-icon { transition: transform .3s var(--ss-ease); }
+.ss-faq[open] .ss-faq-icon { transform: rotate(45deg); }
+.ss-faq-body ol, .ss-faq-body ul { margin: .5rem 0 0; padding: 0; list-style: none; }
+
+/* ---------- Reduced motion: everything visible, nothing moves ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .ss-sheet *, .ss-sheet *::before, .ss-sheet *::after, .ss-curtain { animation: none !important; transition: none !important; }
+  .js [data-reveal], .js [data-reveal="rows"] > *, .js .ss-drop, .js .ss-stamp { opacity: 1 !important; translate: none !important; }
+  .js .ss-drop { transform: none !important; }
+  .js .ss-bar { background-size: 100% 100%; color: rgb(var(--ss-onprimary)); }
+  .js .ss-shutter::after { display: none; }
+  .js .ss-barcode rect { transform: none; }
+  .ss-scan { display: none; }
+}
