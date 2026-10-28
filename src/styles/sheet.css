@@ -216,11 +216,15 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
 /* Links inside authored HTML (about page data) */
 .ss-about-html a, .ss-faq-body a { color: rgb(var(--color-primary)); text-decoration: underline; text-underline-offset: 3px; }
 
-/* FAQ accordion */
-.ss-faq summary { list-style: none; cursor: pointer; }
-.ss-faq summary::-webkit-details-marker { display: none; }
-.ss-faq .ss-faq-icon { transition: transform .3s var(--ss-ease); }
-.ss-faq[open] .ss-faq-icon { transform: rotate(45deg); }
+/* Accordion (components/sheet/Accordion.jsx): panels slide by animating the grid row
+   from 0fr to 1fr, which works for any content height; the body also fades/slides in. */
+.ss-acc-icon { display: inline-block; transition: transform .45s var(--ss-ease); }
+.ss-acc[data-open] .ss-acc-icon { transform: rotate(45deg); }
+.ss-acc-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ss-ease); }
+.ss-acc[data-open] .ss-acc-panel { grid-template-rows: 1fr; }
+.ss-acc-panel > div { overflow: hidden; min-height: 0; }
+.ss-acc-body { opacity: 0; translate: 0 -8px; transition: opacity .35s ease, translate .5s var(--ss-ease); }
+.ss-acc[data-open] .ss-acc-body { opacity: 1; translate: none; transition-delay: .08s; }
 .ss-faq-body ol, .ss-faq-body ul { margin: .5rem 0 0; padding: 0; list-style: none; }
 
 /* ---------- Reduced motion: everything visible, nothing moves ---------- */

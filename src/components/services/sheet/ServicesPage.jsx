@@ -7,7 +7,7 @@ import faqData from '../../../data/faq.json'
 import { capitalizeFirstLetter } from '../../../helpers/common'
 import PageHero from '../../sheet/PageHero'
 import SectionHeading, { Bar } from '../../sheet/SectionHeading'
-import FaqAccordion from '../../sheet/FaqAccordion'
+import Accordion, { faqItems } from '../../sheet/Accordion'
 import CtaBand from '../../sheet/CtaBand'
 import Process from '../../home/sheet/Process'
 
@@ -116,7 +116,7 @@ function ServicesPage() {
             </div>
           </div>
           <div className="lg:col-span-8">
-            <FaqAccordion key={faqGroup} questions={faqData[faqGroup] || []} />
+            <Accordion key={faqGroup} items={faqItems(faqData[faqGroup] || [])} initialOpen={0} numbered />
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@ import appConstants from '../../../constants/appConstants'
 import faqData from '../../../data/faq.json'
 import homeContent from '../../../data/homeContent.json'
 import SectionHeading, { Bar } from '../../sheet/SectionHeading'
-import FaqAccordion from '../../sheet/FaqAccordion'
+import Accordion, { faqItems } from '../../sheet/Accordion'
 
 // The client-facing questions, picked from the full development FAQ
 const questions = homeContent.faqIndexes.map((i) => faqData.development[i]).filter(Boolean)
@@ -22,7 +22,7 @@ function Faq() {
           </Link>
         </div>
         <div className="lg:col-span-8">
-          <FaqAccordion questions={questions} />
+          <Accordion items={faqItems(questions)} initialOpen={0} numbered />
         </div>
       </div>
     </section>

@@ -11,10 +11,10 @@ import communities from '../../../data/communities.json'
 import hobbies from '../../../data/hobbies.json'
 import languages from '../../../data/language.json'
 import { capitalizeFirstLetter } from '../../../helpers/common'
-import useExclusiveOpen from '../../../helpers/useExclusiveOpen'
 import PageHero from '../../sheet/PageHero'
 import SectionHeading, { Bar } from '../../sheet/SectionHeading'
 import CtaBand from '../../sheet/CtaBand'
+import Accordion from '../../sheet/Accordion'
 
 // HTML in these strings is authored in src/data/*.json (the old About page renders it the same way)
 const html = (s) => ({ __html: s })
@@ -47,9 +47,6 @@ const orderedLanguages = [...languages].sort((a, b) => (a.language === 'code') -
 // not answer every question a recruiter might have.
 function AboutPage() {
   const { paragraphs, facts } = homeContent.about
-  // One open item at a time in each list
-  const hobbyProps = useExclusiveOpen()
-  const languageProps = useExclusiveOpen()
 
   return (
     <>
@@ -161,30 +158,14 @@ function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 md:px-8 lg:grid-cols-2">
           <div>
             <SectionHeading label="[ beyond work ]" size="text-4xl sm:text-5xl">When I&apos;m <Bar>off the clock.</Bar></SectionHeading>
-            <div className="mt-10 border-t border-ink">
-              {hobbies.map((h, i) => (
-                <details key={h.name} className="ss-faq group border-b border-ink/15" data-reveal="up" {...hobbyProps(i)}>
-                  <summary className="flex justify-between gap-4 py-4">
-                    <span className="ss-display ss-cond text-xl group-hover:text-primary">{h.name}</span>
-                    <span className="ss-faq-icon font-jet text-xl leading-none text-primary" aria-hidden="true">+</span>
-                  </summary>
-                  <p className="ss-about-html pb-5 text-ash" dangerouslySetInnerHTML={html(h.desc)} />
-                </details>
-              ))}
+            <div className="mt-10">
+              <Accordion size="sm" items={hobbies.map((h) => ({ title: h.name, html: h.desc }))} />
             </div>
           </div>
           <div>
             <SectionHeading label="[ languages ]" size="text-4xl sm:text-5xl">How I <Bar>talk.</Bar></SectionHeading>
-            <div className="mt-10 border-t border-ink">
-              {orderedLanguages.map((l, i) => (
-                <details key={l.language} className="ss-faq group border-b border-ink/15" data-reveal="up" {...languageProps(i)}>
-                  <summary className="flex justify-between gap-4 py-4">
-                    <span className="ss-display ss-cond text-xl group-hover:text-primary">{capitalizeFirstLetter(l.language)}</span>
-                    <span className="ss-faq-icon font-jet text-xl leading-none text-primary" aria-hidden="true">+</span>
-                  </summary>
-                  <p className="ss-about-html pb-5 text-ash" dangerouslySetInnerHTML={html(l.description)} />
-                </details>
-              ))}
+            <div className="mt-10">
+              <Accordion size="sm" items={orderedLanguages.map((l) => ({ title: capitalizeFirstLetter(l.language), html: l.description }))} />
             </div>
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-jet text-xs font-bold uppercase tracking-[.16em]" data-reveal="up">
               <Link to={appConstants.routes.listsBooks} className="text-primary hover:underline">Books I read ▸</Link>

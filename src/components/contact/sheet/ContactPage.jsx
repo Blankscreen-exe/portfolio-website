@@ -5,7 +5,7 @@ import faqData from '../../../data/faq.json'
 import homeContent from '../../../data/homeContent.json'
 import Contact from '../../home/sheet/Contact'
 import SectionHeading, { Bar } from '../../sheet/SectionHeading'
-import FaqAccordion from '../../sheet/FaqAccordion'
+import Accordion, { faqItems } from '../../sheet/Accordion'
 
 const CHANNELS = [
   { name: 'Book a call', detail: 'Pick a time that suits you', href: socialLinks.calendarBooking },
@@ -53,7 +53,7 @@ function ContactPage() {
           <div className="lg:col-span-4">
             <SectionHeading label="[ questions ]" size="text-4xl sm:text-5xl">Good to <Bar>know.</Bar></SectionHeading>
           </div>
-          <div className="lg:col-span-8"><FaqAccordion questions={questions} /></div>
+          <div className="lg:col-span-8"><Accordion items={faqItems(questions)} initialOpen={0} numbered /></div>
         </div>
       </section>
 
