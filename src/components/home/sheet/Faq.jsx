@@ -5,6 +5,7 @@ import appConstants from '../../../constants/appConstants'
 import faqData from '../../../data/faq.json'
 import homeContent from '../../../data/homeContent.json'
 import SectionHeading, { Bar } from '../../sheet/SectionHeading'
+import FaqAccordion from '../../sheet/FaqAccordion'
 
 // The client-facing questions, picked from the full development FAQ
 const questions = homeContent.faqIndexes.map((i) => faqData.development[i]).filter(Boolean)
@@ -20,21 +21,8 @@ function Faq() {
             All questions <span className="ss-chev">▸▸▸</span>
           </Link>
         </div>
-
-        <div className="border-t border-ink lg:col-span-8" data-reveal="rows">
-          {questions.map((q, i) => (
-            <details key={q.question} className="ss-faq group border-b border-ink" open={i === 0}>
-              <summary className="flex items-start justify-between gap-6 py-5">
-                <span className="flex gap-4">
-                  <span className="pt-1 font-jet text-xs text-ash">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="ss-display ss-cond text-2xl group-hover:text-primary">{q.question}</span>
-                </span>
-                <span className="ss-faq-icon font-jet text-2xl leading-none text-primary" aria-hidden="true">+</span>
-              </summary>
-              {/* Answers are trusted HTML authored in faq.json (same as the existing FAQ component) */}
-              <div className="ss-faq-body pb-6 pl-9 leading-relaxed text-ash" dangerouslySetInnerHTML={{ __html: q.answer }} />
-            </details>
-          ))}
+        <div className="lg:col-span-8">
+          <FaqAccordion questions={questions} />
         </div>
       </div>
     </section>

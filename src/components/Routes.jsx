@@ -8,30 +8,37 @@ import appConstants from '../constants/appConstants'
 // Components
 import PageTitle from './common/PageTitle'
 import Home from './home'
-import About from './about'
-import Services from './services'
+// import About from './about' //REF: replaced by AboutPage (redesign)
+// import Services from './services' //REF: replaced by ServicesPage (redesign)
 import Error404 from './common/404'
-import WorkExperience from './workHistory'
+// import WorkExperience from './workHistory' //REF: merged into AboutPage #experience (redesign)
 import BookList from './booksList'
 import GameList from './gameList'
 import BookmarksList from './bookmarksList'
 import DevResourceList from './devResourceList'
 import TargetSkillSet from './targetSkillSet'
 import Certificates from './certificates'
-import Blog from './blog'
-import Project from './projects'
-// Contact page moved into the Home #contact section; route below redirects there.
-// import Contact from './contact'
+// import Blog from './blog' //REF: replaced by WritingPage (redesign)
+// import Project from './projects' //REF: replaced by WorkPage + ProjectDetail (redesign)
+
+// Spec-sheet redesign pages
+import AboutPage from './about/sheet/AboutPage'
+import ServicesPage from './services/sheet/ServicesPage'
+import WorkPage from './projects/sheet/WorkPage'
+import ProjectDetail from './projects/sheet/ProjectDetail'
+import WritingPage from './blog/sheet/WritingPage'
+import ContactPage from './contact/sheet/ContactPage'
 
 function RoutesList(props) {
   return (
     <Routes>
         <Route path={appConstants.routes.home} element={<Home/>}/>
-        <Route path={appConstants.routes.aboutMe} element={<About/>}/>
-        <Route path={appConstants.routes.blog} element={<Blog/>}/>
+        <Route path={appConstants.routes.aboutMe} element={<AboutPage/>}/>
+        <Route path={appConstants.routes.blog} element={<WritingPage/>}/>
 
         {/* <Route path={appConstants.routes.experience} element={<WorkExperience/>}/> */}
-        <Route path={appConstants.routes.experienceWorkHistory} element={<WorkExperience/>}/>
+        {/* Experience & awards now live on the About page */}
+        <Route path={appConstants.routes.experienceWorkHistory} element={<Navigate to={`${appConstants.routes.aboutMe}#experience`} replace/>}/>
         {/* <Route path={appConstants.routes.experienceAwards} element={<PageTitle title="Work Experience Award"/>}/> */}
         <Route path={appConstants.routes.experienceCertificates} element={<Certificates/>}/>
         <Route path={appConstants.routes.experienceUpcomingSkills} element={<TargetSkillSet/>}/>
@@ -44,16 +51,15 @@ function RoutesList(props) {
         <Route path={appConstants.routes.listsResources} element={<DevResourceList/>}/>
         <Route path={appConstants.routes.listsBookmarks} element={<BookmarksList/>}/>
 
-        <Route path={appConstants.routes.services} element={<Services/>}/>
-        <Route path={appConstants.routes.servicesBackend} element={<Services/>}/>
-        <Route path={appConstants.routes.servicesFrontend} element={<Services/>}/>
-        <Route path={appConstants.routes.servicesMachineLearning} element={<Services/>}/>
-        <Route path={appConstants.routes.servicesMentorship} element={<Services/>}/>
-        <Route path={appConstants.routes.servicesFaq} element={<Services/>}/>
+        {/* Old ?servicetype=N links are handled inside ServicesPage */}
+        <Route path={appConstants.routes.services} element={<ServicesPage/>}/>
 
-        <Route path={appConstants.routes.projects} element={<Project/>}/>
+        <Route path={appConstants.routes.projects} element={<WorkPage/>}/>
+        <Route path={appConstants.routes.projectDetail} element={<ProjectDetail/>}/>
+        <Route path="/work" element={<Navigate to={appConstants.routes.projects} replace/>}/>
 
-        <Route path={appConstants.routes.contacts} element={<Navigate to="/#contact" replace/>}/>
+        <Route path={appConstants.routes.contacts} element={<ContactPage/>}/>
+        <Route path="/contact" element={<Navigate to={appConstants.routes.contacts} replace/>}/>
 
         <Route path={"*"} element={<Error404/>}/>
     </Routes>

@@ -42,7 +42,11 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
     linear-gradient(90deg, rgb(var(--ss-ink) / .07) 1px, transparent 1px);
   background-size: 48px 48px;
   transition: background-color .5s ease, color .5s ease;
+  /* keep the footer at the bottom of the screen on short pages */
+  display: flex;
+  flex-direction: column;
 }
+.ss-sheet > main { flex: 1 0 auto; }
 @media (max-width: 640px) { .ss-sheet { margin: 6px; } }
 
 /* App.css redefines Tailwind's `.sticky` as position:fixed for the old navbar, so the
@@ -208,6 +212,9 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
 /* Content swap (testimonials): blur-fade in on change */
 .ss-swap { animation: ss-swap .5s var(--ss-ease) both; }
 @keyframes ss-swap { from { opacity: 0; filter: blur(6px); translate: 0 8px; } }
+
+/* Links inside authored HTML (about page data) */
+.ss-about-html a, .ss-faq-body a { color: rgb(var(--color-primary)); text-decoration: underline; text-underline-offset: 3px; }
 
 /* FAQ accordion */
 .ss-faq summary { list-style: none; cursor: pointer; }

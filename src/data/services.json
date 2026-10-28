@@ -10,7 +10,9 @@
             "Internal tools",
             "APIs & backend systems",
             "MVPs & production products"
-        ]
+        ],
+        "goodFitIf": "You have an idea, or an early product, and need someone to build it properly and see it through to real users.",
+        "contactTopic": "Build an app or website"
     },
     {
         "title": "AI Engineering",
@@ -23,7 +25,9 @@
             "RAG systems",
             "AI automation",
             "Model/API integrations"
-        ]
+        ],
+        "goodFitIf": "You want AI to do real work in your business, like answering customers, reading documents or finding leads.",
+        "contactTopic": "AI & automation"
     },
     {
         "title": "AI Prototype To Production",
@@ -37,7 +41,9 @@
             "Reliability & observability",
             "Security & access control",
             "Scaling & deployment"
-        ]
+        ],
+        "goodFitIf": "You have an AI demo that works on your laptop and now it needs to hold up with real customers.",
+        "contactTopic": "AI & automation"
     },
     {
         "title": "Technical Rescue",
@@ -50,7 +56,9 @@
             "Performance investigations",
             "Technical debt",
             "Technical roadmaps"
-        ]
+        ],
+        "goodFitIf": "Your software keeps breaking, is slow, or every change takes far longer than it should.",
+        "contactTopic": "Fix existing software"
     },
     {
         "title": "Consultancy & Audit",
@@ -63,7 +71,9 @@
             "System design",
             "Engineering roadmaps",
             "Technical decision reviews"
-        ]
+        ],
+        "goodFitIf": "You're about to make a big technical decision and want an experienced second opinion first.",
+        "contactTopic": "Advice & mentoring"
     },
     {
         "title": "Automation & Integrations",
@@ -77,7 +87,9 @@
             "Data synchronization",
             "Workflow automation",
             "Internal tooling"
-        ]
+        ],
+        "goodFitIf": "Your team copies data between tools by hand, or your systems don't talk to each other.",
+        "contactTopic": "AI & automation"
     },
     {
         "title": "mentorship",
@@ -91,6 +103,8 @@
             "Resume Improvement",
             "Interview Preparation",
             "... and more"
-        ]
+        ],
+        "goodFitIf": "You're a developer who wants structured guidance, project help or career coaching.",
+        "contactTopic": "Advice & mentoring"
     }
 ]

@@ -8,6 +8,7 @@ export default {
         aboutMeLanguages:"/about#languages",
         
         projects:"/projects",
+        projectDetail:"/projects/:slug",
         
         experience:"/experience",
         experienceWorkHistory:"/experience/work-history",

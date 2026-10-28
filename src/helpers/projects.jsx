@@ -25,6 +25,39 @@ export function resolveProjectThumbnail(thumbnailUrl) {
   return resolveProjectImages(thumbnailUrl)[0]
 }
 
+// ---------- Redesign helpers ----------
+
+// "AMOS - AI Powered CRM System" → { name: "AMOS", subtitle: "AI Powered CRM System" }
+export function splitTitle(title = '') {
+  const [name, ...rest] = title.split(' - ')
+  return { name, subtitle: rest.join(' - ') }
+}
+
+// First sentence of a (long, technical) description, for card copy
+export function firstSentence(text = '') {
+  const para = text.split('\n')[0]
+  const m = para.match(/^.*?[.!?](\s|$)/)
+  return (m ? m[0] : para).trim()
+}
+
+// Short status word for badges
+export function statusLabel(project) {
+  if (project.status === 'ongoing') return project.projUrl ? 'Live' : 'Ongoing'
+  return 'Shipped'
+}
+
+// Client work vs side projects ("hobby")
+export const isClientWork = (project) => project.category !== 'hobby'
+
+// URL slug from the project title: "AMOS - AI Powered CRM System" → "amos-ai-powered-crm-system"
+export function projectSlug(project) {
+  return (project.title || '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
 // Build the category / status / contribution meta (icon + title + description) for a
 // project. Centralizes the labelling logic that used to be duplicated in ProjectCard.
 export function getProjectMeta({ category, status, openToContrib }) {

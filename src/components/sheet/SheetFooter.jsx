@@ -13,13 +13,13 @@ const COLUMNS = [
       { name: 'Services', to: appConstants.routes.services },
       { name: 'About', to: appConstants.routes.aboutMe },
       { name: 'Writing', to: appConstants.routes.blog },
-      { name: 'Contact', to: `${appConstants.routes.home}#contact` },
+      { name: 'Contact', to: appConstants.routes.contacts },
     ],
   },
   {
     title: 'More',
     links: [
-      { name: 'Experience & awards', to: appConstants.routes.experienceWorkHistory },
+      { name: 'Experience & awards', to: `${appConstants.routes.aboutMe}#experience` },
       { name: 'Certificates', to: appConstants.routes.experienceCertificates },
       { name: 'Books', to: appConstants.routes.listsBooks },
       { name: 'Bookmarks', to: appConstants.routes.listsBookmarks },

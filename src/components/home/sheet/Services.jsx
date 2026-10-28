@@ -13,7 +13,7 @@ function Services() {
 
         <div className="mt-12 border-t border-ink" data-reveal="rows">
           {homeContent.services.map((s) => (
-            <Link key={s.key} to={appConstants.routes.services} className="ss-wipe grid items-baseline gap-2 border-b border-ink/15 px-2 py-6 md:grid-cols-12">
+            <Link key={s.key} to={`${appConstants.routes.services}#service-${s.serviceIndex}`} className="ss-wipe grid items-baseline gap-2 border-b border-ink/15 px-2 py-6 md:grid-cols-12">
               <span className="ss-dim font-jet text-xs md:col-span-1">{s.key}</span>
               <h3 className="ss-display ss-cond text-3xl md:col-span-4">{s.title}</h3>
               <p className="ss-dim md:col-span-6">{s.description}</p>

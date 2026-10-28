@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 import { Turnstile } from '@marsidev/react-turnstile'
 
@@ -28,10 +29,17 @@ function Field({ label, error, children }) {
 }
 
 function ContactForm() {
+  const [params] = useSearchParams()
   const [data, setData] = useState(EMPTY)
   const [errors, setErrors] = useState({})
   const [captcha, setCaptcha] = useState(null) // null | 'success' | 'error' | 'expired'
   const [state, setState] = useState('idle')  // idle | sending | sent | failed
+
+  // Buttons elsewhere link here with ?topic=… to pre-select what the visitor needs
+  useEffect(() => {
+    const topic = params.get('topic')
+    if (topic && homeContent.contactTopics.includes(topic)) setData((d) => ({ ...d, topic }))
+  }, [params])
 
   const set = (name) => (e) => setData((d) => ({ ...d, [name]: e.target.value }))
 

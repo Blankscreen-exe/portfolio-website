@@ -11,14 +11,15 @@ const NEXT_STEPS = [
   'You get a clear plan and quote before any work starts.',
 ]
 
-// Inverted (ink) panel; every "Start a project" button on the site lands here.
-function Contact() {
+// Inverted (ink) panel with the contact form. Used on the home page and the Contact page;
+// `label` / `section` / `id` let each place number it its own way.
+function Contact({ label = '[ 07 / contact ]', section = '07 / contact', id = 'contact', headingAs: Heading = 'h2' }) {
   return (
-    <section id="contact" data-section="07 / contact" className="scroll-mt-16 bg-ink text-stock transition-colors duration-500">
+    <section id={id} data-section={section} className="scroll-mt-16 bg-ink text-stock transition-colors duration-500">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:px-8 lg:grid-cols-2">
         <div>
-          <div className="ss-label !text-stock/60" data-reveal="up"><Scramble text="[ 07 / contact ]" /></div>
-          <h2 className="ss-display mt-4 text-6xl sm:text-7xl" data-reveal="focus">Let&apos;s <Bar>talk.</Bar></h2>
+          <div className="ss-label !text-stock/60" data-reveal="up"><Scramble text={label} /></div>
+          <Heading className="ss-display mt-4 text-6xl sm:text-7xl" data-reveal="focus">Let&apos;s <Bar>talk.</Bar></Heading>
           <p className="mt-6 max-w-md text-lg text-stock/75" data-reveal="up">
             A sentence or two is enough, no technical details needed.
           </p>

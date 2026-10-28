@@ -3,34 +3,14 @@ import { Link } from 'react-router-dom'
 
 import appConstants from '../../../constants/appConstants'
 import projectList from '../../../data/projectList.json'
-import { resolveProjectThumbnail } from '../../../helpers/projects'
+import { resolveProjectThumbnail, splitTitle, firstSentence, statusLabel, projectSlug } from '../../../helpers/projects'
 import SectionHeading, { Bar } from '../../sheet/SectionHeading'
 
 const featured = projectList.filter((p) => p.featured)
 
-// "AMOS - AI Powered CRM System" → { name: "AMOS", subtitle: "AI Powered CRM System" }
-function splitTitle(title) {
-  const [name, ...rest] = title.split(' - ')
-  return { name, subtitle: rest.join(' - ') }
-}
-
-// First sentence of the (long, technical) description, for card copy
-function firstSentence(text = '') {
-  const para = text.split('\n')[0]
-  const m = para.match(/^.*?[.!?](\s|$)/)
-  return (m ? m[0] : para).trim()
-}
-
-function statusBadge(p) {
-  if (p.status === 'ongoing') return p.projUrl ? 'Live' : 'Ongoing'
-  return 'Shipped'
-}
-
-// External live link when there is one, otherwise the projects page
+// Cards open the project's detail page (which has the live link), keeping visitors on the site
 function ProjectLink({ project, className, children }) {
-  return project.projUrl
-    ? <a href={project.projUrl} target="_blank" rel="noopener noreferrer" className={className}>{children}</a>
-    : <Link to={appConstants.routes.projects} className={className}>{children}</Link>
+  return <Link to={`/projects/${projectSlug(project)}`} className={className}>{children}</Link>
 }
 
 function SelectedWork() {
@@ -55,8 +35,8 @@ function SelectedWork() {
             <div>
               <div className="flex items-center justify-between font-jet text-[10px] uppercase tracking-[.15em]">
                 <span className="flex items-center gap-2 bg-primary px-2 py-0.5 text-onprimary">
-                  {statusBadge(lead) === 'Live' && <span className="ss-blink inline-block h-1.5 w-1.5 bg-onprimary" />}
-                  {statusBadge(lead)}
+                  {statusLabel(lead) === 'Live' && <span className="ss-blink inline-block h-1.5 w-1.5 bg-onprimary" />}
+                  {statusLabel(lead)}
                 </span>
                 <span className="text-ash">Featured</span>
               </div>
@@ -69,7 +49,7 @@ function SelectedWork() {
               </dl>
             </div>
             <span className="ss-chev-btn mt-8 font-jet text-[11px] font-bold uppercase tracking-[.2em] text-primary">
-              {lead.projUrl ? 'Visit live site' : 'See the project'} <span className="ss-chev">↗</span>
+              Read the full story <span className="ss-chev">↗</span>
             </span>
           </div>
           <div className="ss-shutter relative min-h-[260px] border-t border-ink md:border-l md:border-t-0" data-reveal="shutter">
@@ -89,7 +69,7 @@ function SelectedWork() {
                 </div>
                 <div className="relative z-[2] flex flex-1 flex-col p-6" data-reveal="up" style={{ '--i': i % 2 }}>
                   <div className="flex justify-between font-jet text-[10px] uppercase tracking-[.15em] text-ash">
-                    <span>{statusBadge(p)}</span>
+                    <span>{statusLabel(p)}</span>
                     <span className="text-primary opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
                   </div>
                   <h3 className="ss-display ss-cond mt-4 text-3xl">{t.name}</h3>

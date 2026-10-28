@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -22,14 +22,36 @@ import RoutesList from './components/Routes.jsx';
 import appConstants from './constants/appConstants'
 import { useSheetMotion } from './helpers/sheetMotion'
 
-// Routes already rebuilt in the spec-sheet layout render full width; every other page
-// keeps its old centred container (.ss-legacy) until it is redesigned.
-const REDESIGNED_ROUTES = [appConstants.routes.home]
+// Pages not yet rebuilt in the spec-sheet layout keep their old centred container
+// (.ss-legacy); everything else renders full width.
+const LEGACY_ROUTES = [
+  appConstants.routes.experienceCertificates,
+  appConstants.routes.experienceUpcomingSkills,
+  appConstants.routes.listsGames,
+  appConstants.routes.listsBooks,
+  appConstants.routes.listsResources,
+  appConstants.routes.listsBookmarks,
+]
 
 function App() {
   const location = useLocation()
-  const isRedesigned = REDESIGNED_ROUTES.includes(location.pathname)
+  const isLegacy = LEGACY_ROUTES.includes(location.pathname)
   useSheetMotion()
+
+  // On navigation: scroll to the #hash target if there is one, otherwise to the top.
+  // Query-string-only changes (e.g. Work page tabs) keep the scroll position.
+  useEffect(() => {
+    if (location.hash) {
+      // small delay so layout/images settle before scrolling
+      const id = setTimeout(() => {
+        document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+      return () => clearTimeout(id)
+    }
+    window.scrollTo(0, 0)
+    // location.key re-runs the hash scroll when the same #link is clicked again
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, location.hash, location.hash ? location.key : null])
 
   const count = useSelector((state) => {
     // console.log(state)
@@ -46,7 +68,7 @@ function App() {
     <>
     <div className="ss-sheet">
       <SheetHeader/>
-      <main className={isRedesigned ? '' : 'ss-legacy'}>
+      <main className={isLegacy ? 'ss-legacy' : ''}>
         <RoutesList/>
       </main>
       <SheetFooter/>

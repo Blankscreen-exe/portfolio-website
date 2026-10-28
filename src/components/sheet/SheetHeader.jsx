@@ -99,7 +99,7 @@ function SheetHeader() {
             ◐
           </button>
           <Link
-            to={`${appConstants.routes.home}#contact`}
+            to={appConstants.routes.contacts}
             className="ss-drop ss-chev-btn hidden items-center gap-1 bg-ink px-5 font-jet text-xs font-bold uppercase tracking-widest text-stock transition-opacity hover:opacity-90 sm:flex"
             style={{ '--i': 7 }}
           >
@@ -132,7 +132,7 @@ function SheetHeader() {
               </NavLink>
             ))}
             <Link
-              to={`${appConstants.routes.home}#contact`}
+              to={appConstants.routes.contacts}
               className="block bg-primary px-5 py-4 font-jet text-xs font-bold uppercase tracking-widest text-onprimary"
             >
               Start a project ↗

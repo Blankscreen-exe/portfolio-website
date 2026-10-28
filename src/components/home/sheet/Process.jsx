@@ -3,7 +3,8 @@ import React, { useEffect, useRef } from 'react'
 import homeContent from '../../../data/homeContent.json'
 import SectionHeading, { Bar } from '../../sheet/SectionHeading'
 
-function Process() {
+// `label` / `section` let other pages reuse the block without the home page's numbering
+function Process({ label = '[ 04 / how it works ]', section = '04 / how it works' }) {
   const sectionRef = useRef(null)
   const lineRef = useRef(null)
 
@@ -23,9 +24,9 @@ function Process() {
   const steps = homeContent.process
 
   return (
-    <section ref={sectionRef} id="process" data-section="04 / how it works" className="border-b border-ink">
+    <section ref={sectionRef} id="process" data-section={section} className="border-b border-ink">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
-        <SectionHeading label="[ 04 / how it works ]">Three <Bar>steps.</Bar></SectionHeading>
+        <SectionHeading label={label}>Three <Bar>steps.</Bar></SectionHeading>
 
         <div className="relative mt-12">
           <div className="absolute -top-3 left-0 right-0 hidden h-[3px] bg-ink/15 md:block" aria-hidden="true">
