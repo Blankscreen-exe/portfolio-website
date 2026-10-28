@@ -5,19 +5,18 @@ import appConstants from '../../../constants/appConstants'
 import imgList from '../../../constants/img'
 import homeContent from '../../../data/homeContent.json'
 import socialLinks from '../../../data/socialLinks.json'
-import workTimeline from '../../../data/workTimeline.json'
 import awards from '../../../data/awards.json'
-import education from '../../../data/educationTimeLine.json'
 import techStack from '../../../data/techStack.json'
 import communities from '../../../data/communities.json'
 import hobbies from '../../../data/hobbies.json'
 import languages from '../../../data/language.json'
 import { capitalizeFirstLetter } from '../../../helpers/common'
+import useExclusiveOpen from '../../../helpers/useExclusiveOpen'
 import PageHero from '../../sheet/PageHero'
 import SectionHeading, { Bar } from '../../sheet/SectionHeading'
 import CtaBand from '../../sheet/CtaBand'
 
-// HTML in these strings is authored in src/data/*.json (the old About/Experience pages render it the same way)
+// HTML in these strings is authored in src/data/*.json (the old About page renders it the same way)
 const html = (s) => ({ __html: s })
 
 const TOOLKIT_LABELS = { languages: 'Languages', backend: 'Backend', frontend: 'Frontend', database: 'Databases', 'ML DS AI': 'AI & data', other: 'Infra & tools' }
@@ -41,8 +40,16 @@ function Portrait() {
   )
 }
 
+// "Code" reads best as the punchline, so it goes last
+const orderedLanguages = [...languages].sort((a, b) => (a.language === 'code') - (b.language === 'code'))
+
+// Experience and education are left off on purpose: the page should spark a conversation,
+// not answer every question a recruiter might have.
 function AboutPage() {
   const { paragraphs, facts } = homeContent.about
+  // One open item at a time in each list
+  const hobbyProps = useExclusiveOpen()
+  const languageProps = useExclusiveOpen()
 
   return (
     <>
@@ -71,37 +78,6 @@ function AboutPage() {
                 </div>
               </dl>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience */}
-      <section id="experience" className="scroll-mt-16 border-b border-ink" data-section="experience">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
-          <SectionHeading label="[ experience ]">Where I&apos;ve <Bar>worked.</Bar></SectionHeading>
-          <div className="mt-12 border-t border-ink">
-            {workTimeline.map((job, i) => (
-              <details key={job.title} className="ss-faq group border-b border-ink" open={i === 0} data-reveal="up">
-                <summary className="grid gap-2 py-6 md:grid-cols-12 md:items-baseline">
-                  <span className="font-jet text-xs uppercase tracking-[.12em] text-ash md:col-span-3">{job.date}</span>
-                  <span className="md:col-span-8">
-                    <span className="ss-display ss-cond block text-3xl group-hover:text-primary">{job.title}</span>
-                    <span className="mt-1 block font-jet text-xs uppercase tracking-[.12em]">{job.tooltip}</span>
-                  </span>
-                  <span className="ss-faq-icon hidden text-right font-jet text-2xl text-primary md:col-span-1 md:block" aria-hidden="true">+</span>
-                </summary>
-                <div className="pb-8 md:grid md:grid-cols-12">
-                  <ul className="space-y-2 text-ash md:col-span-8 md:col-start-4">
-                    {job.description.map((d) => (
-                      <li key={d} className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 shrink-0 bg-primary" /><span dangerouslySetInnerHTML={html(d)} /></li>
-                    ))}
-                    {job.orgUrl && (
-                      <li className="pt-2"><a href={job.orgUrl} target="_blank" rel="noopener noreferrer" className="font-jet text-xs font-bold uppercase tracking-[.14em] text-primary hover:underline">{job.title} ↗</a></li>
-                    )}
-                  </ul>
-                </div>
-              </details>
-            ))}
           </div>
         </div>
       </section>
@@ -159,32 +135,13 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Education */}
-      <section id="education" className="scroll-mt-16 border-b border-ink bg-paper" data-section="education">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
-          <SectionHeading label="[ education ]">Where I <Bar>studied.</Bar></SectionHeading>
-          <div className="mt-12 border-t border-ink">
-            {education.map((e) => (
-              <div key={e.degreeTitle} className="grid gap-3 border-b border-ink/15 py-8 md:grid-cols-12" data-reveal="up">
-                <span className="font-jet text-xs uppercase tracking-[.12em] text-ash md:col-span-3">{e.startDate} – {e.endDate}</span>
-                <div className="md:col-span-9">
-                  <h3 className="ss-display ss-cond text-3xl">{e.degreeTitle}</h3>
-                  <p className="ss-about-html mt-1 font-jet text-xs uppercase tracking-[.12em]" dangerouslySetInnerHTML={html(e.organization)} />
-                  <p className="ss-about-html mt-4 leading-relaxed text-ash" dangerouslySetInnerHTML={html(e.description)} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Communities */}
-      <section id="communities" className="scroll-mt-16 border-b border-ink" data-section="communities">
+      <section id="communities" className="scroll-mt-16 border-b border-ink bg-paper" data-section="communities">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
           <SectionHeading label="[ communities ]">Giving <Bar>back.</Bar></SectionHeading>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {communities.map((c, i) => (
-              <a key={c.title} href={c.websiteUrl} target="_blank" rel="noopener noreferrer" className="ss-spot ss-finder group flex flex-col border border-ink bg-paper" data-reveal="up" style={{ '--i': i }}>
+              <a key={c.title} href={c.websiteUrl} target="_blank" rel="noopener noreferrer" className="ss-spot ss-finder group flex flex-col border border-ink bg-stock" data-reveal="up" style={{ '--i': i }}>
                 <span className="ss-glow" />
                 <div className="relative grid aspect-[16/9] place-items-center overflow-hidden border-b border-ink bg-stock p-6">
                   <img src={resolveCommunityImage(c.imageUrl)} alt="" loading="lazy" className="ss-shot max-h-full max-w-full object-contain" />
@@ -200,13 +157,13 @@ function AboutPage() {
       </section>
 
       {/* Beyond work */}
-      <section id="beyond" className="scroll-mt-16 border-b border-ink bg-paper" data-section="beyond work">
+      <section id="beyond" className="scroll-mt-16 border-b border-ink" data-section="beyond work">
         <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 md:px-8 lg:grid-cols-2">
           <div>
             <SectionHeading label="[ beyond work ]" size="text-4xl sm:text-5xl">When I&apos;m <Bar>off the clock.</Bar></SectionHeading>
             <div className="mt-10 border-t border-ink">
-              {hobbies.map((h) => (
-                <details key={h.name} className="ss-faq group border-b border-ink/15" data-reveal="up">
+              {hobbies.map((h, i) => (
+                <details key={h.name} className="ss-faq group border-b border-ink/15" data-reveal="up" {...hobbyProps(i)}>
                   <summary className="flex justify-between gap-4 py-4">
                     <span className="ss-display ss-cond text-xl group-hover:text-primary">{h.name}</span>
                     <span className="ss-faq-icon font-jet text-xl leading-none text-primary" aria-hidden="true">+</span>
@@ -219,8 +176,8 @@ function AboutPage() {
           <div>
             <SectionHeading label="[ languages ]" size="text-4xl sm:text-5xl">How I <Bar>talk.</Bar></SectionHeading>
             <div className="mt-10 border-t border-ink">
-              {languages.map((l) => (
-                <details key={l.language} className="ss-faq group border-b border-ink/15" data-reveal="up">
+              {orderedLanguages.map((l, i) => (
+                <details key={l.language} className="ss-faq group border-b border-ink/15" data-reveal="up" {...languageProps(i)}>
                   <summary className="flex justify-between gap-4 py-4">
                     <span className="ss-display ss-cond text-xl group-hover:text-primary">{capitalizeFirstLetter(l.language)}</span>
                     <span className="ss-faq-icon font-jet text-xl leading-none text-primary" aria-hidden="true">+</span>

@@ -11,7 +11,7 @@ import Home from './home'
 // import About from './about' //REF: replaced by AboutPage (redesign)
 // import Services from './services' //REF: replaced by ServicesPage (redesign)
 import Error404 from './common/404'
-// import WorkExperience from './workHistory' //REF: merged into AboutPage #experience (redesign)
+// import WorkExperience from './workHistory' //REF: retired in the redesign; awards moved to AboutPage #awards
 import BookList from './booksList'
 import GameList from './gameList'
 import BookmarksList from './bookmarksList'
@@ -37,8 +37,8 @@ function RoutesList(props) {
         <Route path={appConstants.routes.blog} element={<WritingPage/>}/>
 
         {/* <Route path={appConstants.routes.experience} element={<WorkExperience/>}/> */}
-        {/* Experience & awards now live on the About page */}
-        <Route path={appConstants.routes.experienceWorkHistory} element={<Navigate to={`${appConstants.routes.aboutMe}#experience`} replace/>}/>
+        {/* Old experience & awards page: awards now live on the About page */}
+        <Route path={appConstants.routes.experienceWorkHistory} element={<Navigate to={`${appConstants.routes.aboutMe}#awards`} replace/>}/>
         {/* <Route path={appConstants.routes.experienceAwards} element={<PageTitle title="Work Experience Award"/>}/> */}
         <Route path={appConstants.routes.experienceCertificates} element={<Certificates/>}/>
         <Route path={appConstants.routes.experienceUpcomingSkills} element={<TargetSkillSet/>}/>

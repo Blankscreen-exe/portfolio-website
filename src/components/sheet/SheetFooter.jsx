@@ -19,7 +19,7 @@ const COLUMNS = [
   {
     title: 'More',
     links: [
-      { name: 'Experience & awards', to: `${appConstants.routes.aboutMe}#experience` },
+      { name: 'Awards & talks', to: `${appConstants.routes.aboutMe}#awards` },
       { name: 'Certificates', to: appConstants.routes.experienceCertificates },
       { name: 'Books', to: appConstants.routes.listsBooks },
       { name: 'Bookmarks', to: appConstants.routes.listsBookmarks },
