@@ -91,7 +91,8 @@ function AboutPage() {
                 <Wrapper key={a.title} {...props} className="ss-spot ss-finder group flex flex-col border border-ink bg-stock" data-reveal="up" style={{ '--i': i % 3 }}>
                   <span className="ss-glow" />
                   <div className="relative aspect-[16/9] overflow-hidden border-b border-ink">
-                    <img src={imgList.awards[a.imgUrl]} alt="" loading="lazy" className="ss-shot h-full w-full object-cover" />
+                    {/* Award photos stay grayscale on hover (only the zoom remains), unlike other cards */}
+                    <img src={imgList.awards[a.imgUrl]} alt="" loading="lazy" className="h-full w-full object-cover contrast-[1.05] grayscale transition-transform duration-500 group-hover:scale-[1.03]" />
                   </div>
                   <div className="relative z-[2] flex flex-1 flex-col p-5">
                     <div className="flex justify-between font-jet text-[10px] uppercase tracking-[.15em] text-ash">
