@@ -160,6 +160,10 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
 @keyframes ss-blink { 50% { opacity: 0 } }
 .ss-blink { animation: ss-blink 1.2s steps(2, start) infinite; }
 
+/* Autoplay countdown: a bar that fills left to right (duration set inline). Full when animation is off. */
+.ss-fill { animation: ss-fill linear both; }
+@keyframes ss-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
 /* Chevron conveyor: a repeating mask shifted by exactly one tile, so it loops seamlessly */
 .ss-conveyor {
   --chev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 24'%3E%3Cpath d='M0 0h9l12 12L9 24H0l12-12z'/%3E%3C/svg%3E");
