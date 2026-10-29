@@ -1,0 +1,23 @@
+{
+  "title": "Ghost Cue",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Oct 2026",
+  "sortOrder": 21,
+  "description": "A live-call assistant and a teleprompter for software demos, in a window that screen shares, recordings and screenshots cannot see.",
+  "tags": [
+    "python",
+    "pyQt",
+    "transcription",
+    "speech-to-text",
+    "teleprompter",
+    "meeting assisstant",
+    "wasapi"
+  ],
+  "liveUrl": "https://blankscreen-exe.github.io/ghostcue",
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/ghostcue",
+  "images": []
+}

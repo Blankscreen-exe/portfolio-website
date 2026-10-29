@@ -1,0 +1,25 @@
+{
+  "title": "Exploratory Data Analysis Of Hate Crimes In USA (1991-2020)",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Mar 2022",
+  "sortOrder": 35,
+  "description": "This exploratory data analysis examines hate-crime records from across the USA between 1991 and 2020, working through three decades of data to extract meaningful insights and trends.\n\nIt uses SQL and Python (Pandas, NumPy, Scikit-learn, TensorFlow) to process and analyse the records, with Power BI used to visualise the findings.",
+  "tags": [
+    "PowerBI",
+    "SQL",
+    "Pandas",
+    "Numpy",
+    "Tensorflow",
+    "Scikitlearn",
+    "Python"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/PowerBI-Competition-MAT-May-2022",
+  "images": [
+    "/images/projects/exploratory-data-analysis-of-hate-crimes-in-usa-1991-2020/1.jpg"
+  ]
+}

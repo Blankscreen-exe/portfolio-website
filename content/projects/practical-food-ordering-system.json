@@ -1,0 +1,35 @@
+{
+  "title": "PractiCal Food Ordering System",
+  "featured": true,
+  "kind": "client",
+  "status": "ongoing",
+  "openToContrib": false,
+  "dateLabel": "Live and Ongoing",
+  "sortOrder": 6,
+  "description": "PractiCal is a nutritionist-led food-ordering system that helps customers receive meal plans tailored to their dietary needs. Instead of generic takeout, it focuses on delivering the right meals for each customer's goals and restrictions.\n\nThe application uses a PHP/Laravel backend with a Next.js and TailwindCSS frontend and a MySQL database, tying together ordering, meal-plan management, and delivery in one platform.",
+  "tags": [
+    "PHP",
+    "Laravel",
+    "Next.js",
+    "Node.js",
+    "TailwindCSS",
+    "MySQL"
+  ],
+  "liveUrl": "https://practical.me/",
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/practical-food-ordering-system/1.png",
+    "/images/projects/practical-food-ordering-system/2.png",
+    "/images/projects/practical-food-ordering-system/3.png",
+    "/images/projects/practical-food-ordering-system/4.png",
+    "/images/projects/practical-food-ordering-system/5.png",
+    "/images/projects/practical-food-ordering-system/6.png",
+    "/images/projects/practical-food-ordering-system/7.png",
+    "/images/projects/practical-food-ordering-system/8.png",
+    "/images/projects/practical-food-ordering-system/9.png",
+    "/images/projects/practical-food-ordering-system/10.png",
+    "/images/projects/practical-food-ordering-system/11.png",
+    "/images/projects/practical-food-ordering-system/12.png"
+  ]
+}

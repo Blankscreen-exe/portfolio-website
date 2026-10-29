@@ -1,0 +1,14 @@
+{
+  "title": "Create Python Dependency Report(Docx) using Python Itself",
+  "description": "I, along with several other developers in my circle faced the need to compile a comprehensive report on all the dependencies that a certain project of ours used.",
+  "published": "2023-07-01",
+  "url": "https://medium.com/@hammad.ai/create-python-dependency-report-docx-using-python-itself-760b3bb8db48",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*t4at15uHcpuxqiRR",
+  "tags": [
+    "docs",
+    "dependency management",
+    "python",
+    "report",
+    "automation"
+  ]
+}

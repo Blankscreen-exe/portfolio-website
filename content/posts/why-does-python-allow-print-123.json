@@ -1,0 +1,12 @@
+{
+  "title": "Why Does Python Allow `print = 123`?",
+  "description": "If you ever try to run print=123, the interpreter would just run it without causing a fuss, although it would seem that it should raise a warning at least if not an exception.",
+  "published": "2024-12-01",
+  "url": "https://medium.com/@hammad.ai/why-does-python-allow-print-123-c960c1035209",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*YQ8tWD1gGiabXuHCG47lBA.png",
+  "tags": [
+    "programming",
+    "python",
+    "design philosophy"
+  ]
+}

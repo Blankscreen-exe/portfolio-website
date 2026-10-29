@@ -1,0 +1,24 @@
+{
+  "title": "LawnPro Software",
+  "featured": false,
+  "kind": "client",
+  "status": "ongoing",
+  "openToContrib": false,
+  "dateLabel": "Live and Ongoing",
+  "sortOrder": 9,
+  "description": "LawnPro is business-management software for lawn-care companies, shipping with a range of features to manage employees, payments, customers, and the day-to-day operations of the business from a single place.\n\nIt is built on a PHP/Laravel backend and MySQL database, with a React.js frontend (Vite.js/Node.js tooling) providing the management interface.",
+  "tags": [
+    "PHP",
+    "Laravel",
+    "React.js",
+    "Vite.js",
+    "Node.js",
+    "MySQL"
+  ],
+  "liveUrl": "https://www.lawnprosoftware.com",
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/lawnpro-software/1.png"
+  ]
+}

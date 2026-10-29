@@ -1,0 +1,25 @@
+{
+  "title": "Exploratory Data Analysis Of Pokemon Data - 2022 Submission for DataDNA Challenge",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Jul 2022",
+  "sortOrder": 34,
+  "description": "This is my submission for the 2022 DataDNA challenge hosted by OnyxData — an exploratory data analysis built around a Pokémon dataset, digging into the patterns hidden in the data.\n\nIt combines SQL and Python (Pandas, NumPy, Scikit-learn, TensorFlow) for the data work with Power BI for interactive visualisation and reporting.",
+  "tags": [
+    "PowerBI",
+    "SQL",
+    "Pandas",
+    "Numpy",
+    "Tensorflow",
+    "Scikitlearn",
+    "Python"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/dataDNA_Challenge_submissions/tree/main/july2022",
+  "images": [
+    "/images/projects/exploratory-data-analysis-of-pokemon-data-2022-submission-for-datadna-challenge/1.jpg"
+  ]
+}

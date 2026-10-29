@@ -1,0 +1,13 @@
+{
+  "title": "Keep Your Desktop From Cluttering Using Python Desktop App",
+  "description": "We will create a minimalistic desktop app using Python, which will keep icons from cluttering our desktop. However, the main goal of this article is to show you the way around PysimpleGUI framework using an OOP approach. This approach comes with many benefits which you will see as we move on as compared to using the plain script file.",
+  "published": "2023-09-01",
+  "url": "https://medium.com/@hammad.ai/keep-your-desktop-from-cluttering-using-python-desktop-app-9598b1969e3e",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:828/format:webp/1*6ahnGDYe6jGqXJdBceyGSQ.png",
+  "tags": [
+    "python",
+    "oop",
+    "pysimplegui",
+    "convention"
+  ]
+}

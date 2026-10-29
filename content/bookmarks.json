@@ -1,0 +1,1697 @@
+{
+  "items": [
+    {
+      "title": "Early",
+      "url": "https://www.early.tools/",
+      "description": "Early-stage startups & pre-launch tools, curated daily",
+      "category": "directory",
+      "tags": [
+        "startups",
+        "pre-launch",
+        "founders"
+      ],
+      "featured": false
+    },
+    {
+      "title": "JetBrains Academy",
+      "url": "https://academy.jetbrains.com/",
+      "description": "Lots of great courses for both beignners and professionals",
+      "category": "courses",
+      "tags": [
+        "programming",
+        "AI",
+        "ML",
+        "Tooling"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Church Of Malware",
+      "url": "https://churchofmalware.org",
+      "description": "Registered nonprofit org for free off-sec research and security education",
+      "category": "library",
+      "tags": [
+        "malware",
+        "cyber security",
+        "Research",
+        "library"
+      ],
+      "featured": false
+    },
+    {
+      "title": "System Design Handbook",
+      "url": "https://www.systemdesignhandbook.com/",
+      "description": "20+ years of system design wisdom",
+      "category": "resource",
+      "tags": [
+        "system design",
+        "ML system design",
+        "interview prep"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Tech Interview Handbook",
+      "url": "https://www.techinterviewhandbook.org/",
+      "description": "Free curated interview preparation materials for busy people",
+      "category": "resource",
+      "tags": [
+        "system design",
+        "salary negotiation",
+        "algorithm",
+        "behaviour interview"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Awesome System Design Resources",
+      "url": "https://github.com/ashishps1/awesome-system-design-resources",
+      "description": "free resources to learn System Design concepts and prepare for interviews",
+      "category": "resource",
+      "tags": [
+        "system design",
+        "networks",
+        "database",
+        "architecture",
+        "Async Communication",
+        "API"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Bug Me Not",
+      "url": "https://bugmenot.com/",
+      "description": "Get free, shared logins from the BugMeNot community",
+      "category": "tool",
+      "tags": [
+        "shared logins",
+        "login evasion"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Z Library",
+      "url": "https://z-library.im/",
+      "description": "Free e-books",
+      "category": "library",
+      "tags": [
+        "multiple topics",
+        "learning resources"
+      ],
+      "featured": false
+    },
+    {
+      "title": "The Linux Foundation",
+      "url": "https://training.linuxfoundation.org/",
+      "description": "Free and paid Linux Courses",
+      "category": "courses",
+      "tags": [
+        "linux",
+        "networking",
+        "cyber security",
+        "learning resources"
+      ],
+      "featured": false
+    },
+    {
+      "title": "zenk-security",
+      "url": "https://repo.zenk-security.com/",
+      "description": "A list of free cyber security resources",
+      "category": "docs",
+      "tags": [
+        "cyber-security",
+        "docs",
+        "learning resources"
+      ],
+      "featured": false
+    },
+    {
+      "title": "osintcabal",
+      "url": "https://osintcabal.org/",
+      "description": "A list of OSINT online-tools and guides.",
+      "category": "docs",
+      "tags": [
+        "cyber-security",
+        "osint",
+        "docs",
+        "online tools"
+      ],
+      "featured": false
+    },
+    {
+      "title": "0xinfection",
+      "url": "https://0xinfection.xyz/",
+      "description": "Ramblings of an infected geek on security, technology, and everything in between.",
+      "category": "docs",
+      "tags": [
+        "cyber-security",
+        "hacking",
+        "docs"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Hard Break",
+      "url": "https://www.hardbreak.wiki/",
+      "description": "HardBreak collects knowledge about Hardware Hacking / IoT hacking in one place.",
+      "category": "docs",
+      "tags": [
+        "cyber-security",
+        "hardware",
+        "docs"
+      ],
+      "featured": false
+    },
+    {
+      "title": "pico CTF",
+      "url": "https://picoctf.org/",
+      "description": "picoCTF gamifies learning hacking with capture-the-flag puzzles created by trusted computer security and privacy experts at Carnegie Mellon University.",
+      "category": "labs",
+      "tags": [
+        "cyber-security",
+        "CTF",
+        "labs"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Refactoring Guru",
+      "url": "https://refactoring.guru/",
+      "description": "Refactoring.Guru makes it easy for you to discover everything you need to know about refactoring, design patterns, SOLID principles, and other smart programming topics.",
+      "category": "guide",
+      "tags": [
+        "refactor",
+        "design-patterns",
+        "programming",
+        "reference",
+        "docs"
+      ],
+      "featured": true
+    },
+    {
+      "title": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/",
+      "description": "Comprehensive documentation for web technologies including HTML, CSS, and JavaScript",
+      "category": "documentation",
+      "tags": [
+        "web",
+        "javascript",
+        "html",
+        "css",
+        "reference",
+        "docs"
+      ],
+      "featured": true
+    },
+    {
+      "title": "CodePen",
+      "url": "https://codepen.io/",
+      "description": "Online code editor for HTML, CSS, and JavaScript",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "html",
+        "css",
+        "javascript",
+        "frontend"
+      ],
+      "featured": true
+    },
+    {
+      "title": "JSFiddle",
+      "url": "https://jsfiddle.net/",
+      "description": "Online code editor and playground for web development",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "javascript",
+        "html",
+        "css",
+        "playground"
+      ],
+      "featured": false
+    },
+    {
+      "title": "StackBlitz",
+      "url": "https://stackblitz.com/",
+      "description": "Online IDE for full-stack web development",
+      "category": "tools",
+      "tags": [
+        "ide",
+        "editor",
+        "typescript",
+        "angular",
+        "react"
+      ],
+      "featured": true
+    },
+    {
+      "title": "CodeSandbox",
+      "url": "https://codesandbox.io/",
+      "description": "Online code editor and prototyping tool",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "react",
+        "vue",
+        "prototyping",
+        "ide"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Replit",
+      "url": "https://replit.com/",
+      "description": "Online IDE and coding platform",
+      "category": "tools",
+      "tags": [
+        "ide",
+        "editor",
+        "coding",
+        "online"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Regex101",
+      "url": "https://regex101.com/",
+      "description": "Online regex tester and debugger with syntax highlighting",
+      "category": "utilities",
+      "tags": [
+        "regex",
+        "testing",
+        "debugging",
+        "pattern-matching"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Can I Use",
+      "url": "https://caniuse.com/",
+      "description": "Browser compatibility tables for web technologies",
+      "category": "utilities",
+      "tags": [
+        "browser",
+        "compatibility",
+        "css",
+        "javascript",
+        "html"
+      ],
+      "featured": true
+    },
+    {
+      "title": "JSONLint",
+      "url": "https://jsonlint.com/",
+      "description": "JSON validator and formatter",
+      "category": "utilities",
+      "tags": [
+        "json",
+        "validator",
+        "formatter",
+        "debugging"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Base64 Encode/Decode",
+      "url": "https://www.base64encode.org/",
+      "description": "Online Base64 encoder and decoder",
+      "category": "utilities",
+      "tags": [
+        "base64",
+        "encoding",
+        "decoding",
+        "converter"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Color Picker",
+      "url": "https://htmlcolorcodes.com/color-picker/",
+      "description": "HTML color picker and color code converter",
+      "category": "utilities",
+      "tags": [
+        "color",
+        "picker",
+        "hex",
+        "rgb",
+        "design"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Unicode Character Table",
+      "url": "https://unicode-table.com/",
+      "description": "Complete Unicode character table with search",
+      "category": "utilities",
+      "tags": [
+        "unicode",
+        "characters",
+        "symbols",
+        "reference"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Lorem Ipsum Generator",
+      "url": "https://www.lipsum.com/",
+      "description": "Classic Lorem Ipsum placeholder text generator",
+      "category": "utilities",
+      "tags": [
+        "lorem-ipsum",
+        "placeholder",
+        "text",
+        "generator"
+      ],
+      "featured": false
+    },
+    {
+      "title": "URL Encoder/Decoder",
+      "url": "https://www.urlencoder.org/",
+      "description": "Online URL encoder and decoder tool",
+      "category": "utilities",
+      "tags": [
+        "url",
+        "encoding",
+        "decoding",
+        "converter"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Markdown Editor",
+      "url": "https://dillinger.io/",
+      "description": "Online markdown editor with live preview",
+      "category": "utilities",
+      "tags": [
+        "markdown",
+        "editor",
+        "preview",
+        "writing"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Image Optimizer",
+      "url": "https://squoosh.app/",
+      "description": "Image compression and optimization tool",
+      "category": "utilities",
+      "tags": [
+        "images",
+        "compression",
+        "optimization",
+        "performance"
+      ],
+      "featured": true
+    },
+    {
+      "title": "SVG Optimizer",
+      "url": "https://jakearchibald.github.io/svgomg/",
+      "description": "SVG optimization tool",
+      "category": "utilities",
+      "tags": [
+        "svg",
+        "optimization",
+        "graphics",
+        "compression"
+      ],
+      "featured": false
+    },
+    {
+      "title": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/",
+      "description": "Free coding bootcamp with interactive lessons",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "tutorials",
+        "courses",
+        "free",
+        "coding"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Codecademy",
+      "url": "https://www.codecademy.com/",
+      "description": "Interactive coding lessons and courses",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "courses",
+        "tutorials",
+        "interactive"
+      ],
+      "featured": true
+    },
+    {
+      "title": "JavaScript.info",
+      "url": "https://javascript.info/",
+      "description": "Modern JavaScript tutorial from basics to advanced",
+      "category": "learning",
+      "tags": [
+        "javascript",
+        "tutorial",
+        "learning",
+        "reference"
+      ],
+      "featured": true
+    },
+    {
+      "title": "CSS-Tricks",
+      "url": "https://css-tricks.com/",
+      "description": "Web design and development blog focused on CSS",
+      "category": "learning",
+      "tags": [
+        "css",
+        "web-design",
+        "tutorials",
+        "articles"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/",
+      "description": "Web design and development articles and resources",
+      "category": "learning",
+      "tags": [
+        "web-design",
+        "articles",
+        "tutorials",
+        "ux",
+        "ui"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Coolors",
+      "url": "https://coolors.co/",
+      "description": "Color palette generator and inspiration",
+      "category": "design",
+      "tags": [
+        "color",
+        "palette",
+        "generator",
+        "design",
+        "ui"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Font Awesome",
+      "url": "https://fontawesome.com/",
+      "description": "Icon library and toolkit",
+      "category": "design",
+      "tags": [
+        "icons",
+        "font",
+        "ui",
+        "design"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Material Icons",
+      "url": "https://fonts.google.com/icons",
+      "description": "Google Material Design icon library",
+      "category": "design",
+      "tags": [
+        "icons",
+        "material-design",
+        "google",
+        "ui"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Heroicons",
+      "url": "https://heroicons.com/",
+      "description": "Beautiful hand-crafted SVG icons",
+      "category": "design",
+      "tags": [
+        "icons",
+        "svg",
+        "ui",
+        "design"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Google Fonts",
+      "url": "https://fonts.google.com/",
+      "description": "Free web fonts library",
+      "category": "design",
+      "tags": [
+        "fonts",
+        "typography",
+        "web-fonts",
+        "design"
+      ],
+      "featured": true
+    },
+    {
+      "title": "RapidAPI",
+      "url": "https://rapidapi.com/",
+      "description": "API marketplace and testing platform",
+      "category": "apis",
+      "tags": [
+        "api",
+        "marketplace",
+        "testing",
+        "rest"
+      ],
+      "featured": true
+    },
+    {
+      "title": "JSONPlaceholder",
+      "url": "https://jsonplaceholder.typicode.com/",
+      "description": "Fake REST API for testing and prototyping",
+      "category": "apis",
+      "tags": [
+        "api",
+        "testing",
+        "mock",
+        "rest",
+        "json"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Public APIs",
+      "url": "https://github.com/public-apis/public-apis",
+      "description": "Curated list of free APIs for software development",
+      "category": "apis",
+      "tags": [
+        "api",
+        "list",
+        "free",
+        "resources",
+        "github"
+      ],
+      "featured": true
+    },
+    {
+      "title": "HTTPie",
+      "url": "https://httpie.io/",
+      "description": "Command-line HTTP client for API testing",
+      "category": "apis",
+      "tags": [
+        "api",
+        "http",
+        "cli",
+        "testing",
+        "tools"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Reddit r/programming",
+      "url": "https://www.reddit.com/r/programming/",
+      "description": "Programming discussions and news",
+      "category": "community",
+      "tags": [
+        "reddit",
+        "discussion",
+        "news",
+        "programming"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "description": "Tech news and discussions",
+      "category": "community",
+      "tags": [
+        "news",
+        "tech",
+        "discussion",
+        "startups"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Discord Developer Communities",
+      "url": "https://discord.com/",
+      "description": "Chat platform with developer communities",
+      "category": "community",
+      "tags": [
+        "chat",
+        "community",
+        "discussion",
+        "collaboration"
+      ],
+      "featured": false
+    },
+    {
+      "title": "GitHub Discussions",
+      "url": "https://github.com/",
+      "description": "Community discussions on GitHub repositories",
+      "category": "community",
+      "tags": [
+        "github",
+        "discussion",
+        "community",
+        "collaboration"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Google Lighthouse",
+      "url": "https://developers.google.com/web/tools/lighthouse",
+      "description": "Automated tool for improving web page quality",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "seo",
+        "accessibility",
+        "testing",
+        "audit"
+      ],
+      "featured": true
+    },
+    {
+      "title": "WebPageTest",
+      "url": "https://www.webpagetest.org/",
+      "description": "Website performance testing tool",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "testing",
+        "speed",
+        "optimization"
+      ],
+      "featured": true
+    },
+    {
+      "title": "GTmetrix",
+      "url": "https://gtmetrix.com/",
+      "description": "Website speed and performance testing",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "speed",
+        "testing",
+        "optimization"
+      ],
+      "featured": false
+    },
+    {
+      "title": "PageSpeed Insights",
+      "url": "https://pagespeed.web.dev/",
+      "description": "Google's page speed analysis tool",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "speed",
+        "google",
+        "testing"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Bundlephobia",
+      "url": "https://bundlephobia.com/",
+      "description": "Find the cost of adding npm packages",
+      "category": "performance",
+      "tags": [
+        "npm",
+        "bundles",
+        "size",
+        "performance",
+        "packages"
+      ],
+      "featured": false
+    },
+    {
+      "title": "OWASP",
+      "url": "https://owasp.org/",
+      "description": "Open Web Application Security Project",
+      "category": "security",
+      "tags": [
+        "security",
+        "web",
+        "vulnerabilities",
+        "best-practices"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Have I Been Pwned",
+      "url": "https://haveibeenpwned.com/",
+      "description": "Check if your email has been compromised in a data breach",
+      "category": "security",
+      "tags": [
+        "security",
+        "privacy",
+        "data-breach",
+        "email"
+      ],
+      "featured": true
+    },
+    {
+      "title": "SSL Labs",
+      "url": "https://www.ssllabs.com/ssltest/",
+      "description": "SSL server testing and analysis",
+      "category": "security",
+      "tags": [
+        "ssl",
+        "tls",
+        "security",
+        "certificates",
+        "testing"
+      ],
+      "featured": false
+    },
+    {
+      "title": "JSON Formatter",
+      "url": "https://jsonformatter.org/",
+      "description": "JSON formatter and validator",
+      "category": "utilities",
+      "tags": [
+        "json",
+        "formatter",
+        "validator",
+        "beautifier"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Carbon",
+      "url": "https://carbon.now.sh/",
+      "description": "Create and share beautiful images of your source code",
+      "category": "utilities",
+      "tags": [
+        "code",
+        "images",
+        "screenshots",
+        "sharing"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Frontend Masters",
+      "url": "https://frontendmasters.com/",
+      "description": "Advanced front-end development courses",
+      "category": "learning",
+      "tags": [
+        "courses",
+        "frontend",
+        "advanced",
+        "video"
+      ],
+      "featured": false
+    },
+    {
+      "title": "UI Movement",
+      "url": "https://uimovement.com/",
+      "description": "UI design inspiration newsletter",
+      "category": "design",
+      "tags": [
+        "ui",
+        "inspiration",
+        "design",
+        "newsletter"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Flaticon",
+      "url": "https://www.flaticon.com/",
+      "description": "Free icon database",
+      "category": "design",
+      "tags": [
+        "icons",
+        "free",
+        "database",
+        "ui"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/",
+      "description": "Discover new products and tools",
+      "category": "community",
+      "tags": [
+        "products",
+        "tools",
+        "discovery",
+        "startups"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Indie Hackers",
+      "url": "https://www.indiehackers.com/",
+      "description": "Community of independent developers and entrepreneurs",
+      "category": "community",
+      "tags": [
+        "entrepreneurship",
+        "startups",
+        "community",
+        "business"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Web.dev",
+      "url": "https://web.dev/",
+      "description": "Google's web development best practices and guides",
+      "category": "performance",
+      "tags": [
+        "web",
+        "performance",
+        "best-practices",
+        "google"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Chrome DevTools",
+      "url": "https://developer.chrome.com/docs/devtools/",
+      "description": "Chrome browser developer tools documentation",
+      "category": "performance",
+      "tags": [
+        "devtools",
+        "debugging",
+        "chrome",
+        "browser"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Snyk",
+      "url": "https://snyk.io/",
+      "description": "Security platform for finding and fixing vulnerabilities",
+      "category": "security",
+      "tags": [
+        "security",
+        "vulnerabilities",
+        "dependencies",
+        "scanning"
+      ],
+      "featured": false
+    },
+    {
+      "title": "npm audit",
+      "url": "https://docs.npmjs.com/cli/v8/commands/npm-audit",
+      "description": "npm package security audit tool",
+      "category": "security",
+      "tags": [
+        "security",
+        "npm",
+        "audit",
+        "vulnerabilities"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Testing Library",
+      "url": "https://testing-library.com/",
+      "description": "Simple and complete testing utilities",
+      "category": "testing",
+      "tags": [
+        "testing",
+        "utilities",
+        "react",
+        "dom"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Storybook",
+      "url": "https://storybook.js.org/",
+      "description": "Tool for building UI components in isolation",
+      "category": "testing",
+      "tags": [
+        "testing",
+        "components",
+        "ui",
+        "development"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Linear",
+      "url": "https://linear.app/",
+      "description": "Issue tracking and project management for software teams",
+      "category": "tools",
+      "tags": [
+        "project-management",
+        "issues",
+        "tracking",
+        "productivity"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Minify",
+      "url": "https://www.minifier.org/",
+      "description": "Minify JavaScript and CSS code",
+      "category": "utilities",
+      "tags": [
+        "minify",
+        "javascript",
+        "css",
+        "optimization"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Diff Checker",
+      "url": "https://www.diffchecker.com/",
+      "description": "Compare text differences between two files",
+      "category": "utilities",
+      "tags": [
+        "diff",
+        "compare",
+        "text",
+        "files"
+      ],
+      "featured": false
+    },
+    {
+      "title": "QR Code Generator",
+      "url": "https://www.qr-code-generator.com/",
+      "description": "Free QR code generator and creator",
+      "category": "utilities",
+      "tags": [
+        "qr-code",
+        "generator",
+        "barcode",
+        "tools"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Khan Academy Computing",
+      "url": "https://www.khanacademy.org/computing/computer-programming",
+      "description": "Free programming courses and tutorials",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "courses",
+        "free",
+        "programming"
+      ],
+      "featured": false
+    },
+    {
+      "title": "The Odin Project",
+      "url": "https://www.theodinproject.com/",
+      "description": "Free full-stack web development curriculum",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "curriculum",
+        "free",
+        "full-stack"
+      ],
+      "featured": true
+    },
+    {
+      "title": "App Academy Open",
+      "url": "https://www.appacademy.io/course/app-academy-open",
+      "description": "Free full-stack web development bootcamp",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "bootcamp",
+        "free",
+        "full-stack"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Egghead",
+      "url": "https://egghead.io/",
+      "description": "Bite-sized video courses for web developers",
+      "category": "learning",
+      "tags": [
+        "courses",
+        "video",
+        "tutorials",
+        "learning"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Scrimba",
+      "url": "https://scrimba.com/",
+      "description": "Interactive coding screencasts",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "video",
+        "interactive",
+        "courses"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Material Design",
+      "url": "https://material.io/design",
+      "description": "Google's Material Design guidelines and resources",
+      "category": "design",
+      "tags": [
+        "design",
+        "material",
+        "ui",
+        "guidelines",
+        "google"
+      ],
+      "featured": true
+    },
+    {
+      "title": "UI Design Daily",
+      "url": "https://www.uidesigndaily.com/",
+      "description": "Daily UI design inspiration and resources",
+      "category": "design",
+      "tags": [
+        "ui",
+        "design",
+        "inspiration",
+        "daily"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Awwwards",
+      "url": "https://www.awwwards.com/",
+      "description": "Awards for design, creativity and innovation on the internet",
+      "category": "design",
+      "tags": [
+        "design",
+        "awards",
+        "inspiration",
+        "web-design"
+      ],
+      "featured": false
+    },
+    {
+      "title": "SiteInspire",
+      "url": "https://www.siteinspire.com/",
+      "description": "Web design inspiration showcase",
+      "category": "design",
+      "tags": [
+        "design",
+        "inspiration",
+        "web-design",
+        "showcase"
+      ],
+      "featured": false
+    },
+    {
+      "title": "REST Countries API",
+      "url": "https://restcountries.com/",
+      "description": "Free REST API for country information",
+      "category": "apis",
+      "tags": [
+        "api",
+        "rest",
+        "countries",
+        "free",
+        "data"
+      ],
+      "featured": false
+    },
+    {
+      "title": "OpenWeatherMap API",
+      "url": "https://openweathermap.org/api",
+      "description": "Weather data API",
+      "category": "apis",
+      "tags": [
+        "api",
+        "weather",
+        "data",
+        "free"
+      ],
+      "featured": false
+    },
+    {
+      "title": "r/webdev",
+      "url": "https://www.reddit.com/r/webdev/",
+      "description": "Web development community on Reddit",
+      "category": "community",
+      "tags": [
+        "reddit",
+        "webdev",
+        "community",
+        "discussion"
+      ],
+      "featured": false
+    },
+    {
+      "title": "r/learnprogramming",
+      "url": "https://www.reddit.com/r/learnprogramming/",
+      "description": "Community for learning programming",
+      "category": "community",
+      "tags": [
+        "reddit",
+        "learning",
+        "programming",
+        "community"
+      ],
+      "featured": false
+    },
+    {
+      "title": "r/javascript",
+      "url": "https://www.reddit.com/r/javascript/",
+      "description": "JavaScript news and discussions",
+      "category": "community",
+      "tags": [
+        "reddit",
+        "javascript",
+        "news",
+        "discussion"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Lobsters",
+      "url": "https://lobste.rs/",
+      "description": "Technology link aggregator and discussion",
+      "category": "community",
+      "tags": [
+        "news",
+        "tech",
+        "discussion",
+        "aggregator"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Calibre",
+      "url": "https://calibreapp.com/",
+      "description": "Website performance monitoring and optimization",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "monitoring",
+        "optimization",
+        "speed"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Web Vitals",
+      "url": "https://web.dev/vitals/",
+      "description": "Essential metrics for a healthy site",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "metrics",
+        "web-vitals",
+        "optimization"
+      ],
+      "featured": true
+    },
+    {
+      "title": "OWASP Top 10",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "description": "Top 10 most critical web application security risks",
+      "category": "security",
+      "tags": [
+        "security",
+        "owasp",
+        "vulnerabilities",
+        "best-practices"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Security Headers",
+      "url": "https://securityheaders.com/",
+      "description": "Analyze your website's security headers",
+      "category": "security",
+      "tags": [
+        "security",
+        "headers",
+        "analysis",
+        "testing"
+      ],
+      "featured": false
+    },
+    {
+      "title": "VirusTotal",
+      "url": "https://www.virustotal.com/",
+      "description": "Analyze suspicious files and URLs",
+      "category": "security",
+      "tags": [
+        "security",
+        "malware",
+        "scanning",
+        "analysis"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Karma",
+      "url": "https://karma-runner.github.io/",
+      "description": "Spectacular test runner for JavaScript",
+      "category": "testing",
+      "tags": [
+        "testing",
+        "karma",
+        "test-runner",
+        "javascript"
+      ],
+      "featured": false
+    },
+    {
+      "title": "CyberChef",
+      "url": "https://gchq.github.io/CyberChef/",
+      "description": "All-in-one tool for encoding, decoding, encryption, compression, and data analysis",
+      "category": "security",
+      "tags": [
+        "encoding",
+        "crypto",
+        "forensics",
+        "analysis"
+      ],
+      "featured": true
+    },
+    {
+      "title": "JWT Decoder",
+      "url": "https://jwt.ms/",
+      "description": "Decode and inspect JSON Web Tokens",
+      "category": "security",
+      "tags": [
+        "jwt",
+        "auth",
+        "tokens"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Burp Suite Community",
+      "url": "https://portswigger.net/burp/communitydownload",
+      "description": "Web vulnerability scanner and proxy",
+      "category": "security",
+      "tags": [
+        "pentesting",
+        "http",
+        "proxy"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Amass",
+      "url": "https://amass-project.github.io/",
+      "description": "Attack surface mapping and asset discovery",
+      "category": "security",
+      "tags": [
+        "recon",
+        "osint",
+        "networking"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Shodan",
+      "url": "https://www.shodan.io/",
+      "description": "Search engine for internet-connected devices",
+      "category": "security",
+      "tags": [
+        "osint",
+        "iot",
+        "search"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Censys",
+      "url": "https://search.censys.io/",
+      "description": "Search engine for hosts, certificates, and services",
+      "category": "security",
+      "tags": [
+        "certificates",
+        "osint",
+        "network"
+      ],
+      "featured": false
+    },
+    {
+      "title": "VirusShare",
+      "url": "https://virusshare.com/",
+      "description": "Malware sample repository",
+      "category": "security",
+      "tags": [
+        "malware",
+        "analysis",
+        "research"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Any.Run",
+      "url": "https://any.run/",
+      "description": "Interactive malware sandbox",
+      "category": "security",
+      "tags": [
+        "malware",
+        "sandbox",
+        "analysis"
+      ],
+      "featured": true
+    },
+    {
+      "title": "CrackStation",
+      "url": "https://crackstation.net/",
+      "description": "Hash cracking and lookup tool",
+      "category": "security",
+      "tags": [
+        "hash",
+        "passwords",
+        "crypto"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Hashcat",
+      "url": "https://hashcat.net/hashcat/",
+      "description": "Advanced password recovery tool",
+      "category": "security",
+      "tags": [
+        "hash",
+        "passwords",
+        "gpu"
+      ],
+      "featured": false
+    },
+    {
+      "title": "ngrok",
+      "url": "https://ngrok.com/",
+      "description": "Expose local servers securely to the internet",
+      "category": "tools",
+      "tags": [
+        "tunneling",
+        "http",
+        "dev"
+      ],
+      "featured": true
+    },
+    {
+      "title": "LocalTunnel",
+      "url": "https://theboroer.github.io/localtunnel-www/",
+      "description": "Open local servers to the public internet",
+      "category": "tools",
+      "tags": [
+        "tunnel",
+        "dev",
+        "http"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Requestly",
+      "url": "https://requestly.io/",
+      "description": "Intercept and modify HTTP requests",
+      "category": "tools",
+      "tags": [
+        "http",
+        "debugging",
+        "proxy"
+      ],
+      "featured": false
+    },
+    {
+      "title": "HTTP Toolkit",
+      "url": "https://httptoolkit.com/",
+      "description": "Intercept and inspect HTTP traffic",
+      "category": "tools",
+      "tags": [
+        "http",
+        "networking",
+        "debugging"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Beeceptor",
+      "url": "https://beeceptor.com/",
+      "description": "Mock APIs and inspect HTTP requests",
+      "category": "apis",
+      "tags": [
+        "mock",
+        "api",
+        "http"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Mockoon",
+      "url": "https://mockoon.com/",
+      "description": "Local mock API server",
+      "category": "apis",
+      "tags": [
+        "mock",
+        "api",
+        "local"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Swagger Editor",
+      "url": "https://editor.swagger.io/",
+      "description": "Design and test OpenAPI specifications",
+      "category": "apis",
+      "tags": [
+        "openapi",
+        "api",
+        "design"
+      ],
+      "featured": false
+    },
+    {
+      "title": "OpenAPI Generator",
+      "url": "https://openapi-generator.tech/",
+      "description": "Generate clients and servers from OpenAPI specs",
+      "category": "apis",
+      "tags": [
+        "openapi",
+        "codegen",
+        "api"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Stoplight",
+      "url": "https://stoplight.io/",
+      "description": "API design and governance platform",
+      "category": "apis",
+      "tags": [
+        "api",
+        "design",
+        "collaboration"
+      ],
+      "featured": false
+    },
+    {
+      "title": "CodeMirror Playground",
+      "url": "https://codemirror.net/demo/",
+      "description": "In-browser code editor playground",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "playground",
+        "code"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Monaco Editor Playground",
+      "url": "https://microsoft.github.io/monaco-editor/playground.html",
+      "description": "VS Code editor engine playground",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "vscode",
+        "playground"
+      ],
+      "featured": false
+    },
+    {
+      "title": "AST Explorer",
+      "url": "https://astexplorer.net/",
+      "description": "Explore abstract syntax trees for many languages",
+      "category": "tools",
+      "tags": [
+        "ast",
+        "parsing",
+        "analysis"
+      ],
+      "featured": true
+    },
+    {
+      "title": "JSON to CSV",
+      "url": "https://json-csv.com/",
+      "description": "Convert JSON data to CSV",
+      "category": "utilities",
+      "tags": [
+        "json",
+        "csv",
+        "converter"
+      ],
+      "featured": false
+    },
+    {
+      "title": "CSVJSON",
+      "url": "https://csvjson.com/",
+      "description": "Convert CSV, JSON, TSV formats",
+      "category": "utilities",
+      "tags": [
+        "csv",
+        "json",
+        "converter"
+      ],
+      "featured": false
+    },
+    {
+      "title": "SQL Formatter",
+      "url": "https://sqlformat.org/",
+      "description": "Format and beautify SQL queries",
+      "category": "databases",
+      "tags": [
+        "sql",
+        "formatter",
+        "queries"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Explain Analyze",
+      "url": "https://explain.depesz.com/",
+      "description": "Visualize PostgreSQL query plans",
+      "category": "databases",
+      "tags": [
+        "postgres",
+        "query",
+        "performance"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Redash",
+      "url": "https://redash.io/",
+      "description": "Query and visualize data sources",
+      "category": "databases",
+      "tags": [
+        "sql",
+        "analytics",
+        "dashboards"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Cronitor",
+      "url": "https://cronitor.io/",
+      "description": "Cron job monitoring and alerting",
+      "category": "devops",
+      "tags": [
+        "cron",
+        "monitoring",
+        "jobs"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Healthchecks",
+      "url": "https://healthchecks.io/",
+      "description": "Monitor cron jobs and background tasks",
+      "category": "devops",
+      "tags": [
+        "cron",
+        "monitoring",
+        "alerts"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Draw.io",
+      "url": "https://app.diagrams.net/",
+      "description": "Create architecture and flow diagrams",
+      "category": "tools",
+      "tags": [
+        "diagrams",
+        "architecture",
+        "visual"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "description": "Hand-drawn style diagrams",
+      "category": "tools",
+      "tags": [
+        "diagrams",
+        "whiteboard",
+        "design"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Code Time Analyzer",
+      "url": "https://wakatime.com/",
+      "description": "Track time spent coding",
+      "category": "productivity",
+      "tags": [
+        "time-tracking",
+        "metrics",
+        "coding"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Overleaf",
+      "url": "https://www.overleaf.com/",
+      "description": "Collaborative LaTeX editor",
+      "category": "tools",
+      "tags": [
+        "latex",
+        "editor",
+        "collaboration"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Glitch",
+      "url": "https://glitch.com/",
+      "description": "Build and deploy small web apps quickly",
+      "category": "tools",
+      "tags": [
+        "hosting",
+        "node",
+        "web"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Railway",
+      "url": "https://railway.app/",
+      "description": "Deploy databases and services easily",
+      "category": "devops",
+      "tags": [
+        "deployment",
+        "cloud",
+        "hosting"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Render",
+      "url": "https://render.com/",
+      "description": "Cloud hosting for web services",
+      "category": "devops",
+      "tags": [
+        "hosting",
+        "cloud",
+        "deploy"
+      ],
+      "featured": false
+    }
+  ]
+}

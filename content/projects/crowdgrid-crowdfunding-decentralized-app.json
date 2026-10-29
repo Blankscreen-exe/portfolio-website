@@ -1,0 +1,33 @@
+{
+  "title": "CrowdGrid - Crowdfunding Decentralized App",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Jan 2024",
+  "sortOrder": 16,
+  "description": "This is a crowdfunding solution built entirely on web3: creators can host their projects for funding in crypto and withdraw the raised funds whenever they need to, without a traditional payment intermediary sitting in the middle.\n\nThe frontend is built with React.js and Vite.js, connecting to wallets through MetaMask and Ethers.js, with Hedera Hashgraph as the underlying distributed ledger. A Nest.js backend with Turso DB supports the off-chain side of the app.",
+  "tags": [
+    "React.js",
+    "Vite.js",
+    "Hedera Hashgraph",
+    "Metamask",
+    "Ethers.js",
+    "Nest.js",
+    "Turso DB"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/1.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/2.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/3.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/4.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/5.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/6.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/7.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/8.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/9.png"
+  ]
+}

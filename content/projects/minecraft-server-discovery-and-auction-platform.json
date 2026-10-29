@@ -1,0 +1,23 @@
+{
+  "title": "Minecraft Server Discovery & Auction Platform",
+  "featured": false,
+  "kind": "side",
+  "status": "ongoing",
+  "openToContrib": true,
+  "dateLabel": "May 2025",
+  "sortOrder": 12,
+  "description": "This platform lets users discover Minecraft servers and buy or sell them through auctions. It brings server browsing and a real marketplace together, so owners can list their servers and interested buyers can bid on them.\n\nIt is built with a Python/Django backend and PostgreSQL, with a JavaScript frontend, and integrates Stripe to handle the real payments behind the auction transactions.",
+  "tags": [
+    "Django",
+    "Python",
+    "JavaScript",
+    "PostgreSQL",
+    "Stripe"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/minecraft-server-discovery-and-auction-platform/1.png"
+  ]
+}

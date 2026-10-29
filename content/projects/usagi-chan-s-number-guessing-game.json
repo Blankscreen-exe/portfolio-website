@@ -1,0 +1,21 @@
+{
+  "title": "Usagi Chan's Number Guessing Game",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Nov 2022",
+  "sortOrder": 31,
+  "description": "Usagi Chan's Number Guessing Game is a browser game where the player is shown a number and has to guess whether the next number will be larger or smaller. A correct guess earns a point, while a wrong one costs a life.\n\nIt is a frontend game built with React.js and Vite.js, and is playable live in the browser.",
+  "tags": [
+    "JavaScript",
+    "Vite.js",
+    "React.js"
+  ],
+  "liveUrl": "https://usagichan-numbergame.netlify.app/",
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/Usagi-chans-number-guessing-game",
+  "images": [
+    "/images/projects/usagi-chan-s-number-guessing-game/1.png"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Product Webscraper For E-commerce Site and Product Image Generator",
+  "featured": false,
+  "kind": "client",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Mar 2024",
+  "sortOrder": 15,
+  "description": "eBay Product Scraper is a tool that automatically collects product listings from eBay and saves them to a database, turning scattered marketplace data into a structured, queryable dataset.\n\nIt is built in Python with Django and uses Selenium to drive the scraping, persisting the results to PostgreSQL alongside a vector database, with a JavaScript/TailwindCSS interface on top.",
+  "tags": [
+    "Django",
+    "Selenium",
+    "PostgreSQL",
+    "VectorDB",
+    "Python",
+    "JavaScript",
+    "TailwindCSS"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/product-webscraper-for-e-commerce-site-and-product-image-generator/1.png",
+    "/images/projects/product-webscraper-for-e-commerce-site-and-product-image-generator/2.png"
+  ]
+}

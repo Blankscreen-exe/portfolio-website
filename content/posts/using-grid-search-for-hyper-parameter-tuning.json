@@ -1,0 +1,14 @@
+{
+  "title": "Using Grid Search For Hyper-Parameter Tuning",
+  "description": "Here we are going to explore an efficient way to tune our model’s hyperparameters using Grid Search. We would be exploring the facilities that it provides as well as run some scenarios with Python code.",
+  "published": "2023-10-01",
+  "url": "https://medium.com/@hammad.ai/using-grid-search-for-hyper-parameter-tuning-bad6756324cc",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*Tgy73ctK_RMAeTPo",
+  "tags": [
+    "python",
+    "gridsearchcv",
+    "data science",
+    "machine learning",
+    "hyperparameter tuning"
+  ]
+}

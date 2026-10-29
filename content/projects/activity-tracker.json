@@ -1,0 +1,22 @@
+{
+  "title": "Activity Tracker",
+  "featured": false,
+  "kind": "side",
+  "status": "ongoing",
+  "openToContrib": true,
+  "dateLabel": "Aug 2026",
+  "sortOrder": 29,
+  "description": "A quietly powerful Windows activity tracker. See exactly where your time goes, tag it your own way, and keep every byte of it on your own machine.",
+  "tags": [
+    "C#",
+    ".NET 9",
+    "WPF"
+  ],
+  "liveUrl": "https://blankscreen-exe.github.io/activity-tracker-prototype/",
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/activity-tracker-prototype",
+  "images": [
+    "/images/projects/activity-tracker/1.png",
+    "/images/projects/activity-tracker/2.png"
+  ]
+}

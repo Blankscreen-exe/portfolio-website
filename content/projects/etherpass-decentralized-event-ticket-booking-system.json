@@ -1,0 +1,30 @@
+{
+  "title": "EtherPass - Decentralized Event Ticket Booking System",
+  "featured": false,
+  "kind": "client",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Jan 2024",
+  "sortOrder": 14,
+  "description": "EtherPass is a decentralized event ticket-booking system that lets users book tickets for events directly with their web3 wallet, using the blockchain to handle ticket ownership in a tamper-resistant way.\n\nIts smart contracts are written in Solidity and developed with Truffle on Ethereum, accessed from the client via Web3.js and MetaMask. The application layer combines a React.js (Vite.js) frontend with a Nest.js backend and Turso DB.",
+  "tags": [
+    "Ethereum",
+    "Solidity",
+    "Truffle",
+    "Web3.js",
+    "React.js",
+    "Vite.js",
+    "Metamask",
+    "Nest.js",
+    "Turso DB"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/etherpass-decentralized-event-ticket-booking-system/1.png",
+    "/images/projects/etherpass-decentralized-event-ticket-booking-system/2.png",
+    "/images/projects/etherpass-decentralized-event-ticket-booking-system/3.png",
+    "/images/projects/etherpass-decentralized-event-ticket-booking-system/4.png"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "title": "Product Engineering",
+      "description": "I build and evolve software products from idea to production, with the engineering needed to support real users.",
+      "goodFitIf": "You have an idea, or an early product, and need someone to build it properly and see it through to real users.",
+      "contactTopic": "Build an app or website",
+      "deliverables": [
+        "SaaS platforms",
+        "B2B applications",
+        "Internal tools",
+        "APIs & backend systems",
+        "MVPs & production products"
+      ]
+    },
+    {
+      "title": "AI Engineering",
+      "description": "I turn AI capabilities into reliable software that can actually be used in production.",
+      "goodFitIf": "You want AI to do real work in your business, like answering customers, reading documents or finding leads.",
+      "contactTopic": "AI & automation",
+      "deliverables": [
+        "AI-powered applications",
+        "LLM integrations",
+        "AI agents & workflows",
+        "RAG systems",
+        "AI automation",
+        "Model/API integrations"
+      ]
+    },
+    {
+      "title": "AI Prototype To Production",
+      "description": "Bring your AI prototypes to your customers and make it production-grade and ready to survive real users.",
+      "goodFitIf": "You have an AI demo that works on your laptop and now it needs to hold up with real customers.",
+      "contactTopic": "AI & automation",
+      "deliverables": [
+        "Prototype assessment",
+        "Production architecture",
+        "Backend & infrastructure",
+        "Reliability & observability",
+        "Security & access control",
+        "Scaling & deployment"
+      ]
+    },
+    {
+      "title": "Technical Rescue",
+      "description": "Diagnose and fix software that has become unreliable, difficult to maintain, or expensive to change.",
+      "goodFitIf": "Your software keeps breaking, is slow, or every change takes far longer than it should.",
+      "contactTopic": "Fix existing software",
+      "deliverables": [
+        "Codebase audits",
+        "Architecture reviews",
+        "Production debugging",
+        "Performance investigations",
+        "Technical debt",
+        "Technical roadmaps"
+      ]
+    },
+    {
+      "title": "Consultancy & Audit",
+      "description": "Get an experienced technical perspective on your product, architecture, or engineering decisions before they become expensive problems.",
+      "goodFitIf": "You're about to make a big technical decision and want an experienced second opinion first.",
+      "contactTopic": "Advice & mentoring",
+      "deliverables": [
+        "Architecture & technology selection",
+        "Technical strategy",
+        "Product feasibility",
+        "System design",
+        "Engineering roadmaps",
+        "Technical decision reviews"
+      ]
+    },
+    {
+      "title": "Automation & Integrations",
+      "description": "Automate repetitive processes and connect systems that currently don't talk to each other.",
+      "goodFitIf": "Your team copies data between tools by hand, or your systems don't talk to each other.",
+      "contactTopic": "AI & automation",
+      "deliverables": [
+        "Business process automation",
+        "API integrations",
+        "CRM/ERP integrations",
+        "Data synchronization",
+        "Workflow automation",
+        "Internal tooling"
+      ]
+    },
+    {
+      "title": "Mentorship",
+      "description": "I offer mentorship for developers looking to strengthen their skills through structured guidance and real-world projects.",
+      "goodFitIf": "You're a developer who wants structured guidance, project help or career coaching.",
+      "contactTopic": "Advice & mentoring",
+      "deliverables": [
+        "Technical Skill Development",
+        "Career Path Coaching",
+        "Project Assisstance & Guidance",
+        "Industry Insights",
+        "Resume Improvement",
+        "Interview Preparation",
+        "... and more"
+      ]
+    }
+  ]
+}

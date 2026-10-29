@@ -1,0 +1,23 @@
+{
+  "title": "Entrepreneur's Business Simulator",
+  "featured": false,
+  "kind": "client",
+  "status": "ongoing",
+  "openToContrib": false,
+  "dateLabel": "Live and Ongoing",
+  "sortOrder": 10,
+  "description": "Entrepreneur's Business Simulator is a training platform designed to teach young entrepreneurs the fundamentals of business and financial management. Rather than dry theory, it lets learners practise decision-making in a simulated environment.\n\nIt is built with a Python/Django backend using Jinja2 server-side templating and a JavaScript frontend, with PostgreSQL storing the simulation and user data.",
+  "tags": [
+    "Python",
+    "Django",
+    "JavaScript",
+    "Jinja2",
+    "PostgreSQL"
+  ],
+  "liveUrl": "https://ebs.org/",
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/entrepreneur-s-business-simulator/1.png"
+  ]
+}

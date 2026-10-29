@@ -1,0 +1,13 @@
+{
+  "title": "Variance Inflation Factor & The Intuition Behind It",
+  "description": "I’m going to assume that you came here looking for an explanation which will let you understand the intuition behind Variance Inflation Factor(aka VIF).",
+  "published": "2023-09-01",
+  "url": "https://medium.com/@hammad.ai/variance-inflation-factor-c1d4404f4dd9",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*Gq8jF5ZN_sgFtYw_",
+  "tags": [
+    "python",
+    "data science",
+    "statsmodels",
+    "statistics"
+  ]
+}

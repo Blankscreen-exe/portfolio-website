@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "name": "Chris Jennings",
+      "role": "CEO - Nextlayer Technologies",
+      "avatar": "/images/testimonials/chris-jennings.png",
+      "quote": "One of the best python devs on upwork. Gets all issues resolved and gets the job done. Worked with him for 4 months on a medium term project to develop an auto trader for crypto exchange which was in a bad state. He resolved all problems with this custom trading system and got it up and running."
+    },
+    {
+      "name": "Ahsan Furqan",
+      "role": "Senior Software Engineer - Get Licensed",
+      "avatar": "/images/testimonials/ahsan-furqan.jpg",
+      "quote": "I have had the pleasure of working alongside hammad for a year at Siliconplex. He is an exceptional Python/Django with an impressive ability to deliver high-quality solutions. Hammad brings a deep understanding of web development technologies and consistently goes above and beyond in tackling complex challenges. I wholeheartedly recommend Hammad to anyone seeking a highly skilled and reliable Python/Django developer. He would be a valuable asset to any team or project."
+    },
+    {
+      "name": "Saqib Najam",
+      "role": "Senior Software Engineer - Siliconplex",
+      "avatar": "/images/testimonials/saqib-najam.jpg",
+      "quote": "I have been supervising Hammad for quite some time. I can say that he is a hardworking and professional individual. He tends to write clean code and follow best practices to the best of his abilities to deliver quality solutions to critical problems."
+    },
+    {
+      "name": "Qamar Abbas",
+      "role": "iOS Developer - Siliconplex",
+      "avatar": "/images/testimonials/qamar-abbas.jpg",
+      "quote": "Hammad has proven to be a competent and valuable team member. He has excellent skills in Django and Django Rest Framework. He always tends delivers high-quality code on time with great and professional work ethics. During my time with him, he worked on a diverse set of technologies, which is a sign of a good developer. Definitely recommend him for any web development project which requires Django expertise and creativity."
+    },
+    {
+      "name": "Chander Harwani",
+      "role": "Category Specialist - Daraz",
+      "avatar": "/images/testimonials/chander-harwani.jpg",
+      "quote": "Hammad has great technical knowledge, specially he is expert in Python. I also got to learn a lot about docker, gitflow and streamlit from Hammad, he is great leader to work with!"
+    },
+    {
+      "name": "Muhammad Hammad",
+      "role": "Software Engineer - Paysys Labs",
+      "avatar": "/images/testimonials/muhammad-hammad.jpg",
+      "quote": "His knowledge in overall Python stack is remarkable, specifically in Django framework. We both have worked on a project in Pumpjack Dataworks and there he proved to be a worthy teammate."
+    },
+    {
+      "name": "Zain-ul-Abidin",
+      "role": "Full Stack Developer - Saudi Controls Ltd.",
+      "avatar": "/images/testimonials/zain-ul-abidin.jpg",
+      "quote": "He is honestly good at handling the backend APIs in Node/Express. He had been a great support to the team. Nice working with you and looking forward to more opportunities to work together."
+    },
+    {
+      "name": "Muhammad Taha Hassan",
+      "role": "IELTS Instructor - Eunoia Education",
+      "avatar": "/images/testimonials/muhammad-taha-hassan.jpg",
+      "quote": "His Django development skills are excellent. Not only he knows the framework inside out but can develop fully functional backend in it. We were working on a Final Year Project together as students and that was when he demonstrated his strong skills in python programming and django development."
+    },
+    {
+      "name": "Daniel Walczak",
+      "role": "Digital Forensics Specialist - Biuro Ekspertyz Sądowych",
+      "avatar": "/images/testimonials/daniel-walczak.jpg",
+      "quote": "I would like to express my sincere appreciation for my teacher, Muhammad Hammad. From the very beginning, he helped me understand the fundamentals of programming and introduced me to the world of coding. Muhammad is an outstanding teacher who truly knows his craft. He is patient, supportive, and always willing to help whenever I face challenges. Thanks to his guidance and encouragement, I have been able to grow and improve my skills significantly. I am grateful to have had the opportunity to learn from such a dedicated and knowledgeable educator."
+    },
+    {
+      "name": "Syed Farrukh Shah",
+      "role": "Frontend Lead - Siliconplex",
+      "avatar": "/images/testimonials/syed-farrukh-shah.jpg",
+      "quote": "I highly recommend Hammad for any development work, especially in the Django and React stack. Over the course of several projects, he consistently demonstrated not only technical expertise but also an incredible work ethic and problem-solving mindset. If you’re looking for a dependable developer with a strong skill set in Django and React. Definitely recommend him."
+    }
+  ]
+}

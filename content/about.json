@@ -1,0 +1,440 @@
+{
+  "awards": [
+    {
+      "title": "Performance Award By Siliconplex",
+      "kind": "award",
+      "date": "2024-05-01",
+      "description": "A 'Best Performance Award For Rising Star' was presented to me by Siliconplex on their 10th Anniversary. The event had lots of people from Siliconplex as well as from vairous other partner companies. I had a great networking experience and enjoyed the event to the fullest.",
+      "links": [
+        "https://www.linkedin.com/posts/siliconplex_10yearanniversary-celebration-techinnovation-activity-7201624243120308224-70C8?utm_source=share&utm_medium=member_desktop"
+      ],
+      "image": "/images/awards/performance-award-by-siliconplex.jpg"
+    },
+    {
+      "title": "Certificate of Appreciation By IEEE Region 10 Reaching Local Initiatives",
+      "kind": "workshop",
+      "date": "2022-08-01",
+      "description": "Awarded to me for working behind the scenes and presenting besides of IEEE Educational Activities Chair and UBIT UoK Chair Dr. M. Sadiq Ali Khan. This was a workshop focused on empowering education through the use of internet. I presented on the various tools which can be used in the classroom for enhanced learning and expose students to a plethora of opportunities in a safe environment.",
+      "links": [
+        "https://ea.ieeer10.org/2022-result-announcement-for-eac-call-for-proposals/#:~:text=IEEE%20Karachi%20Internet%20Literacy%20workshop%20for%20underdeveloped%20areas"
+      ],
+      "image": "/images/awards/certificate-of-appreciation-by-ieee-region-10-reaching-local.jpg"
+    },
+    {
+      "title": "Certificate of Appreciation IEEE Digital Education Awareness",
+      "kind": "workshop",
+      "date": "2022-06-01",
+      "description": "I received this award in recognition of my contributions to the Digital Educational Awareness Programme, working alongside Dr. M. Sadiq Ali Khan, who chairs both the IEEE Educational Activities and UBIT at the University of Karachi. The workshop spanned for 2 days and was focused on empowering the teachers of various background with technologies and softwares which can help them conduct successfull online classes during Covid-19 pandemic.",
+      "links": [
+        "https://qsimpact.org/impacts/202/two-days-workshop-on-capacity-building-/"
+      ],
+      "image": "/images/awards/certificate-of-appreciation-ieee-digital-education-awareness.jpg"
+    },
+    {
+      "title": "CodeBIT - Final Year Project Symposium",
+      "kind": "award",
+      "date": "2022-03-01",
+      "description": "I won a prize in the CodeBIT Final Year Project competition held within the premises of UBIT UoK. The judges were from various different organizations among which the primary sponsor of the event was WANZ Global - International Group of Companies and other sponsors include Folio3, Securiti, Agile Alliance, Qavi Technologies etc. The project entries were judged by a team formed among these sponsors. My FYP was a Data Analytics Solution which accumulated and aggregated Freelancer's data from various sources and loaded them through an ETL pipeline. The Software was able to log the user in to their account and provide them with analytics and insights which helped them answer business questions and make the right decisions about their future endevours.",
+      "links": [
+        "https://www.nawaiwaqt.com.pk/E-Paper/karachi/2022-03-12/page-2"
+      ],
+      "image": "/images/awards/codebit-final-year-project-symposium.jpg"
+    },
+    {
+      "title": "Meeting With AghaKhan Directors and Chairmen On Educational Reforms in Pakistan",
+      "kind": "award",
+      "date": "2022-02-01",
+      "description": "I was invited in a meeting (with the reference of Dr. Ghulam Ali Mallah, Seceratory/CEO of IBCC Islamabad) with Agha Khan pioneers i.e. Dr. Shezad Jeeva (Director Examination of Board and Associate Professor of Practice, AKUEB), Dr. Naveed Yousuf (Associate Director, Assessment and Research, Associate Professor, AKUEB) and Mr M. Shariff (Associate Director of Operations, AKUEB) on the educational reforms of Pakistan in relation with the factors which affects the transition of classrooms from physical to online. We had a lengthy discussion on how the most successful education system of Finland has achieved smooth transition without any hindrances so far and how we can achieve tha same.",
+      "links": [],
+      "image": "/images/awards/meeting-with-aghakhan-directors-and-chairmen-on-educational-.jpeg"
+    },
+    {
+      "title": "19th International Conference on Frontiers of Information Technology, Comstech, Islamabad",
+      "kind": "award",
+      "date": "2022-01-01",
+      "description": "This is an annual conference which was, at that time, held by Dr. M. Sadiq Ali Khan (Chair UBIT, Chair IEEE Computer Society). This conference is aimed mainly at technological breakthroughs, scientists and their latest contributions and invites experts from around the World to participate and share cutting-edge knowledge and development in their fields. There I met various highly respected experts of technological, biological and various domains. This is where I met Dr. Ghulam Ali Mallah (Seceratory/CEO of IBCC Islamabad), who then refered me to Dr. Shehzad Jeeva (Director Examination of Board and Associate Professor of Practice, AKUEB).",
+      "links": [
+        "https://comstech.org"
+      ],
+      "image": "/images/awards/19th-international-conference-on-frontiers-of-information-te.jpeg"
+    }
+  ],
+  "toolkit": [
+    {
+      "group": "Languages",
+      "items": [
+        {
+          "name": "Python",
+          "url": "https://www.python.org/"
+        },
+        {
+          "name": "JavaScript",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        },
+        {
+          "name": "TypeScript",
+          "url": "https://www.typescriptlang.org"
+        },
+        {
+          "name": "PHP",
+          "url": "https://www.php.net/"
+        },
+        {
+          "name": "Go Lang",
+          "url": "https://go.dev"
+        },
+        {
+          "name": "Solidity",
+          "url": "https://soliditylang.org/"
+        },
+        {
+          "name": "HTML",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        },
+        {
+          "name": "CSS",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        }
+      ]
+    },
+    {
+      "group": "Backend",
+      "items": [
+        {
+          "name": "Django",
+          "url": "https://www.djangoproject.com/"
+        },
+        {
+          "name": "DRF",
+          "url": "https://www.django-rest-framework.org/"
+        },
+        {
+          "name": "Node.js",
+          "url": "https://nodejs.org/en"
+        },
+        {
+          "name": "Express.js",
+          "url": "https://expressjs.com/"
+        },
+        {
+          "name": "Laravel",
+          "url": "https://laravel.com/"
+        },
+        {
+          "name": "Flask",
+          "url": "https://flask.palletsprojects.com/"
+        },
+        {
+          "name": "FastAPI",
+          "url": "https://fastapi.tiangolo.com/"
+        },
+        {
+          "name": "NestJS",
+          "url": "https://nestjs.com/"
+        },
+        {
+          "name": "Gin",
+          "url": "https://gin-gonic.com"
+        },
+        {
+          "name": "Echo",
+          "url": "https://echo.labstack.com"
+        },
+        {
+          "name": "ODOO",
+          "url": "https://www.odoo.com/"
+        },
+        {
+          "name": "Sanity",
+          "url": "https://www.sanity.io"
+        },
+        {
+          "name": "Yii",
+          "url": "https://www.yiiframework.com"
+        }
+      ]
+    },
+    {
+      "group": "Frontend",
+      "items": [
+        {
+          "name": "React.js",
+          "url": "https://react.dev/"
+        },
+        {
+          "name": "Vite.js",
+          "url": "https://vitejs.dev/"
+        },
+        {
+          "name": "Redux",
+          "url": "https://redux.js.org/"
+        },
+        {
+          "name": "React Router",
+          "url": "https://reactrouter.com/en/main"
+        },
+        {
+          "name": "Next.js",
+          "url": "https://nextjs.org"
+        },
+        {
+          "name": "Tailwind CSS",
+          "url": "https://tailwindcss.com/"
+        },
+        {
+          "name": "Bulma CSS",
+          "url": "https://bulma.io"
+        },
+        {
+          "name": "Bootstrap",
+          "url": "https://getbootstrap.com/"
+        },
+        {
+          "name": "SASS",
+          "url": "https://sass-lang.com/"
+        },
+        {
+          "name": "Streamlit",
+          "url": "https://streamlit.io/"
+        },
+        {
+          "name": "Shadcn/ui",
+          "url": "https://ui.shadcn.com"
+        }
+      ]
+    },
+    {
+      "group": "Databases",
+      "items": [
+        {
+          "name": "PostgresSQL",
+          "url": "https://www.postgresql.org/"
+        },
+        {
+          "name": "MySQL",
+          "url": "https://www.mysql.com/"
+        },
+        {
+          "name": "Redis",
+          "url": "https://redis.io/"
+        },
+        {
+          "name": "MongoDB",
+          "url": "https://www.mongodb.com/"
+        },
+        {
+          "name": "SQLite3",
+          "url": "https://www.sqlite.org/"
+        },
+        {
+          "name": "Firebase",
+          "url": "https://firebase.google.com/"
+        },
+        {
+          "name": "MSSQL",
+          "url": "https://learn.microsoft.com/"
+        },
+        {
+          "name": "Elasticsearch",
+          "url": "https://www.elastic.co/elasticsearch"
+        }
+      ]
+    },
+    {
+      "group": "AI & data",
+      "items": [
+        {
+          "name": "Numpy",
+          "url": "https://numpy.org/"
+        },
+        {
+          "name": "Scikit Learn",
+          "url": "https://scikit-learn.org/"
+        },
+        {
+          "name": "PowerBI",
+          "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi"
+        },
+        {
+          "name": "Tensorflow",
+          "url": "https://www.tensorflow.org/"
+        },
+        {
+          "name": "LangChain",
+          "url": "https://www.langchain.com/"
+        },
+        {
+          "name": "Pandas",
+          "url": "https://pandas.pydata.org/"
+        },
+        {
+          "name": "MLFlow",
+          "url": "https://mlflow.org/"
+        },
+        {
+          "name": "IBM Watson Studio",
+          "url": "https://www.ibm.com/products/watson-studio"
+        },
+        {
+          "name": "OpenAI API",
+          "url": "https://openai.com/"
+        },
+        {
+          "name": "Weka",
+          "url": "https://waikato.github.io/weka-site/index.html"
+        },
+        {
+          "name": "Dagshub",
+          "url": "https://dagshub.com/"
+        },
+        {
+          "name": "Crew AI",
+          "url": "https://www.crewai.com"
+        }
+      ]
+    },
+    {
+      "group": "Infra & tools",
+      "items": [
+        {
+          "name": "Amazon Web Services",
+          "url": "https://aws.amazon.com"
+        },
+        {
+          "name": "Docker",
+          "url": "https://www.docker.com/"
+        },
+        {
+          "name": "Wordpress",
+          "url": "https://wordpress.com/"
+        },
+        {
+          "name": "Apache Server",
+          "url": "https://httpd.apache.org/"
+        },
+        {
+          "name": "NGINX",
+          "url": "https://nginx.org/en/"
+        },
+        {
+          "name": "Open CV",
+          "url": "https://opencv.org"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/"
+        },
+        {
+          "name": "JIRA",
+          "url": "https://www.atlassian.com/software/jira"
+        },
+        {
+          "name": "Apache Kafka",
+          "url": "https://kafka.apache.org/"
+        },
+        {
+          "name": "Rabbit MQ",
+          "url": "https://www.rabbitmq.com/"
+        },
+        {
+          "name": "Celery",
+          "url": "https://docs.celeryq.dev/en/stable/index.html"
+        },
+        {
+          "name": "Git",
+          "url": "https://git-scm.com/"
+        },
+        {
+          "name": "Github",
+          "url": "https://github.com/"
+        },
+        {
+          "name": "Sentry",
+          "url": "https://sentry.io/"
+        },
+        {
+          "name": "Selenium",
+          "url": "https://www.selenium.dev"
+        },
+        {
+          "name": "Power Apps",
+          "url": "https://www.microsoft.com/en-us/power-platform/products/power-apps"
+        },
+        {
+          "name": "Terraform",
+          "url": "https://www.terraform.io"
+        },
+        {
+          "name": "Webflow",
+          "url": "https://www.webflow.com"
+        }
+      ]
+    }
+  ],
+  "communities": [
+    {
+      "title": "Dev In Trenches",
+      "description": "This is my own community for developers. This website is dedicated to providing resources and hard-earned knowledge about software development in the corporate trenches.",
+      "url": "https://dev-in-trenches.com",
+      "image": "/images/communities/dev-in-trenches.png"
+    },
+    {
+      "title": "Cyber Sources",
+      "description": "This is a community for cybersecurity professionals run by a good friend of mine. His website is dedicated to providing resources and information about cybersecurity.",
+      "url": "https://cybersources.site",
+      "image": "/images/communities/cyber-sources.png"
+    },
+    {
+      "title": "IEEE R10 Educational Activities",
+      "description": "I have been part of this community during my university days. I was part of the IEEE R10 Educational Activities and worked directly under the Chair Dr. M. Sadiq Ali Khan for the year 2022-2023.",
+      "url": "https://ea.ieeer10.org/",
+      "image": "/images/communities/ieee-r10-educational-activities.png"
+    },
+    {
+      "title": "IEEE R10 Computer Society",
+      "description": "I have been part of this community during my university days. I was part of the IEEE Computer Society - Karachi Section and worked directly under the Chair Dr. Bhagwan Das for the year 2022-2023.",
+      "url": "https://www.computer.org/",
+      "image": "/images/communities/ieee-r10-computer-society.png"
+    }
+  ],
+  "hobbies": [
+    {
+      "title": "Develop Hobby Projects",
+      "body": "I develop **hobby projects** whenever I have free time. As for ideas, I have no shortage of them. I like to try out new ideas and experiement with known or unknown technologies. I am fearless when it comes to technologies that don't come with a documentation.\n\nMy personal projects are filled with all kinds of weirdness and awesome shenanigans. Check them out at your earliest!"
+    },
+    {
+      "title": "Writing blog on medium.com",
+      "body": "I write **blog articles** on [medium.com](#). I write about the *projects* that I have built, Some difficult-to-grasp *Data Science* and *Machine Learning* concepts and stuff that helps a developer in their daily lives.\n\nI have been writing all kinds of thigns in the past, essays, reviews, academic resources for my university students, poems ... you name it. Maybe that is why writing is one of my forte."
+    },
+    {
+      "title": "Helping coding enthusiasts worldwide",
+      "body": "Just like writing and making weird projects are my hobbies, I also have a habit of **helping young enthusiasts** who want to pursue *Computer Science* or some specific niche in this domain. I have successfully mentored several people online (on personal basis ofc). My audience is spread across the world!\n\nI have mentored people for becoming market ready as a developer, interview prep, portfolio projects, skill learning and a lot of other things that I probably can't remember.\n\nReach out to me if you need some technical assisstance or guidance. I will gladly help you out."
+    },
+    {
+      "title": "Reading research papers on IEEE XPlore",
+      "body": "Reading and writing often come in a single package whenever hobbies are talked about. And I just love **reading research papers** as much as I love writing. Honestly speaking I'd go anywhere as long as they have good reading material but recently my go-to place have been **IEEE Xplore**.\n\nBut if you are thinking that I read only the sciency stuff, then nope. I also read about all kinds of fiction, novels, biography etc."
+    },
+    {
+      "title": "Sketching portraits, scenery and anime OCs",
+      "body": "I didn't go to any art school, just self taught myself to draw and here I am, **sketching** realistic faces of famous characters and **drawing** OCs.\n\nAlthough I haven't yet but I think I will make a separate page on this website for my drawings. but till then, you can ping me if you want to witness my potential as an artist (*you won't be dissappointed and I take my word seriously*)"
+    }
+  ],
+  "languages": [
+    {
+      "title": "English",
+      "body": "I am proficient in written and verbal English communications. I read research papers, books, write blog posts and code in English too, on a daily basis.\n\nYou will find my accent smooth and my words clear when you are talking to me."
+    },
+    {
+      "title": "German",
+      "body": "I learned a little bit of German, from various sources including Duolingo and a good native German friend of mine.\n\nBisher kann ich in einem Restaurant nur Essen bestellen, Leute begrüßen und normale Dinge des Alltags sagen."
+    },
+    {
+      "title": "Japanese",
+      "body": "I know a little bit of written and verbal Japanese communications. I can tell you about myself, orderfood, describe my day, and more.\n\nI learned it with my brother who was planning to go to Japan."
+    },
+    {
+      "title": "Code",
+      "body": "Yes ... I can talk to machines using a language called **binary**. Those 0s and 1s start making sense once you get the hang of it.\n\nDon't worry, I'm fluent in Python, JS, C#, and the hottest frameworks you can imagine!"
+    }
+  ]
+}

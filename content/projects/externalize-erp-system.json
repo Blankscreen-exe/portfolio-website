@@ -1,0 +1,36 @@
+{
+  "title": "Externalize ERP System",
+  "featured": false,
+  "kind": "client",
+  "status": "ongoing",
+  "openToContrib": false,
+  "dateLabel": "May 2026",
+  "sortOrder": 2,
+  "description": "Designed and developed an AI-assisted accounting automation platform that streamlines the journey from invoice collection to ERP posting. The system uses OCR and large language models to extract structured data from invoices, generate draft accounting entries, and route them through a human validation workflow before synchronization with the accounting system. Multi-company support, role-based access control, audit trails, and secure document management ensure operational reliability and compliance.\n\nThe platform integrates with the Cegid ERP ecosystem to synchronize accounting and tax data, automate approved journal postings, and provide real-time visibility through financial dashboards, reporting tools, and intelligent alerts. Built with a strong focus on traceability and accounting control, the solution combines AI-driven efficiency with human oversight, helping accounting teams reduce manual workload while maintaining accuracy and compliance across financial operations.",
+  "tags": [
+    "Node.js",
+    "Next.js",
+    "Supabase",
+    "JavaScript",
+    "TailwindCSS",
+    "PostgreSQL",
+    "Websocket"
+  ],
+  "liveUrl": "https://externaliza2.com/",
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/externalize-erp-system/1.png",
+    "/images/projects/externalize-erp-system/2.png",
+    "/images/projects/externalize-erp-system/3.png",
+    "/images/projects/externalize-erp-system/4.png",
+    "/images/projects/externalize-erp-system/5.png",
+    "/images/projects/externalize-erp-system/6.png",
+    "/images/projects/externalize-erp-system/7.png",
+    "/images/projects/externalize-erp-system/8.png",
+    "/images/projects/externalize-erp-system/9.png",
+    "/images/projects/externalize-erp-system/10.png",
+    "/images/projects/externalize-erp-system/11.png",
+    "/images/projects/externalize-erp-system/12.png"
+  ]
+}

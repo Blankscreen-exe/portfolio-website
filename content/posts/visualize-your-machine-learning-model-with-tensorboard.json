@@ -1,0 +1,14 @@
+{
+  "title": "Visualize your Machine Learning Model with TensorBoard",
+  "description": "Want to see what your ML models look from the inside? lets do it with TensorBoard. This article will prove to be a good starting point for beginners who want to know the basic stuff related to TensorBoard and how they can use it.",
+  "published": "2023-07-01",
+  "url": "https://medium.com/@hammad.ai/visualize-your-machine-learning-model-with-tensorboard-dd3a057925e9",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:828/format:webp/1*Vxt_xqlxSU1rdKlX-y4k5g.png",
+  "tags": [
+    "python",
+    "visualization",
+    "tensorboard",
+    "tensorflow",
+    "deployment"
+  ]
+}

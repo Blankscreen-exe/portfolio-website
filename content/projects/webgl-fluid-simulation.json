@@ -1,0 +1,20 @@
+{
+  "title": "WebGL Fluid Simulation",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Aug 2022",
+  "sortOrder": 32,
+  "description": "This is a small side project that simulates fluid effects directly on an HTML document, creating interactive, flowing visuals right in the browser.\n\nIt is built with vanilla JavaScript, HTML, and CSS, using WebGL to render the simulation with GPU acceleration.",
+  "tags": [
+    "JavaScript",
+    "WebGL"
+  ],
+  "liveUrl": "https://blankscreen-exe.github.io/webGL-fluid-simulation/",
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/webGL-fluid-simulation",
+  "images": [
+    "/images/projects/webgl-fluid-simulation/1.png"
+  ]
+}

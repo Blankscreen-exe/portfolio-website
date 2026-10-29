@@ -1,0 +1,28 @@
+{
+  "title": "Content Machine",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Sept 2026",
+  "sortOrder": 20,
+  "description": "A local tool for running a content pipeline: an idea pool, the pieces made from each idea, and the state of each one on its way to being published. Everything runs on your machine and nothing is sent anywhere.\n\nIt replaces a Notion database, so it has to do three things Notion could not: work offline, raise its own reminders, and sit next to the files and generation steps that produce the work.",
+  "tags": [
+    "python",
+    "Jinja2",
+    "fastAPI",
+    "HTML",
+    "JavaScript",
+    "TailwindCSS"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/content-machine",
+  "images": [
+    "/images/projects/content-machine/1.png",
+    "/images/projects/content-machine/2.png",
+    "/images/projects/content-machine/3.png",
+    "/images/projects/content-machine/4.png",
+    "/images/projects/content-machine/5.png"
+  ]
+}
