@@ -57,15 +57,13 @@ const count = (label, a, b) => (a === b ? [] : [`${label}: ${a} legacy records, 
 {
   const old = legacy('projectList')
   const ported = new Map(collection('projects').map((p) => [p.title, p]))
-  // Image references that pointed at files which never existed (nothing to migrate)
-  const knownMissing = new Set(['project:ghostcue0'])
   verify('projectList → content/projects', old.length, [
     () => count('projects', old.length, ported.size),
     () =>
       old.flatMap((o) => {
         const n = ported.get(o.title)
         if (!n) return [`missing project "${o.title}"`]
-        const refs = (Array.isArray(o.thumbnailUrl) ? o.thumbnailUrl : [o.thumbnailUrl]).filter(Boolean).filter((r) => !knownMissing.has(r))
+        const refs = (Array.isArray(o.thumbnailUrl) ? o.thumbnailUrl : [o.thumbnailUrl]).filter(Boolean)
         return [
           ...field(`${o.title} featured`, Boolean(o.featured), n.featured),
           ...field(`${o.title} kind`, o.category === 'hobby' ? 'side' : 'client', n.kind),
