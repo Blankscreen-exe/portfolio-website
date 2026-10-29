@@ -83,7 +83,7 @@ export default config({
         description: longText('Description'),
         published: fields.date({ label: 'Published', validation: { isRequired: true } }),
         url: fields.url({ label: 'Article URL', validation: { isRequired: true } }),
-        thumbnail: fields.url({ label: 'Thumbnail URL' }),
+        thumbnail: fields.url({ label: 'Thumbnail URL', description: 'Image hosts must be allowed in next.config.ts (currently Medium and Hashnode)' }),
         tags: tags(),
       },
     }),

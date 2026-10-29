@@ -3,6 +3,8 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 
+import nextConfig from '../../next.config'
+
 import { getAbout, getFaq, getHome, getPosts, getProjects, getServices, getTestimonials } from './content'
 
 // Content-integrity checks: catch broken references before they reach the live site
@@ -50,6 +52,13 @@ describe('content', () => {
     const faq = await getFaq()
     expect(faq.development.length).toBeLessThanOrEqual(4)
     expect(faq.mentorship.length).toBeLessThanOrEqual(4)
+  })
+
+  it('every post thumbnail comes from an image host next.config allows', async () => {
+    // next/image throws on unconfigured hosts, which takes down the whole page
+    const allowed = (nextConfig.images?.remotePatterns ?? []).map((p) => ('hostname' in p ? p.hostname : ''))
+    const blocked = (await getPosts()).filter((p) => p.thumbnail && !allowed.includes(new URL(p.thumbnail).hostname)).map((p) => `${p.slug}: ${new URL(p.thumbnail!).hostname}`)
+    expect(blocked).toEqual([])
   })
 
   it('posts are sorted newest first', async () => {

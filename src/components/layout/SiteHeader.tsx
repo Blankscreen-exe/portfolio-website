@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 
 import { prefersReducedMotion } from '@/hooks/useOnceVisible'
 import { routes } from '@/lib/routes'
@@ -41,6 +41,19 @@ export default function SiteHeader({ name, availability }: { name: string; avail
   const [section, setSection] = useState<string | null>(null)
   const progressRef = useRef<HTMLDivElement>(null)
   const curtainRef = useRef<HTMLDivElement>(null)
+
+  // In development React remounts the root once and resets <html> to the attributes in JSX,
+  // dropping the theme and `js` class the boot script set in app/layout.tsx. Put them back
+  // before paint (a no-op in production, where the boot script's values are never cleared).
+  useLayoutEffect(() => {
+    const root = document.documentElement
+    root.classList.add('js')
+    try {
+      if (localStorage.getItem('theme') === 'dark') root.dataset.theme = 'dark'
+    } catch {
+      /* storage unavailable: keep the default theme */
+    }
+  }, [])
 
   // Scroll progress bar + "which section am I in" readout (sections opt in with data-section)
   useEffect(() => {
