@@ -4,19 +4,33 @@
   "metrics": [
     {
       "value": "20+",
-      "label": "Production Systems Delivered"
+      "label": "Production Systems Delivered",
+      "showInStrip": true
     },
     {
       "value": "50+",
-      "label": "Clients & Teams Supported"
+      "label": "Clients & Teams Supported",
+      "showInStrip": true
     },
     {
       "value": "~5",
-      "label": "Years Production Experience"
+      "label": "Years Production Experience",
+      "showInStrip": true
     },
     {
       "value": "99%",
-      "label": "Uptime on Maintained Systems"
+      "label": "Uptime on Maintained Systems",
+      "showInStrip": true
+    },
+    {
+      "value": "10+",
+      "label": "Systems Stabilized or Refactored",
+      "showInStrip": false
+    },
+    {
+      "value": "4",
+      "label": "Engineering Communities Served",
+      "showInStrip": false
     }
   ],
   "services": [

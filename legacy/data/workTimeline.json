@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Siliconplex",
+    "orgUrl": "https://www.siliconplex.com/",
+    "tooltip": "Associate Software Developer",
+    "description": [
+      "Maintained and contributed to <u>highend projects</u> which included Entrepreneur's Business Simulator(EBS) and NFT Showroom etc",
+      "Complpeted training on <u>SCRUM</u> anthologies",
+      "Complpeted training on <u>blockchain development</u> and smart contracts",
+      "<u>Deployed projects</u> on remote servers and maintained them",
+      "Collaborated with team and brainstormed on ideas to <u>solve technical problems</u> and client's change requests",
+      "<u>Prepared documentation</u> such as Project Requirement Document (PRD), Meeting Notes with clients, Project Timeline Estimations, API, Documentation and Project READMEs",
+      "<u>Delivered workshops</u> on Blockchain, Ethereum, Arbitrage, Solidity Smart Contracts and Decentralized Applications",
+      "<u>Performed R&D</u> operations on new and upcoming projects",
+      "<u>Trained Interns</u> and prepared them to work on live projects"
+    ],
+    "date": "Feb 2023 - Ongoing"
+  },
+  {
+    "title": "Pump Jack Dataworks",
+    "orgUrl": "https://pumpjackdataworks.com/tixsee/",
+    "tooltip": "Software Developer & Data Miner Intern",
+    "description": [
+      "<u>Lead</u> and supervised 5 team members for ongoing projects",
+      "<u>Documented</u> and planned solution outline for given problems and assigned tasks to team members as well as collaborated with senior developers",
+      "Performed <u>project management</u> for the team's workflow and kept the development process under check",
+      "Contributed in backend development and test <u>MERN stack</u> based projects",
+      "Utilized <u>SCRUM</u> and <u>AGILE</u> methodologies",
+      "<u>Learned new technologies</u> such as Django, Apache Kafka, Redis, React, Express and other Javascript frameworks",
+      "Took initiative to offer <u>technical direction</u> and creative solutions to team-mates",
+      "<u>Delivered workshops</u> for hands-on to Django for fellow team members",
+      "<u>Developed, coded, modified and debugged</u> application programs of varying degree of complexity with full independence",
+      "Worked on a <u>Machine Learning</u> based project which kept scores of table tennis player by tracking the ball trajectory"
+    ],
+    "date": "May 2022 - Aug 2022"
+  },
+  {
+    "title": "The Sparks Foundation",
+    "orgUrl": "https://www.thesparksfoundationsingapore.org/",
+    "tooltip": "Data Science & Business Analytics Intern",
+    "description": [
+      "<u>Analyzed, identifiedand, interpreted</u> trends and patterns in complex datasets by finding correlations and visualizing with charts",
+      "<u>Told stories</u> about discovered insights and presented them",
+      "Used <u>PowerBI, Tensorflow and Python</u> to answer business questions",
+      "Utilized various professional statistical techniques such as <u>Matthews Correlation Coefficient</u> and <u>TimeSeries Analysis</u>",
+      "<u>Researched, reviewed and analyzed</u> existing requirements for different projects",
+      "Performed <u>Requirements Engineering</u> for completeness, consistency, comprehensibility, feasibility and conformity to standards"
+    ],
+    "date": "Apr 2022 - May 2022"
+  }
+]

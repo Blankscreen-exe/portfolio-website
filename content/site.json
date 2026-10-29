@@ -9,6 +9,19 @@
     "hashnode": "https://hammadai.hashnode.dev/",
     "upwork": "https://www.upwork.com/freelancers/~01f9b5bc6f481f0385",
     "discord": "https://discordapp.com/users/blankscreen.exe",
-    "calendarBooking": "https://cal.com/hammadai/general"
-  }
+    "calendarBooking": "https://cal.com/hammadai/general",
+    "reddit": "https://www.reddit.com/user/blankscreenEXE/",
+    "x": "https://x.com/blankscreenexe",
+    "eBizCard": "https://hihello.me/p/c9724f05-f569-4cf7-a896-f53366a3f8dc"
+  },
+  "contactAlternatives": [
+    {
+      "icon": "linkedin",
+      "name": "LinkedIn"
+    },
+    {
+      "icon": "discord",
+      "name": "Discord (blankscreen.exe)"
+    }
+  ]
 }

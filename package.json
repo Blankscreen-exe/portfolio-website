@@ -14,7 +14,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "verify:legacy": "node scripts/verify-legacy-port.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",

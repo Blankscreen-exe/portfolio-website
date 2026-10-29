@@ -29,8 +29,10 @@ export function BooksBrowser({ books }: { books: readonly Book[] }) {
   )
 }
 
-const bookmarkText = (b: Bookmark) => `${b.title} ${b.description} ${b.category} ${b.tags.join(' ')}`
+const bookmarkText = (b: Bookmark) => `${b.title} ${b.description} ${b.provider} ${b.category} ${b.tags.join(' ')}`
 const bookmarkCategory = (b: Bookmark) => (b.category ? [b.category] : [])
+// Courses often have no write-up, just a provider
+const bookmarkBlurb = (b: Bookmark) => b.description || (b.provider ? `A ${b.category === 'learning' ? 'course' : 'resource'} from ${b.provider}.` : '')
 
 export function BookmarksBrowser({ bookmarks }: { bookmarks: readonly Bookmark[] }) {
   return (
@@ -40,16 +42,21 @@ export function BookmarksBrowser({ bookmarks }: { bookmarks: readonly Bookmark[]
       facetValues={bookmarkCategory}
       getKey={(b) => b.url ?? b.title}
       noun="bookmarks"
-      placeholder="Search tools, docs and resources…"
+      placeholder="Search tools, docs, courses…"
       renderItem={(b) => (
         <a href={b.url ?? undefined} target="_blank" rel="noopener noreferrer" className="ss-wipe grid gap-2 px-2 py-4 md:grid-cols-12 md:items-baseline">
           <span className="md:col-span-4">
             <span className="ss-display ss-cond block text-2xl leading-tight">
               {b.title}
-              {b.featured && <span className="ml-2 align-middle font-jet text-[10px] text-primary">★</span>}
+              {b.featured && (
+                <span className="ml-2 align-middle font-jet text-[10px] text-primary" aria-label="Favourite">
+                  ★
+                </span>
+              )}
             </span>
+            {b.provider && <span className="ss-dim mt-1 block font-jet text-[10px] uppercase tracking-[.1em]">{b.provider}</span>}
           </span>
-          <span className="ss-dim text-sm md:col-span-6">{b.description}</span>
+          <span className="ss-dim line-clamp-3 text-sm md:col-span-6">{bookmarkBlurb(b)}</span>
           <span className="ss-dim font-jet text-[10px] uppercase tracking-[.08em] md:col-span-2 md:text-right">
             {b.category} <span className="ss-arrow text-primary">↗</span>
           </span>

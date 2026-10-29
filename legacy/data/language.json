@@ -1,0 +1,18 @@
+[
+    {
+        "language": "english",
+        "description": "I am proficient in written and verbal English communications. I read research papers, books, write blog posts and code in English too, on a daily basis.<br/><br/>You will find my accent smooth and my words clear when you are talking to me."
+    },
+    {
+        "language": "german",
+        "description": "I learned a little bit of German, from various sources including Duolingo and a good native German friend of mine.<br/><br/>Bisher kann ich in einem Restaurant nur Essen bestellen, Leute begrüßen und normale Dinge des Alltags sagen."
+    },
+    {
+        "language": "code",
+        "description": "Yes ... I can talk to machines using a language called <span class='font-bold'>binary</span>. Those 0s and 1s start making sense once you get the hang of it.<br /><br />Don't worry, I'm fluent in Python, JS, C#, and the hottest frameworks you can imagine!"
+    },
+    {
+        "language": "japanese",
+        "description": "I know a little bit of written and verbal Japanese communications. I can tell you about myself, orderfood, describe my day, and more.<br /><br /> I learned it with my brother who was planning to go to Japan."
+    }
+]

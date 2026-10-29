@@ -18,6 +18,8 @@ npm run check      # lint → typecheck → tests → production build (what CI 
 ```
 content/                 All site content as JSON, edited through Keystatic (or by hand)
 public/images/           Images referenced from content
+legacy/data/             The pre-CMS JSON data, kept for reference (see legacy/README.md)
+scripts/                 verify-legacy-port.mjs: proves legacy/data was fully migrated
 keystatic.config.ts      Content model: collections (projects, posts) and singletons (pages)
 src/
   app/

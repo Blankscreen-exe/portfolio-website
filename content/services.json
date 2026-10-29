@@ -11,7 +11,9 @@
         "Internal tools",
         "APIs & backend systems",
         "MVPs & production products"
-      ]
+      ],
+      "shortTitle": "Product Eng",
+      "featured": true
     },
     {
       "title": "AI Engineering",
@@ -25,7 +27,9 @@
         "RAG systems",
         "AI automation",
         "Model/API integrations"
-      ]
+      ],
+      "shortTitle": "AI Eng",
+      "featured": false
     },
     {
       "title": "AI Prototype To Production",
@@ -39,7 +43,9 @@
         "Reliability & observability",
         "Security & access control",
         "Scaling & deployment"
-      ]
+      ],
+      "shortTitle": "AI to Production",
+      "featured": true
     },
     {
       "title": "Technical Rescue",
@@ -53,7 +59,9 @@
         "Performance investigations",
         "Technical debt",
         "Technical roadmaps"
-      ]
+      ],
+      "shortTitle": "Tech Rescue",
+      "featured": false
     },
     {
       "title": "Consultancy & Audit",
@@ -67,7 +75,9 @@
         "System design",
         "Engineering roadmaps",
         "Technical decision reviews"
-      ]
+      ],
+      "shortTitle": "Consultancy",
+      "featured": false
     },
     {
       "title": "Automation & Integrations",
@@ -81,7 +91,9 @@
         "Data synchronization",
         "Workflow automation",
         "Internal tooling"
-      ]
+      ],
+      "shortTitle": "Automation",
+      "featured": true
     },
     {
       "title": "Mentorship",
@@ -96,7 +108,9 @@
         "Resume Improvement",
         "Interview Preparation",
         "... and more"
-      ]
+      ],
+      "shortTitle": "mentorship",
+      "featured": false
     }
   ]
 }

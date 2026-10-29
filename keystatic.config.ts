@@ -106,7 +106,13 @@ export default config({
           upwork: fields.url({ label: 'Upwork' }),
           discord: fields.url({ label: 'Discord' }),
           calendarBooking: fields.url({ label: 'Booking link' }),
+          reddit: fields.url({ label: 'Reddit' }),
+          x: fields.url({ label: 'X' }),
+          eBizCard: fields.url({ label: 'Digital business card' }),
         }, { label: 'Links' }),
+        contactAlternatives: fields.array(fields.object({ icon: text('Icon key'), name: text('Label') }), {
+          label: 'Other ways to reach me', itemLabel: (p) => p.fields.name.value,
+        }),
       },
     }),
 
@@ -117,8 +123,13 @@ export default config({
       schema: {
         heroLabel: text('Hero label'),
         heroIntro: longText('Hero intro'),
-        metrics: fields.array(fields.object({ value: text('Value', 'e.g. 20+, ~5, 99%'), label: text('Label') }), {
-          label: 'Stats strip', itemLabel: (p) => `${p.fields.value.value} ${p.fields.label.value}`,
+        metrics: fields.array(fields.object({
+          value: text('Value', 'e.g. 20+, ~5, 99%'),
+          label: text('Label'),
+          showInStrip: fields.checkbox({ label: 'Show in the hero stats strip', defaultValue: true }),
+        }), {
+          label: 'Stats', description: 'Strip items appear in this order; the first one is also used on the hero card.',
+          itemLabel: (p) => `${p.fields.value.value} ${p.fields.label.value}`,
         }),
         services: fields.array(fields.object({
           title: text('Title'),
@@ -149,6 +160,8 @@ export default config({
       schema: {
         items: fields.array(fields.object({
           title: text('Title'),
+          shortTitle: text('Short title', 'Compact label, e.g. for tabs'),
+          featured: fields.checkbox({ label: 'Featured' }),
           description: longText('Description'),
           goodFitIf: longText('Good fit if…'),
           contactTopic: text('Contact topic', 'Must match one of the home page contact topics'),
@@ -204,17 +217,43 @@ export default config({
         }), { label: 'Awards & talks', itemLabel: (p) => p.fields.title.value }),
         toolkit: fields.array(fields.object({
           group: text('Group'),
-          items: fields.array(fields.object({ name: text('Name'), url: fields.url({ label: 'URL' }) }), {
+          items: fields.array(fields.object({
+            name: text('Name'),
+            url: fields.url({ label: 'URL' }),
+            icon: text('Icon key'),
+            bgColor: text('Brand colour', 'CSS colour, e.g. #3470a0'),
+            fontColor: text('Text colour'),
+          }), {
             label: 'Tools', itemLabel: (p) => p.fields.name.value,
           }),
         }), { label: 'Toolkit', itemLabel: (p) => p.fields.group.value }),
+        experience: fields.array(fields.object({
+          organization: text('Organization'),
+          role: text('Role'),
+          dates: text('Dates', 'e.g. "Feb 2023 - Ongoing"'),
+          url: fields.url({ label: 'Website' }),
+          highlights: fields.array(markdown('Highlight'), { label: 'Highlights', itemLabel: (p) => p.value.slice(0, 60) }),
+        }), { label: 'Work history (not shown on the site)', itemLabel: (p) => p.fields.organization.value }),
+        education: fields.array(fields.object({
+          degree: text('Degree'),
+          organization: markdown('Institution'),
+          startYear: text('Start year'),
+          endYear: text('End year'),
+          description: markdown('Description'),
+        }), { label: 'Education (not shown on the site)', itemLabel: (p) => p.fields.degree.value }),
+        upcomingSkills: fields.array(fields.object({
+          text: markdown('Text'),
+          prefix: text('Prefix'),
+          colorType: text('Colour type'),
+          isHighlight: fields.checkbox({ label: 'Highlight' }),
+        }), { label: 'Skills I am learning next (not shown on the site)', itemLabel: (p) => p.fields.text.value }),
         communities: fields.array(fields.object({
           title: text('Title'),
           description: longText('Description'),
           url: fields.url({ label: 'Website' }),
           image: image('Logo', 'communities'),
         }), { label: 'Communities', itemLabel: (p) => p.fields.title.value }),
-        hobbies: fields.array(fields.object({ title: text('Title'), body: markdown('Text') }), {
+        hobbies: fields.array(fields.object({ title: text('Title'), body: markdown('Text'), value: fields.integer({ label: 'Weight', description: 'Relative amount of time spent (used by the old chart)' }) }), {
           label: 'Off the clock', itemLabel: (p) => p.fields.title.value,
         }),
         languages: fields.array(fields.object({ title: text('Language'), body: markdown('Text') }), {
@@ -245,7 +284,10 @@ export default config({
           description: longText('Description'),
           category: text('Category'),
           tags: tags(),
-          featured: fields.checkbox({ label: 'Featured' }),
+          featured: fields.checkbox({ label: 'Featured', description: 'Shown with a ★ and listed first' }),
+          icon: fields.url({ label: 'Icon URL' }),
+          provider: text('Provider', 'Who publishes it, e.g. "freeCodeCamp" (mostly for courses)'),
+          rating: fields.integer({ label: 'Rating (1–5)', validation: { min: 1, max: 5 } }),
         }), { label: 'Bookmarks', itemLabel: (p) => p.fields.title.value }),
       },
     }),

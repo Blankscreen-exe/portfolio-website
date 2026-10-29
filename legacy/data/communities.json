@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Dev In Trenches",
+    "description": "This is my own community for developers. This website is dedicated to providing resources and hard-earned knowledge about software development in the corporate trenches.",
+    "imageUrl": "img:dit",
+    "websiteUrl": "https://dev-in-trenches.com"
+  },
+  {
+    "title": "Cyber Sources",
+    "description": "This is a community for cybersecurity professionals run by a good friend of mine. His website is dedicated to providing resources and information about cybersecurity.",
+    "imageUrl": "img:cybersources",
+    "websiteUrl": "https://cybersources.site"
+  },
+  {
+    "title": "IEEE R10 Educational Activities",
+    "description": "I have been part of this community during my university days. I was part of the IEEE R10 Educational Activities and worked directly under the Chair Dr. M. Sadiq Ali Khan for the year 2022-2023.",
+    "imageUrl": "img:ieeeear10",
+    "websiteUrl": "https://ea.ieeer10.org/"
+  },
+  {
+    "title": "IEEE R10 Computer Society",
+    "description": "I have been part of this community during my university days. I was part of the IEEE Computer Society - Karachi Section and worked directly under the Chair Dr. Bhagwan Das for the year 2022-2023.",
+    "imageUrl": "img:ieeecomputer",
+    "websiteUrl": "https://www.computer.org/"
+  }
+]

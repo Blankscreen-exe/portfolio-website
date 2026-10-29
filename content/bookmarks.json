@@ -10,7 +10,10 @@
         "pre-launch",
         "founders"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.early.tools/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "JetBrains Academy",
@@ -23,7 +26,10 @@
         "ML",
         "Tooling"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Church Of Malware",
@@ -36,7 +42,10 @@
         "Research",
         "library"
       ],
-      "featured": false
+      "featured": false,
+      "icon": null,
+      "provider": "",
+      "rating": null
     },
     {
       "title": "System Design Handbook",
@@ -48,7 +57,10 @@
         "ML system design",
         "interview prep"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.systemdesignhandbook.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Tech Interview Handbook",
@@ -61,7 +73,10 @@
         "algorithm",
         "behaviour interview"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.techinterviewhandbook.org/img/favicon.png",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Awesome System Design Resources",
@@ -76,7 +91,10 @@
         "Async Communication",
         "API"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://github.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Bug Me Not",
@@ -87,7 +105,10 @@
         "shared logins",
         "login evasion"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://bugmenot.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Z Library",
@@ -98,7 +119,10 @@
         "multiple topics",
         "learning resources"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://z-library.im/img/favicons/favicon-32x32.svg?v=2",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "The Linux Foundation",
@@ -111,7 +135,10 @@
         "cyber security",
         "learning resources"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.google.com/s2/favicons?domain=training.linuxfoundation.org",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "zenk-security",
@@ -123,7 +150,10 @@
         "docs",
         "learning resources"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://repo.zenk-security.com/images/favicon2.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "osintcabal",
@@ -136,7 +166,10 @@
         "docs",
         "online tools"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://osintcabal.org/favicons/apple-icon-152x152.png",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "0xinfection",
@@ -148,7 +181,10 @@
         "hacking",
         "docs"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://0xinfection.xyz/favicon-32x32.png",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Hard Break",
@@ -160,7 +196,10 @@
         "hardware",
         "docs"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.hardbreak.wiki/~gitbook/image?url=https%3A%2F%2F2343901342-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FiAi4u24KW445RkQwdeSM%252Fsites%252Fsite_JnjIO%252Ficon%252FqPs8nePKQ0pFeJzuzEON%252Flogo.png%3Falt%3Dmedia%26token%3D598587cb-6de6-4f23-86a6-0407600354b9&width=32&dpr=3&quality=100&sign=b467cfbe&sv=2",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "pico CTF",
@@ -172,21 +211,28 @@
         "CTF",
         "labs"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://picoctf.org/favicon-32x32.png",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Refactoring Guru",
       "url": "https://refactoring.guru/",
-      "description": "Refactoring.Guru makes it easy for you to discover everything you need to know about refactoring, design patterns, SOLID principles, and other smart programming topics.",
+      "description": "Refactoring.Guru makes it easy for you to discover everything you need to know about refactoring, design patterns, SOLID principles, and other smart programming topics.\n\nThis is one of the best resources to learn Design Patterns from",
       "category": "guide",
       "tags": [
         "refactor",
         "design-patterns",
         "programming",
         "reference",
-        "docs"
+        "docs",
+        "design patterns"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://refactoring.guru/favicon.png",
+      "provider": "Refactoring Guru",
+      "rating": 5
     },
     {
       "title": "MDN Web Docs",
@@ -201,7 +247,10 @@
         "reference",
         "docs"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://developer.mozilla.org/favicon-48x48.png",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "CodePen",
@@ -215,7 +264,10 @@
         "javascript",
         "frontend"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://codepen.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "JSFiddle",
@@ -229,7 +281,10 @@
         "css",
         "playground"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://jsfiddle.net/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "StackBlitz",
@@ -243,7 +298,10 @@
         "angular",
         "react"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://stackblitz.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "CodeSandbox",
@@ -257,7 +315,10 @@
         "prototyping",
         "ide"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://codesandbox.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Replit",
@@ -270,7 +331,10 @@
         "coding",
         "online"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://replit.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Regex101",
@@ -283,7 +347,10 @@
         "debugging",
         "pattern-matching"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://regex101.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Can I Use",
@@ -297,7 +364,10 @@
         "javascript",
         "html"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://caniuse.com/img/favicon-128.png",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "JSONLint",
@@ -310,7 +380,10 @@
         "formatter",
         "debugging"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://jsonlint.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Base64 Encode/Decode",
@@ -323,7 +396,10 @@
         "decoding",
         "converter"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.base64encode.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Color Picker",
@@ -337,7 +413,10 @@
         "rgb",
         "design"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://htmlcolorcodes.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Unicode Character Table",
@@ -350,7 +429,10 @@
         "symbols",
         "reference"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://unicode-table.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Lorem Ipsum Generator",
@@ -363,7 +445,10 @@
         "text",
         "generator"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.lipsum.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "URL Encoder/Decoder",
@@ -376,7 +461,10 @@
         "decoding",
         "converter"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.urlencoder.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Markdown Editor",
@@ -389,7 +477,10 @@
         "preview",
         "writing"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://dillinger.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Image Optimizer",
@@ -402,7 +493,10 @@
         "optimization",
         "performance"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://squoosh.app/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "SVG Optimizer",
@@ -415,7 +509,10 @@
         "graphics",
         "compression"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://jakearchibald.github.io/svgomg/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "freeCodeCamp",
@@ -429,7 +526,10 @@
         "free",
         "coding"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://www.freecodecamp.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Codecademy",
@@ -442,7 +542,10 @@
         "tutorials",
         "interactive"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://www.codecademy.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "JavaScript.info",
@@ -455,7 +558,10 @@
         "learning",
         "reference"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://javascript.info/img/favicon/favicon.png",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "CSS-Tricks",
@@ -468,7 +574,10 @@
         "tutorials",
         "articles"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://css-tricks.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Smashing Magazine",
@@ -482,7 +591,10 @@
         "ux",
         "ui"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.smashingmagazine.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Coolors",
@@ -496,7 +608,10 @@
         "design",
         "ui"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://coolors.co/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Font Awesome",
@@ -509,7 +624,10 @@
         "ui",
         "design"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://fontawesome.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Material Icons",
@@ -522,7 +640,10 @@
         "google",
         "ui"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://fonts.google.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Heroicons",
@@ -535,7 +656,10 @@
         "ui",
         "design"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://heroicons.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Google Fonts",
@@ -548,7 +672,10 @@
         "web-fonts",
         "design"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://fonts.google.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "RapidAPI",
@@ -561,7 +688,10 @@
         "testing",
         "rest"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://rapidapi.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "JSONPlaceholder",
@@ -575,7 +705,10 @@
         "rest",
         "json"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://jsonplaceholder.typicode.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Public APIs",
@@ -589,7 +722,10 @@
         "resources",
         "github"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://github.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "HTTPie",
@@ -603,7 +739,10 @@
         "testing",
         "tools"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://httpie.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Reddit r/programming",
@@ -616,7 +755,10 @@
         "news",
         "programming"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.reddit.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Hacker News",
@@ -629,7 +771,10 @@
         "discussion",
         "startups"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://news.ycombinator.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Discord Developer Communities",
@@ -642,7 +787,10 @@
         "discussion",
         "collaboration"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://discord.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "GitHub Discussions",
@@ -655,7 +803,10 @@
         "community",
         "collaboration"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://github.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Google Lighthouse",
@@ -669,7 +820,10 @@
         "testing",
         "audit"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://developers.google.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "WebPageTest",
@@ -682,7 +836,10 @@
         "speed",
         "optimization"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://www.webpagetest.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "GTmetrix",
@@ -695,7 +852,10 @@
         "testing",
         "optimization"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://gtmetrix.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "PageSpeed Insights",
@@ -708,7 +868,10 @@
         "google",
         "testing"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://pagespeed.web.dev/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Bundlephobia",
@@ -722,7 +885,10 @@
         "performance",
         "packages"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://bundlephobia.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "OWASP",
@@ -733,9 +899,13 @@
         "security",
         "web",
         "vulnerabilities",
-        "best-practices"
+        "best-practices",
+        "cyber security"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://owasp.org/favicon.ico",
+      "provider": "OWASP",
+      "rating": null
     },
     {
       "title": "Have I Been Pwned",
@@ -748,7 +918,10 @@
         "data-breach",
         "email"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://haveibeenpwned.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "SSL Labs",
@@ -762,7 +935,10 @@
         "certificates",
         "testing"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.ssllabs.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "JSON Formatter",
@@ -775,7 +951,10 @@
         "validator",
         "beautifier"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://jsonformatter.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Carbon",
@@ -788,7 +967,10 @@
         "screenshots",
         "sharing"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://carbon.now.sh/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Frontend Masters",
@@ -801,7 +983,10 @@
         "advanced",
         "video"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://frontendmasters.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "UI Movement",
@@ -814,7 +999,10 @@
         "design",
         "newsletter"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://uimovement.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Flaticon",
@@ -827,7 +1015,10 @@
         "database",
         "ui"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.flaticon.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Product Hunt",
@@ -840,7 +1031,10 @@
         "discovery",
         "startups"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.producthunt.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Indie Hackers",
@@ -853,7 +1047,10 @@
         "community",
         "business"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.indiehackers.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Web.dev",
@@ -866,7 +1063,10 @@
         "best-practices",
         "google"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://web.dev/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Chrome DevTools",
@@ -879,7 +1079,10 @@
         "chrome",
         "browser"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://developer.chrome.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Snyk",
@@ -892,7 +1095,10 @@
         "dependencies",
         "scanning"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://snyk.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "npm audit",
@@ -905,7 +1111,10 @@
         "audit",
         "vulnerabilities"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.npmjs.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Testing Library",
@@ -918,7 +1127,10 @@
         "react",
         "dom"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://testing-library.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Storybook",
@@ -931,7 +1143,10 @@
         "ui",
         "development"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://storybook.js.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Linear",
@@ -944,7 +1159,10 @@
         "tracking",
         "productivity"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://linear.app/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Minify",
@@ -957,7 +1175,10 @@
         "css",
         "optimization"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.minifier.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Diff Checker",
@@ -970,7 +1191,10 @@
         "text",
         "files"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.diffchecker.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "QR Code Generator",
@@ -983,7 +1207,10 @@
         "barcode",
         "tools"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.qr-code-generator.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Khan Academy Computing",
@@ -996,7 +1223,10 @@
         "free",
         "programming"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.khanacademy.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "The Odin Project",
@@ -1009,7 +1239,10 @@
         "free",
         "full-stack"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://www.theodinproject.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "App Academy Open",
@@ -1022,7 +1255,10 @@
         "free",
         "full-stack"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.appacademy.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Egghead",
@@ -1035,7 +1271,10 @@
         "tutorials",
         "learning"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://egghead.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Scrimba",
@@ -1048,7 +1287,10 @@
         "interactive",
         "courses"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://scrimba.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Material Design",
@@ -1062,7 +1304,10 @@
         "guidelines",
         "google"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://material.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "UI Design Daily",
@@ -1075,7 +1320,10 @@
         "inspiration",
         "daily"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.uidesigndaily.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Awwwards",
@@ -1088,7 +1336,10 @@
         "inspiration",
         "web-design"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.awwwards.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "SiteInspire",
@@ -1101,7 +1352,10 @@
         "web-design",
         "showcase"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.siteinspire.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "REST Countries API",
@@ -1115,7 +1369,10 @@
         "free",
         "data"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://restcountries.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "OpenWeatherMap API",
@@ -1128,7 +1385,10 @@
         "data",
         "free"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://openweathermap.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "r/webdev",
@@ -1141,7 +1401,10 @@
         "community",
         "discussion"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.reddit.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "r/learnprogramming",
@@ -1154,7 +1417,10 @@
         "programming",
         "community"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.reddit.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "r/javascript",
@@ -1167,7 +1433,10 @@
         "news",
         "discussion"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.reddit.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Lobsters",
@@ -1180,7 +1449,10 @@
         "discussion",
         "aggregator"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://lobste.rs/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Calibre",
@@ -1193,7 +1465,10 @@
         "optimization",
         "speed"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://calibreapp.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Web Vitals",
@@ -1206,7 +1481,10 @@
         "web-vitals",
         "optimization"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://web.dev/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "OWASP Top 10",
@@ -1219,7 +1497,10 @@
         "vulnerabilities",
         "best-practices"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://owasp.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Security Headers",
@@ -1232,7 +1513,10 @@
         "analysis",
         "testing"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://securityheaders.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "VirusTotal",
@@ -1245,7 +1529,10 @@
         "scanning",
         "analysis"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.virustotal.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Karma",
@@ -1258,7 +1545,10 @@
         "test-runner",
         "javascript"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://karma-runner.github.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "CyberChef",
@@ -1271,7 +1561,10 @@
         "forensics",
         "analysis"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://gchq.github.io/CyberChef/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "JWT Decoder",
@@ -1283,7 +1576,10 @@
         "auth",
         "tokens"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://jwt.ms/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Burp Suite Community",
@@ -1295,7 +1591,10 @@
         "http",
         "proxy"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://portswigger.net/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Amass",
@@ -1307,7 +1606,10 @@
         "osint",
         "networking"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://amass-project.github.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Shodan",
@@ -1319,7 +1621,10 @@
         "iot",
         "search"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://www.shodan.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Censys",
@@ -1331,7 +1636,10 @@
         "osint",
         "network"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://censys.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "VirusShare",
@@ -1343,7 +1651,10 @@
         "analysis",
         "research"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://virusshare.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Any.Run",
@@ -1355,7 +1666,10 @@
         "sandbox",
         "analysis"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://any.run/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "CrackStation",
@@ -1367,7 +1681,10 @@
         "passwords",
         "crypto"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://crackstation.net/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Hashcat",
@@ -1379,7 +1696,10 @@
         "passwords",
         "gpu"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://hashcat.net/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "ngrok",
@@ -1391,7 +1711,10 @@
         "http",
         "dev"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://ngrok.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "LocalTunnel",
@@ -1403,7 +1726,10 @@
         "dev",
         "http"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://theboroer.github.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Requestly",
@@ -1415,7 +1741,10 @@
         "debugging",
         "proxy"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://requestly.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "HTTP Toolkit",
@@ -1427,7 +1756,10 @@
         "networking",
         "debugging"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://httptoolkit.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Beeceptor",
@@ -1439,7 +1771,10 @@
         "api",
         "http"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://beeceptor.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Mockoon",
@@ -1451,7 +1786,10 @@
         "api",
         "local"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://mockoon.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Swagger Editor",
@@ -1463,7 +1801,10 @@
         "api",
         "design"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://swagger.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "OpenAPI Generator",
@@ -1475,7 +1816,10 @@
         "codegen",
         "api"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://openapi-generator.tech/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Stoplight",
@@ -1487,7 +1831,10 @@
         "design",
         "collaboration"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://stoplight.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "CodeMirror Playground",
@@ -1499,7 +1846,10 @@
         "playground",
         "code"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://codemirror.net/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Monaco Editor Playground",
@@ -1511,7 +1861,10 @@
         "vscode",
         "playground"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://microsoft.github.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "AST Explorer",
@@ -1523,7 +1876,10 @@
         "parsing",
         "analysis"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://astexplorer.net/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "JSON to CSV",
@@ -1535,7 +1891,10 @@
         "csv",
         "converter"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://json-csv.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "CSVJSON",
@@ -1547,7 +1906,10 @@
         "json",
         "converter"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://csvjson.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "SQL Formatter",
@@ -1559,7 +1921,10 @@
         "formatter",
         "queries"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://sqlformat.org/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Explain Analyze",
@@ -1571,7 +1936,10 @@
         "query",
         "performance"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://explain.depesz.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Redash",
@@ -1583,7 +1951,10 @@
         "analytics",
         "dashboards"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://redash.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Cronitor",
@@ -1595,7 +1966,10 @@
         "monitoring",
         "jobs"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://cronitor.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Healthchecks",
@@ -1607,7 +1981,10 @@
         "monitoring",
         "alerts"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://healthchecks.io/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Draw.io",
@@ -1619,7 +1996,10 @@
         "architecture",
         "visual"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://app.diagrams.net/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Excalidraw",
@@ -1631,7 +2011,10 @@
         "whiteboard",
         "design"
       ],
-      "featured": true
+      "featured": true,
+      "icon": "https://excalidraw.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Code Time Analyzer",
@@ -1643,7 +2026,10 @@
         "metrics",
         "coding"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://wakatime.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Overleaf",
@@ -1655,7 +2041,10 @@
         "editor",
         "collaboration"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://www.overleaf.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Glitch",
@@ -1667,7 +2056,10 @@
         "node",
         "web"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://glitch.com/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Railway",
@@ -1679,7 +2071,10 @@
         "cloud",
         "hosting"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://railway.app/favicon.ico",
+      "provider": "",
+      "rating": null
     },
     {
       "title": "Render",
@@ -1691,7 +2086,1217 @@
         "cloud",
         "deploy"
       ],
-      "featured": false
+      "featured": false,
+      "icon": "https://render.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "AZ-104 Microsoft Azure Administrator Certification",
+      "url": "https://www.cybrary.it/course/az-104-microsoft-azure-administrator",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Azure"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Cybrary",
+      "rating": null
+    },
+    {
+      "title": "Agile Methodology",
+      "url": "https://www.guru99.com/agile-testing-course.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "agile",
+        "testing"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Agile Methodology: A beginners guide to agile method and SCRUM",
+      "url": "https://www.softwaretestinghelp.com/agile-scrum-methodology-for-development-and-testing/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "agile",
+        "SCRUM"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "softwaretestinghelp",
+      "rating": null
+    },
+    {
+      "title": "Agile Project Management",
+      "url": "https://www.coursera.org/learn/agile-project-management",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "project management",
+        "agile"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Google",
+      "rating": null
+    },
+    {
+      "title": "Apache Kafka Quick Start",
+      "url": "https://kafka.apache.org/quickstart",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Apache Kafka"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Apache Kafka",
+      "rating": null
+    },
+    {
+      "title": "Applied Data Science Lab",
+      "url": "https://www.wqu.edu/adsl",
+      "description": "Their course was very comprehensive and covered almost everything a data scientist should know. This course is a great choice for any beginner out there.",
+      "category": "learning",
+      "tags": [
+        "data science",
+        "machine learning"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "World Quant University",
+      "rating": 5
+    },
+    {
+      "title": "Artificial Intelligence roadmap",
+      "url": "https://i.am.ai/roadmap/#note",
+      "description": "Out of all the roadmaps out there this one really hits the nail. It contains tangible instructions on \"what to do\" unlike several other roadmaps which only state the obvious.\nI personally found it likable that they explicitly said that jumping directly to deep learning is a \"no go\".",
+      "category": "learning",
+      "tags": [
+        "roadmaps",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "i.am.ai",
+      "rating": 5
+    },
+    {
+      "title": "Awesome Ricing",
+      "url": "https://github.com/fosslife/awesome-ricing",
+      "description": "An extensive guide to ricing your linux distro. It seems to have everything wms, cli tools etc. It actually is an awesome repo.",
+      "category": "learning",
+      "tags": [
+        "rice"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "fosslife",
+      "rating": 5
+    },
+    {
+      "title": "Basics of BrainF*ck",
+      "url": "https://gist.github.com/roachhd/dce54bec8ba55fb17d3a",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "BrainF*ck",
+        "programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Katie",
+      "rating": null
+    },
+    {
+      "title": "Books By Agiliq",
+      "url": "https://books.agiliq.com/en/latest/README.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "python",
+        "django"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Agiliq",
+      "rating": 5
+    },
+    {
+      "title": "Build a Free Website with Wordpress",
+      "url": "https://www.coursera.org/projects/build-free-website-wordpress",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "wordpress",
+        "website design"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Coursera",
+      "rating": null
+    },
+    {
+      "title": "Building LLMs from the Ground Up",
+      "url": "https://magazine.sebastianraschka.com/p/building-llms-from-the-ground-up",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "AI",
+        "LLM",
+        "NLP",
+        "GPT"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Ahead Of AI",
+      "rating": null
+    },
+    {
+      "title": "Business Analytics with Excel: Elementary to Advanced",
+      "url": "https://www.coursera.org/learn/business-analytics-excel",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Business Analytics",
+        "Excel",
+        "Linear Programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "John Hopkins University",
+      "rating": null
+    },
+    {
+      "title": "CCNA Basics",
+      "url": "https://www.guru99.com/introduction-ccna.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Networking"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "CURL Cook Book",
+      "url": "https://catonmat.net/cookbooks/curl",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "CURL"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Catonmat",
+      "rating": null
+    },
+    {
+      "title": "Caching in Django with REDIS",
+      "url": "https://realpython.com/caching-in-django-with-redis/",
+      "description": "It explains everything there is to know about caching in django. Pretty much simplified to newbies to understand",
+      "category": "learning",
+      "tags": [
+        "redis",
+        "django",
+        "cache"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "RealPython",
+      "rating": 5
+    },
+    {
+      "title": "Celery + Redis + Django",
+      "url": "https://www.codingforentrepreneurs.com/blog/celery-redis-django/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "celery",
+        "redis",
+        "cache",
+        "django",
+        "cron"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "codingforentrepreneurs",
+      "rating": null
+    },
+    {
+      "title": "Cloudflare Learning Center",
+      "url": "https://www.cloudflare.com/learning/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "cloudflare",
+        "networking",
+        "security"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Cloudflare",
+      "rating": 5
+    },
+    {
+      "title": "Code Project",
+      "url": "https://www.codeproject.com",
+      "description": "This is a site where developers from around the world share their knowledge. Their are a plethora of resources/topics/code you can find here.",
+      "category": "learning",
+      "tags": [
+        "tutorials",
+        "knowledgebase"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "codeproject.com",
+      "rating": 5
+    },
+    {
+      "title": "Collection of Books By Al Sweigart",
+      "url": "https://inventwithpython.com/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "programming",
+        "python"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "inventwithpython",
+      "rating": null
+    },
+    {
+      "title": "CompTIA A+ Full Video Course for Beginners",
+      "url": "https://www.youtube.com/watch?v=Yi3L8ZCX8zc&list=PLc6LqxQFwub_rksUc1FnWB9rwO2rf7qoz",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "networking"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "BurningIceTech",
+      "rating": null
+    },
+    {
+      "title": "Crackmes",
+      "url": "https://crackmes.one",
+      "description": "A go-to place for software cracking practice",
+      "category": "learning",
+      "tags": [
+        "crack",
+        "reverse engineering"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "crackmes",
+      "rating": 5
+    },
+    {
+      "title": "Crow's Nest",
+      "url": "https://www.crow.rip/crows-nest",
+      "description": "Recommended to me by one hellova hacker friend of mine. She disappeared in the internet cables without a trace.",
+      "category": "learning",
+      "tags": [
+        "malware development",
+        "exploitation",
+        "black hat"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "cr-0w",
+      "rating": 5
+    },
+    {
+      "title": "Cybersecurity Tutorial",
+      "url": "https://www.golinuxcloud.com/kali-linux-bootable-usb/",
+      "description": "This is a text-based extensive walkthrough for different cybersecurity concepts.",
+      "category": "learning",
+      "tags": [
+        "cybersecurity"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "golinuxcloud",
+      "rating": null
+    },
+    {
+      "title": "Database Engineering Complete Course",
+      "url": "https://www.youtube.com/watch?v=iwRneX7GIGI",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "database",
+        "SQL"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Nerd's Lesson",
+      "rating": null
+    },
+    {
+      "title": "Deep Dive Into Modern Web Development",
+      "url": "https://fullstackopen.com/en/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "web dev",
+        "react.js",
+        "express.js",
+        "node.js",
+        "testing",
+        "graphQL",
+        "CI/CD",
+        "SQL"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "fullstackopen",
+      "rating": null
+    },
+    {
+      "title": "Design Patterns Video Tutorial",
+      "url": "https://www.youtube.com/playlist?list=PLF206E906175C7E07",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "design patterns"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Derek Banas",
+      "rating": null
+    },
+    {
+      "title": "Developer Roadmap",
+      "url": "https://roadmap.sh/",
+      "description": "This is the only stop for you if you are looking forward to a guided learning experience, You can find several roadmaps here, backend, frontend, devops, blockchain you name it. More are coming soon.",
+      "category": "learning",
+      "tags": [
+        "guidelines",
+        "roadmaps"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "roadmap",
+      "rating": 5
+    },
+    {
+      "title": "Django For Everybody",
+      "url": "https://www.dj4e.com/",
+      "description": "He starts with the very basics and then dives deep into Django. Awesome choice for beginners, but I would recommend that you understand python and a few things about backend frameworks before taking this course.",
+      "category": "learning",
+      "tags": [
+        "django",
+        "python"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Dr. Chuck",
+      "rating": 5
+    },
+    {
+      "title": "Docker Hands-on Labs",
+      "url": "https://hackmd.io/@pmanzoni/Bremen2020/%2F%40pmanzoni%2FBJcpeAcML",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "docker",
+        "networking",
+        "threading"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Peitro Manzoni",
+      "rating": null
+    },
+    {
+      "title": "Docker Networking Hands-on Lab",
+      "url": "https://training.play-with-docker.com/docker-networking-hol/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "docker",
+        "networking"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Docker",
+      "rating": 5
+    },
+    {
+      "title": "Ethical Hacking Tutorial",
+      "url": "https://www.guru99.com/ethical-hacking-tutorials.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "hacking"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Foundational C# Course with Microsoft",
+      "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "C#",
+        "programming"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "FreeCodeCamp",
+      "rating": 5
+    },
+    {
+      "title": "Functional Programming Slides",
+      "url": "https://tony-scialo.github.io/slides-functional-programing/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "functional programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "tony-scialo",
+      "rating": null
+    },
+    {
+      "title": "Getting Started with picoCTF",
+      "url": "https://picoctf.org/get_started.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "cyber security"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "picoCTF",
+      "rating": null
+    },
+    {
+      "title": "Git Book",
+      "url": "https://www.git-scm.com/book/en/v2",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "git"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Git",
+      "rating": null
+    },
+    {
+      "title": "Git Conventional Commits",
+      "url": "https://www.conventionalcommits.org/en/v1.0.0/",
+      "description": "This document defines some standards for writing your commit messages. It covers almost all aspects and scopes of what a commit message should contain.",
+      "category": "learning",
+      "tags": [
+        "git"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "conventional-commits",
+      "rating": 5
+    },
+    {
+      "title": "How To Do In Java",
+      "url": "https://howtodoinjava.com/",
+      "description": "It contains tutorials on java and its related technologies like Spring, Spring Boot, JUnit, Hibernate and also Interview preparation.",
+      "category": "learning",
+      "tags": [
+        "java",
+        "tutorials",
+        "spring",
+        "springboot",
+        "JUnit",
+        "Hibernate",
+        "interview"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "howtodoinjava.com",
+      "rating": null
+    },
+    {
+      "title": "How to get started with Milvus",
+      "url": "https://milvus.io/blog/how-to-get-started-with-milvus.md",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Vector Database"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Milvus",
+      "rating": null
+    },
+    {
+      "title": "IBM Trainin Center",
+      "url": "https://www.ibm.com/training/",
+      "description": "The cover a wide variety of topics including IT infrastructure, Automation, cloud, BI, AI, Asset Management, Supply chain, Security etc. A good place to learn a lot of things",
+      "category": "learning",
+      "tags": [
+        "Learning Platform"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "IBM",
+      "rating": 4
+    },
+    {
+      "title": "Introduction to Statistics",
+      "url": "https://www.coursera.org/learn/stanford-statistics",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "statistics"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Stanford",
+      "rating": null
+    },
+    {
+      "title": "JIRA Tutorial for beginners",
+      "url": "https://www.guru99.com/jira-tutorial-a-complete-guide-for-beginners.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "JIRA"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Jenkins Basics Tutorial",
+      "url": "https://www.guru99.com/jenkins-tutorial.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "jenkins"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "JetBrains Academy",
+      "url": "https://www.jetbrains.com/academy/#learn",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "programming",
+        "machine learning",
+        "game dev",
+        "data science",
+        "web dev",
+        "backend"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "JetBrains",
+      "rating": 5
+    },
+    {
+      "title": "Learn Assembly The Hard Way",
+      "url": "https://github.com/MahadMuhammad/Learn-Assembly-The-Hard-Way",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "assembly",
+        "low-level"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "MahadMuhammad",
+      "rating": null
+    },
+    {
+      "title": "Learn MongoDB",
+      "url": "https://learn.mongodb.com/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "mongoDB",
+        "NoSQL",
+        "database"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "MongoDB",
+      "rating": 5
+    },
+    {
+      "title": "Learn Python",
+      "url": "https://www.learnpython.org",
+      "description": "It is not only for learning python, but includes tutorials on several other languages as well.\nThink of it as a w3schools alternative.",
+      "category": "learning",
+      "tags": [
+        "languages",
+        "tutorials"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "ronreiter",
+      "rating": null
+    },
+    {
+      "title": "Learn Spring Boot",
+      "url": "https://www.baeldung.com/spring-boot",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "springboot",
+        "backend"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Baeldung",
+      "rating": null
+    },
+    {
+      "title": "Learn Three.js By Building 5 Projects",
+      "url": "https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "three.js"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "FreeCodeCamp",
+      "rating": null
+    },
+    {
+      "title": "Libhunt",
+      "url": "https://www.libhunt.com/",
+      "description": "A library for projects, Q/A, snippets and all sorts of cranky shenanigans. A treasurechest of code.",
+      "category": "learning",
+      "tags": [
+        "code",
+        "projects",
+        "newsfeed"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "libhunt.com",
+      "rating": 5
+    },
+    {
+      "title": "Linux Guide",
+      "url": "https://www.baeldung.com/linux/",
+      "description": "It contains information about linux OS and how to configure and modify it as well as how to manage it's resources",
+      "category": "learning",
+      "tags": [
+        "linux",
+        "administration",
+        "scripting"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Baeldung",
+      "rating": null
+    },
+    {
+      "title": "List of Free Learning Resources In Many Languages",
+      "url": "https://github.com/EbookFoundation/free-programming-books",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "computer science",
+        "software development"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "EbookFoundation",
+      "rating": null
+    },
+    {
+      "title": "Machine Learning Notes",
+      "url": "https://github.com/kassi-bertrand/machine-learning-notes/tree/main",
+      "description": "A very detailed and organized compilation of machine learning notes. This includes topics like MLP,CNN,RNN, the usaeg of PyTorch and Scikit-learn etc. All of the topics discussed come with a set of Jupyter Notebooks. Someone really put a lot of effort in this repo.",
+      "category": "learning",
+      "tags": [
+        "AI",
+        "ML",
+        "MLP",
+        "Data Science"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "kassi-bertrand",
+      "rating": 5
+    },
+    {
+      "title": "MalAPI",
+      "url": "https://malapi.io",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "malware developement"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "mrd0x",
+      "rating": null
+    },
+    {
+      "title": "NLP: Zero To Hero",
+      "url": "https://github.com/JUSTSUJAY/nlp-zero-to-hero/tree/main",
+      "description": "This is a set of tutorials for learning NLP. The repository claims to have a complete package for anyone looking forward to learn NLP.",
+      "category": "learning",
+      "tags": [
+        "NLP",
+        "ML",
+        "AI"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "JUSTSUJAY",
+      "rating": null
+    },
+    {
+      "title": "Network Technician Course",
+      "url": "https://skillsforall.com/career-path/network-technician?courseLang=en-US",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "networking"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "SkillsForAll",
+      "rating": null
+    },
+    {
+      "title": "Neural Networks: Zero To Hero",
+      "url": "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
+      "description": "This youtube playlist has a lot of materials related to neural networks. This guy is going from the basic concepts like back propagation, to building your own GPT model from scratch. There are lots of things going on in this playlist and they seem kind of unrelated to each other.",
+      "category": "learning",
+      "tags": [
+        "neural networks",
+        "NLP",
+        "GPT",
+        "AI",
+        "ML"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Andrej Karpathy",
+      "rating": 5
+    },
+    {
+      "title": "Neuromatch computational neuroscience course",
+      "url": "https://compneuro.neuromatch.io/tutorials/intro.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Machine Learning",
+        "Neuro Science",
+        "Mathematics"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Neuromatch",
+      "rating": null
+    },
+    {
+      "title": "Online Labs and Playground",
+      "url": "https://labex.io/tutorials/linux-online-linux-playground-372915",
+      "description": "They have several online in-browser labs to mess around with ranging from linux terminals tp C++ labs. It's in a virtual and isolated environment so you don't have to worry about breaking anything. Good for those who are just starting to learn about stuff without the hassle of setting up an environment dedicated to the technologies they want to use.\n\nThey also have skill trees, which can assist you in figuring out what to learn next in your career path.\n\nAdding icing on top, they have several project guidelines and tutorials as well which can get you some hand-on.",
+      "category": "learning",
+      "tags": [
+        "labs",
+        "playgrounds",
+        "tutorials",
+        "roadmaps"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "labex.io",
+      "rating": 5
+    },
+    {
+      "title": "OpenStax",
+      "url": "https://openstax.org",
+      "description": "They provide free educational resources for a variety of subjects.",
+      "category": "learning",
+      "tags": [
+        "resources",
+        "education",
+        "science"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "openstax.org",
+      "rating": 5
+    },
+    {
+      "title": "Operating System Course",
+      "url": "https://www.guru99.com/os-tutorial.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "operating system"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Operating Systems: Three Easy Pieces",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+      "description": "First of all it a FREE online book. Although I haven't read it in detail but I have crawled through the topics it discusses.\nI remember that learning about OS was very boring, especially when there was no code involved. After all, we don't understand unless there is some tangible mechanics to understand. Not only this book has got your back on tangible examples, but also contains comprehension questions, homework(which includes code) and projects.",
+      "category": "learning",
+      "tags": [
+        "OS",
+        "projects"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "University of Wisconsin-Madison",
+      "rating": 5
+    },
+    {
+      "title": "Operations Research By Solomon Getachew",
+      "url": "https://www.youtube.com/playlist?list=PLRE038tQcNiHT-ItY56Y230Nhu4jB97Wx",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "operations research",
+        "linear programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Solomon Getachew",
+      "rating": null
+    },
+    {
+      "title": "Operations Research by Yong Wang",
+      "url": "https://www.youtube.com/watch?v=WIWhQpR-CjY&list=PLgA4wLGrqI-ll9OSJmR5nU4lV4_aNTgKx",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "operations research",
+        " linear programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Binghamton University",
+      "rating": null
+    },
+    {
+      "title": "Play With Docker Classroom",
+      "url": "https://training.play-with-docker.com",
+      "description": "A sand-box environment for those learning docker. There are interactive labs and ton of content to learn from.",
+      "category": "learning",
+      "tags": [
+        "docker",
+        "devops"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Marcos Nils, Jonathan Leibiusky",
+      "rating": 5
+    },
+    {
+      "title": "Postgresql Tutorial",
+      "url": "https://www.postgresqltutorial.com/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "postgreSQL",
+        "database"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Postgresql",
+      "rating": null
+    },
+    {
+      "title": "Power Shell Utilities",
+      "url": "https://github.com/farag2/Utilities/tree/master",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "powershell",
+        "windows",
+        "batch",
+        "utilities"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "farag2",
+      "rating": null
+    },
+    {
+      "title": "Programming Zero Knowledge Proof: From Zero To Hero",
+      "url": "https://zkintro.com/articles/programming-zkps-from-zero-to-hero",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "zeroknowledge proof",
+        "group signatures"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "zkintro.com",
+      "rating": null
+    },
+    {
+      "title": "Programming in assembly language tutorial",
+      "url": "https://github.com/mschwartz/assembly-tutorial",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "assembly",
+        "low-level"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "mschwartz",
+      "rating": 5
+    },
+    {
+      "title": "Python For Everybody",
+      "url": "https://www.py4e.com/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "python",
+        "programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Dr. Chuck",
+      "rating": null
+    },
+    {
+      "title": "REST API Tutorial",
+      "url": "https://restfulapi.net/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "REST",
+        "RESTful",
+        "API"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Restfulapi",
+      "rating": null
+    },
+    {
+      "title": "React Hooks Simplified",
+      "url": "https://courses.webdevsimplified.com/react-hooks-simplified",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "React.js",
+        "Hooks"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Web Dev Simplified",
+      "rating": null
+    },
+    {
+      "title": "Reverse Engineering For Everyone",
+      "url": "https://0xinfection.github.io/reversing/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "reverse engineering",
+        "malware analysis"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "mytechnotalent",
+      "rating": null
+    },
+    {
+      "title": "SQL Academy",
+      "url": "https://sql-academy.org/en",
+      "description": "It is a good place to learn SQL from.",
+      "category": "learning",
+      "tags": [
+        "SQL",
+        "Database"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "SQL Academy",
+      "rating": 4
+    },
+    {
+      "title": "Software Engineering Tutorial",
+      "url": "https://www.guru99.com/software-engineering-tutorial.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "software engineering"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Spring Quick Start Guide",
+      "url": "https://spring.io/quickstart",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "spring",
+        "java"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Spring",
+      "rating": null
+    },
+    {
+      "title": "System Design Primer",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "system design"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "donnemartin",
+      "rating": null
+    },
+    {
+      "title": "Test Driven Development in Django",
+      "url": "https://test-driven-django-development.readthedocs.io/en/latest/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "python",
+        "TDD",
+        "django"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "PSF",
+      "rating": 4
+    },
+    {
+      "title": "The Complete PyQT6 Tutorial",
+      "url": "https://www.pythonguis.com/pyqt6-tutorial/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "pyQT6",
+        "python"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "pythonguis",
+      "rating": null
+    },
+    {
+      "title": "The Documentation System",
+      "url": "https://docs.divio.com/documentation-system/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "documentation"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Divio",
+      "rating": null
+    },
+    {
+      "title": "The Most Helpful PowerShell Cheat Sheet You’ll Ever Find",
+      "url": "https://www.stationx.net/powershell-cheat-sheet/",
+      "description": "They have a powershell command generator in there. You just type what you want to do, and it spits back the command. Nice isn't it? but the only downside of it, as I feel, is that they wrote it as a blog which kind of hides the amazing tool beneath a mass of text.",
+      "category": "learning",
+      "tags": [
+        "windows",
+        "powershell"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "stationx.net",
+      "rating": 4
+    },
+    {
+      "title": "Training Custom Object Detector",
+      "url": "https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "tensorfloww",
+        "object detection",
+        "computer vision"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Tensorflow",
+      "rating": null
+    },
+    {
+      "title": "What is Microsoft Fabric? How to Build a Customer Segmentation Project",
+      "url": "https://www.freecodecamp.org/news/what-is-microsoft-fabric/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Microsoft Fabric"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "FreeCodeCamp",
+      "rating": null
+    },
+    {
+      "title": "flat assembler",
+      "url": "https://flatassembler.net",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "assembly"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Tomasz Grysztar",
+      "rating": 5
+    },
+    {
+      "title": "hackerone",
+      "url": "https://www.hackerone.com",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "cyber security"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "hackerone",
+      "rating": null
     }
   ]
 }

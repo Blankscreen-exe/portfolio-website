@@ -9,7 +9,8 @@ import { stagger } from '@/lib/style'
 import CardStack from './CardStack'
 
 export default function Hero({ home, site }: { home: Home; site: Site }) {
-  const metrics = home.metrics
+  // Only the stats marked for the strip, in CMS order; the first also appears on the hero card
+  const metrics = home.metrics.filter((m) => m.showInStrip)
 
   return (
     <section className="border-b border-ink">

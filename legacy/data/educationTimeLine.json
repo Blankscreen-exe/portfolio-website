@@ -1,0 +1,16 @@
+[
+    {
+        "degreeTitle": "Masters In Computer Science (MCS)",
+        "startDate": "2020",
+        "endDate": "2021",
+        "organization": "<a href='https://uok.edu.pk/' target='_blank'>University of Karachi</a>",
+        "description": "I was part of various extracurricular activities and societies including <span class='font-bold text-primary'>IEEE Computer Society - Karachi Section</span> and <span class='font-bold text-primary'>Arts & Culture Society</span>, while also maintaining my academic record of being among the toppers of Masters Program. I studied under state of the art teachers and developed several educational projects related to Computer Science which really proved to be an enlightening experience.<br/>I am glad that I worked on my Final Year Project under Dr. Asim Ali and <span class='font-bold text-primary'>won a prize in the CodeBIT Competition</span> held by Department of Computer Science on March 2022, which was primarily sponsored by WANZ International Enterprize, Qavi Technologies and many other industries.<br/>My Final Year Project was based on Data Analytics and Business Intelligence, where I was aggregating Freelancer's Data from various sources through an ETL pipeline and displayed insights in a web application."
+    },
+    {
+        "degreeTitle": "Bachelor In Mathematical Science (B.Sc)",
+        "startDate": "2017",
+        "endDate": "2019",
+        "organization": "<a href='https://uok.edu.pk/' target='_blank'>University of Karachi</a>",
+        "description": "I proved to be a diligent student and earned recognitions from my Professor Dr. Khurram Iqbal. My skills in Python Programming Language & MS Excel Spread Sheets were recognized as worthy of being nominated as a Teacher's Assisstant (working under Dr. Khurram Iqbal) for conducting lab sessions for the student's of Financial Mathematics.<br/>During my Bachelors, I was also engaged in some educational group projects related to Statistics, and Robotics as part of my studies. I worked on MS Excel, Python and Arduino Microprocessors. My other subjects were highly theoretical in mathematical applications.<br/>I also became a member of <span class='font-bold text-primary'>Arts & Culture Society</span>, a student's club founded by University Alumni and patronized by Dr. Asim Ali and supervised by Dr. Khalid Iraqi (VC University of Karachi). In this Club I took part in activities related to literature review, event planning and promotion and as an IT support."
+    }
+]

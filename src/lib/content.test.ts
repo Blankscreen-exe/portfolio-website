@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { existsSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 
@@ -33,6 +33,17 @@ describe('content', () => {
   it('service contact topics are offered on the contact form', async () => {
     const topics = (await getHome()).contactTopics
     for (const s of await getServices()) expect(topics, s.title).toContain(s.contactTopic)
+  })
+
+  it('contains no raw HTML (rich text uses the Markdown subset in lib/markdown.ts)', () => {
+    const files = (dir: string): string[] =>
+      readdirSync(dir, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? files(path.join(dir, e.name)) : [path.join(dir, e.name)]))
+    const strings = (value: unknown): string[] =>
+      typeof value === 'string' ? [value] : Array.isArray(value) ? value.flatMap(strings) : value && typeof value === 'object' ? Object.values(value).flatMap(strings) : []
+    const withHtml = files(path.join(process.cwd(), 'content'))
+      .filter((f) => f.endsWith('.json'))
+      .flatMap((f) => strings(JSON.parse(readFileSync(f, 'utf8'))).filter((s) => /<\/?[a-z][^>]*>/i.test(s)).map((s) => `${path.basename(f)}: ${s.slice(0, 60)}`))
+    expect(withHtml).toEqual([])
   })
 
   it('posts are sorted newest first', async () => {

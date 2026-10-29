@@ -65,35 +65,59 @@
       "items": [
         {
           "name": "Python",
-          "url": "https://www.python.org/"
+          "url": "https://www.python.org/",
+          "icon": "python",
+          "bgColor": "#3470a0",
+          "fontColor": ""
         },
         {
           "name": "JavaScript",
-          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+          "icon": "javascript",
+          "bgColor": "#efd81d",
+          "fontColor": ""
         },
         {
           "name": "TypeScript",
-          "url": "https://www.typescriptlang.org"
+          "url": "https://www.typescriptlang.org",
+          "icon": "typescript",
+          "bgColor": "#efd81d",
+          "fontColor": ""
         },
         {
           "name": "PHP",
-          "url": "https://www.php.net/"
+          "url": "https://www.php.net/",
+          "icon": "php",
+          "bgColor": "#7377ad;",
+          "fontColor": ""
         },
         {
           "name": "Go Lang",
-          "url": "https://go.dev"
+          "url": "https://go.dev",
+          "icon": "golang",
+          "bgColor": "#74ad5e",
+          "fontColor": ""
         },
         {
           "name": "Solidity",
-          "url": "https://soliditylang.org/"
+          "url": "https://soliditylang.org/",
+          "icon": "solidity",
+          "bgColor": "#e6e3ec",
+          "fontColor": ""
         },
         {
           "name": "HTML",
-          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+          "icon": "html",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "CSS",
-          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+          "icon": "css",
+          "bgColor": "#e96228",
+          "fontColor": ""
         }
       ]
     },
@@ -102,55 +126,94 @@
       "items": [
         {
           "name": "Django",
-          "url": "https://www.djangoproject.com/"
+          "url": "https://www.djangoproject.com/",
+          "icon": "django",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "DRF",
-          "url": "https://www.django-rest-framework.org/"
+          "url": "https://www.django-rest-framework.org/",
+          "icon": "djangorestframework",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Node.js",
-          "url": "https://nodejs.org/en"
+          "url": "https://nodejs.org/en",
+          "icon": "nodejs",
+          "bgColor": "#74ad5e",
+          "fontColor": ""
         },
         {
           "name": "Express.js",
-          "url": "https://expressjs.com/"
+          "url": "https://expressjs.com/",
+          "icon": "expressjs",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Laravel",
-          "url": "https://laravel.com/"
+          "url": "https://laravel.com/",
+          "icon": "laravel",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Flask",
-          "url": "https://flask.palletsprojects.com/"
+          "url": "https://flask.palletsprojects.com/",
+          "icon": "flask",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "FastAPI",
-          "url": "https://fastapi.tiangolo.com/"
+          "url": "https://fastapi.tiangolo.com/",
+          "icon": "fastapi",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "NestJS",
-          "url": "https://nestjs.com/"
+          "url": "https://nestjs.com/",
+          "icon": "nestjs",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Gin",
-          "url": "https://gin-gonic.com"
+          "url": "https://gin-gonic.com",
+          "icon": "gin",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Echo",
-          "url": "https://echo.labstack.com"
+          "url": "https://echo.labstack.com",
+          "icon": "echo",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "ODOO",
-          "url": "https://www.odoo.com/"
+          "url": "https://www.odoo.com/",
+          "icon": "odoo",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Sanity",
-          "url": "https://www.sanity.io"
+          "url": "https://www.sanity.io",
+          "icon": "sanity",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Yii",
-          "url": "https://www.yiiframework.com"
+          "url": "https://www.yiiframework.com",
+          "icon": "yii",
+          "bgColor": "#e96228",
+          "fontColor": ""
         }
       ]
     },
@@ -159,47 +222,80 @@
       "items": [
         {
           "name": "React.js",
-          "url": "https://react.dev/"
+          "url": "https://react.dev/",
+          "icon": "reactjs",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Vite.js",
-          "url": "https://vitejs.dev/"
+          "url": "https://vitejs.dev/",
+          "icon": "vitejs",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Redux",
-          "url": "https://redux.js.org/"
+          "url": "https://redux.js.org/",
+          "icon": "redux",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "React Router",
-          "url": "https://reactrouter.com/en/main"
+          "url": "https://reactrouter.com/en/main",
+          "icon": "reactrouter",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Next.js",
-          "url": "https://nextjs.org"
+          "url": "https://nextjs.org",
+          "icon": "nextjs",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Tailwind CSS",
-          "url": "https://tailwindcss.com/"
+          "url": "https://tailwindcss.com/",
+          "icon": "tailwind",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Bulma CSS",
-          "url": "https://bulma.io"
+          "url": "https://bulma.io",
+          "icon": "bulma",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Bootstrap",
-          "url": "https://getbootstrap.com/"
+          "url": "https://getbootstrap.com/",
+          "icon": "bootstrap",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "SASS",
-          "url": "https://sass-lang.com/"
+          "url": "https://sass-lang.com/",
+          "icon": "sass",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Streamlit",
-          "url": "https://streamlit.io/"
+          "url": "https://streamlit.io/",
+          "icon": "streamlit",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Shadcn/ui",
-          "url": "https://ui.shadcn.com"
+          "url": "https://ui.shadcn.com",
+          "icon": "shadcn",
+          "bgColor": "#e96228",
+          "fontColor": ""
         }
       ]
     },
@@ -208,35 +304,59 @@
       "items": [
         {
           "name": "PostgresSQL",
-          "url": "https://www.postgresql.org/"
+          "url": "https://www.postgresql.org/",
+          "icon": "postgresql",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "MySQL",
-          "url": "https://www.mysql.com/"
+          "url": "https://www.mysql.com/",
+          "icon": "mysql",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Redis",
-          "url": "https://redis.io/"
+          "url": "https://redis.io/",
+          "icon": "redis",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "MongoDB",
-          "url": "https://www.mongodb.com/"
+          "url": "https://www.mongodb.com/",
+          "icon": "mongodb",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "SQLite3",
-          "url": "https://www.sqlite.org/"
+          "url": "https://www.sqlite.org/",
+          "icon": "sqlite",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Firebase",
-          "url": "https://firebase.google.com/"
+          "url": "https://firebase.google.com/",
+          "icon": "firebase",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "MSSQL",
-          "url": "https://learn.microsoft.com/"
+          "url": "https://learn.microsoft.com/",
+          "icon": "mssql",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Elasticsearch",
-          "url": "https://www.elastic.co/elasticsearch"
+          "url": "https://www.elastic.co/elasticsearch",
+          "icon": "elasticsearch",
+          "bgColor": "#e96228",
+          "fontColor": ""
         }
       ]
     },
@@ -245,51 +365,87 @@
       "items": [
         {
           "name": "Numpy",
-          "url": "https://numpy.org/"
+          "url": "https://numpy.org/",
+          "icon": "numpy",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Scikit Learn",
-          "url": "https://scikit-learn.org/"
+          "url": "https://scikit-learn.org/",
+          "icon": "scikitlearn",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "PowerBI",
-          "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi"
+          "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi",
+          "icon": "powerbi",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "Tensorflow",
-          "url": "https://www.tensorflow.org/"
+          "url": "https://www.tensorflow.org/",
+          "icon": "tensorflow",
+          "bgColor": "#e96228",
+          "fontColor": ""
         },
         {
           "name": "LangChain",
-          "url": "https://www.langchain.com/"
+          "url": "https://www.langchain.com/",
+          "icon": "langchain",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Pandas",
-          "url": "https://pandas.pydata.org/"
+          "url": "https://pandas.pydata.org/",
+          "icon": "pandas",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "MLFlow",
-          "url": "https://mlflow.org/"
+          "url": "https://mlflow.org/",
+          "icon": "mlflow",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "IBM Watson Studio",
-          "url": "https://www.ibm.com/products/watson-studio"
+          "url": "https://www.ibm.com/products/watson-studio",
+          "icon": "ibmwatson",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "OpenAI API",
-          "url": "https://openai.com/"
+          "url": "https://openai.com/",
+          "icon": "openai",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Weka",
-          "url": "https://waikato.github.io/weka-site/index.html"
+          "url": "https://waikato.github.io/weka-site/index.html",
+          "icon": "weka",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Dagshub",
-          "url": "https://dagshub.com/"
+          "url": "https://dagshub.com/",
+          "icon": "dagshub",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Crew AI",
-          "url": "https://www.crewai.com"
+          "url": "https://www.crewai.com",
+          "icon": "crewai",
+          "bgColor": "",
+          "fontColor": ""
         }
       ]
     },
@@ -298,75 +454,129 @@
       "items": [
         {
           "name": "Amazon Web Services",
-          "url": "https://aws.amazon.com"
+          "url": "https://aws.amazon.com",
+          "icon": "aws",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Docker",
-          "url": "https://www.docker.com/"
+          "url": "https://www.docker.com/",
+          "icon": "docker",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Wordpress",
-          "url": "https://wordpress.com/"
+          "url": "https://wordpress.com/",
+          "icon": "wordpress",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Apache Server",
-          "url": "https://httpd.apache.org/"
+          "url": "https://httpd.apache.org/",
+          "icon": "apacheserver",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "NGINX",
-          "url": "https://nginx.org/en/"
+          "url": "https://nginx.org/en/",
+          "icon": "nginx",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Open CV",
-          "url": "https://opencv.org"
+          "url": "https://opencv.org",
+          "icon": "opencv",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Figma",
-          "url": "https://www.figma.com/"
+          "url": "https://www.figma.com/",
+          "icon": "figma",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "JIRA",
-          "url": "https://www.atlassian.com/software/jira"
+          "url": "https://www.atlassian.com/software/jira",
+          "icon": "jira",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Apache Kafka",
-          "url": "https://kafka.apache.org/"
+          "url": "https://kafka.apache.org/",
+          "icon": "apachekafka",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Rabbit MQ",
-          "url": "https://www.rabbitmq.com/"
+          "url": "https://www.rabbitmq.com/",
+          "icon": "rabbitmq",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Celery",
-          "url": "https://docs.celeryq.dev/en/stable/index.html"
+          "url": "https://docs.celeryq.dev/en/stable/index.html",
+          "icon": "celery",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Git",
-          "url": "https://git-scm.com/"
+          "url": "https://git-scm.com/",
+          "icon": "git",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Github",
-          "url": "https://github.com/"
+          "url": "https://github.com/",
+          "icon": "github",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Sentry",
-          "url": "https://sentry.io/"
+          "url": "https://sentry.io/",
+          "icon": "sentry",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Selenium",
-          "url": "https://www.selenium.dev"
+          "url": "https://www.selenium.dev",
+          "icon": "selenium",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Power Apps",
-          "url": "https://www.microsoft.com/en-us/power-platform/products/power-apps"
+          "url": "https://www.microsoft.com/en-us/power-platform/products/power-apps",
+          "icon": "power_apps",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Terraform",
-          "url": "https://www.terraform.io"
+          "url": "https://www.terraform.io",
+          "icon": "terraform",
+          "bgColor": "",
+          "fontColor": ""
         },
         {
           "name": "Webflow",
-          "url": "https://www.webflow.com"
+          "url": "https://www.webflow.com",
+          "icon": "webflow",
+          "bgColor": "",
+          "fontColor": ""
         }
       ]
     }
@@ -400,23 +610,28 @@
   "hobbies": [
     {
       "title": "Develop Hobby Projects",
-      "body": "I develop **hobby projects** whenever I have free time. As for ideas, I have no shortage of them. I like to try out new ideas and experiement with known or unknown technologies. I am fearless when it comes to technologies that don't come with a documentation.\n\nMy personal projects are filled with all kinds of weirdness and awesome shenanigans. Check them out at your earliest!"
+      "body": "I develop **hobby projects** whenever I have free time. As for ideas, I have no shortage of them. I like to try out new ideas and experiement with known or unknown technologies. I am fearless when it comes to technologies that don't come with a documentation.\n\nMy personal projects are filled with all kinds of weirdness and awesome shenanigans. Check them out at your earliest!",
+      "value": 400
     },
     {
       "title": "Writing blog on medium.com",
-      "body": "I write **blog articles** on [medium.com](#). I write about the *projects* that I have built, Some difficult-to-grasp *Data Science* and *Machine Learning* concepts and stuff that helps a developer in their daily lives.\n\nI have been writing all kinds of thigns in the past, essays, reviews, academic resources for my university students, poems ... you name it. Maybe that is why writing is one of my forte."
+      "body": "I write **blog articles** on [medium.com](#). I write about the *projects* that I have built, Some difficult-to-grasp *Data Science* and *Machine Learning* concepts and stuff that helps a developer in their daily lives.\n\nI have been writing all kinds of thigns in the past, essays, reviews, academic resources for my university students, poems ... you name it. Maybe that is why writing is one of my forte.",
+      "value": 335
     },
     {
       "title": "Helping coding enthusiasts worldwide",
-      "body": "Just like writing and making weird projects are my hobbies, I also have a habit of **helping young enthusiasts** who want to pursue *Computer Science* or some specific niche in this domain. I have successfully mentored several people online (on personal basis ofc). My audience is spread across the world!\n\nI have mentored people for becoming market ready as a developer, interview prep, portfolio projects, skill learning and a lot of other things that I probably can't remember.\n\nReach out to me if you need some technical assisstance or guidance. I will gladly help you out."
+      "body": "Just like writing and making weird projects are my hobbies, I also have a habit of **helping young enthusiasts** who want to pursue *Computer Science* or some specific niche in this domain. I have successfully mentored several people online (on personal basis ofc). My audience is spread across the world!\n\nI have mentored people for becoming market ready as a developer, interview prep, portfolio projects, skill learning and a lot of other things that I probably can't remember.\n\nReach out to me if you need some technical assisstance or guidance. I will gladly help you out.",
+      "value": 274
     },
     {
       "title": "Reading research papers on IEEE XPlore",
-      "body": "Reading and writing often come in a single package whenever hobbies are talked about. And I just love **reading research papers** as much as I love writing. Honestly speaking I'd go anywhere as long as they have good reading material but recently my go-to place have been **IEEE Xplore**.\n\nBut if you are thinking that I read only the sciency stuff, then nope. I also read about all kinds of fiction, novels, biography etc."
+      "body": "Reading and writing often come in a single package whenever hobbies are talked about. And I just love **reading research papers** as much as I love writing. Honestly speaking I'd go anywhere as long as they have good reading material but recently my go-to place have been **IEEE Xplore**.\n\nBut if you are thinking that I read only the sciency stuff, then nope. I also read about all kinds of fiction, novels, biography etc.",
+      "value": 235
     },
     {
       "title": "Sketching portraits, scenery and anime OCs",
-      "body": "I didn't go to any art school, just self taught myself to draw and here I am, **sketching** realistic faces of famous characters and **drawing** OCs.\n\nAlthough I haven't yet but I think I will make a separate page on this website for my drawings. but till then, you can ping me if you want to witness my potential as an artist (*you won't be dissappointed and I take my word seriously*)"
+      "body": "I didn't go to any art school, just self taught myself to draw and here I am, **sketching** realistic faces of famous characters and **drawing** OCs.\n\nAlthough I haven't yet but I think I will make a separate page on this website for my drawings. but till then, you can ping me if you want to witness my potential as an artist (*you won't be dissappointed and I take my word seriously*)",
+      "value": 310
     }
   ],
   "languages": [
@@ -435,6 +650,129 @@
     {
       "title": "Code",
       "body": "Yes ... I can talk to machines using a language called **binary**. Those 0s and 1s start making sense once you get the hang of it.\n\nDon't worry, I'm fluent in Python, JS, C#, and the hottest frameworks you can imagine!"
+    }
+  ],
+  "experience": [
+    {
+      "organization": "Siliconplex",
+      "role": "Associate Software Developer",
+      "dates": "Feb 2023 - Ongoing",
+      "url": "https://www.siliconplex.com/",
+      "highlights": [
+        "Maintained and contributed to highend projects which included Entrepreneur's Business Simulator(EBS) and NFT Showroom etc",
+        "Complpeted training on SCRUM anthologies",
+        "Complpeted training on blockchain development and smart contracts",
+        "Deployed projects on remote servers and maintained them",
+        "Collaborated with team and brainstormed on ideas to solve technical problems and client's change requests",
+        "Prepared documentation such as Project Requirement Document (PRD), Meeting Notes with clients, Project Timeline Estimations, API, Documentation and Project READMEs",
+        "Delivered workshops on Blockchain, Ethereum, Arbitrage, Solidity Smart Contracts and Decentralized Applications",
+        "Performed R&D operations on new and upcoming projects",
+        "Trained Interns and prepared them to work on live projects"
+      ]
+    },
+    {
+      "organization": "Pump Jack Dataworks",
+      "role": "Software Developer & Data Miner Intern",
+      "dates": "May 2022 - Aug 2022",
+      "url": "https://pumpjackdataworks.com/tixsee/",
+      "highlights": [
+        "Lead and supervised 5 team members for ongoing projects",
+        "Documented and planned solution outline for given problems and assigned tasks to team members as well as collaborated with senior developers",
+        "Performed project management for the team's workflow and kept the development process under check",
+        "Contributed in backend development and test MERN stack based projects",
+        "Utilized SCRUM and AGILE methodologies",
+        "Learned new technologies such as Django, Apache Kafka, Redis, React, Express and other Javascript frameworks",
+        "Took initiative to offer technical direction and creative solutions to team-mates",
+        "Delivered workshops for hands-on to Django for fellow team members",
+        "Developed, coded, modified and debugged application programs of varying degree of complexity with full independence",
+        "Worked on a Machine Learning based project which kept scores of table tennis player by tracking the ball trajectory"
+      ]
+    },
+    {
+      "organization": "The Sparks Foundation",
+      "role": "Data Science & Business Analytics Intern",
+      "dates": "Apr 2022 - May 2022",
+      "url": "https://www.thesparksfoundationsingapore.org/",
+      "highlights": [
+        "Analyzed, identifiedand, interpreted trends and patterns in complex datasets by finding correlations and visualizing with charts",
+        "Told stories about discovered insights and presented them",
+        "Used PowerBI, Tensorflow and Python to answer business questions",
+        "Utilized various professional statistical techniques such as Matthews Correlation Coefficient and TimeSeries Analysis",
+        "Researched, reviewed and analyzed existing requirements for different projects",
+        "Performed Requirements Engineering for completeness, consistency, comprehensibility, feasibility and conformity to standards"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Masters In Computer Science (MCS)",
+      "organization": "[University of Karachi](https://uok.edu.pk/)",
+      "startYear": "2020",
+      "endYear": "2021",
+      "description": "I was part of various extracurricular activities and societies including **IEEE Computer Society - Karachi Section** and **Arts & Culture Society**, while also maintaining my academic record of being among the toppers of Masters Program. I studied under state of the art teachers and developed several educational projects related to Computer Science which really proved to be an enlightening experience.\nI am glad that I worked on my Final Year Project under Dr. Asim Ali and **won a prize in the CodeBIT Competition** held by Department of Computer Science on March 2022, which was primarily sponsored by WANZ International Enterprize, Qavi Technologies and many other industries.\nMy Final Year Project was based on Data Analytics and Business Intelligence, where I was aggregating Freelancer's Data from various sources through an ETL pipeline and displayed insights in a web application."
+    },
+    {
+      "degree": "Bachelor In Mathematical Science (B.Sc)",
+      "organization": "[University of Karachi](https://uok.edu.pk/)",
+      "startYear": "2017",
+      "endYear": "2019",
+      "description": "I proved to be a diligent student and earned recognitions from my Professor Dr. Khurram Iqbal. My skills in Python Programming Language & MS Excel Spread Sheets were recognized as worthy of being nominated as a Teacher's Assisstant (working under Dr. Khurram Iqbal) for conducting lab sessions for the student's of Financial Mathematics.\nDuring my Bachelors, I was also engaged in some educational group projects related to Statistics, and Robotics as part of my studies. I worked on MS Excel, Python and Arduino Microprocessors. My other subjects were highly theoretical in mathematical applications.\nI also became a member of **Arts & Culture Society**, a student's club founded by University Alumni and patronized by Dr. Asim Ali and supervised by Dr. Khalid Iraqi (VC University of Karachi). In this Club I took part in activities related to literature review, event planning and promotion and as an IT support."
+    }
+  ],
+  "upcomingSkills": [
+    {
+      "text": "📌 Frameworks",
+      "prefix": "$",
+      "colorType": "info",
+      "isHighlight": false
+    },
+    {
+      "text": "[ ] Learning [Next.js](https://nextjs.org)",
+      "prefix": ">",
+      "colorType": "secondary",
+      "isHighlight": false
+    },
+    {
+      "text": "[ ] Learning [React-Native](.https://reactnativedev/)",
+      "prefix": ">",
+      "colorType": "secondary",
+      "isHighlight": false
+    },
+    {
+      "text": "",
+      "prefix": "$",
+      "colorType": "secondary",
+      "isHighlight": false
+    },
+    {
+      "text": "📌 Other Skills and Technologies",
+      "prefix": "$",
+      "colorType": "info",
+      "isHighlight": false
+    },
+    {
+      "text": "Thinking of learning [Jenkins](https://www.jenkins.io/) or [AWS](https://aws.amazon.com/) (help me pick)",
+      "prefix": "~",
+      "colorType": "secondary",
+      "isHighlight": false
+    },
+    {
+      "text": "Business Communications (got any recommendatioins where to learn?)",
+      "prefix": "~",
+      "colorType": "secondary",
+      "isHighlight": false
+    },
+    {
+      "text": "Learning about [Teraform](https://www.terraform.io)",
+      "prefix": "~",
+      "colorType": "secondary",
+      "isHighlight": false
+    },
+    {
+      "text": "Learning about [Teamcity](https://www.jetbrains.com/teamcity/)",
+      "prefix": "~",
+      "colorType": "secondary",
+      "isHighlight": false
     }
   ]
 }

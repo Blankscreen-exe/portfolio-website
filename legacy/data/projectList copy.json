@@ -1,0 +1,671 @@
+[
+    {
+        "title": "Clinic AI Voice Agent for Scheduling, Intake & Specialist Routing",
+        "description": "This is a voice agent that can schedule appointments, intake patients and route them to the appropriate specialist.",
+        "tags": [
+            "Python", 
+            "JavaScript",
+            "Node.js",
+            "TailwindCSS",
+            "PostgreSQL",
+            "LLM",
+            "OpenAI",
+            "VAPI",
+            "Twilio"
+        ],
+        "projUrl": null,
+        "githubUrl": null,
+        "publishDate": "Live and Ongoing",
+        "thumbnailUrl":[
+            "project:clinicVoice1",
+            "project:clinicVoice2",
+            "project:clinicVoice3",
+            "project:clinicVoice4",
+            "project:clinicVoice5",
+            "project:clinicVoice6",
+            "project:clinicVoice7",
+            "project:clinicVoice8",
+            "project:clinicVoice9",
+            "project:clinicVoice10"
+        ],
+        "category":"corporate",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "AI-Powered LinkedIn Automation & CRM Integration Platform",
+        "description": "This is a platform that automates LinkedIn interactions and integrates with your CRM system to streamline your sales and marketing efforts.",
+        "tags": [
+            "Python", 
+            "Go Lang",
+            "JavaScript",
+            "FastAPI",
+            "Gin",
+            "Nest.js",
+            "Microservices",
+            "PostgreSQL",
+            "AWS",
+            "LLM",
+            "Web scraping"
+        ],
+        "projUrl": null,
+        "githubUrl": null,
+        "publishDate": "Live and Ongoing",
+        "thumbnailUrl":[
+            "project:linkedinAutomation3",
+            "project:linkedinAutomation1",
+            "project:linkedinAutomation2",
+            "project:linkedinAutomation4"
+        ],
+        "category":"corporate",
+        "status": "ongoing",
+        "openToContrib": false
+    },
+    {
+        "title": "Entrepreneur's Business Simulator",
+        "description": "Entrepreneur’s Business Simulator is a software designed to train young entrepreneurs within all aspects of business and financial management.",
+        "tags": [
+            "Python", 
+            "Django",
+            "JavaScript",
+            "Jinja2",
+            "PostgreSQL"
+        ],
+        "projUrl": "https://ebs.org/",
+        "githubUrl": null,
+        "publishDate": "Live and Ongoing",
+        "thumbnailUrl":"project:ebs",
+        "category":"corporate",
+        "status": "ongoing",
+        "openToContrib": false
+    },
+    {
+        "title": "PractiCal Food Ordering System",
+        "description": "It is a food ordering system which is lead by a nutritionist. It helps deliver you your desired meal plan based on your dietary needs and more.",
+        "tags": [
+            "PHP", 
+            "Laravel",
+            "Next.js",
+            "Node.js",
+            "TailwindCSS",
+            "MySQL"
+        ],
+        "projUrl": "https://practical.me/",
+        "githubUrl": null,
+        "publishDate": "Live and Ongoing",
+        "thumbnailUrl":"project:practical",
+        "category":"corporate",
+        "status": "ongoing",
+        "openToContrib": false
+    },
+    {
+        "title": "Go Bro On-Demand Service Booking Platform",
+        "description": "It is an on demand service booking platform where customers can ask for services such as baby-sitting, plumbing, carpenter, A/C Repair etc",
+        "tags": [
+            "PHP", 
+            "Laravel",
+            "React-native",
+            "Vite.js",
+            "Node.js",
+            "MySQL"
+        ],
+        "projUrl": "https://www.gobro.co.nz/",
+        "githubUrl": null,
+        "publishDate": "Live and Ongoing",
+        "thumbnailUrl":"project:gobro",
+        "category":"corporate",
+        "status": "ongoing",
+        "openToContrib": false
+    },
+    {
+        "title": "NFT Showroom",
+        "description": "It is a platform which showcases digital assets while providing a user friendly and a safe way for everyone to engage with the world of NFTs.",
+        "tags": [
+            "Python", 
+            "Django",
+            "Django Rest Framework",
+            "Solidity",
+            "Metamask",
+            "Web3.js",
+            "React-native",
+            "Vite.js",
+            "Node.js",
+            "PostgreSQL"
+        ],
+        "projUrl": "https://nft-showroom.com/",
+        "githubUrl": null,
+        "publishDate": "Live and Ongoing",
+        "thumbnailUrl":"project:nftshowroom",
+        "category":"corporate",
+        "status": "ongoing",
+        "openToContrib": false
+    },
+    {
+        "title": "ATS System - Resume Parser Microservice",
+        "description": "ATS Resume Parser is an internal tool for a hiring agency that parses resumes and saves them to a database using an automated pipeline.",
+        "tags": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL",
+            "LLM",
+            "OpenAI",
+            "Machine Learning",
+            "Langchain",
+            "VectorDB",
+            "JavaScript",
+            "TailwindCSS"
+        ],
+        "projUrl": null,
+        "githubUrl": null,
+        "publishDate": "May 2024",
+        "thumbnailUrl":[
+            "project:ATSResumeParser1",
+            "project:ATSResumeParser2",
+            "project:ATSResumeParser3"
+        ],
+        "category":"corporate",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "LawnPro Software",
+        "description": "This is a Lawn Business Software which comes prepacked with a bunch of features to manage employees, payments, customers and more.",
+        "tags": [
+            "PHP", 
+            "Laravel", 
+            "React.js",
+            "Vite.js",
+            "Node.js",
+            "MySQL"
+        ],
+        "projUrl": "https://www.lawnprosoftware.com",
+        "githubUrl": null,
+        "publishDate": "Live and Ongoing",
+        "thumbnailUrl":"project:lawnprosoftware",
+        "category":"corporate",
+        "status": "ongoing",
+        "openToContrib": false
+    },
+    {
+        "title": "Minecraft Server Discovery & Auction Platform",
+        "description": "Minecraft Server Discovery & Auction Platform is a platform that allows users to discover and auction Minecraft servers.",
+        "tags": [
+            "Django", 
+            "Python",
+            "JavaScript",
+            "PostgreSQL",
+            "Stripe"
+        ],
+        "projUrl": null,
+        "githubUrl": null,
+        "publishDate": "May 2025",
+        "thumbnailUrl": "project:mcServerDiscovery",
+        "category":"hobby",
+        "status": "ongoing",
+        "openToContrib": true
+    },
+    {
+        "title": "Crypto Price Tracker",
+        "description": "ETL pipeline with DLQ support for extracting and aggregating Crypto timeseries data.",
+        "tags": [
+            "Flask", 
+            "Python",
+            "JavaScript",
+            "MongoDB"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/Crypto-Price-Tracker",
+        "publishDate": "Apr 2025",
+        "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/Crypto-Price-Tracker/refs/heads/main/docs/assets/preview2.png",
+        "category":"hobby",
+        "status": "ongoing",
+        "openToContrib": true
+    },
+    {
+        "title": "The Duck Council",
+        "description": "A council to reflect on problems using the Rubber Duck Debugging method.",
+        "tags": [
+            "Crew.ai", 
+            "Python",
+            "Flask",
+            "React.js",
+            "Vite.js",
+            "MongoDB"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/The-Duck-Council",
+        "publishDate": null,
+        "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/The-Duck-Council/refs/heads/main/docs/assets/thumbnail.png",
+        "category":"hobby",
+        "status": "ongoing",
+        "openToContrib": true
+    },
+    {
+        "title": "EtherPass - Decentralized Event Ticket Booking System",
+        "description": "EtherPass is a decentralized event ticket booking system that allows users to book tickets for events using their web3 wallet. It is built using Ethereum, Solidity, Web3.js, React.js, Vite.js, Metamask, Nest.js, and Turso DB.",
+        "tags": [
+            "Ethereum",
+            "Solidity",
+            "Truffle",
+            "Web3.js",
+            "React.js",
+            "Vite.js",
+            "Metamask",
+            "Nest.js",
+            "Turso DB"
+        ],
+        "projUrl": null,
+        "githubUrl": null,
+        "publishDate": "Jan 2024",
+        "thumbnailUrl":[
+            "project:bcEtherPass1",
+            "project:bcEtherPass2",
+            "project:bcEtherPass3",
+            "project:bcEtherPass4"
+        ],
+        "category":"corporate",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "Ebay Product Scraper",
+        "description": "Ebay Product Scraper is a tool that scrapes products from eBay and saves them to a database. It is built using Node.js, Express.js, and MongoDB.",
+        "tags": [
+            "Django",
+            "Selenium",
+            "PostgreSQL",
+            "VectorDB",
+            "Python",
+            "JavaScript",
+            "TailwindCSS"
+        ],
+        "projUrl": null,
+        "githubUrl": null,
+        "publishDate": "Mar 2024",
+        "thumbnailUrl":[
+            "project:ebayProductScraper1",
+            "project:ebayProductScraper2"
+        ],
+        "category":"corporate",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "Crowdfunding Decentralized App",
+        "description": "It is a crowdfunding solution but built entirely on web3.0. Host your projects here for funding via crypto and withdraw funds whenever.",
+        "tags": [
+            "React.js",
+            "Vite.js",
+            "Hedera Hashgraph",
+            "Metamask",
+            "Ethers.js",
+            "Nest.js",
+            "Turso DB"
+        ],
+        "projUrl": null,
+        "githubUrl": null,
+        "publishDate": "Jan 2024",
+        "thumbnailUrl":null,
+        "category":"corporate",
+        "status": "ongoing",
+        "openToContrib": false
+    },
+    {
+        "title": "ExpenTable",
+        "description": "An Expendible Timtable suitable for quick weekly planning. Simple yet loaded with features you will love.",
+        "tags": [
+            "React.js", 
+            "Vite.js",
+            "Node.js"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/ExpenTable",
+        "publishDate": null,
+        "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/ExpenTable/refs/heads/main/docs/assets/logo.png",
+        "category":"hobby",
+        "status": "ongoing",
+        "openToContrib": true
+    },
+    {
+        "title": "Startup Showroom",
+        "description": "A startup directory where you can showcase your startup, engage with people and get noticed.",
+        "tags": [
+            "Next.js", 
+            "Node.js",
+            "TypeScript",
+            "Sanity",
+            "TailwindCSS"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/yc_directory",
+        "publishDate": null,
+        "thumbnailUrl": null,
+        "category":"hobby",
+        "status": "ongoing",
+        "openToContrib": true
+    },
+    {
+        "title": "Cloud Munshi",
+        "description": "It is a Point-of-Sales (POS) software for those who wan to keep track of their inventory and manage businesses.",
+        "tags": [
+            "PHP", 
+            "Yii",
+            "Next.js",
+            "Vite.js",
+            "MySQL"
+        ],
+        "projUrl": "https://www.cloudmunshi.com/demo/munshi",
+        "githubUrl": null,
+        "publishDate": "Live and Ongoing",
+        "thumbnailUrl":"project:cloudmunshi",
+        "category":"corporate",
+        "status": "ongoing",
+        "openToContrib": false
+    },
+    {
+        "title": "Tkinter Mod Manager",
+        "description": "This is a simple mod manager built on Tkinter. This applet is named mod manager because there are certain games which have an option to add or remove mods by copying/pasting/deleting files from one directory to another. The mod files in questions are named in a non-human-friendly way (e.g. 1234567.mod), now copying and pasting those files from directory to another will of course work but not when you want to keep track of which files belong to which mod. This applet makes that task easy.",
+        "tags": [
+            "Python", 
+            "GUI",
+            "TKinter"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/tkinter-mod-manager",
+        "publishDate": "May 2024",
+        "thumbnailUrl": null,
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "Shortcut Keeper",
+        "description": "An icon grouper applet for windows, inspired by icon grouping feature in GNOME and android desktops. This is just like the icon grouping found in android and GNOME desktops.",
+        "tags": [
+            "Python", 
+            "GUI",
+            "PySimpleGUI"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/shortcut_keeper/tree/dev",
+        "publishDate": "Nov 2023",
+        "thumbnailUrl": "https://github.com/Blankscreen-exe/shortcut_keeper/raw/dev/docs/images/preview.png",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "Jevil's Dilemma",
+        "description": "This is a Web-based version of the tabletop party game called Dilemma. In the traditional version of this game you have a pack of flash cards, all of which contain a question. This question describes a scenario which forces you to choose an 'action'. There are no scores, no correct answers, no winners ... just pure brimming creativity.",
+        "tags": [
+            "JavaScript", 
+            "React.js",
+            "Node.js",
+            "Vite.js",
+            "game"
+        ],
+        "projUrl": "https://jevils-dilemma.vercel.app/",
+        "githubUrl": "https://github.com/Blankscreen-exe/jevils-dilemma",
+        "publishDate": null,
+        "thumbnailUrl": null,
+        "category":"collab",
+        "status": "ongoing",
+        "openToContrib": true
+    },
+    {
+        "title": "Shell Show",
+        "description": "A CMD applet which can render images inside the terminal.",
+        "tags": [
+            "Python",
+            "Pillow"
+        ],
+        "projUrl": "https://github.com/Blankscreen-exe/shell-show",
+        "githubUrl": "https://github.com/Blankscreen-exe/shell-show",
+        "publishDate": "Oct 2024",
+        "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/shell-show/refs/heads/main/docs/assets/preview.png",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "You vs The Void",
+        "description": "If you click on the void ... it will click back.",
+        "tags": [
+            "JavaScript", 
+            "JQuery",
+            "CSS",
+            "HTML"
+        ],
+        "projUrl": "https://blankscreen-exe.github.io/the-void/",
+        "githubUrl": "https://github.com/Blankscreen-exe/the-void",
+        "publishDate": "Feb 2025",
+        "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/the-void/refs/heads/main/docs/assets/thumbnail.png",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "Triple Triad Card Maker",
+        "description": "This is a game card generator which takes in .png assets and compiles them into a game card which can then be printed.",
+        "tags": [
+            "Python", 
+            "OpenCV",
+            "Numpy",
+            "game"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/triple-trial-card-maker",
+        "publishDate": null,
+        "thumbnailUrl": null,
+        "category":"hobby",
+        "status": "ongoing",
+        "openToContrib": true
+    },
+    {
+        "title": "Docker Practice/Tutorial Repo",
+        "description": "This is a repo which contains docker related shenanigans. These are the things I have tried with docker and wrote a tutorial about it.",
+        "tags": [
+            "Docker", 
+            "Python",
+            "Shell"
+        ],
+        "projUrl": "https://blankscreen-exe.github.io/docker-practice/",
+        "githubUrl": "https://github.com/Blankscreen-exe/docker-practice",
+        "publishDate": "Oct 2023",
+        "thumbnailUrl": "project:dockerpracticerepo",
+        "category":"hobby",
+        "status": "ongoing",
+        "openToContrib": true
+    },
+    {
+        "title": "Screen Magnifier",
+        "description": "An app for magnifying a portion of the screen. Useful for when you want to enlarge a portion of the screen while presentating a lot code and text.",
+        "tags": [
+            "Python", 
+            "OpenCV",
+            "PyQT",
+            "Pillow"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/screen_magnifier",
+        "publishDate": "Sep 2023",
+        "thumbnailUrl": null,
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "Image Classifier App",
+        "description": "This is a simple image classification app made with using MobileNetV2 model and Tensorflow.",
+        "tags": [
+            "Python", 
+            "Machine Learning",
+            "TKinter",
+            "Tensorflow"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/Image-Classification-App",
+        "publishDate": "Jul 2023",
+        "thumbnailUrl": "https://github.com/Blankscreen-exe/Image-Classification-App/raw/main/docs/images/app_preview.png",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "Python Dependency Report Generator",
+        "description": "It produces a docx format document which lists out all the dependencies that a certain python environments uses.",
+        "tags": [
+            "Python", 
+            "python-docx"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/python_dependency_report_generator",
+        "publishDate": "Jul 2023",
+        "thumbnailUrl": "https://github.com/Blankscreen-exe/python_dependency_report_generator/raw/main/docs/img/preview.png",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "Usagi Chan's Number Guessing Game",
+        "description": "This is a number guessing game where the player will be given a number and they will have to guess if the next number will be larger or smaller. Based on their answer they will either get a point or loose a life.",
+        "tags": [
+            "JavaScript",
+            "Vite.js",
+            "React.js"
+        ],
+        "projUrl": "https://usagichan-numbergame.netlify.app/",
+        "githubUrl": "https://github.com/Blankscreen-exe/Usagi-chans-number-guessing-game",
+        "publishDate": "Nov 2022",
+        "thumbnailUrl": "https://github.com/Blankscreen-exe/Usagi-chans-number-guessing-game/raw/main/docs/Screenshot_8.png",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "WebGL Fluid Simulation",
+        "description": "This is a small side project to simulate fluid effects on an html document using vanilla JS, HTML and CSS.",
+        "tags": [
+            "JavaScript", 
+            "WebGL"
+        ],
+        "projUrl": "https://blankscreen-exe.github.io/webGL-fluid-simulation/",
+        "githubUrl": "https://github.com/Blankscreen-exe/webGL-fluid-simulation",
+        "publishDate": "Aug 2022",
+        "thumbnailUrl": "project:webglfluidsimulation",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "Marketing Campaign EDA On Supermarket Dataset",
+        "description": "This is an attempt to analyze and find trends in the marketing campaign of a supermarket.",
+        "tags": [
+            "Data Visualization", 
+            "Data Analysis", 
+            "Tensorflow",
+            "Scikitlearn",
+            "Seaborn",
+            "Pandas",
+            "Numpy",
+            "Python"
+        ],
+        "projUrl": "",
+        "githubUrl": "https://github.com/Blankscreen-exe/Data-Mining-Lab",
+        "publishDate": "Jul 2022",
+        "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/Data-Mining-Lab/refs/heads/main/docs/preview.png",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "Exploratory Data Analysis Of Pokemon Data - 2022 Submission for DataDNA Challenge",
+        "description": "This is a submission for 2022 DataDNA competition hosted by OnyxData.",
+        "tags": [
+            "PowerBI", 
+            "SQL",
+            "Pandas",
+            "Numpy",
+            "Tensorflow",
+            "Scikitlearn",
+            "Python"
+        ],
+        "projUrl": "",
+        "githubUrl": "https://github.com/Blankscreen-exe/dataDNA_Challenge_submissions/tree/main/july2022",
+        "publishDate": "Jul 2022",
+        "thumbnailUrl": "https://github.com/Blankscreen-exe/dataDNA_Challenge_submissions/raw/main/july2022/doc/img/preview.jpg",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "Exploratory Data Analysis Of Hate Crimes In USA (1991-2020)",
+        "description": "This is an exploratory data analysis exercise which targets hatecrime records in different parts of USA (1991-2020) & extracts valuable insights from it.",
+        "tags": [
+            "PowerBI", 
+            "SQL",
+            "Pandas",
+            "Numpy",
+            "Tensorflow",
+            "Scikitlearn",
+            "Python"
+        ],
+        "projUrl": "",
+        "githubUrl": "https://github.com/Blankscreen-exe/PowerBI-Competition-MAT-May-2022",
+        "publishDate": "Mar 2022",
+        "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/PowerBI-Competition-MAT-May-2022/refs/heads/main/images/Screenshot_8.jpg",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": false
+    },
+    {
+        "title": "TermaChat",
+        "description": "A CMD applet for peer-to-peer serverless communication.",
+        "tags": [
+            "Python",
+            "Websockets",
+            "Multithreading"
+        ],
+        "projUrl": "https://github.com/Blankscreen-exe/TermaChat",
+        "githubUrl": "https://github.com/Blankscreen-exe/TermaChat",
+        "publishDate": "Jan 2025",
+        "thumbnailUrl": "https://raw.githubusercontent.com/Blankscreen-exe/TermaChat/refs/heads/main/docs/thumbnail.png",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "The Save Stash",
+        "description": "This is where I keep all my games' save files as trophies",
+        "tags": [
+            "JavaScript", 
+            "HTML",
+            "CSS"
+        ],
+        "projUrl": "https://blankscreen-exe.github.io/The-Save-Stash/",
+        "githubUrl": "https://github.com/Blankscreen-exe/The-Save-Stash",
+        "publishDate": "Dec 2024",
+        "thumbnailUrl": "project:thesavestash",
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": true
+    },
+    {
+        "title": "Invoice Generator",
+        "description": "This is an invoice generator built with Jinja2 and WeasyPrint. You can use this to make a pdf and an html invoice. Before you can use this script, you will need to customize some settings beforehand.",
+        "tags": [
+            "Python", 
+            "Jinja2",
+            "WeasyPrint",
+            "HTML",
+            "CSS"
+        ],
+        "projUrl": null,
+        "githubUrl": "https://github.com/Blankscreen-exe/invoice_generator",
+        "publishDate": "Nov 2023",
+        "thumbnailUrl": null,
+        "category":"hobby",
+        "status": "finished",
+        "openToContrib": false
+    }
+]

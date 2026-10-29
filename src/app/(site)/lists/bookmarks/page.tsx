@@ -7,7 +7,7 @@ import { getBookmarks } from '@/lib/content'
 
 export const metadata: Metadata = {
   title: 'Bookmarks',
-  description: 'Tools, docs, APIs and resources I keep coming back to.',
+  description: 'Tools, docs, APIs, courses and resources I keep coming back to.',
 }
 
 export default async function BookmarksPage() {
@@ -16,7 +16,7 @@ export default async function BookmarksPage() {
   const ordered = [...bookmarks].sort((a, b) => Number(b.featured) - Number(a.featured))
   return (
     <>
-      <PageHero label="[ shelf / bookmarks ]" section="bookmarks" intro="Tools, docs, APIs and resources I keep coming back to. Starred ones are my favourites.">
+      <PageHero label="[ shelf / bookmarks ]" section="bookmarks" intro="Tools, docs, APIs, courses and resources I keep coming back to. Starred ones are my favourites.">
         Worth <Bar>saving.</Bar>
       </PageHero>
       <section className="border-b border-ink" data-section="bookmarks">
