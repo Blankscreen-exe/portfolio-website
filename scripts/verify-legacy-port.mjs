@@ -134,12 +134,8 @@ const count = (label, a, b) => (a === b ? [] : [`${label}: ${a} legacy records, 
     () => field('about paragraphs', hc.about.paragraphs, home.aboutParagraphs),
     () => field('about facts', hc.about.facts.map((f) => ({ label: f.key, value: f.value })), home.aboutFacts),
     () => field('contact topics', hc.contactTopics, home.contactTopics),
-    () =>
-      field(
-        'home FAQ picks (now "featured" flags)',
-        hc.faqIndexes.map((i) => legacy('faq').development[i].question),
-        faq.development.filter((q) => q.featured).map((q) => q.question)
-      ),
+    // The home page's FAQ picks are now "featured" flags (checked against the FAQ rewrite below)
+    () => (faq.development.some((q) => q.featured) ? [] : ['no featured questions for the home page']),
   ])
 }
 
@@ -165,13 +161,45 @@ const count = (label, a, b) => (a === b ? [] : [`${label}: ${a} legacy records, 
 }
 
 {
+  // The FAQ was deliberately cut to four questions per group after the migration. Every old
+  // question is either merged into a new one or dropped with a reason, and nothing is unaccounted for.
+  const FAQ_REWRITE = {
+    development: {
+      'What should I expect when I bring you my project idea?': 'What happens when I bring you my project idea?',
+      'How long does it typically take to develop a software application?': 'How long will it take?',
+      'How often will you communicate with me during the project?': 'How will we stay in touch, and how do I give feedback?',
+      'During the project, how can I provide you with feedback on your work?': 'How will we stay in touch, and how do I give feedback?',
+      'What happens if I change my mind about a certain feature in middle of the project development?': 'What if I change my mind halfway through?',
+      'What type of Web applications do you work with?': { dropped: 'the Work page shows this' },
+      'How can I contact you if I have a project I want you to work on?': { dropped: 'outdated (LinkedIn); the Contact page covers it' },
+      'Do you work on Mobile frontend?': { dropped: 'contradicted by React Native projects' },
+      'How can you ensure the quality of your code?': { dropped: 'cut to keep four questions' },
+    },
+    mentorship: {
+      'What should I expect if I want you to teach me some technical stuff?': 'How does mentorship work?',
+      'What if I want to make some changes to my study plan in middle of our study sessions?': 'How does mentorship work?',
+      'Do you have past experience teaching these technologies?': 'How does mentorship work?',
+      'Is this mentorship program suitable for complete beginners?': 'Is it suitable for complete beginners?',
+      'What is your area of expertize?': 'What can you help me with?',
+      'Do you prefer project-based learning?': 'What can you help me with?',
+      'Do you offer mentorship for preparing for programming interviews?': 'What can you help me with?',
+      'Can you help me with specific programming challenges?': 'What can you help me with?',
+      'Do you offer online or in-person mentoring?': 'Online or in person? One-to-one or in a group?',
+    },
+  }
   const old = legacy('faq')
   const faq = content('faq')
   for (const group of ['development', 'mentorship']) {
-    const ported = new Map(faq[group].map((q) => [q.question, q]))
-    verify(`faq.${group} → faq.${group}`, old[group].length, [
-      () => count(group, old[group].length, ported.size),
-      () => old[group].flatMap((q) => (ported.has(q.question) ? text(`"${q.question}" answer`, q.answer, ported.get(q.question).answer) : [`missing question "${q.question}"`])),
+    const current = new Set(faq[group].map((q) => q.question))
+    verify(`faq.${group} → faq.${group} (rewritten, max 4)`, old[group].length, [
+      () => (faq[group].length <= 4 ? [] : [`${faq[group].length} questions; the limit is 4`]),
+      () =>
+        old[group].flatMap((q) => {
+          const fate = FAQ_REWRITE[group][q.question]
+          if (!fate) return [`"${q.question}" is neither kept, merged nor marked as dropped`]
+          if (typeof fate === 'string' && !current.has(fate)) return [`"${q.question}" was merged into "${fate}", which doesn't exist`]
+          return []
+        }),
     ])
   }
 }

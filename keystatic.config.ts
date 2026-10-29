@@ -179,12 +179,12 @@ export default config({
           question: text('Question'),
           answer: markdown('Answer'),
           featured: fields.checkbox({ label: 'Show on home & contact pages' }),
-        }), { label: 'Working with me', itemLabel: (p) => p.fields.question.value }),
+        }), { label: 'Working with me', description: 'Up to 4 questions', validation: { length: { max: 4 } }, itemLabel: (p) => p.fields.question.value }),
         mentorship: fields.array(fields.object({
           question: text('Question'),
           answer: markdown('Answer'),
           featured: fields.checkbox({ label: 'Show on home & contact pages' }),
-        }), { label: 'Mentorship', itemLabel: (p) => p.fields.question.value }),
+        }), { label: 'Mentorship', description: 'Up to 4 questions', validation: { length: { max: 4 } }, itemLabel: (p) => p.fields.question.value }),
       },
     }),
 

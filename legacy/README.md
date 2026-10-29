@@ -13,4 +13,7 @@ Intentionally not migrated:
 - `certificates*.json`: placeholder entries only ("Lorem ipsum", no files).
 - `projectList copy.json`, `projectList copy 2.json`: older snapshots of `projectList.json`.
 
+`faq.json` was rewritten after the migration to four questions per group; the verifier maps
+every old question to the one it was merged into, or the reason it was dropped.
+
 `devResourceList.json` was merged into bookmarks (category "learning", with provider and rating).

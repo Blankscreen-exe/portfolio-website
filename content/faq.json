@@ -1,95 +1,45 @@
 {
   "development": [
     {
-      "question": "What should I expect when I bring you my project idea?",
-      "answer": "I like to keep it straightforward:\n\n1. You come to me with your idea and I ask you some questions about it (requirement gathering)\n2. Once I understand the depths & details of the task, I will give you a breakdown of the task as milestones along with time estimations.\n3. We discuss if the breakdown(point 2) needs to be changed\n4. Once all of that is settled, I begin my work and provide you timely reports until it is done.\n\n📌 But all of this may not apply to small tasks. There is no point in making you wait for task as small as writing unit tests for a small project.",
+      "question": "What happens when I bring you my project idea?",
+      "answer": "I keep it straightforward:\n\n1. You tell me your idea and I ask questions until I understand it.\n2. I break the work into milestones with time estimates.\n3. We adjust the plan together if needed.\n4. I start building and send you regular progress reports until it's done.\n\nSmall tasks skip the ceremony: there's no point making you wait for a plan to write a few tests.",
       "featured": true
     },
     {
-      "question": "What type of Web applications do you work with?",
-      "answer": "I have worked with **E-Commerce**, **Analytics Dashboards**, **Service Platforms**, **Educational Web Apps** etc in the past. But don't worry, I am open to work with new ideas and domains.",
+      "question": "How long will it take?",
+      "answer": "It depends on the size of the project. Once I understand what you need, you get a milestone breakdown with time estimates before any work starts.",
       "featured": true
     },
     {
-      "question": "How often will you communicate with me during the project?",
-      "answer": "As often as there is a need to discuss something critical. But in general, if everything is going according to plan, you will get a daily report from me.",
+      "question": "How will we stay in touch, and how do I give feedback?",
+      "answer": "Whichever chat or video tool you're comfortable with. If everything's on track you get a daily progress report, and anything critical I raise straight away.",
       "featured": true
     },
     {
-      "question": "What happens if I change my mind about a certain feature in middle of the project development?",
-      "answer": "Nothing much happens, except that you and I will revisit the time and work estimations and finalize it in a single meeting (if possible). After your change of mind is taken care of, I will resume working with the new plan of action.\n\n📌 Please keep in mind that it might cost, you and me both, some delays and I might need to revert some things that I have already done. This can take some time, so it is always better to have a clear communication in the initial stages of work.",
-      "featured": true
-    },
-    {
-      "question": "How long does it typically take to develop a software application?",
-      "answer": "Varies heavily on your project. I will estimate a time frame for task completion once I have your requirements",
-      "featured": true
-    },
-    {
-      "question": "Do you work on Mobile frontend?",
-      "answer": "No. not yet anyways. But I plan on making that a part of my skillset.",
-      "featured": false
-    },
-    {
-      "question": "How can you ensure the quality of your code?",
-      "answer": "I can perform Test Driven Development which not only ensures that I am on the right track but also heavily reduces the chances of bugs",
-      "featured": false
-    },
-    {
-      "question": "How can I contact you if I have a project I want you to work on?",
-      "answer": "You can reach me out on LinkedIn for this.",
-      "featured": false
-    },
-    {
-      "question": "During the project, how can I provide you with feedback on your work?",
-      "answer": "We can use any chat medium you are comfortable with. As for video calls, I'm open to use any medium you are comfortable in.",
+      "question": "What if I change my mind halfway through?",
+      "answer": "That's fine. We revisit the plan and estimates together, ideally in one meeting, and I carry on with the new direction. Changes late in the work can mean some rework, so the earlier we talk, the better.",
       "featured": false
     }
   ],
   "mentorship": [
     {
-      "question": "What should I expect if I want you to teach me some technical stuff?",
-      "answer": "I will listen to your needs and goals for learning and give you a study plan which should be well-tailored to your requirements and goals.\n\nThen we will have a discussion about the study plan and you will be able to make changes to it however you like.\n\nWhen all of that is done, I will create a Google Classroom for you (just you and me unless you have friends who want to study with you) where I will post every handouts, study materials, home work and announcements. We can then start our study sessions.",
+      "question": "How does mentorship work?",
+      "answer": "I learn your goals and put together a study plan tailored to you. We review it together, and it can change as we go. I've run workshops at university and as an IEEE Computer Society member, so this isn't new to me.",
       "featured": false
     },
     {
-      "question": "What if I want to make some changes to my study plan in middle of our study sessions?",
-      "answer": "I can make those changes, but please keep in mind that it might also require me to make some changes to the rest of the study plan. Therefore we might need to have a meeting of how we are going to proceed further.",
+      "question": "Is it suitable for complete beginners?",
+      "answer": "Yes. Even without a CS degree, or coming from a completely different field, I can help you get into IT.",
       "featured": false
     },
     {
-      "question": "Do you have past experience teaching these technologies?",
-      "answer": "Yes, I have conducted technical workshops and sessions in my University as well as on other platforms either as an IEEE Computer Society Member or on a personal basis.",
+      "question": "What can you help me with?",
+      "answer": "Python and JavaScript ecosystems, plus AI and machine learning. I teach through real projects, since that's how I learned. I also help with interview prep and specific programming problems.",
       "featured": false
     },
     {
-      "question": "Do you prefer project-based learning?",
-      "answer": "Absolutely! That's how I learned my trade, and that is how I'm going to teach you.",
-      "featured": false
-    },
-    {
-      "question": "Do you offer online or in-person mentoring?",
-      "answer": "Whichever you prefer. I can teach in a group of students as well as single one-to-one sessions",
-      "featured": false
-    },
-    {
-      "question": "Is this mentorship program suitable for complete beginners?",
-      "answer": "Yes. By all means. Even if you do not have a Computer Science Degree or even if you belong to a completely different field, I can help you get a job in IT domain.",
-      "featured": false
-    },
-    {
-      "question": "Do you offer mentorship for preparing for programming interviews?",
-      "answer": "Yes",
-      "featured": false
-    },
-    {
-      "question": "What is your area of expertize?",
-      "answer": "Python, JavaScript related technologies. I also have experience working with AI and machine learning systems",
-      "featured": false
-    },
-    {
-      "question": "Can you help me with specific programming challenges?",
-      "answer": "Yes, of course",
+      "question": "Online or in person? One-to-one or in a group?",
+      "answer": "Whichever you prefer.",
       "featured": false
     }
   ]

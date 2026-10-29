@@ -3,7 +3,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 
-import { getAbout, getHome, getPosts, getProjects, getServices, getTestimonials } from './content'
+import { getAbout, getFaq, getHome, getPosts, getProjects, getServices, getTestimonials } from './content'
 
 // Content-integrity checks: catch broken references before they reach the live site
 // (e.g. an image deleted from /public while a project still points at it).
@@ -44,6 +44,12 @@ describe('content', () => {
       .filter((f) => f.endsWith('.json'))
       .flatMap((f) => strings(JSON.parse(readFileSync(f, 'utf8'))).filter((s) => /<\/?[a-z][^>]*>/i.test(s)).map((s) => `${path.basename(f)}: ${s.slice(0, 60)}`))
     expect(withHtml).toEqual([])
+  })
+
+  it('keeps each FAQ group to at most four questions', async () => {
+    const faq = await getFaq()
+    expect(faq.development.length).toBeLessThanOrEqual(4)
+    expect(faq.mentorship.length).toBeLessThanOrEqual(4)
   })
 
   it('posts are sorted newest first', async () => {

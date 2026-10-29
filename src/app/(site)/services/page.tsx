@@ -25,7 +25,7 @@ export default async function ServicesPage() {
         intro="Whether you're starting from an idea, adding AI to your business or rescuing software that's holding you back, here's how I can help. Every engagement starts with a conversation, not a contract."
         aside={<ServicesIndex titles={services.map((s) => s.title)} />}
       >
-        What I can <Bar>do for you.</Bar>
+        What can I <Bar>do for you?</Bar>
       </PageHero>
 
       <ServicesCarousel services={services} />
