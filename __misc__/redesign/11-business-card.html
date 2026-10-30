@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital business card options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: 3 188 207;
+      --stock: 220 225 225;
+      --paper: 241 243 242;
+      --ink: 18 21 21;
+      --ash: 76 84 84;
+      --ease: cubic-bezier(.16, .84, .24, 1);
+    }
+    * { box-sizing: border-box; }
+    html { background: rgb(var(--ink)); }
+    body { margin: 12px; min-height: calc(100vh - 24px); color: rgb(var(--ink)); font-family: Inter, system-ui, sans-serif; }
+    .grid-bg {
+      background-color: rgb(var(--stock));
+      background-image:
+        linear-gradient(rgb(var(--ink) / .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(var(--ink) / .07) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    main { max-width: 1216px; margin: 0 auto; padding: 56px 20px 80px; }
+    .label { font: 500 11px 'JetBrains Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--ash)); }
+    h1 { margin: 14px 0 0; font: 900 clamp(40px, 8vw, 72px)/.9 Archivo, system-ui, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+    .intro { max-width: 640px; margin: 20px 0 0; font-size: 18px; line-height: 1.55; color: rgb(var(--ash)); }
+
+    .options { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 56px 32px; margin-top: 48px; justify-items: center; }
+    .option { width: 100%; max-width: 360px; }
+    .opt-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+    .opt-letter { font: 700 12px 'JetBrains Mono', monospace; color: rgb(var(--primary)); }
+    .opt-name { font: 900 22px/1 Archivo, system-ui, sans-serif; font-stretch: 70%; text-transform: uppercase; }
+    .pick { padding: 2px 6px; background: rgb(var(--primary)); font: 700 9px 'JetBrains Mono', monospace; letter-spacing: .12em; }
+    .note { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: rgb(var(--ash)); }
+
+    /* A phone-sized screen; each option is what /card would show */
+    .screen { position: relative; height: 720px; overflow: hidden auto; border: 2px solid rgb(var(--ink)); }
+    .screen.ink { background: rgb(var(--ink)); color: rgb(var(--stock)); }
+    .pad { padding: 20px; }
+
+    /* Shared pieces */
+    .display { font: 900 34px/.95 Archivo, system-ui, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+    .cond { font-stretch: 70%; }
+    .bar { padding: 0 .12em; background: rgb(var(--primary)); color: rgb(var(--ink)); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .mono { font: 400 12px 'JetBrains Mono', monospace; }
+    .small-label { font: 400 10px 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; color: rgb(var(--ash)); }
+    .ink .small-label { color: rgb(var(--stock) / .6); }
+    .avail { display: flex; align-items: center; gap: 8px; font: 400 11px 'JetBrains Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .dot { position: relative; display: inline-block; flex: none; width: 8px; height: 8px; background: rgb(var(--primary)); }
+    .dot::after { content: ''; position: absolute; inset: 0; border: 1px solid rgb(var(--primary)); animation: pulse 1.8s ease-out infinite; }
+    @keyframes pulse { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(3.5); } }
+    .photo { position: relative; display: block; width: 100%; aspect-ratio: 1; object-fit: cover; filter: grayscale(1) contrast(1.05); border: 1px solid rgb(var(--ink) / .15); }
+    .ico { display: inline-block; flex: none; width: 1.05em; height: 1.05em; vertical-align: -.15em; fill: none; stroke: currentColor; stroke-width: 1.75; }
+
+    .btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px 16px; border: 2px solid rgb(var(--ink)); background: none; color: inherit; cursor: pointer; font: 700 12px 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; }
+    .btn.primary { border-color: rgb(var(--primary)); background: rgb(var(--primary)); color: rgb(var(--ink)); }
+    .btn.dark { background: rgb(var(--ink)); color: rgb(var(--stock)); }
+    .ink .btn { border-color: rgb(var(--stock) / .4); }
+    .ink .btn.primary { border-color: rgb(var(--primary)); }
+    .btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .btn-row .btn { padding-inline: 8px; white-space: nowrap; font-size: 11px; letter-spacing: .06em; }
+
+    .link-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border: 1px solid rgb(var(--ink)); background: rgb(var(--ink)); }
+    .link-cell { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-width: 0; padding: 12px; border: 0; background: rgb(var(--paper)); color: rgb(var(--ink)); cursor: pointer; font: 700 11px 'JetBrains Mono', monospace; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; }
+    .link-cell .ico { color: rgb(var(--primary)); }
+
+    .qr { display: block; width: 100%; aspect-ratio: 1; fill: rgb(var(--ink)); background: rgb(var(--paper)); }
+
+    /* A: ID card */
+    .id-card { border: 1px solid rgb(var(--ink)); background: rgb(var(--paper)); padding: 12px; }
+    .strip { display: flex; justify-content: space-between; margin-bottom: 8px; }
+    .photo-wrap { position: relative; }
+    .chip { position: absolute; left: 0; bottom: 12px; padding: 5px 10px; background: rgb(var(--ink)); color: rgb(var(--stock)); font: 700 11px 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; }
+
+    /* B: flip card */
+    .flip { display: block; width: 100%; height: 196px; padding: 0; border: 0; background: none; color: inherit; cursor: pointer; perspective: 1000px; text-align: left; }
+    .flip-inner { position: relative; display: block; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .7s var(--ease); }
+    .flip[aria-pressed="true"] .flip-inner { transform: rotateY(180deg); }
+    .face { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 16px; border: 1px solid rgb(var(--ink)); -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+    .face.front { background: rgb(var(--ink)); color: rgb(var(--stock)); }
+    .face.back { flex-direction: row; gap: 12px; padding-inline: 12px; background: rgb(var(--paper)); color: rgb(var(--ink)); transform: rotateY(180deg); }
+    .face .small-label { color: rgb(var(--stock) / .6); }
+    .face.back .small-label { color: rgb(var(--ash)); }
+    .logo { display: grid; place-items: center; width: 28px; height: 28px; background: rgb(var(--primary)); color: rgb(var(--ink)); font: 700 11px 'JetBrains Mono', monospace; }
+    .face-row { display: flex; align-items: flex-start; justify-content: space-between; }
+    .back-qr { flex: none; width: 92px; align-self: center; }
+    .back-lines { display: flex; flex-direction: column; justify-content: center; gap: 7px; min-width: 0; font: 400 10px 'JetBrains Mono', monospace; }
+
+    /* C: link stack */
+    .stack-head { display: flex; align-items: center; gap: 14px; }
+    .stack-head .photo { flex: none; width: 84px; }
+    .rows { border-top: 1px solid rgb(var(--ink)); }
+    .row { position: relative; isolation: isolate; display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; padding: 13px 14px; border: 0; border-bottom: 1px solid rgb(var(--ink)); background: rgb(var(--paper)); color: inherit; cursor: pointer; text-align: left; text-decoration: none; }
+    .row::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgb(var(--primary)); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); }
+    .row:hover::before { transform: scaleX(1); }
+    .row-name { display: block; font: 900 20px/1 Archivo, system-ui, sans-serif; font-stretch: 70%; text-transform: uppercase; }
+    .row-sub { display: block; margin-top: 4px; font: 400 11px 'JetBrains Mono', monospace; color: rgb(var(--ash)); }
+    .row:hover .row-sub { color: rgb(var(--ink)); }
+    .row.feature { background: rgb(var(--primary)); padding-block: 18px; }
+    .row.feature .row-name { font-size: 26px; }
+    .row.feature .row-sub { color: rgb(var(--ink)); }
+    .row.feature::before { background: rgb(255 255 255 / .25); }
+    .row .ico { color: rgb(var(--primary)); }
+    .row.feature .ico, .row:hover .ico { color: rgb(var(--ink)); }
+
+    /* D: scan screen */
+    .scan-qr { width: 100%; padding: 14px; background: rgb(var(--paper)); }
+    .text-links { display: flex; flex-wrap: wrap; gap: 8px 16px; font: 700 11px 'JetBrains Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .text-links a, .text-links button { padding: 0; border: 0; background: none; color: rgb(var(--primary)); cursor: pointer; font: inherit; letter-spacing: inherit; text-transform: inherit; text-decoration: none; }
+
+    /* E: lanyard */
+    .lanyard { position: relative; display: flex; flex-direction: column; align-items: center; transform-origin: top center; animation: swing 2.6s ease-in-out 1 both; }
+    @keyframes swing { 0% { transform: rotate(-7deg); } 22% { transform: rotate(5deg); } 44% { transform: rotate(-3deg); } 66% { transform: rotate(1.5deg); } 100% { transform: none; } }
+    .strap { width: 14px; height: 52px; background: repeating-linear-gradient(0deg, rgb(var(--primary)) 0 8px, rgb(var(--ink)) 8px 10px); }
+    .clip { width: 22px; height: 14px; margin-top: -2px; border: 2px solid rgb(var(--ink)); border-top: 0; background: rgb(var(--stock)); }
+    .badge { position: relative; width: 250px; margin-top: -4px; padding: 26px 14px 14px; border: 1px solid rgb(var(--ink)); background: rgb(var(--paper)); box-shadow: 6px 6px 0 rgb(var(--ink) / .85); }
+    .hole { position: absolute; top: 9px; left: 50%; width: 30px; height: 8px; transform: translateX(-50%); border: 1px solid rgb(var(--ink)); background: rgb(var(--stock)); }
+    .badge-foot { display: grid; grid-template-columns: minmax(0, 1fr) 58px; align-items: end; gap: 10px; margin-top: 10px; }
+
+    .stack-gap > * + * { margin-top: 12px; }
+    .toast { position: sticky; bottom: 12px; left: 0; width: max-content; max-width: calc(100% - 24px); margin: 0 auto; padding: 8px 12px; background: rgb(var(--primary)); color: rgb(var(--ink)); font: 700 11px 'JetBrains Mono', monospace; letter-spacing: .1em; text-transform: uppercase; opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body class="grid-bg">
+<main>
+  <div class="label">[ /card ]</div>
+  <h1>Digital business card.</h1>
+  <p class="intro">Five versions of a phone-first page at its own URL, like yoursite.com/card. Everything is live: Save contact downloads a real contact file, Discord copies your username, and B flips when tapped. The QR codes are placeholders and won't scan yet.</p>
+  <div class="options" id="options"></div>
+</main>
+
+<script>
+  const ME = {
+    first: 'M. Hammad',
+    last: 'Hassan',
+    name: 'M. Hammad Hassan',
+    title: 'Product Engineer',
+    sub: 'Technical Consultant',
+    email: 'mhammad.hassan002@gmail.com',
+    discord: 'blankscreen.exe',
+    book: 'https://cal.com/hammadai/general',
+    linkedin: 'https://www.linkedin.com/in/hammadai/',
+    github: 'https://github.com/Blankscreen-exe',
+    x: 'https://x.com/blankscreenexe',
+    writing: 'https://hammadai.hashnode.dev/',
+  }
+
+  const PHOTO = '../../public/profile_pic.png'
+  const icon = (d) => `<svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="${d}" /></svg>`
+  const ARROW = icon('M2 10 10 2M3.25 2H10v6.75')
+  const COPY = icon('M4.25 4.25h6.25v6.25H4.25zM7.75 4.25V1.5H1.5v6.25h2.75')
+  const DOWN = icon('M6 1.5v7.25M2.5 5.5 6 9l3.5-3.5M1.5 11h9')
+
+  const external = 'target="_blank" rel="noopener noreferrer"'
+  const save = (cls = 'primary') => `<button type="button" class="btn ${cls}" data-action="save">Save contact ${DOWN}</button>`
+  const book = (cls = 'dark') => `<a class="btn ${cls}" href="${ME.book}" ${external}>Book a call ${ARROW}</a>`
+
+  const linkGrid = `<div class="link-grid">
+    <a class="link-cell" href="mailto:${ME.email}">Email ${ARROW}</a>
+    <a class="link-cell" href="${ME.linkedin}" ${external}>LinkedIn ${ARROW}</a>
+    <a class="link-cell" href="${ME.github}" ${external}>GitHub ${ARROW}</a>
+    <a class="link-cell" href="${ME.x}" ${external}>X ${ARROW}</a>
+    <button type="button" class="link-cell" data-action="copy" style="grid-column:1/-1">Discord: ${ME.discord} ${COPY}</button>
+  </div>`
+
+  // Placeholder only: looks like a QR code but does not encode anything
+  function fakeQr(seed = 7, size = 29) {
+    let s = seed
+    const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280
+    const inFinder = (x, y) => (x < 8 && y < 8) || (x >= size - 8 && y < 8) || (x < 8 && y >= size - 8)
+    let cells = ''
+    for (let y = 0; y < size; y++) for (let x = 0; x < size; x++) if (!inFinder(x, y) && rnd() > 0.52) cells += `<rect x="${x}" y="${y}" width="1.02" height="1.02" />`
+    const finder = (x, y) => `<path fill-rule="evenodd" d="M${x} ${y}h7v7h-7zM${x + 1} ${y + 1}v5h5v-5z" /><rect x="${x + 2}" y="${y + 2}" width="3" height="3" />`
+    return `<svg class="qr" viewBox="-1 -1 ${size + 2} ${size + 2}" role="img" aria-label="Placeholder QR code">${cells}${finder(0, 0)}${finder(size - 7, 0)}${finder(0, size - 7)}</svg>`
+  }
+
+  const barcode = (() => {
+    const bars = [[0, 2], [4, 1], [7, 4], [13, 1], [16, 2], [21, 1], [24, 5], [31, 1], [34, 2], [38, 4], [44, 1], [47, 2], [51, 1], [54, 5], [61, 1], [63, 1]]
+    return `<svg style="width:64px;height:16px;fill:currentColor;opacity:.8" viewBox="0 0 64 16" aria-hidden="true">${bars.map(([x, w]) => `<rect x="${x}" width="${w}" height="16" />`).join('')}</svg>`
+  })()
+
+  const OPTIONS = [
+    {
+      letter: 'A', name: 'ID card',
+      note: 'Your hero card, carried over as the page. Instantly recognisable as you, and the photo takes up most of the first screen.',
+      screen: 'grid-bg',
+      html: `<div class="pad stack-gap">
+        <div class="id-card">
+          <div class="strip small-label"><span>Business card</span><span>01/01</span></div>
+          <div class="photo-wrap"><img class="photo" src="${PHOTO}" alt="" /><span class="chip">${ME.name}</span></div>
+          <div class="display cond" style="margin-top:16px">${ME.title}</div>
+          <div class="mono" style="margin-top:4px;color:rgb(var(--ash))">&amp; ${ME.sub}</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding-top:12px;border-top:1px solid rgb(var(--ink) / .15)"><span class="avail"><span class="dot"></span>Available for work</span>${barcode}</div>
+        </div>
+        <div class="btn-row">${save()}${book()}</div>
+        ${linkGrid}
+      </div>`,
+    },
+    {
+      letter: 'B', name: 'Flip card',
+      note: 'A real card shape that flips to a QR code and details. The most playful, and it feels like handing someone a card. Tap it.',
+      screen: 'grid-bg',
+      html: `<div class="pad stack-gap">
+        <div class="small-label">[ tap the card ]</div>
+        <button type="button" class="flip" data-action="flip" aria-pressed="false" aria-label="Flip the card">
+          <span class="flip-inner">
+            <span class="face front">
+              <span class="face-row"><span class="logo">MH</span><span class="small-label">Flip</span></span>
+              <span>
+                <span class="display" style="display:block;font-size:30px">${ME.first}<br /><span class="bar">${ME.last}</span></span>
+                <span class="mono" style="display:block;margin-top:8px;font-size:11px;color:rgb(var(--stock) / .75)">${ME.title} &amp; ${ME.sub}</span>
+              </span>
+            </span>
+            <span class="face back">
+              <span class="back-qr">${fakeQr(11)}</span>
+              <span class="back-lines">
+                <span class="small-label">Reach me</span>
+                <span>${ME.email}</span>
+                <span>cal.com/hammadai</span>
+                <span>in/hammadai</span>
+              </span>
+            </span>
+          </span>
+        </button>
+        <div class="avail"><span class="dot"></span>Available for work</div>
+        <div class="btn-row">${save()}${book()}</div>
+        ${linkGrid}
+      </div>`,
+    },
+    {
+      letter: 'C', name: 'Link stack', pick: true,
+      note: 'Every way to reach you, one tap each, with Book a call first. The most useful on a phone, and it covers the link tree idea from your list too.',
+      screen: 'grid-bg',
+      html: `<div class="pad">
+        <div class="stack-head">
+          <img class="photo" src="${PHOTO}" alt="" />
+          <div>
+            <div class="display cond" style="font-size:28px">${ME.name}</div>
+          </div>
+        </div>
+        <div class="display cond" style="margin-top:14px;font-size:26px"><span class="bar">${ME.title}</span></div>
+        <div class="mono" style="margin-top:6px;color:rgb(var(--ash))">&amp; ${ME.sub}</div>
+        <div class="avail" style="margin:12px 0 16px"><span class="dot"></span>Available for work</div>
+        <div class="rows">
+          <a class="row feature" href="${ME.book}" ${external}><span><span class="row-name">Book a call</span><span class="row-sub">Pick a time that suits you</span></span>${ARROW}</a>
+          <button type="button" class="row" data-action="save"><span><span class="row-name">Save contact</span><span class="row-sub">Add me to your phone</span></span>${DOWN}</button>
+          <a class="row" href="mailto:${ME.email}"><span><span class="row-name">Email</span><span class="row-sub">${ME.email}</span></span>${ARROW}</a>
+          <a class="row" href="${ME.linkedin}" ${external}><span><span class="row-name">LinkedIn</span><span class="row-sub">Message me directly</span></span>${ARROW}</a>
+          <a class="row" href="${ME.github}" ${external}><span><span class="row-name">GitHub</span><span class="row-sub">See the code</span></span>${ARROW}</a>
+          <a class="row" href="${ME.x}" ${external}><span><span class="row-name">X</span><span class="row-sub">Let's talk on X</span></span>${ARROW}</a>
+          <button type="button" class="row" data-action="copy"><span><span class="row-name">Discord</span><span class="row-sub">${ME.discord}</span></span>${COPY}</button>
+        </div>
+      </div>`,
+    },
+    {
+      letter: 'D', name: 'Scan screen',
+      note: 'Built for meeting people: open it, hold up your phone, they scan. The QR fills the screen, so the links take a back seat.',
+      screen: 'ink',
+      html: `<div class="pad stack-gap">
+        <div class="small-label">[ scan to connect ]</div>
+        <div class="scan-qr">${fakeQr(23)}</div>
+        <div class="display" style="margin-top:18px">${ME.first}<br /><span class="bar">${ME.last}</span></div>
+        <div class="mono" style="color:rgb(var(--stock) / .75)">${ME.title} &amp; ${ME.sub}</div>
+        ${save()}
+        <div class="text-links">
+          <a href="${ME.book}" ${external}>Book a call</a>
+          <a href="mailto:${ME.email}">Email</a>
+          <a href="${ME.linkedin}" ${external}>LinkedIn</a>
+          <a href="${ME.github}" ${external}>GitHub</a>
+          <button type="button" data-action="copy">Discord</button>
+        </div>
+      </div>`,
+    },
+    {
+      letter: 'E', name: 'Lanyard badge',
+      note: 'A conference badge that swings in on load. The most memorable, and it has both your photo and a QR code, but less room for links.',
+      screen: 'grid-bg',
+      html: `<div class="lanyard">
+          <div class="strap"></div><div class="clip"></div>
+          <div class="badge">
+            <span class="hole"></span>
+            <img class="photo" src="${PHOTO}" alt="" />
+            <div class="mono" style="margin-top:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:11px">${ME.name}</div>
+            <div class="badge-foot">
+              <div>
+                <div class="display cond" style="font-size:25px"><span class="bar">${ME.title}</span></div>
+                <div class="mono" style="margin-top:6px;font-size:11px;color:rgb(var(--ash))">&amp; ${ME.sub}</div>
+              </div>
+              ${fakeQr(31, 21)}
+            </div>
+          </div>
+        </div>
+        <div class="pad stack-gap" style="padding-top:24px">
+          <div class="btn-row">${save()}${book()}</div>
+          ${linkGrid}
+        </div>`,
+    },
+  ]
+
+  document.getElementById('options').innerHTML = OPTIONS.map((o) => `
+    <section class="option">
+      <div class="opt-head">
+        <span class="opt-letter">${o.letter}</span>
+        <span class="opt-name">${o.name}</span>
+        ${o.pick ? '<span class="pick">PICK</span>' : ''}
+      </div>
+      <div class="screen ${o.screen}">${o.html}<div class="toast" role="status"></div></div>
+      <p class="note">${o.note}</p>
+    </section>`).join('')
+
+  // A real vCard: phones offer to add this as a contact
+  function vCard() {
+    return [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      `N:${ME.last};${ME.first};;;`,
+      `FN:${ME.name}`,
+      `TITLE:${ME.title} & ${ME.sub}`,
+      `EMAIL;TYPE=INTERNET:${ME.email}`,
+      `URL;TYPE=LinkedIn:${ME.linkedin}`,
+      `URL;TYPE=GitHub:${ME.github}`,
+      `URL;TYPE=Booking:${ME.book}`,
+      'END:VCARD',
+      '',
+    ].join('\r\n')
+  }
+
+  function toast(from, text) {
+    const el = from.closest('.screen').querySelector('.toast')
+    el.textContent = text
+    el.classList.add('show')
+    clearTimeout(el.timer)
+    el.timer = setTimeout(() => el.classList.remove('show'), 1800)
+  }
+
+  document.addEventListener('click', async (e) => {
+    const target = e.target.closest('[data-action]')
+    if (!target) return
+    const { action } = target.dataset
+    if (action === 'flip') target.setAttribute('aria-pressed', String(target.getAttribute('aria-pressed') !== 'true'))
+    if (action === 'copy') {
+      try {
+        await navigator.clipboard.writeText(ME.discord)
+        toast(target, `Copied ${ME.discord}`)
+      } catch {
+        toast(target, ME.discord)
+      }
+    }
+    if (action === 'save') {
+      const url = URL.createObjectURL(new Blob([vCard()], { type: 'text/vcard' }))
+      const link = Object.assign(document.createElement('a'), { href: url, download: 'hammad-hassan.vcf' })
+      link.click()
+      URL.revokeObjectURL(url)
+      toast(target, 'Contact downloaded')
+    }
+  })
+</script>
+</body>
+</html>

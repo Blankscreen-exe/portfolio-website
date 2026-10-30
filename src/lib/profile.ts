@@ -67,6 +67,28 @@ export function buildLlmsTxt({ site, home, services, projects, faq }: ProfileCon
     .concat('\n')
 }
 
+/** vCard values must escape these characters (RFC 6350) */
+const vCardText = (value: string) => value.replace(/[\\,;]/g, '\\$&')
+
+/** A vCard contact file. The last word of the name is treated as the family name. */
+export function buildVCard(site: Site) {
+  const parts = site.name.split(' ')
+  const family = parts.pop() ?? ''
+  const links = [{ name: 'Website', href: siteUrl }, ...profileLinks(site), ...(site.social.calendarBooking ? [{ name: 'Book a call', href: site.social.calendarBooking }] : [])]
+
+  return [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    `N:${vCardText(family)};${vCardText(parts.join(' '))};;;`,
+    `FN:${vCardText(site.name)}`,
+    `TITLE:${vCardText(site.role)}`,
+    `EMAIL;TYPE=INTERNET:${site.email}`,
+    ...links.map((l) => `URL;TYPE=${l.name.replace(/\s+/g, '')}:${l.href}`),
+    'END:VCARD',
+    '',
+  ].join('\r\n')
+}
+
 /** schema.org Person, the structured data search engines already understand. */
 export function buildPersonJsonLd({ site, services }: Pick<ProfileContent, 'site' | 'services'>) {
   return {

@@ -209,6 +209,16 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
 .ss-nudge { animation: ss-nudge 4s var(--ss-ease) infinite; }
 @keyframes ss-nudge { 0%, 80%, 100% { translate: 0 0; } 88% { translate: 6px -6px; } }
 
+/* Link tree: the signature grid, in light lines on the ink panel */
+.ss-poster {
+  background-image:
+    linear-gradient(rgb(var(--ss-stock) / .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--ss-stock) / .06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.ss-dim-on-ink { color: rgb(var(--ss-stock) / .65); }
+.ss-wipe:hover .ss-dim-on-ink { color: rgb(var(--ss-onprimary)); }
+
 /* "Available" dot: a square ring keeps expanding out of it */
 .ss-pulse { position: relative; }
 .ss-pulse::after { content: ''; position: absolute; inset: 0; border: 1px solid rgb(var(--color-primary)); pointer-events: none; animation: ss-pulse 1.8s ease-out infinite; }

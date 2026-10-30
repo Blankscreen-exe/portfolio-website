@@ -31,6 +31,7 @@ export default function SiteFooter({ site }: { site: Site }) {
         { name: 'Awards & talks', href: routes.awards },
         { name: 'Books', href: routes.books },
         { name: 'Bookmarks', href: routes.bookmarks },
+        { name: 'Business card', href: routes.card },
       ],
     },
     {

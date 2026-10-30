@@ -11,6 +11,8 @@ const VARIANTS = {
 
 // Every variant has the same 2px border, so a size is the same height in all of them
 const SIZES = {
+  /** Fits two side by side on the narrowest phones */
+  xs: 'inline-block whitespace-nowrap px-2 py-3 text-center text-[11px] tracking-[.06em]',
   sm: 'inline-block px-6 py-3 text-xs tracking-[.14em]',
   md: 'inline-block px-6 py-3.5 text-xs tracking-[.16em]',
   lg: 'inline-block px-8 py-[18px] text-sm tracking-[.16em]',
@@ -95,9 +97,10 @@ export default function Button({
   }
 
   const { external, ...link } = rest
-  if (external) {
+  // Files and other sites are plain links, not client-side navigation
+  if (external || link.download !== undefined) {
     return (
-      <a target="_blank" rel="noopener noreferrer" {...name} {...link} className={classes}>
+      <a {...(external && { target: '_blank', rel: 'noopener noreferrer' })} {...name} {...link} className={classes}>
         {content}
       </a>
     )

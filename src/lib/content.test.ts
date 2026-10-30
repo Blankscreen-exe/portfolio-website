@@ -5,7 +5,8 @@ import { describe, expect, it } from 'vitest'
 
 import nextConfig from '../../next.config'
 
-import { getAbout, getFaq, getHome, getPosts, getProjects, getServices, getTestimonials } from './content'
+import { getAbout, getFaq, getHome, getLinktree, getPosts, getProjects, getServices, getTestimonials } from './content'
+import { routes } from './routes'
 
 // Content-integrity checks: catch broken references before they reach the live site
 // (e.g. an image deleted from /public while a project still points at it).
@@ -15,6 +16,19 @@ describe('content', () => {
   it('every project image exists in /public', async () => {
     const missing = (await getProjects()).flatMap((p) => p.images.filter((src) => !existsSync(publicFile(src))).map((src) => `${p.slug}: ${src}`))
     expect(missing).toEqual([])
+  })
+
+  it('every link tree link goes somewhere real', async () => {
+    const pages = Object.values(routes).filter((r) => typeof r === 'string')
+    const broken = (await getLinktree())
+      .filter((l) => l.action === 'link')
+      .filter((l) => (l.target.startsWith('/') ? !pages.includes(l.target as (typeof pages)[number]) : !/^(https?:\/\/|mailto:)/.test(l.target)))
+    expect(broken.map((l) => l.title)).toEqual([])
+  })
+
+  it('link tree titles are unique', async () => {
+    const titles = (await getLinktree()).map((l) => l.title)
+    expect(new Set(titles).size).toBe(titles.length)
   })
 
   it('has at least one featured project for the home page', async () => {

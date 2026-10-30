@@ -16,4 +16,7 @@ export const routes = {
   books: '/lists/books',
   bookmarks: '/lists/bookmarks',
   llms: '/llms.txt',
+  card: '/card',
+  linktree: '/linktree',
+  cardContact: '/card/contact.vcf',
 } as const

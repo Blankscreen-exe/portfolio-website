@@ -4,14 +4,13 @@ import Link from 'next/link'
 import { type KeyboardEvent, type MouseEvent, useEffect, useRef, useState } from 'react'
 
 import { ArrowUpRight, Check, RotateArrow } from '@/components/ui/Decor'
-import ProfilePhoto from '@/components/ui/ProfilePhoto'
+import IdCardFace from '@/components/ui/IdCardFace'
 import { prefersReducedMotion } from '@/hooks/useOnceVisible'
 import type { Home } from '@/lib/content'
 import { routes } from '@/lib/routes'
 import { stagger } from '@/lib/style'
 
 const CARD_NAMES = ['Who I am', "Industries I've built for", 'Why work with me']
-const BARCODE: [number, number][] = [[0, 2], [4, 1], [7, 4], [13, 1], [16, 2], [21, 1], [24, 5], [31, 1], [34, 2], [38, 4], [44, 1], [47, 2], [51, 1], [54, 5], [61, 1], [63, 1]]
 
 type Props = Pick<Home, 'industries' | 'whyMe'> & { delivered?: { value: string; label: string }; name: string; role: string }
 
@@ -63,33 +62,13 @@ export default function CardStack({ industries, whyMe, delivered, name, role }: 
     const pos = order.indexOf(index)
     return { className: `ss-card ${extra} ${flying === index ? 'fly' : ''}`, 'data-pos': pos, 'aria-hidden': pos !== 0 }
   }
-  const [title, ...subtitle] = role.split(' & ')
 
   return (
     <div className="mx-auto w-full max-w-[360px] self-end lg:col-span-4 lg:mx-0 lg:max-w-none" data-reveal="up" style={stagger(3)}>
       <div className="ss-stack" role="button" tabIndex={0} aria-label="Profile cards. Press to show the next card." onClick={onClick} onKeyDown={onKeyDown}>
         {/* 01 — Who */}
         <article {...cardProps(0, 'border border-ink bg-paper p-3')}>
-          <div className="mb-2 flex justify-between font-jet text-[10px] uppercase tracking-widest text-ash">
-            <span>ID card</span>
-            <span>01/03</span>
-          </div>
-          <ProfilePhoto eager>
-            <span className="absolute bottom-3 left-0 bg-ink px-2.5 py-1 font-jet text-[11px] font-bold uppercase tracking-[.14em] text-stock">{name}</span>
-          </ProfilePhoto>
-          <div className="ss-display ss-cond mt-4 text-[34px] leading-none">{title}</div>
-          {subtitle.length > 0 && <div className="mt-1 font-jet text-xs text-ash">&amp; {subtitle.join(' & ')}</div>}
-          <div className="mt-3 flex items-center justify-between border-t border-ink/15 pt-3">
-            <span className="flex items-center gap-2 font-jet text-[11px] uppercase tracking-widest">
-              <span className="ss-pulse inline-block h-2 w-2 bg-primary" />
-              Available for work
-            </span>
-            <svg className="h-4 w-16 opacity-80" viewBox="0 0 64 16" fill="currentColor" aria-hidden="true">
-              {BARCODE.map(([x, w]) => (
-                <rect key={x} x={x} width={w} height={16} />
-              ))}
-            </svg>
-          </div>
+          <IdCardFace name={name} role={role} label="ID card" index="01/03" />
         </article>
 
         {/* 02 — Industries */}

@@ -1,0 +1,80 @@
+# ===================================================================
+# ABOUT ME — context for the portfolio chatbot
+#
+# This is the ONLY information the chatbot knows. Edit it freely:
+# add, remove, or rewrite anything. After editing, commit + redeploy
+# (or run `vercel dev` locally) to pick up the changes.
+#
+# Lines starting with "#" are notes for you and are still sent to the
+# model, so feel free to leave guidance for it here too.
+# ===================================================================
+
+## Identity
+- Name: M. Hammad Hassan
+- Title: Product Engineer & Technical Consultant
+- Status: Open to opportunities (contract, full-time, and consulting).
+- One-liner: I help teams turn ideas into shipped products — owning features
+  end-to-end, from user problem and design through backend, integrations, and
+  long-term maintainability.
+
+## Contact & Links
+- LinkedIn: https://www.linkedin.com/in/hammadai/
+- GitHub: https://github.com/Blankscreen-exe
+- Medium (writing): https://medium.com/@hammad.ai
+- Best way to reach me: use the contact form on this site (the "Let's talk!" section).
+
+## What I do
+- End-to-end product development: scoping, building, shipping, and iterating
+  on features with users in mind.
+- Backend services, APIs, and integrations.
+- Full-stack web applications.
+- Machine learning / data science and AI-powered features.
+- Technical consulting, code stabilization, and improving maintainability.
+- Mentorship and training (I've delivered workshops and trained interns).
+
+## Core skills
+- Languages: Python, JavaScript, TypeScript, PHP, Go, Solidity, HTML, CSS.
+- Backend: Django, Django REST Framework, FastAPI, Flask, Express.js, Laravel,
+  Hono, Gin, Echo, Odoo, Yii.
+- Frontend: React, Next.js, Vite, Redux, Tailwind CSS, Shadcn/ui, Bootstrap, SASS.
+- Databases: PostgreSQL, MySQL, MongoDB, Redis, SQLite, MSSQL, Firebase, Elasticsearch.
+- ML / DS / AI: NumPy, Pandas, scikit-learn, TensorFlow, LangChain, CrewAI,
+  OpenAI API, PowerBI, MLflow.
+- Infra & tooling: AWS, Docker, Terraform, NGINX, Apache, Kafka, RabbitMQ, Celery,
+  Git/GitHub, Sentry, Selenium.
+
+## Experience
+- Siliconplex — Associate Software Developer (Feb 2023 - present)
+  Worked on high-end projects (Entrepreneur's Business Simulator, NFT Showroom),
+  blockchain & smart-contract development, deployed and maintained projects on
+  remote servers, wrote technical documentation, delivered workshops on
+  blockchain/Ethereum/Solidity, performed R&D, and trained interns. SCRUM-trained.
+
+- Pump Jack Dataworks — Software Developer & Data Miner Intern (May 2022 - Aug 2022)
+  Led a team of 5, planned solutions and assigned tasks, did backend development
+  on MERN-stack projects, used Agile/SCRUM, picked up Django/Kafka/Redis/React/
+  Express, and built an ML project that scored table-tennis players by tracking
+  ball trajectory.
+
+- The Sparks Foundation — Data Science & Business Analytics Intern (Apr 2022 - May 2022)
+  Analyzed and visualized trends in complex datasets, used PowerBI/TensorFlow/Python
+  to answer business questions, applied statistical techniques (Matthews Correlation
+  Coefficient, time-series analysis), and did requirements engineering.
+
+## Working style
+- Comfortable owning features end-to-end with full independence.
+- Strong on documentation, planning, and communicating with clients/teams.
+- Experience leading and mentoring small teams.
+
+## Availability & logistics
+# Fill these in so recruiters get straight answers:
+- Location / time zone: (add this)
+- Remote / hybrid / onsite preference: (add this)
+- Notice period or earliest start: (add this)
+- Visa / work authorization: (add this)
+- Compensation expectations: (add this, or say you prefer to discuss directly)
+
+## Notes for the assistant
+- Keep answers concise, friendly, and professional — you're talking to recruiters.
+- If something isn't covered above, say you don't have that detail and suggest
+  reaching out via the contact form on the site. Do NOT make things up.

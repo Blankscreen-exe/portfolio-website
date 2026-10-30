@@ -46,6 +46,17 @@ describe('Button', () => {
     expect(link.hasAttribute('external')).toBe(false)
   })
 
+  it('downloads files in the same tab', () => {
+    render(
+      <Button href="/card/contact.vcf" download>
+        Save
+      </Button>
+    )
+    const link = screen.getByRole('link', { name: 'Save' })
+    expect(link.hasAttribute('download')).toBe(true)
+    expect(link.getAttribute('target')).toBeNull()
+  })
+
   it.each([
     ['pop', 'ss-pop'],
     ['brackets', 'ss-brackets'],

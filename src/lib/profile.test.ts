@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { FaqItem, Home, Project, Service, Site } from './content'
-import { buildLlmsTxt, buildPersonJsonLd } from './profile'
+import { buildLlmsTxt, buildPersonJsonLd, buildVCard } from './profile'
 import { siteUrl } from './routes'
 
 const site = {
@@ -59,6 +59,38 @@ describe('llms.txt', () => {
 
   it('drops a section with nothing in it', () => {
     expect(buildLlmsTxt({ site, home, services: [], projects, faq })).not.toContain('## Services')
+  })
+})
+
+describe('vCard', () => {
+  const lines = buildVCard(site).split('\r\n')
+
+  it('is a complete card with CRLF line endings', () => {
+    expect(lines[0]).toBe('BEGIN:VCARD')
+    expect(lines).toContain('VERSION:3.0')
+    expect(lines.at(-2)).toBe('END:VCARD')
+  })
+
+  it('splits the family name from the rest', () => {
+    expect(lines).toContain('N:Doe;Jane;;;')
+    expect(lines).toContain('FN:Jane Doe')
+  })
+
+  it('includes contact details, booking and public profiles', () => {
+    expect(lines).toContain('EMAIL;TYPE=INTERNET:jane@example.com')
+    expect(lines).toContain(`URL;TYPE=Website:${siteUrl}`)
+    expect(lines).toContain('URL;TYPE=LinkedIn:https://linkedin.com/in/jane')
+    expect(lines).toContain('URL;TYPE=Bookacall:https://cal.com/jane')
+  })
+
+  it('leaves out Upwork and empty links', () => {
+    const text = lines.join('\n').toLowerCase()
+    expect(text).not.toContain('upwork')
+    expect(text).not.toContain('github')
+  })
+
+  it('escapes special characters', () => {
+    expect(buildVCard({ ...site, role: 'Engineer, Lead; Ops' })).toContain('TITLE:Engineer\\, Lead\\; Ops')
   })
 })
 

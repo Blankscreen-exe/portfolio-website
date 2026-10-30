@@ -36,6 +36,7 @@ export type Post = Awaited<ReturnType<typeof getPosts>>[number]
 
 export const getSite = cache(() => required('site', reader.singletons.site.read()))
 export const getHome = cache(() => required('home', reader.singletons.home.read()))
+export const getLinktree = cache(async () => (await required('linktree', reader.singletons.linktree.read())).items)
 export const getServices = cache(async () => (await required('services', reader.singletons.services.read())).items)
 export const getFaq = cache(() => required('faq', reader.singletons.faq.read()))
 export const getTestimonials = cache(async () => (await required('testimonials', reader.singletons.testimonials.read())).items)

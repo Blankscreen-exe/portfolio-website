@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ID card name options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: 3 188 207;
+      --stock: 220 225 225;
+      --paper: 241 243 242;
+      --ink: 18 21 21;
+      --ash: 76 84 84;
+    }
+    * { box-sizing: border-box; }
+    html { background: rgb(var(--ink)); }
+    body {
+      margin: 12px;
+      min-height: calc(100vh - 24px);
+      color: rgb(var(--ink));
+      font-family: Inter, system-ui, sans-serif;
+      background-color: rgb(var(--stock));
+      background-image:
+        linear-gradient(rgb(var(--ink) / .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(var(--ink) / .07) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    main { max-width: 1216px; margin: 0 auto; padding: 56px 20px 80px; }
+    .label { font: 500 11px 'JetBrains Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--ash)); }
+    h1 { margin: 14px 0 0; font: 900 clamp(40px, 8vw, 72px)/.9 Archivo, system-ui, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+    .intro { max-width: 620px; margin: 20px 0 0; font-size: 18px; line-height: 1.55; color: rgb(var(--ash)); }
+
+    .options { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 48px 40px; margin-top: 48px; align-items: start; }
+    .opt-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+    .opt-letter { font: 700 12px 'JetBrains Mono', monospace; color: rgb(var(--primary)); }
+    .opt-name { font: 900 22px/1 Archivo, system-ui, sans-serif; font-stretch: 70%; text-transform: uppercase; }
+    .pick { padding: 2px 6px; background: rgb(var(--primary)); font: 700 9px 'JetBrains Mono', monospace; letter-spacing: .12em; }
+    .note { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: rgb(var(--ash)); }
+
+    /* ---------- The real card ---------- */
+    .card { border: 1px solid rgb(var(--ink)); background: rgb(var(--paper)); padding: 12px; }
+    .strip { display: flex; justify-content: space-between; margin-bottom: 8px; font: 400 10px 'JetBrains Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: rgb(var(--ash)); }
+    .photo { position: relative; aspect-ratio: 1; border: 1px solid rgb(var(--ink) / .15); }
+    .photo img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+    .tick { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgb(var(--primary)); transform: scaleX(0); transform-origin: left; animation: tick 6s linear infinite; }
+    @keyframes tick { 92% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
+
+    .display { font: 900 34px/1 Archivo, system-ui, sans-serif; font-stretch: 70%; letter-spacing: -.025em; text-transform: uppercase; }
+    .sub { margin-top: 4px; font: 400 12px 'JetBrains Mono', monospace; color: rgb(var(--ash)); }
+    .foot { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgb(var(--ink) / .15); }
+    .avail { display: flex; align-items: center; gap: 8px; font: 400 11px 'JetBrains Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .dot { position: relative; display: inline-block; width: 8px; height: 8px; background: rgb(var(--primary)); }
+    .dot::after { content: ''; position: absolute; inset: 0; border: 1px solid rgb(var(--primary)); animation: pulse 1.8s ease-out infinite; }
+    @keyframes pulse { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(3.5); } }
+    .barcode { width: 64px; height: 16px; fill: currentColor; opacity: .8; }
+
+    /* A, B: the small name line */
+    .name-line { margin-top: 14px; font: 700 12px 'JetBrains Mono', monospace; letter-spacing: .16em; text-transform: uppercase; }
+    .name-line + .display { margin-top: 6px; }
+    /* B: cyan bar on the title */
+    .bar { padding: 0 .12em; background: rgb(var(--primary)); }
+    /* C: name in the top strip */
+    .strip-name { font-weight: 700; color: rgb(var(--ink)); letter-spacing: .14em; }
+    /* D: name chip on the photo */
+    .chip { position: absolute; left: 0; bottom: 12px; padding: 5px 10px; background: rgb(var(--ink)); color: rgb(var(--stock)); font: 700 11px 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; }
+    /* E: ID-card fields */
+    .fields { margin-top: 14px; }
+    .field { display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: baseline; gap: 8px; }
+    .field + .field { margin-top: 8px; }
+    .field dt { font: 400 10px 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; color: rgb(var(--ash)); }
+    .field dd { margin: 0; }
+    .field-name { font: 700 13px 'JetBrains Mono', monospace; }
+    .field .display { font-size: 28px; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="label">[ id card ]</div>
+  <h1>Where does the name go?</h1>
+  <p class="intro">Your real card, with the photo, status tick and pulsing dot, in five versions. The current one is first for comparison.</p>
+  <div class="options" id="options"></div>
+</main>
+
+<script>
+  const BARCODE = [[0, 2], [4, 1], [7, 4], [13, 1], [16, 2], [21, 1], [24, 5], [31, 1], [34, 2], [38, 4], [44, 1], [47, 2], [51, 1], [54, 5], [61, 1], [63, 1]]
+  const barcode = `<svg class="barcode" viewBox="0 0 64 16" aria-hidden="true">${BARCODE.map(([x, w]) => `<rect x="${x}" width="${w}" height="16" />`).join('')}</svg>`
+  const foot = `<div class="foot"><span class="avail"><span class="dot"></span>Available for work</span>${barcode}</div>`
+  const photo = (extra = '') => `<div class="photo"><img src="../../public/profile_pic.png" alt="" /><div class="tick"></div>${extra}</div>`
+  const strip = (left = 'ID card') => `<div class="strip"><span>${left}</span><span>01/03</span></div>`
+  const NAME = 'M. Hammad Hassan'
+  const sub = '<div class="sub">&amp; Technical Consultant</div>'
+
+  const OPTIONS = [
+    {
+      letter: 'Now', name: 'Current',
+      note: 'For comparison: title only, no name.',
+      body: `${strip()}${photo()}<div class="display" style="margin-top:16px">Product Engineer</div>${sub}`,
+    },
+    {
+      letter: 'A', name: 'Small name above',
+      note: 'The simplest. The title stays dominant and the name reads like a label.',
+      body: `${strip()}${photo()}<div class="name-line">${NAME}</div><div class="display">Product Engineer</div>${sub}`,
+    },
+    {
+      letter: 'B', name: 'Title in a cyan bar', pick: true,
+      note: 'The title stands out the most, and it matches the cyan bars in your hero headline.',
+      body: `${strip()}${photo()}<div class="name-line">${NAME}</div><div class="display"><span class="bar">Product Engineer</span></div>${sub}`,
+    },
+    {
+      letter: 'C', name: 'Name in the top strip',
+      note: 'Adds no height and looks like a real ID card, but the name is small and easy to miss.',
+      body: `${strip(`<span class="strip-name">${NAME}</span>`)}${photo()}<div class="display" style="margin-top:16px">Product Engineer</div>${sub}`,
+    },
+    {
+      letter: 'D', name: 'Name tag on the photo',
+      note: 'The most character. It covers part of your shirt and sits just above the status tick.',
+      body: `${strip()}${photo(`<span class="chip">${NAME}</span>`)}<div class="display" style="margin-top:16px">Product Engineer</div>${sub}`,
+    },
+    {
+      letter: 'E', name: 'ID-card fields',
+      note: 'The most spec-sheet, but the labels take width, so the title has to shrink.',
+      body: `${strip()}${photo()}<dl class="fields"><div class="field"><dt>Name</dt><dd class="field-name">${NAME}</dd></div><div class="field"><dt>Role</dt><dd><div class="display">Product Engineer</div>${sub}</dd></div></dl>`,
+    },
+  ]
+
+  document.getElementById('options').innerHTML = OPTIONS.map((o) => `
+    <section>
+      <div class="opt-head">
+        <span class="opt-letter">${o.letter}</span>
+        <span class="opt-name">${o.name}</span>
+        ${o.pick ? '<span class="pick">PICK</span>' : ''}
+      </div>
+      <article class="card">${o.body}${foot}</article>
+      <p class="note">${o.note}</p>
+    </section>`).join('')
+</script>
+</body>
+</html>

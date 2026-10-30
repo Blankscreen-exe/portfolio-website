@@ -38,6 +38,7 @@ export const Play = (props: IconProps) => <LineIcon solid d="M3.75 2.25 9.25 6l-
 export const CaretLeft = (props: IconProps) => <LineIcon solid d="M8 2.75 3.5 6 8 9.25z" {...props} />
 export const Star = (props: IconProps) => <LineIcon solid d="M6 1.75 7.3 4.5l3 .4-2.2 2.05.55 2.95L6 8.45 3.35 9.9l.55-2.95L1.7 4.9l3-.4z" {...props} />
 export const HalfCircle = (props: IconProps) => <LineIcon solid d="M6 1.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5zM6 1.25a4.75 4.75 0 0 0 0 9.5z" {...props} />
+export const Download = (props: IconProps) => <LineIcon d="M6 1.5v7M2.75 5.25 6 8.5l3.25-3.25M1.5 10.75h9" {...props} />
 export const ArrowUp = (props: IconProps) => <LineIcon d="M6 10.5V1.75M2.25 5.5 6 1.75 9.75 5.5" {...props} />
 export const ChevronDown = (props: IconProps) => <LineIcon d="M2 4.25 6 8.25 10 4.25" {...props} />
 export const RotateArrow = (props: IconProps) => <LineIcon d="M10.5 6A4.5 4.5 0 1 1 6 1.5c1.26 0 2.47.5 3.37 1.37L10.5 4M10.5 1.5V4H8" {...props} />

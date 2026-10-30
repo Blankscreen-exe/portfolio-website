@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Button animation options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: 3 188 207;
+      --stock: 220 225 225;
+      --paper: 241 243 242;
+      --ink: 18 21 21;
+      --ash: 76 84 84;
+      --ease: cubic-bezier(.16, .84, .24, 1);
+      /* button colours; the toggle swaps these */
+      --btn-bg: rgb(var(--primary));
+      --btn-fg: rgb(var(--ink));
+      --fx: rgb(var(--ink));
+      --fill: rgb(0 0 0 / .18);
+    }
+    body.on-black {
+      --btn-bg: rgb(var(--ink));
+      --btn-fg: rgb(var(--stock));
+      --fx: rgb(var(--primary));
+      --fill: rgb(var(--primary) / .35);
+    }
+
+    * { box-sizing: border-box; }
+    html { background: rgb(var(--ink)); }
+    body {
+      margin: 12px;
+      min-height: calc(100vh - 24px);
+      color: rgb(var(--ink));
+      font-family: Inter, system-ui, sans-serif;
+      background-color: rgb(var(--stock));
+      background-image:
+        linear-gradient(rgb(var(--ink) / .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(var(--ink) / .07) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    main { max-width: 1216px; margin: 0 auto; padding: 56px 20px 80px; }
+    .label { font: 500 11px 'JetBrains Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--ash)); }
+    h1 { margin: 14px 0 0; font: 900 clamp(40px, 8vw, 72px)/.9 Archivo, system-ui, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+    .intro { max-width: 620px; margin: 20px 0 0; font-size: 18px; line-height: 1.55; color: rgb(var(--ash)); }
+
+    .toggle { display: inline-flex; margin-top: 28px; border: 1px solid rgb(var(--ink)); background: rgb(var(--paper)); }
+    .toggle button { border: 0; background: none; color: inherit; cursor: pointer; padding: 10px 16px; font: 700 11px 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; }
+    .toggle button + button { border-left: 1px solid rgb(var(--ink)); }
+    .toggle button[aria-pressed="true"] { background: rgb(var(--primary)); }
+
+    .group { margin-top: 56px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 1px; margin-top: 14px; border: 1px solid rgb(var(--ink)); background: rgb(var(--ink)); }
+    #current { max-width: 392px; }
+    .card { display: flex; flex-direction: column; min-width: 0; padding: 22px; background: rgb(var(--paper)); }
+    .head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+    .name { font: 900 22px/1 Archivo, system-ui, sans-serif; font-stretch: 70%; text-transform: uppercase; }
+    .num { font: 500 11px 'JetBrains Mono', monospace; color: rgb(var(--primary)); }
+    .pick { margin-left: 8px; padding: 2px 6px; background: rgb(var(--primary)); color: rgb(var(--ink)); font: 700 9px 'JetBrains Mono', monospace; letter-spacing: .12em; vertical-align: 3px; }
+    .stage { display: grid; place-items: center; min-height: 148px; }
+    .note { margin: 0; font-size: 14px; line-height: 1.5; color: rgb(var(--ash)); }
+
+    /* ---------- The button, same as the site's "Start a project" ---------- */
+    .btn {
+      position: relative;
+      display: inline-block;
+      padding: 20px 32px;
+      white-space: nowrap;
+      background: var(--btn-bg);
+      color: var(--btn-fg);
+      font: 700 14px 'JetBrains Mono', monospace;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .btn .text, .btn .ico { position: relative; z-index: 1; }
+    .ico { display: inline-block; width: 1.05em; height: 1.05em; vertical-align: -.15em; margin-left: .35em; }
+    .ico svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.75; }
+
+    /* 0. Current: conveying squares */
+    .a-squares { overflow: clip; }
+    .a-squares::after { content: ''; position: absolute; bottom: 4px; left: -10px; right: 0; height: 5px; background: repeating-linear-gradient(90deg, var(--fx) 0 5px, transparent 5px 10px); animation: squares .4s linear infinite; }
+    @keyframes squares { to { transform: translateX(10px); } }
+
+    /* 1. Arrow fly-through */
+    .a-fly .ico { overflow: clip; overflow-clip-margin: 1px; }
+    .a-fly svg { animation: fly 3.5s var(--ease) infinite; }
+    @keyframes fly {
+      0%, 70% { transform: none; }
+      82% { transform: translate(130%, -130%); }
+      82.01% { transform: translate(-130%, 130%); }
+      96%, 100% { transform: none; }
+    }
+
+    /* 2. Corner brackets */
+    .a-brackets::before {
+      --c: rgb(var(--ink));
+      content: '';
+      position: absolute;
+      inset: -7px;
+      background:
+        linear-gradient(var(--c), var(--c)) 0 0 / 14px 2px,
+        linear-gradient(var(--c), var(--c)) 0 0 / 2px 14px,
+        linear-gradient(var(--c), var(--c)) 100% 0 / 14px 2px,
+        linear-gradient(var(--c), var(--c)) 100% 0 / 2px 14px,
+        linear-gradient(var(--c), var(--c)) 0 100% / 14px 2px,
+        linear-gradient(var(--c), var(--c)) 0 100% / 2px 14px,
+        linear-gradient(var(--c), var(--c)) 100% 100% / 14px 2px,
+        linear-gradient(var(--c), var(--c)) 100% 100% / 2px 14px;
+      background-repeat: no-repeat;
+      animation: brackets 1.8s ease-in-out infinite;
+    }
+    @keyframes brackets { 50% { inset: -14px; opacity: .45; } }
+
+    /* 3. Text scramble: see the script at the bottom */
+
+    /* 4. Sweep */
+    .a-sweep { overflow: clip; }
+    .a-sweep::after { content: ''; position: absolute; top: -20%; bottom: -20%; left: 0; width: 60px; background: rgb(255 255 255 / .5); transform: translateX(-120px) skewX(-20deg); animation: sweep 3.5s ease-in-out infinite; }
+    @keyframes sweep { 0% { transform: translateX(-120px) skewX(-20deg); } 35%, 100% { transform: translateX(380px) skewX(-20deg); } }
+
+    /* 5. Border trace */
+    .trace { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; fill: none; pointer-events: none; }
+    .trace rect { x: 1.5px; y: 1.5px; width: calc(100% - 3px); height: calc(100% - 3px); stroke: var(--fx); stroke-width: 3; stroke-dasharray: 18 82; animation: trace 2.6s linear infinite; }
+    @keyframes trace { to { stroke-dashoffset: -100; } }
+
+    /* 6. Hard shadow pop */
+    .a-shadow { box-shadow: 6px 6px 0 var(--fx); animation: pop 3s var(--ease) infinite; }
+    @keyframes pop {
+      0%, 76%, 100% { transform: none; box-shadow: 6px 6px 0 var(--fx); }
+      84% { transform: translate(6px, 6px); box-shadow: 0 0 0 var(--fx); }
+    }
+
+    /* 7. Hazard stripes */
+    .a-hazard { overflow: clip; }
+    .a-hazard::before { content: ''; position: absolute; inset: 0 0 0 -29px; background: repeating-linear-gradient(45deg, var(--fill) 0 10px, transparent 10px 20px); animation: hazard 1.4s linear infinite; }
+    @keyframes hazard { to { transform: translateX(28.28px); } }
+
+    /* 8. Fill loop */
+    .a-fill { overflow: clip; }
+    .a-fill::before { content: ''; position: absolute; inset: 0; background: var(--fill); transform-origin: left; animation: fill 3.5s linear infinite; }
+    @keyframes fill { 0% { transform: scaleX(0); opacity: 1; } 80% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
+
+    /* 9. Barcode */
+    .a-barcode { overflow: clip; }
+    .bars { position: absolute; left: 0; right: 0; bottom: 0; height: 10px; display: flex; align-items: flex-end; gap: 2px; }
+    .bars i { flex: none; height: 100%; background: var(--fx); transform-origin: bottom; animation: bar 1.5s ease-in-out infinite; }
+    @keyframes bar { 0%, 100% { transform: scaleY(.25); } 50% { transform: scaleY(1); } }
+
+    /* ---------- Profile photo effects ---------- */
+    .photo-stage { display: grid; place-items: center; min-height: 290px; }
+    .photo { position: relative; width: 220px; aspect-ratio: 1; border: 1px solid rgb(var(--ink) / .15); }
+    .photo img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+    .overlay { position: absolute; inset: 0; pointer-events: none; }
+    .replay { align-self: flex-start; margin-top: 12px; padding: 6px 10px; border: 1px solid rgb(var(--ink)); background: none; color: inherit; cursor: pointer; font: 700 10px 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; }
+    .replay:hover { background: rgb(var(--ink)); color: rgb(var(--stock)); }
+
+    /* 1. Corner crop marks: draw in once and stay */
+    .p-marks i { position: absolute; width: 0; height: 0; border: 0 solid rgb(var(--primary)); opacity: 0; }
+    .p-marks i:nth-child(1) { top: -8px; left: -8px; border-width: 3px 0 0 3px; }
+    .p-marks i:nth-child(2) { top: -8px; right: -8px; border-width: 3px 3px 0 0; }
+    .p-marks i:nth-child(3) { bottom: -8px; left: -8px; border-width: 0 0 3px 3px; }
+    .p-marks i:nth-child(4) { bottom: -8px; right: -8px; border-width: 0 3px 3px 0; }
+    .play .p-marks i { animation: marks .7s var(--ease) forwards; }
+    .play .p-marks i:nth-child(2) { animation-delay: .1s; }
+    .play .p-marks i:nth-child(3) { animation-delay: .2s; }
+    .play .p-marks i:nth-child(4) { animation-delay: .3s; }
+    @keyframes marks { from { opacity: 1; width: 0; height: 0; } to { opacity: 1; width: 28px; height: 28px; } }
+
+    /* 2. Dimension lines: slide in along two edges */
+    .p-dim-h, .p-dim-v { position: absolute; background: rgb(var(--primary)); }
+    .p-dim-h { left: 0; right: 0; bottom: -14px; height: 1px; transform: scaleX(0); transform-origin: left; }
+    .p-dim-v { top: 0; bottom: 0; right: -14px; width: 1px; transform: scaleY(0); transform-origin: top; }
+    .p-dim-h::before, .p-dim-h::after { content: ''; position: absolute; top: -4px; width: 1px; height: 9px; background: inherit; }
+    .p-dim-h::before { left: 0; } .p-dim-h::after { right: 0; }
+    .p-dim-v::before, .p-dim-v::after { content: ''; position: absolute; left: -4px; width: 9px; height: 1px; background: inherit; }
+    .p-dim-v::before { top: 0; } .p-dim-v::after { bottom: 0; }
+    .p-dim-label { position: absolute; left: 50%; bottom: -21px; transform: translateX(-50%); padding: 0 6px; background: rgb(var(--paper)); font: 500 10px 'JetBrains Mono', monospace; letter-spacing: .14em; color: rgb(var(--ash)); opacity: 0; }
+    .play .p-dim-h, .play .p-dim-v { animation: dim .9s var(--ease) forwards; }
+    .play .p-dim-v { animation-delay: .15s; }
+    .play .p-dim-label { animation: dim-label .4s ease .6s forwards; }
+    @keyframes dim { to { transform: none; } }
+    @keyframes dim-label { to { opacity: 1; } }
+
+    /* 3. Halftone resolve: starts as coarse dots and sharpens */
+    .p-halftone { background: radial-gradient(circle at center, transparent 34%, rgb(var(--paper)) 36%) 0 0 / 7px 7px; opacity: 0; }
+    .play .p-halftone { animation: halftone 1.8s ease-in forwards; }
+    .play.fx-halftone img { animation: halftone-img 1.8s ease-in forwards; }
+    @keyframes halftone { 0%, 35% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes halftone-img { 0%, 35% { filter: grayscale(1) contrast(2.4); } 100% { filter: grayscale(1) contrast(1.05); } }
+
+    /* 4. Cyan overlay on hover */
+    .p-tint { background: rgb(var(--primary)); mix-blend-mode: multiply; opacity: 0; transition: opacity .35s ease; }
+    .photo:hover .p-tint { opacity: 1; }
+
+    /* 5. Grid overlay on hover */
+    .p-grid { background-image: linear-gradient(rgb(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--primary)) 1px, transparent 1px); background-size: 24px 24px; opacity: 0; transition: opacity .35s ease; }
+    .photo:hover .p-grid { opacity: .75; }
+
+    /* 6. Tilt on hover: see the script */
+    .photo.tilt { transition: transform .25s ease-out; }
+
+    /* 7. Registration mark: slow rotation in a corner */
+    .p-reg { position: absolute; top: 8px; right: 8px; width: 30px; height: 30px; fill: none; stroke: rgb(var(--primary)); stroke-width: 1.5; animation: reg 8s linear infinite; }
+    @keyframes reg { to { transform: rotate(360deg); } }
+
+    /* 8. Status tick: a thin bar slowly fills and resets */
+    .p-tick { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgb(var(--primary)); transform: scaleX(0); transform-origin: left; animation: tick 6s linear infinite; }
+    @keyframes tick { 92% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="label">[ animation options ]</div>
+  <h1>Pick one.</h1>
+  <p class="intro">Profile photo effects first, using your real photo, then the button animations. The three you picked for the buttons are already on the site.</p>
+
+  <section class="group">
+    <div class="label">[ profile photo: plays once ]</div>
+    <div class="grid" id="photo-once"></div>
+  </section>
+
+  <section class="group">
+    <div class="label">[ profile photo: hover it ]</div>
+    <div class="grid" id="photo-hover"></div>
+  </section>
+
+  <section class="group">
+    <div class="label">[ profile photo: slow loops ]</div>
+    <div class="grid" id="photo-loop"></div>
+  </section>
+
+  <div class="label" style="margin-top: 72px">[ buttons ]</div>
+  <div class="toggle" role="group" aria-label="Button colour">
+    <button type="button" data-mode="cyan" aria-pressed="true">Cyan button</button>
+    <button type="button" data-mode="black" aria-pressed="false">Black button</button>
+  </div>
+
+  <section class="group">
+    <div class="label">[ on the site now ]</div>
+    <div class="grid" id="current"></div>
+  </section>
+
+  <section class="group">
+    <div class="label">[ subtle ]</div>
+    <div class="grid" id="subtle"></div>
+  </section>
+
+  <section class="group">
+    <div class="label">[ noticeable ]</div>
+    <div class="grid" id="noticeable"></div>
+  </section>
+
+  <section class="group">
+    <div class="label">[ bolder ]</div>
+    <div class="grid" id="bolder"></div>
+  </section>
+</main>
+
+<script>
+  const OPTIONS = [
+    { group: 'current', num: '00', name: 'Conveyor squares', cls: 'a-squares', note: 'What the five buttons use today.' },
+    { group: 'subtle', num: '01', name: 'Arrow fly-through', cls: 'a-fly', note: 'The arrow exits top right and comes back in from bottom left. My pick for smaller buttons.', pick: true },
+    { group: 'subtle', num: '02', name: 'Corner brackets', cls: 'a-brackets', note: 'Crop marks pulse outward, like a target lock.' },
+    { group: 'subtle', num: '03', name: 'Text scramble', cls: 'a-scramble', note: 'The label scrambles and resolves every few seconds, like your section labels.' },
+    { group: 'noticeable', num: '04', name: 'Sweep', cls: 'a-sweep', note: 'A band of light crosses, then the button rests.' },
+    { group: 'noticeable', num: '05', name: 'Border trace', cls: 'a-trace', note: 'A short line keeps circling the edge. The label stays untouched. My pick for "Start a project".', pick: true, extra: '<svg class="trace" aria-hidden="true"><rect pathLength="100" /></svg>' },
+    { group: 'noticeable', num: '06', name: 'Hard shadow pop', cls: 'a-shadow', note: 'Presses into a solid offset shadow and springs back.' },
+    { group: 'bolder', num: '07', name: 'Hazard stripes', cls: 'a-hazard', note: 'Faint diagonal stripes drift across the whole button.' },
+    { group: 'bolder', num: '08', name: 'Fill loop', cls: 'a-fill', note: 'A darker tone fills left to right, then resets. Can read as loading.' },
+    { group: 'bolder', num: '09', name: 'Barcode', cls: 'a-barcode', note: 'A strip of bars ripples along the bottom edge, matching your footer barcode.', bars: true },
+  ]
+
+  const ARROW = '<span class="ico"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M3.25 2H10v6.75" /></svg></span>'
+  const LABEL = 'Start a project'
+  const BAR_WIDTHS = [2, 2, 4, 1, 3, 1, 6, 2, 1, 4, 2, 3]
+
+  for (const o of OPTIONS) {
+    const bars = o.bars
+      ? `<span class="bars" aria-hidden="true">${Array.from({ length: 70 }, (_, i) => `<i style="width:${BAR_WIDTHS[i % BAR_WIDTHS.length]}px;animation-delay:${(i * 0.04).toFixed(2)}s"></i>`).join('')}</span>`
+      : ''
+    document.getElementById(o.group).insertAdjacentHTML('beforeend', `
+      <article class="card">
+        <div class="head">
+          <div class="name">${o.name}${o.pick ? '<span class="pick">PICK</span>' : ''}</div>
+          <div class="num">${o.num}</div>
+        </div>
+        <div class="stage">
+          <a href="#" class="btn ${o.cls}" onclick="return false"><span class="text">${LABEL}</span>${ARROW}${o.extra ?? ''}${bars}</a>
+        </div>
+        <p class="note">${o.note}</p>
+      </article>`)
+  }
+
+  // Profile photo effects
+  const PHOTOS = [
+    { group: 'photo-once', num: 'P1', name: 'Corner crop marks', pick: true, once: true, note: 'Cyan marks draw in at the corners and stay, like a marked-up spec sheet. Echoes the button brackets.', fx: '<div class="overlay p-marks"><i></i><i></i><i></i><i></i></div>' },
+    { group: 'photo-once', num: 'P2', name: 'Dimension lines', once: true, note: 'Measurement lines with ticks slide in along two edges, like a technical drawing.', fx: '<span class="p-dim-h"></span><span class="p-dim-v"></span><span class="p-dim-label">FIG. 01</span>' },
+    { group: 'photo-once', num: 'P3', name: 'Halftone resolve', once: true, cls: 'fx-halftone', note: 'Starts as a coarse dot pattern, then sharpens into the normal photo.', fx: '<div class="overlay p-halftone"></div>' },
+    { group: 'photo-hover', num: 'P4', name: 'Cyan overlay', pick: true, note: 'Takes on a cyan tint while hovered, then returns to gray.', fx: '<div class="overlay p-tint"></div>' },
+    { group: 'photo-hover', num: 'P5', name: 'Grid overlay', note: 'Your signature grid lines fade in over the photo.', fx: '<div class="overlay p-grid"></div>' },
+    { group: 'photo-hover', num: 'P6', name: 'Tilt', cls: 'tilt', note: 'Leans toward the cursor. The same kind of cursor-follow you removed from the buttons.' },
+    { group: 'photo-loop', num: 'P7', name: 'Registration mark', note: 'A small crosshair slowly rotates in the corner, off your face.', fx: '<svg class="p-reg" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="8" /><path d="M15 1v28M1 15h28" /></svg>' },
+    { group: 'photo-loop', num: 'P8', name: 'Status tick', note: 'A thin bar along the bottom slowly fills and resets.', fx: '<span class="p-tick"></span>' },
+  ]
+
+  for (const p of PHOTOS) {
+    document.getElementById(p.group).insertAdjacentHTML('beforeend', `
+      <article class="card">
+        <div class="head">
+          <div class="name">${p.name}${p.pick ? '<span class="pick">PICK</span>' : ''}</div>
+          <div class="num">${p.num}</div>
+        </div>
+        <div class="photo-stage">
+          <div class="photo ${p.cls ?? ''}"><img src="../../public/profile_pic.png" alt="" />${p.fx ?? ''}</div>
+        </div>
+        <p class="note">${p.note}</p>
+        ${p.once ? '<button type="button" class="replay">Replay</button>' : ''}
+      </article>`)
+  }
+
+  // Play-once effects start when scrolled into view; Replay restarts them
+  const play = (photo) => {
+    photo.classList.remove('play')
+    void photo.offsetWidth
+    photo.classList.add('play')
+  }
+  const onceObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue
+      onceObserver.unobserve(entry.target)
+      play(entry.target)
+    }
+  }, { threshold: 0.4 })
+  document.querySelectorAll('#photo-once .photo').forEach((photo) => {
+    onceObserver.observe(photo)
+    photo.closest('.card').querySelector('.replay').addEventListener('click', () => play(photo))
+  })
+
+  // P6: tilt towards the cursor
+  document.querySelectorAll('.photo.tilt').forEach((photo) => {
+    photo.addEventListener('mousemove', (e) => {
+      const r = photo.getBoundingClientRect()
+      const rx = (0.5 - (e.clientY - r.top) / r.height) * 12
+      const ry = ((e.clientX - r.left) / r.width - 0.5) * 12
+      photo.style.transform = `perspective(600px) rotateX(${rx}deg) rotateY(${ry}deg)`
+    })
+    photo.addEventListener('mouseleave', () => { photo.style.transform = '' })
+  })
+
+  // 03: scramble the label, resolving one letter at a time
+  const GLYPHS = 'ABCDEFGHJKLMNPRSTUVXYZ0123456789/#'
+  const target = document.querySelector('.a-scramble .text')
+  const scramble = () => {
+    let frame = 0
+    const tick = () => {
+      const settled = frame / 1.6
+      target.textContent = [...LABEL].map((c, i) => (c === ' ' || i < settled ? c : GLYPHS[Math.floor(Math.random() * GLYPHS.length)])).join('')
+      if (settled < LABEL.length) { frame++; setTimeout(tick, 32) }
+    }
+    tick()
+  }
+  setInterval(scramble, 4000)
+  setTimeout(scramble, 800)
+
+  // Cyan / black toggle
+  document.querySelectorAll('.toggle button').forEach((button, _, all) => {
+    button.addEventListener('click', () => {
+      document.body.classList.toggle('on-black', button.dataset.mode === 'black')
+      all.forEach((b) => b.setAttribute('aria-pressed', String(b === button)))
+    })
+  })
+</script>
+</body>
+</html>

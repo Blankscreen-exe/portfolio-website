@@ -28,7 +28,7 @@ export default config({
     navigation: {
       Work: ['projects'],
       Writing: ['posts'],
-      Pages: ['home', 'services', 'about', 'faq', 'testimonials'],
+      Pages: ['home', 'services', 'about', 'faq', 'testimonials', 'linktree'],
       Shelf: ['books', 'bookmarks'],
       Settings: ['site'],
     },
@@ -115,6 +115,24 @@ export default config({
         contactAlternatives: fields.array(fields.object({ icon: text('Icon key'), name: text('Label') }), {
           label: 'Other ways to reach me', itemLabel: (p) => p.fields.name.value,
         }),
+      },
+    }),
+
+    linktree: singleton({
+      label: 'Link tree',
+      path: 'content/linktree',
+      format: json,
+      schema: {
+        items: fields.array(fields.object({
+          title: text('Title'),
+          action: fields.select({
+            label: 'When tapped',
+            options: [{ label: 'Open a link', value: 'link' }, { label: 'Copy text', value: 'copy' }],
+            defaultValue: 'link',
+          }),
+          target: text('Link or text', 'A full URL, a mailto: link or a path like /card. For "Copy text", the text to copy, which is also shown on the page.'),
+          featured: fields.checkbox({ label: 'Highlight', description: 'Shown in cyan with a moving arrow. Best kept to your one main link.' }),
+        }), { label: 'Links', description: 'Shown in this order', itemLabel: (p) => p.fields.title.value }),
       },
     }),
 

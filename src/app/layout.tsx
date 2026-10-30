@@ -15,7 +15,6 @@ export const metadata: Metadata = {
     template: '%s · M. Hammad Hassan',
   },
   description: "I build software that runs your business: apps and websites, practical AI, and fixes for software that's slowing you down.",
-  icons: { icon: '/logo.svg' },
   alternates: { types: { 'text/plain': routes.llms } },
 }
 
