@@ -98,6 +98,8 @@ export default config({
         name: text('Name'),
         role: text('Role'),
         availability: text('Availability', 'Shown in the header when not inside a section'),
+        email: text('Email', 'Shown beside the contact form'),
+        discordUsername: text('Discord username', 'Copied by the Discord card on the Contact page'),
         social: fields.object({
           linkedin: fields.url({ label: 'LinkedIn' }),
           github: fields.url({ label: 'GitHub' }),

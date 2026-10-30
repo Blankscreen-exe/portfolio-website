@@ -3,10 +3,12 @@
 import Link from 'next/link'
 import { type KeyboardEvent, type PointerEvent, useEffect, useRef, useState } from 'react'
 
+import { ArrowUpRight } from '@/components/ui/Decor'
 import { usePageVisible, usePrefersReducedMotion } from '@/hooks/useMediaState'
 import type { Service } from '@/lib/content'
 import { pad } from '@/lib/format'
 import { routes } from '@/lib/routes'
+import { fitText } from '@/lib/style'
 import { HASH_PATTERN, goToService, useActiveService } from './serviceNav'
 
 const AUTOPLAY_MS = 7000
@@ -149,10 +151,14 @@ export default function ServicesCarousel({ services }: { services: readonly Serv
                   inert={i !== active}
                   className="w-full shrink-0"
                 >
-                  <div className="grid gap-10 p-6 sm:p-10 lg:grid-cols-12">
+                  <div className="grid grid-cols-1 gap-10 p-6 sm:p-10 lg:grid-cols-12">
                     <div className="lg:col-span-5">
                       <div className="ss-display text-7xl text-primary">{pad(i + 1)}</div>
-                      <h2 className="ss-display mt-4 text-4xl sm:text-5xl">{s.title}</h2>
+                      <div className="ss-fit mt-4">
+                        <h2 className="ss-display ss-fit-text" style={fitText(s.title, 'clamp(2.25rem, 6vw, 3rem)')}>
+                          {s.title}
+                        </h2>
+                      </div>
                       <p className="mt-5 text-lg leading-relaxed text-ash">{s.description}</p>
                     </div>
 
@@ -164,7 +170,7 @@ export default function ServicesCarousel({ services }: { services: readonly Serv
                         </div>
                       )}
                       <div className="ss-label mt-8">[ what you get ]</div>
-                      <ul className="mt-3 grid border-t border-ink sm:grid-cols-2">
+                      <ul className="mt-3 grid grid-cols-1 border-t border-ink sm:grid-cols-2">
                         {s.deliverables.map((d) => (
                           <li key={d} className="flex items-center gap-3 border-b border-ink/15 py-3 pr-4">
                             <span className="h-2 w-2 shrink-0 bg-primary" />
@@ -176,7 +182,7 @@ export default function ServicesCarousel({ services }: { services: readonly Serv
                         href={routes.contactAbout(s.contactTopic)}
                         className="ss-chev-btn mt-8 inline-block bg-ink px-6 py-3.5 font-jet text-xs font-bold uppercase tracking-[.14em] text-stock hover:opacity-90"
                       >
-                        Talk to me about this <span className="ss-chev">↗</span>
+                        Talk to me about this <ArrowUpRight className="ss-chev" />
                       </Link>
                     </div>
                   </div>

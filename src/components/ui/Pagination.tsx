@@ -1,5 +1,6 @@
 'use client'
 
+import { ArrowLeft, ArrowRight } from '@/components/ui/Decor'
 import { pad } from '@/lib/format'
 import { pageWindow } from '@/lib/pagination'
 
@@ -25,7 +26,7 @@ export default function Pagination({ page, pageCount, total, pageSize, onChange,
     <nav aria-label="Pagination" className="mt-8 flex flex-wrap items-center justify-between gap-4">
       <div className="flex border-y border-l border-ink bg-paper">
         <button type="button" onClick={() => onChange(page - 1)} disabled={page === 1} className={`${cell} hover:bg-ink hover:text-stock disabled:pointer-events-none disabled:opacity-30`} aria-label="Previous page">
-          ←
+          <ArrowLeft className="!h-4 !w-4" />
         </button>
         {pageWindow(page, pageCount).map((p, i) =>
           p === null ? (
@@ -46,7 +47,7 @@ export default function Pagination({ page, pageCount, total, pageSize, onChange,
           )
         )}
         <button type="button" onClick={() => onChange(page + 1)} disabled={page === pageCount} className={`${cell} hover:bg-primary hover:text-onprimary disabled:pointer-events-none disabled:opacity-30`} aria-label="Next page">
-          →
+          <ArrowRight className="!h-4 !w-4" />
         </button>
       </div>
       <p className="font-jet text-[11px] uppercase tracking-[.14em] text-ash">

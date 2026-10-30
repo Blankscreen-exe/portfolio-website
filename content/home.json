@@ -3,12 +3,12 @@
   "heroIntro": "Bring me an idea, a messy system or a job you want automated. I take care of the technical side from start to finish and keep you updated in plain language.",
   "metrics": [
     {
-      "value": "20+",
+      "value": "15+",
       "label": "Production Systems Delivered",
       "showInStrip": true
     },
     {
-      "value": "50+",
+      "value": "20+",
       "label": "Clients & Teams Supported",
       "showInStrip": true
     },
@@ -108,17 +108,13 @@
     }
   ],
   "aboutParagraphs": [
-    "I'm a product engineer and technical consultant. For about five years I've built software for clients and teams in healthcare, sales, hiring, education and food delivery.",
+    "You bring the problem, I build the software that makes it go away. So far that has meant healthcare, sales, hiring, education and food delivery.",
     "I take full ownership of the work, from understanding the problem to launch and upkeep. I write things down and explain decisions clearly, so you're never left guessing."
   ],
   "aboutFacts": [
     {
       "label": "Role",
       "value": "Product Engineer & Consultant"
-    },
-    {
-      "label": "Currently",
-      "value": "Siliconplex, since 2023"
     },
     {
       "label": "Available for",

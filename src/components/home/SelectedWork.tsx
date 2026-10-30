@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { ArrowUpRight, TripleArrow } from '@/components/ui/Decor'
 import SectionHeading, { Bar } from '@/components/ui/SectionHeading'
 import type { Project } from '@/lib/content'
 import { firstSentence, splitTitle, statusLabel } from '@/lib/projects'
@@ -27,11 +28,11 @@ export default function SelectedWork({ projects }: { projects: Project[] }) {
             Built, <Bar>shipped.</Bar>
           </SectionHeading>
           <Link href={routes.work} className="ss-chev-btn font-jet text-xs font-bold uppercase tracking-[.16em] text-primary hover:underline" data-reveal="up">
-            All projects <span className="ss-chev">▸▸▸</span>
+            All projects <TripleArrow />
           </Link>
         </div>
 
-        <Link href={routes.project(lead.slug)} className="ss-spot ss-finder group mt-12 grid border border-ink bg-stock md:grid-cols-[1fr_1.15fr]">
+        <Link href={routes.project(lead.slug)} className="ss-spot ss-finder group mt-12 grid grid-cols-1 border border-ink bg-stock md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]">
           <span className="ss-glow" />
           <div className="relative z-[2] flex flex-col justify-between p-7 sm:p-9" data-reveal="up">
             <div>
@@ -57,7 +58,7 @@ export default function SelectedWork({ projects }: { projects: Project[] }) {
               </dl>
             </div>
             <span className="ss-chev-btn mt-8 font-jet text-[11px] font-bold uppercase tracking-[.2em] text-primary">
-              Read the full story <span className="ss-chev">↗</span>
+              Read the full story <ArrowUpRight className="ss-chev" />
             </span>
           </div>
           <div className="ss-shutter relative min-h-[260px] border-t border-ink md:border-l md:border-t-0" data-reveal="shutter">
@@ -65,7 +66,7 @@ export default function SelectedWork({ projects }: { projects: Project[] }) {
           </div>
         </Link>
 
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
+        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
           {rest.map((p, i) => {
             const t = splitTitle(p.title)
             return (
@@ -77,7 +78,7 @@ export default function SelectedWork({ projects }: { projects: Project[] }) {
                 <div className="relative z-[2] flex flex-1 flex-col p-6" data-reveal="up" style={stagger(i % 2)}>
                   <div className="flex justify-between font-jet text-[10px] uppercase tracking-[.15em] text-ash">
                     <span>{statusLabel(p)}</span>
-                    <span className="text-primary opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
+                    <span className="text-primary opacity-0 transition-opacity group-hover:opacity-100">open <ArrowUpRight /></span>
                   </div>
                   <h3 className="ss-display ss-cond mt-4 text-3xl">{t.name}</h3>
                   {t.subtitle && <p className="mt-1 font-jet text-[11px] uppercase tracking-[.12em]">{t.subtitle}</p>}

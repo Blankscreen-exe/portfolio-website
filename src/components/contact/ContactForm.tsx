@@ -4,6 +4,8 @@ import emailjs from '@emailjs/browser'
 import { Turnstile } from '@marsidev/react-turnstile'
 import { type ChangeEvent, type FormEvent, type ReactNode, useState } from 'react'
 
+import { ArrowUpRight, RotateArrow } from '@/components/ui/Decor'
+import { useMediaQuery } from '@/hooks/useMediaState'
 import { useQueryParams } from '@/hooks/useQueryParams'
 import { emailJs, turnstileSiteKey } from '@/lib/integrations'
 
@@ -49,6 +51,8 @@ export default function ContactForm({ topics, linkedin }: { topics: readonly str
     if (requested && topics.includes(requested)) setData((d) => ({ ...d, topic: requested }))
   }
   const [errors, setErrors] = useState<Errors>({})
+  // The normal widget is a fixed 300px, wider than the form on small phones
+  const captchaSize = useMediaQuery('(max-width: 389px)') ? 'compact' : 'normal'
   const [captchaPassed, setCaptchaPassed] = useState(false)
   const [state, setState] = useState<'idle' | 'sending' | 'sent' | 'failed'>('idle')
 
@@ -96,7 +100,7 @@ export default function ContactForm({ topics, linkedin }: { topics: readonly str
           }}
           className="mt-6 font-jet text-xs font-bold uppercase tracking-[.16em] text-primary hover:underline"
         >
-          Send another ↻
+          Send another <RotateArrow />
         </button>
       </div>
     )
@@ -141,8 +145,9 @@ export default function ContactForm({ topics, linkedin }: { topics: readonly str
 
       <div className="-mt-px border border-stock/35 px-4 py-3">
         <Turnstile
+          key={captchaSize}
           siteKey={turnstileSiteKey}
-          options={{ size: 'normal', theme: 'auto' }}
+          options={{ size: captchaSize, theme: 'auto' }}
           onSuccess={() => setCaptchaPassed(true)}
           onError={() => setCaptchaPassed(false)}
           onExpire={() => setCaptchaPassed(false)}
@@ -159,7 +164,7 @@ export default function ContactForm({ topics, linkedin }: { topics: readonly str
           'Sending…'
         ) : (
           <>
-            Send message <span className="ss-chev">↗</span>
+            Send message <ArrowUpRight className="ss-chev" />
           </>
         )}
       </button>

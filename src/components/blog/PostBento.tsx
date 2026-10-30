@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { ArrowUpRight } from '@/components/ui/Decor'
 import type { Post } from '@/lib/content'
 import { formatMonth, pad } from '@/lib/format'
 import { stagger } from '@/lib/style'
@@ -10,7 +11,7 @@ function Meta({ post, n, className = '' }: { post: Post; n: number; className?: 
   return (
     <div className={`flex justify-between font-jet text-[10px] uppercase tracking-[.15em] ${className}`}>
       <span>{pad(n)} · {formatMonth(post.published)}</span>
-      <span className="opacity-0 transition-opacity group-hover:opacity-100">read ↗</span>
+      <span className="opacity-0 transition-opacity group-hover:opacity-100">read <ArrowUpRight /></span>
     </div>
   )
 }
@@ -30,7 +31,7 @@ export default function PostBento({ posts }: { posts: Post[] }) {
   const external = { target: '_blank', rel: 'noopener noreferrer' } as const
 
   return (
-    <div className="grid gap-4 lg:grid-cols-12 lg:grid-rows-2">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:grid-rows-2">
       <a href={first.url} {...external} className={`${tile} bg-paper lg:col-span-6 lg:row-span-2`} data-reveal="up">
         <span className="ss-glow" />
         <div className="relative aspect-[16/9] overflow-hidden border-b border-ink lg:aspect-auto lg:flex-1">

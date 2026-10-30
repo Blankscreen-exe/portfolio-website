@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { type KeyboardEvent, type MouseEvent, useEffect, useRef, useState } from 'react'
 
+import { ArrowUpRight, RotateArrow } from '@/components/ui/Decor'
 import ProfilePhoto from '@/components/ui/ProfilePhoto'
 import { prefersReducedMotion } from '@/hooks/useOnceVisible'
 import type { Home } from '@/lib/content'
@@ -110,7 +111,7 @@ export default function CardStack({ industries, whyMe, delivered, role }: Props)
               </span>
             )}
             <Link href={routes.work} tabIndex={front === 1 ? 0 : -1} className="font-jet text-[11px] font-bold uppercase tracking-widest text-primary hover:underline">
-              See work ↗
+              See work <ArrowUpRight />
             </Link>
           </div>
         </article>
@@ -149,7 +150,7 @@ export default function CardStack({ industries, whyMe, delivered, role }: Props)
           <span className="hidden sm:inline">Click</span>
           <span className="sm:hidden">Tap</span> to shuffle{' '}
           <span className="inline-block transition-transform duration-700" style={{ transform: `rotate(${turns * 360}deg)` }}>
-            ↻
+            <RotateArrow />
           </span>
         </span>
       </div>

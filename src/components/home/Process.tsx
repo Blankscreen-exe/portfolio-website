@@ -36,7 +36,7 @@ export default function Process({ steps, label = '[ 04 / how it works ]', sectio
           <div className="absolute -top-3 left-0 right-0 hidden h-[3px] bg-ink/15 md:block" aria-hidden="true">
             <div ref={lineRef} className="ss-progress h-full bg-primary" />
           </div>
-          <ol className="grid gap-px border border-ink bg-ink md:grid-cols-3" data-reveal="rows">
+          <ol className="grid grid-cols-1 gap-px border border-ink bg-ink md:grid-cols-3" data-reveal="rows">
             {steps.map((s, i) => (
               <li key={s.title} className="bg-paper p-7">
                 <div className="ss-display text-6xl text-primary">{pad(i + 1)}</div>

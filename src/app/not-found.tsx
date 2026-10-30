@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import SiteShell from '@/components/layout/SiteShell'
+import { ArrowUpRight } from '@/components/ui/Decor'
 import { routes } from '@/lib/routes'
 
 export const metadata = { title: 'Page not found' }
@@ -21,11 +22,11 @@ export default function NotFound() {
             4<span className="ss-bar">0</span>4
           </h1>
           <p className="mt-8 max-w-xl text-lg text-ash">This page doesn&apos;t exist, or it moved during the redesign. Try one of these instead.</p>
-          <div className="mt-10 grid max-w-3xl gap-px border border-ink bg-ink sm:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 max-w-3xl gap-px border border-ink bg-ink sm:grid-cols-3">
             {links.map((l) => (
               <Link key={l.name} href={l.href} className="ss-wipe flex justify-between bg-paper px-5 py-5">
                 <span className="ss-display ss-cond text-2xl">{l.name}</span>
-                <span className="ss-arrow font-jet text-primary">↗</span>
+                <ArrowUpRight className="ss-arrow text-primary" />
               </Link>
             ))}
           </div>

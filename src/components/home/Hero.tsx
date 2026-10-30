@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import CountUp from '@/components/ui/CountUp'
+import { ArrowUpRight, ChevronDown } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
 import type { Home, Site } from '@/lib/content'
 import { parseMetric } from '@/lib/format'
@@ -14,7 +15,7 @@ export default function Hero({ home, site }: { home: Home; site: Site }) {
 
   return (
     <section className="border-b border-ink">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 pb-12 pt-14 md:px-8 lg:grid-cols-12 lg:gap-10 lg:pt-24">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl gap-12 px-5 pb-12 pt-14 md:px-8 lg:grid-cols-12 lg:gap-10 lg:pt-24">
         <div className="lg:col-span-8">
           <div className="ss-label" data-reveal="up">
             <Scramble text={home.heroLabel} />
@@ -34,10 +35,10 @@ export default function Hero({ home, site }: { home: Home; site: Site }) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3" data-reveal="up" style={stagger(6)}>
             <Link href="#contact" className="ss-magnet ss-chev-btn inline-block bg-ink px-6 py-3.5 font-jet text-xs font-bold uppercase tracking-[.14em] text-stock transition-[transform] duration-300">
-              Start a project <span className="ss-chev">↗</span>
+              Start a project <ArrowUpRight className="ss-chev" />
             </Link>
             <Link href={`${routes.home}#work`} className="ss-magnet ss-chev-btn inline-block border-2 border-ink px-6 py-3 font-jet text-xs font-bold uppercase tracking-[.14em] transition-colors duration-300 hover:bg-ink hover:text-stock">
-              See the work <span className="ss-chev">▾</span>
+              See the work <ChevronDown className="ss-chev" />
             </Link>
           </div>
         </div>

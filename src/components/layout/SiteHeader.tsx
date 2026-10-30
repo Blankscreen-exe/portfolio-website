@@ -4,10 +4,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 
+import { ArrowUpRight } from '@/components/ui/Decor'
+import Scramble from '@/components/ui/Scramble'
 import { prefersReducedMotion } from '@/hooks/useOnceVisible'
 import { routes } from '@/lib/routes'
 import { stagger } from '@/lib/style'
-import Scramble from '@/components/ui/Scramble'
 
 const NAV = [
   { name: 'Work', href: routes.work },
@@ -97,8 +98,8 @@ export default function SiteHeader({ name, availability }: { name: string; avail
       <div ref={curtainRef} className="ss-curtain" aria-hidden="true" />
       <header className="sticky top-0 z-40 grid grid-cols-[auto_1fr_auto] border-b border-ink bg-stock transition-colors duration-500">
         <Link href={routes.home} onClick={closeMenu} className="ss-drop flex items-center gap-3 border-r border-ink px-4 py-3.5 sm:px-5" style={stagger(0)}>
-          <span className="grid h-7 w-7 place-items-center bg-primary font-jet text-[11px] font-bold text-onprimary">MH</span>
-          <span className="ss-display ss-cond text-xl">{name.replace(/^M\.\s*/, '')}</span>
+          <span className="grid h-7 w-7 place-items-center bg-primary font-jet text-[11px] font-bold text-onprimary max-[374px]:hidden">MH</span>
+          <span className="ss-display ss-cond whitespace-nowrap text-xl">{name.replace(/^M\.\s*/, '')}</span>
         </Link>
 
         <nav className="hidden items-stretch md:flex" aria-label="Main">
@@ -135,12 +136,12 @@ export default function SiteHeader({ name, availability }: { name: string; avail
             className="ss-drop ss-chev-btn hidden items-center gap-1 bg-ink px-5 font-jet text-xs font-bold uppercase tracking-widest text-stock transition-opacity hover:opacity-90 sm:flex"
             style={stagger(7)}
           >
-            Start a project <span className="ss-chev">↗</span>
+            Let&apos;s Talk <ArrowUpRight className="ss-chev" />
           </Link>
           <button
             type="button"
             onClick={() => setMenuOpen((o) => !o)}
-            className="ss-drop border-l border-ink px-4 font-jet text-[11px] uppercase tracking-widest md:hidden"
+            className="ss-drop whitespace-nowrap border-l border-ink px-4 font-jet text-[11px] uppercase tracking-widest max-[374px]:px-3 md:hidden"
             style={stagger(8)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -160,11 +161,11 @@ export default function SiteHeader({ name, availability }: { name: string; avail
                 onClick={closeMenu}
                 className={`ss-display ss-cond flex justify-between border-b border-ink/15 px-5 py-4 text-3xl ${isActive(item.href) ? 'text-primary' : ''}`}
               >
-                {item.name} <span className="font-jet text-base">↗</span>
+                {item.name} <ArrowUpRight className="text-base" />
               </Link>
             ))}
             <Link href={routes.contact} onClick={closeMenu} className="block bg-primary px-5 py-4 font-jet text-xs font-bold uppercase tracking-widest text-onprimary">
-              Start a project ↗
+              Start a project <ArrowUpRight />
             </Link>
           </nav>
         )}

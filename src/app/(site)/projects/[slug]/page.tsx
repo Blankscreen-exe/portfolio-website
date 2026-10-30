@@ -3,13 +3,15 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import CtaBand from '@/components/ui/CtaBand'
+import { ArrowUpRight } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
 import { Bar } from '@/components/ui/SectionHeading'
 import ProjectGallery from '@/components/work/ProjectGallery'
 import { getProject, getProjects } from '@/lib/content'
+import { longestWord } from '@/lib/format'
 import { firstSentence, kindLabel, splitTitle, statusLabel } from '@/lib/projects'
 import { routes } from '@/lib/routes'
-import { stagger } from '@/lib/style'
+import { fitText, stagger } from '@/lib/style'
 
 // Every project page is generated at build time
 export async function generateStaticParams() {
@@ -48,7 +50,7 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
             ← <Scramble text="[ work ]" /> / {name.toLowerCase()}
           </Link>
 
-          <div className="mt-8 grid gap-10 lg:grid-cols-12">
+          <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <div className="flex flex-wrap items-center gap-3 font-jet text-[10px] uppercase tracking-[.15em]" data-reveal="up">
                 <span className="flex items-center gap-2 bg-primary px-2 py-0.5 text-onprimary">
@@ -57,9 +59,11 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
                 </span>
                 {project.featured && <span className="border border-ink px-2 py-0.5">Featured</span>}
               </div>
-              <h1 className="ss-display mt-6 text-6xl sm:text-7xl lg:text-[88px]" data-reveal="focus">
-                <Bar>{name}</Bar>
-              </h1>
+              <div className="ss-fit mt-6">
+                <h1 className="ss-display ss-fit-text" style={fitText(name, 'clamp(3.75rem, 9vw, 5.5rem)')} data-reveal="focus">
+                  <Bar>{name}</Bar>
+                </h1>
+              </div>
               {subtitle && (
                 <p className="mt-5 font-jet text-sm uppercase tracking-[.12em]" data-reveal="up">
                   {subtitle}
@@ -70,12 +74,12 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
             <div className="flex flex-col justify-end gap-3 lg:col-span-5" data-reveal="up" style={stagger(2)}>
               {project.liveUrl && (
                 <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="ss-chev-btn bg-ink px-6 py-4 text-center font-jet text-xs font-bold uppercase tracking-[.16em] text-stock hover:opacity-90">
-                  Visit the live site <span className="ss-chev">↗</span>
+                  Visit the live site <ArrowUpRight className="ss-chev" />
                 </a>
               )}
               {project.repoUrl && (
                 <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="ss-chev-btn border-2 border-ink px-6 py-3.5 text-center font-jet text-xs font-bold uppercase tracking-[.16em] hover:bg-ink hover:text-stock">
-                  View the code <span className="ss-chev">↗</span>
+                  View the code <ArrowUpRight className="ss-chev" />
                 </a>
               )}
               {!project.liveUrl && project.liveUrlNote && <p className="border border-dashed border-ink px-4 py-3 font-jet text-[11px] text-ash">{project.liveUrlNote}</p>}
@@ -91,7 +95,7 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
       </section>
 
       <section className="border-b border-ink" data-section="the story">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:px-8 lg:grid-cols-12">
+        <div className="mx-auto grid grid-cols-1 max-w-7xl gap-12 px-5 py-16 md:px-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <div className="ss-label" data-reveal="up">
               [ the story ]
@@ -121,7 +125,7 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
         </div>
       </section>
 
-      <nav className="grid border-b border-ink sm:grid-cols-2" aria-label="More projects">
+      <nav className="grid grid-cols-1 border-b border-ink sm:grid-cols-2" aria-label="More projects">
         {[
           { p: prev, dir: '← Previous' },
           { p: next, dir: 'Next →' },
@@ -136,7 +140,7 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
       <CtaBand
         title={
           <>
-            Want something <Bar>like {name.length > 14 ? 'this' : name}?</Bar>
+            Want something <Bar>like {name.length > 14 || longestWord(name) > 9 ? 'this' : name}?</Bar>
           </>
         }
       />

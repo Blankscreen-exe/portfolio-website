@@ -1,5 +1,6 @@
-import { Bar } from '@/components/ui/SectionHeading'
+import { ArrowUpRight } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
+import { Bar } from '@/components/ui/SectionHeading'
 import { pad } from '@/lib/format'
 import ContactForm from './ContactForm'
 
@@ -13,6 +14,7 @@ type Props = {
   topics: readonly string[]
   linkedin?: string | null
   bookingUrl?: string | null
+  email: string
   label?: string
   section?: string
   id?: string
@@ -20,10 +22,10 @@ type Props = {
 }
 
 /** Inverted (ink) panel with the contact form. Used on the home page and the Contact page. */
-export default function ContactPanel({ topics, linkedin, bookingUrl, label = '[ 07 / contact ]', section = '07 / contact', id = 'contact', headingAs: Heading = 'h2' }: Props) {
+export default function ContactPanel({ topics, linkedin, bookingUrl, email, label = '[ 07 / contact ]', section = '07 / contact', id = 'contact', headingAs: Heading = 'h2' }: Props) {
   return (
     <section id={id} data-section={section} className="scroll-mt-16 bg-ink text-stock transition-colors duration-500">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:px-8 lg:grid-cols-2">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl gap-12 px-5 py-20 md:px-8 lg:grid-cols-2">
         <div>
           <div className="ss-label !text-stock/60" data-reveal="up">
             <Scramble text={label} />
@@ -45,9 +47,15 @@ export default function ContactPanel({ topics, linkedin, bookingUrl, label = '[ 
                 </li>
               ))}
             </ol>
+            <div className="mt-8">
+              <div className="ss-label !text-stock/60">[ or email me ]</div>
+              <a href={`mailto:${email}`} className="mt-2 inline-block font-jet text-sm font-bold text-primary hover:underline sm:text-base">
+                {email}
+              </a>
+            </div>
             {bookingUrl && (
               <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="ss-chev-btn mt-6 inline-block font-jet text-xs font-bold uppercase tracking-[.16em] text-primary hover:underline">
-                Prefer to talk? Book a call <span className="ss-chev">↗</span>
+                Prefer to talk? Book a call <ArrowUpRight className="ss-chev" />
               </a>
             )}
           </div>

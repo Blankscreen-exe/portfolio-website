@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
+import { ArrowUpRight } from '@/components/ui/Decor'
 import Drawer from '@/components/ui/Drawer'
 import type { Award } from '@/lib/content'
 import { formatMonth, pad } from '@/lib/format'
@@ -30,7 +31,7 @@ function AwardDetails({ award }: { award: Award }) {
           {award.links.filter(Boolean).map((href, i) => (
             <a key={href} href={href ?? undefined} target="_blank" rel="noopener noreferrer" className="ss-wipe flex justify-between border-b border-ink/15 px-1 py-4">
               <span className="ss-display ss-cond text-xl">{award.links.length > 1 ? `View post ${i + 1}` : 'View the post'}</span>
-              <span className="ss-arrow font-jet text-primary">↗</span>
+              <ArrowUpRight className="ss-arrow text-primary" />
             </a>
           ))}
         </div>
@@ -53,7 +54,7 @@ export default function AwardsGrid({ awards }: { awards: readonly Award[] }) {
 
   return (
     <>
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {awards.map((a, i) => (
           <article key={a.title} className="ss-spot ss-finder group relative flex flex-col border border-ink bg-stock" data-reveal="up" style={stagger(i % 3)}>
             <span className="ss-glow" />

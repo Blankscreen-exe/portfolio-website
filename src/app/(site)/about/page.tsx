@@ -6,6 +6,7 @@ import AwardsGrid from '@/components/about/AwardsGrid'
 import Dossier from '@/components/home/Dossier'
 import Accordion from '@/components/ui/Accordion'
 import CtaBand from '@/components/ui/CtaBand'
+import { ArrowUpRight } from '@/components/ui/Decor'
 import PageHero from '@/components/ui/PageHero'
 import ProfilePhoto from '@/components/ui/ProfilePhoto'
 import SectionHeading, { Bar } from '@/components/ui/SectionHeading'
@@ -62,7 +63,7 @@ export default async function AboutPage() {
           </SectionHeading>
           <div className="mt-12 border-t border-ink" data-reveal="rows">
             {about.toolkit.map((group) => (
-              <div key={group.group} className="grid gap-3 border-b border-ink/15 py-5 md:grid-cols-12">
+              <div key={group.group} className="grid grid-cols-1 gap-3 border-b border-ink/15 py-5 md:grid-cols-12">
                 <div className="ss-display ss-cond text-2xl md:col-span-3">{group.group}</div>
                 <ul className="flex flex-wrap gap-2 md:col-span-9">
                   {group.items.map((tool) => (
@@ -89,7 +90,7 @@ export default async function AboutPage() {
           <SectionHeading label="[ communities ]">
             Giving <Bar>back.</Bar>
           </SectionHeading>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {about.communities.map((c, i) => (
               <a key={c.title} href={c.url ?? undefined} target="_blank" rel="noopener noreferrer" className="ss-spot ss-finder group flex flex-col border border-ink bg-stock" data-reveal="up" style={stagger(i)}>
                 <span className="ss-glow" />
@@ -98,7 +99,7 @@ export default async function AboutPage() {
                 </div>
                 <div className="relative z-[2] p-5">
                   <h3 className="ss-display ss-cond text-xl leading-tight">
-                    {c.title} <span className="font-jet text-sm text-primary">↗</span>
+                    {c.title} <ArrowUpRight className="text-sm text-primary" />
                   </h3>
                   <p className="mt-2 text-sm text-ash">{c.description}</p>
                 </div>
@@ -109,7 +110,7 @@ export default async function AboutPage() {
       </section>
 
       <section id="beyond" className="scroll-mt-16 border-b border-ink" data-section="beyond work">
-        <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 md:px-8 lg:grid-cols-2">
+        <div className="mx-auto grid grid-cols-1 max-w-7xl gap-14 px-5 py-20 md:px-8 lg:grid-cols-2">
           <div>
             <SectionHeading label="[ beyond work ]" size="text-4xl sm:text-5xl">
               When I&apos;m <Bar>off the clock.</Bar>

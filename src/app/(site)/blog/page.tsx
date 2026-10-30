@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 import WritingBrowser from '@/components/blog/WritingBrowser'
 import CtaBand from '@/components/ui/CtaBand'
+import { ArrowUpRight } from '@/components/ui/Decor'
 import PageHero from '@/components/ui/PageHero'
 import { Bar } from '@/components/ui/SectionHeading'
 import { getPosts, getSite } from '@/lib/content'
@@ -24,14 +25,14 @@ export default async function WritingPage() {
       <PageHero
         label="[ writing ]"
         section="writing"
-        intro="Articles on Python, AI, software design and the lessons I've learned building real products."
+        intro="Software Engineering is certainly not a walk in the park ... or a park anyone willingly walks into without knowing what lies ahead. Therefore I call it the trenches where corporate meets brain power to convert ideas into reality."
         aside={
           <div className="border border-ink bg-paper">
             <div className="border-b border-ink px-4 py-2.5 font-jet text-[10px] font-bold uppercase tracking-widest">[ Read me elsewhere ]</div>
             {elsewhere.map((l) => (
               <a key={l.name} href={l.href ?? undefined} target="_blank" rel="noopener noreferrer" className="ss-wipe flex justify-between border-b border-ink/15 px-4 py-3 last:border-b-0">
                 <span className="ss-display ss-cond text-lg">{l.name}</span>
-                <span className="ss-arrow font-jet text-primary">↗</span>
+                <ArrowUpRight className="ss-arrow text-primary" />
               </a>
             ))}
           </div>

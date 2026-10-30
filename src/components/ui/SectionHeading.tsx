@@ -16,7 +16,7 @@ type Props = {
 }
 
 /** `[ label ]` above a big uppercase heading; the label scrambles and the heading racks into focus. */
-export default function SectionHeading({ label, children, className = '', size = 'text-5xl sm:text-6xl', as: Heading = 'h2' }: Props) {
+export default function SectionHeading({ label, children, className = '', size = 'text-[min(10.5vw,3rem)] sm:text-6xl', as: Heading = 'h2' }: Props) {
   return (
     <div className={className}>
       <div className="ss-label" data-reveal="up">

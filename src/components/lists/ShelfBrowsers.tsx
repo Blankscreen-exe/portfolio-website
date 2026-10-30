@@ -3,6 +3,7 @@
 // Thin wrappers that give ListBrowser its render functions (functions can't be passed
 // from a server page to a client component, so they're defined here on the client side).
 
+import { ArrowUpRight } from '@/components/ui/Decor'
 import type { Book, Bookmark } from '@/lib/content'
 import ListBrowser from './ListBrowser'
 
@@ -19,7 +20,7 @@ export function BooksBrowser({ books }: { books: readonly Book[] }) {
       noun="books"
       placeholder="Search by title, author or topic…"
       renderItem={(b) => (
-        <div className="grid gap-2 px-2 py-4 md:grid-cols-12 md:items-baseline">
+        <div className="grid grid-cols-1 gap-2 px-2 py-4 md:grid-cols-12 md:items-baseline">
           <span className="ss-display ss-cond text-2xl leading-tight md:col-span-6">{b.title}</span>
           <span className="text-ash md:col-span-3">{b.author}</span>
           <span className="font-jet text-[10px] uppercase tracking-[.08em] text-ash md:col-span-3 md:text-right">{b.tags.join(' · ')}</span>
@@ -44,7 +45,7 @@ export function BookmarksBrowser({ bookmarks }: { bookmarks: readonly Bookmark[]
       noun="bookmarks"
       placeholder="Search tools, docs, courses…"
       renderItem={(b) => (
-        <a href={b.url ?? undefined} target="_blank" rel="noopener noreferrer" className="ss-wipe grid gap-2 px-2 py-4 md:grid-cols-12 md:items-baseline">
+        <a href={b.url ?? undefined} target="_blank" rel="noopener noreferrer" className="ss-wipe grid grid-cols-1 gap-2 px-2 py-4 md:grid-cols-12 md:items-baseline">
           <span className="md:col-span-4">
             <span className="ss-display ss-cond block text-2xl leading-tight">
               {b.title}
@@ -58,7 +59,7 @@ export function BookmarksBrowser({ bookmarks }: { bookmarks: readonly Bookmark[]
           </span>
           <span className="ss-dim line-clamp-3 text-sm md:col-span-6">{bookmarkBlurb(b)}</span>
           <span className="ss-dim font-jet text-[10px] uppercase tracking-[.08em] md:col-span-2 md:text-right">
-            {b.category} <span className="ss-arrow text-primary">↗</span>
+            {b.category} <ArrowUpRight className="ss-arrow text-primary" />
           </span>
         </a>
       )}

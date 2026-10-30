@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { ArrowUpRight } from '@/components/ui/Decor'
 import type { Project } from '@/lib/content'
 import { firstSentence, kindLabel, splitTitle, statusLabel } from '@/lib/projects'
 import { routes } from '@/lib/routes'
@@ -25,7 +26,7 @@ export default function WorkCard({ project, index = 0 }: { project: Project; ind
           <span>
             {kindLabel(project)} · {statusLabel(project)}
           </span>
-          <span className="text-primary opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
+          <span className="text-primary opacity-0 transition-opacity group-hover:opacity-100">open <ArrowUpRight /></span>
         </div>
         <h3 className="ss-display ss-cond mt-4 text-2xl leading-none">{name}</h3>
         {subtitle && <p className="mt-1.5 font-jet text-[11px] uppercase tracking-[.1em]">{subtitle}</p>}

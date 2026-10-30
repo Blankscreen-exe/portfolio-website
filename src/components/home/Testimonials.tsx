@@ -20,7 +20,7 @@ export default function Testimonials({ items }: { items: readonly Testimonial[] 
           What people <Bar>say.</Bar>
         </SectionHeading>
 
-        <div className="mt-12 grid border border-ink lg:grid-cols-12" data-reveal="up">
+        <div className="mt-12 grid grid-cols-1 border border-ink lg:grid-cols-12" data-reveal="up">
           <figure className="relative flex flex-col justify-between bg-paper p-7 sm:p-10 lg:col-span-8 lg:border-r lg:border-ink">
             <span className="ss-display pointer-events-none absolute right-6 top-2 select-none text-[140px] leading-none text-primary/25" aria-hidden="true">
               &ldquo;

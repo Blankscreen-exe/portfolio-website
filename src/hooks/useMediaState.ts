@@ -5,19 +5,19 @@ import { useSyncExternalStore } from 'react'
 // Live browser state as React values, safe for static rendering (server snapshots are the
 // "nothing special" defaults) and without setState-in-effect.
 
-const REDUCED = '(prefers-reduced-motion: reduce)'
-
-export function usePrefersReducedMotion() {
+export function useMediaQuery(query: string) {
   return useSyncExternalStore(
     (onChange) => {
-      const mq = window.matchMedia(REDUCED)
+      const mq = window.matchMedia(query)
       mq.addEventListener('change', onChange)
       return () => mq.removeEventListener('change', onChange)
     },
-    () => window.matchMedia(REDUCED).matches,
+    () => window.matchMedia(query).matches,
     () => false
   )
 }
+
+export const usePrefersReducedMotion = () => useMediaQuery('(prefers-reduced-motion: reduce)')
 
 /** False while the tab is in the background. */
 export function usePageVisible() {

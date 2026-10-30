@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 
+import { ArrowUpRight, TripleArrow } from '@/components/ui/Decor'
 import type { Home } from '@/lib/content'
 import { routes } from '@/lib/routes'
 
@@ -21,14 +22,14 @@ export default function Dossier({ title, paragraphs, facts, linkedin, showMoreLi
       <span className="ss-stamp right-8 top-8 hidden sm:block">Open to work</span>
       {title ?? <div className="ss-label">[ in short ]</div>}
 
-      <div className="mt-8 grid gap-10 lg:grid-cols-2">
+      <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-2">
         <div className="space-y-4 text-lg leading-relaxed text-ash">
           {paragraphs.map((p) => (
             <p key={p}>{p}</p>
           ))}
           {showMoreLink && (
             <Link href={routes.about} className="ss-chev-btn inline-block pt-2 font-jet text-xs font-bold uppercase tracking-[.16em] text-primary hover:underline">
-              More about me <span className="ss-chev">▸▸▸</span>
+              More about me <TripleArrow />
             </Link>
           )}
         </div>
@@ -44,7 +45,7 @@ export default function Dossier({ title, paragraphs, facts, linkedin, showMoreLi
               <dt className="ss-label w-28 shrink-0">Profile</dt>
               <dd>
                 <a href={linkedin} target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:underline">
-                  LinkedIn ↗
+                  LinkedIn <ArrowUpRight />
                 </a>
               </dd>
             </div>

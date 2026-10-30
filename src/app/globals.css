@@ -59,6 +59,10 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
 .ss-cond { font-stretch: 70%; }
 .ss-label { font-family: var(--font-jet), ui-monospace, monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--ss-ash)); }
 
+/* Headings that must fit one long word: font size follows the container's width (see fitText) */
+.ss-fit { container-type: inline-size; }
+.ss-fit-text { font-size: min(var(--fit-max), calc(100cqw / (var(--chars) * .8 + .3))); }
+
 /* Accent words become a solid cyan bar (wipes in when its section is revealed) */
 .ss-bar {
   padding: 0 .12em;

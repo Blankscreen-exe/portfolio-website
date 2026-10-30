@@ -14,7 +14,7 @@ export default function ServicesFaq({ heading, groups }: { heading: ReactNode; g
   const group = groups.find((g) => g.key === active) ?? groups[0]
 
   return (
-    <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:px-8 lg:grid-cols-12">
+    <div className="mx-auto grid grid-cols-1 max-w-7xl gap-12 px-5 py-20 md:px-8 lg:grid-cols-12">
       <div className="lg:col-span-4">
         {heading}
         <div className="mt-8 flex border border-ink" role="tablist" aria-label="Question topics" data-reveal="up">

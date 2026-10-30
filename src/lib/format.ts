@@ -1,3 +1,6 @@
+/** Length of the longest word: the part of a title that can't wrap. */
+export const longestWord = (text: string) => Math.max(0, ...text.split(/\s+/).map((word) => word.length))
+
 /** 1 → "01" */
 export const pad = (n: number) => String(n).padStart(2, '0')
 

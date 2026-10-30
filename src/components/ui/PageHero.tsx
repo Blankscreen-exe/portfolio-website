@@ -15,7 +15,7 @@ type Props = {
 export default function PageHero({ label, children, intro, aside, section }: Props) {
   return (
     <section className="border-b border-ink" data-section={section}>
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-14 pt-14 md:px-8 lg:grid-cols-12 lg:pt-20">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl gap-10 px-5 pb-14 pt-14 md:px-8 lg:grid-cols-12 lg:pt-20">
         <div className={aside ? 'lg:col-span-8' : 'lg:col-span-10'}>
           <div className="ss-label" data-reveal="up">
             <Scramble text={label} />

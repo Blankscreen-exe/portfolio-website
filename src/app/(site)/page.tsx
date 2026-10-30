@@ -10,6 +10,7 @@ import { ChevronStrip } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
 import { Bar } from '@/components/ui/SectionHeading'
 import { getFaq, getHome, getProjects, getSite, getTestimonials } from '@/lib/content'
+import { fitText } from '@/lib/style'
 
 // Sections follow the client's decision path: hook → relevance → proof → trust → reassurance → act.
 export default async function HomePage() {
@@ -32,9 +33,11 @@ export default async function HomePage() {
           <div className="mt-6">
             <Dossier
               title={
-                <h2 className="ss-display text-5xl sm:text-6xl">
-                  M. Hammad <Bar>Hassan</Bar>
-                </h2>
+                <div className="ss-fit">
+                  <h2 className="ss-display ss-fit-text" style={fitText('M. Hammad Hassan', 'clamp(3rem, 6vw, 3.75rem)')}>
+                    M. Hammad <Bar>Hassan</Bar>
+                  </h2>
+                </div>
               }
               paragraphs={home.aboutParagraphs}
               facts={home.aboutFacts}
@@ -45,7 +48,7 @@ export default async function HomePage() {
       </section>
 
       <FaqSection questions={faq.development.filter((q) => q.featured)} />
-      <ContactPanel topics={home.contactTopics} linkedin={site.social.linkedin} bookingUrl={site.social.calendarBooking} />
+      <ContactPanel topics={home.contactTopics} linkedin={site.social.linkedin} bookingUrl={site.social.calendarBooking} email={site.email} />
     </>
   )
 }

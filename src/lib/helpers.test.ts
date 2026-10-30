@@ -1,9 +1,15 @@
 import { describe, expect, it } from 'vitest'
 import { hasValue, topFacets } from './facets'
-import { formatMonth, pad, parseMetric } from './format'
+import { formatMonth, longestWord, pad, parseMetric } from './format'
 import { firstSentence, matchesQuery, splitTitle, statusLabel } from './projects'
 
 describe('format', () => {
+  it('finds the longest unbreakable word in a title', () => {
+    expect(longestWord("Entrepreneur's Business Simulator")).toBe(14)
+    expect(longestWord('KIT')).toBe(3)
+    expect(longestWord('')).toBe(0)
+  })
+
   it('pads numbers to two digits', () => {
     expect(pad(3)).toBe('03')
     expect(pad(12)).toBe('12')

@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from 'react'
 
+import { ArrowUpRight } from '@/components/ui/Decor'
 import FilterBar from '@/components/ui/FilterBar'
 import Pagination from '@/components/ui/Pagination'
 import { usePagedQuery } from '@/hooks/usePagedQuery'
@@ -88,7 +89,7 @@ export default function WritingBrowser({ posts }: { posts: Post[] }) {
           <ol className="mt-4 border-t border-ink">
             {visible.map((p) => (
               <li key={p.slug} data-reveal="up">
-                <a href={p.url} target="_blank" rel="noopener noreferrer" className="ss-wipe grid items-center gap-3 border-b border-ink/15 px-2 py-5 md:grid-cols-12">
+                <a href={p.url} target="_blank" rel="noopener noreferrer" className="ss-wipe grid grid-cols-1 items-center gap-3 border-b border-ink/15 px-2 py-5 md:grid-cols-12">
                   <span className="ss-dim font-jet text-[11px] uppercase tracking-[.12em] md:col-span-2">{formatMonth(p.published)}</span>
                   <span className="md:col-span-7">
                     <span className="ss-display ss-cond block text-2xl leading-tight">{p.title}</span>
@@ -96,7 +97,7 @@ export default function WritingBrowser({ posts }: { posts: Post[] }) {
                   </span>
                   <span className="ss-dim hidden font-jet text-[10px] uppercase tracking-[.08em] md:col-span-2 md:block">{p.tags.slice(0, 2).join(' · ')}</span>
                   <span className="hidden text-right font-jet text-primary md:col-span-1 md:block">
-                    <span className="ss-arrow">↗</span>
+                    <ArrowUpRight className="ss-arrow" />
                   </span>
                 </a>
               </li>

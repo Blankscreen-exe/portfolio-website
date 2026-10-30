@@ -1,9 +1,10 @@
 import Link from 'next/link'
 
-import { Barcode } from '@/components/ui/Decor'
+import { ArrowUpRight, Barcode } from '@/components/ui/Decor'
 import type { Site } from '@/lib/content'
 import { routes } from '@/lib/routes'
 import BackToTop from './BackToTop'
+import CurrentYear from './CurrentYear'
 
 type FooterLink = { name: string; href: string; external?: boolean }
 
@@ -38,7 +39,6 @@ export default function SiteFooter({ site }: { site: Site }) {
         { name: 'LinkedIn', href: social.linkedin },
         { name: 'GitHub', href: social.github },
         { name: 'Medium', href: social.medium },
-        { name: 'Upwork', href: social.upwork },
         { name: 'Book a call', href: social.calendarBooking },
       ]),
     },
@@ -47,7 +47,7 @@ export default function SiteFooter({ site }: { site: Site }) {
 
   return (
     <footer className="border-t border-ink">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-14 md:px-8 lg:grid-cols-12">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl gap-12 px-5 py-14 md:px-8 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <div className="ss-label mb-3">[ end of sheet ]</div>
           <div className="ss-display text-4xl sm:text-5xl">{site.name.replace(/^M\.\s*/, '')}</div>
@@ -64,7 +64,7 @@ export default function SiteFooter({ site }: { site: Site }) {
                   <li key={l.name}>
                     {l.external ? (
                       <a href={l.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                        {l.name} ↗
+                        {l.name} <ArrowUpRight />
                       </a>
                     ) : (
                       <Link href={l.href} className={linkClass}>
@@ -82,7 +82,7 @@ export default function SiteFooter({ site }: { site: Site }) {
       <div className="border-t border-ink/15">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-5 font-jet text-[11px] uppercase tracking-[.16em] text-ash md:px-8">
           <span>
-            © {new Date().getFullYear()} {site.name}
+            © <CurrentYear builtIn={new Date().getFullYear()} /> {site.name}
           </span>
           <BackToTop className={linkClass} />
         </div>
