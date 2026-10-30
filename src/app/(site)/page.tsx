@@ -9,15 +9,17 @@ import Testimonials from '@/components/home/Testimonials'
 import { ChevronStrip } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
 import { Bar } from '@/components/ui/SectionHeading'
-import { getFaq, getHome, getProjects, getSite, getTestimonials } from '@/lib/content'
+import { getFaq, getHome, getProjects, getServices, getSite, getTestimonials } from '@/lib/content'
+import { buildPersonJsonLd } from '@/lib/profile'
 import { fitText } from '@/lib/style'
 
 // Sections follow the client's decision path: hook → relevance → proof → trust → reassurance → act.
 export default async function HomePage() {
-  const [home, site, projects, testimonials, faq] = await Promise.all([getHome(), getSite(), getProjects(), getTestimonials(), getFaq()])
+  const [home, site, projects, testimonials, faq, services] = await Promise.all([getHome(), getSite(), getProjects(), getTestimonials(), getFaq(), getServices()])
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildPersonJsonLd({ site, services })).replace(/</g, '\\u003c') }} />
       <Hero home={home} site={site} />
       <ChevronStrip />
       <ServicesList services={home.services} />

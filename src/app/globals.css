@@ -192,6 +192,12 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
 }
 @keyframes ss-brackets { 50% { inset: -14px; opacity: .45; } }
 
+/* Profile photo: dissolves into coarse dots and sharpens again, then rests for 5 seconds (2s of a 7s loop) */
+.ss-halftone { position: absolute; inset: 0; pointer-events: none; opacity: 0; background: radial-gradient(circle at center, transparent 34%, rgb(var(--ss-paper)) 36%) 0 0 / 7px 7px; animation: ss-halftone 7s ease-in-out infinite; }
+.ss-halftone-img { animation: ss-halftone-img 7s ease-in-out infinite; }
+@keyframes ss-halftone { 0%, 28.6%, 100% { opacity: 0; } 4%, 12% { opacity: 1; } }
+@keyframes ss-halftone-img { 0%, 28.6%, 100% { filter: grayscale(1) contrast(1.05); } 4%, 12% { filter: grayscale(1) contrast(2.4); } }
+
 /* Profile photo: a thin bar along the bottom slowly fills and resets */
 .ss-tick { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgb(var(--color-primary)); transform: scaleX(0); transform-origin: left; animation: ss-tick 6s linear infinite; }
 @keyframes ss-tick { 92% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Archivo, Inter, JetBrains_Mono } from 'next/font/google'
 import type { ReactNode } from 'react'
+import { routes, siteUrl } from '@/lib/routes'
 import './globals.css'
 
 const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-archivo' })
@@ -8,13 +9,14 @@ const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jet' })
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'M. Hammad Hassan — Product Engineer & Technical Consultant',
     template: '%s · M. Hammad Hassan',
   },
   description: "I build software that runs your business: apps and websites, practical AI, and fixes for software that's slowing you down.",
   icons: { icon: '/logo.svg' },
+  alternates: { types: { 'text/plain': routes.llms } },
 }
 
 // Runs before first paint: applies the saved theme (no light/dark flash) and marks that JS is
