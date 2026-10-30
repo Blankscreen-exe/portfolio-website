@@ -3,7 +3,7 @@
 // Thin wrappers that give ListBrowser its render functions (functions can't be passed
 // from a server page to a client component, so they're defined here on the client side).
 
-import { ArrowUpRight } from '@/components/ui/Decor'
+import { ArrowUpRight, Star } from '@/components/ui/Decor'
 import type { Book, Bookmark } from '@/lib/content'
 import ListBrowser from './ListBrowser'
 
@@ -51,7 +51,7 @@ export function BookmarksBrowser({ bookmarks }: { bookmarks: readonly Bookmark[]
               {b.title}
               {b.featured && (
                 <span className="ml-2 align-middle font-jet text-[10px] text-primary" aria-label="Favourite">
-                  ★
+                  <Star />
                 </span>
               )}
             </span>

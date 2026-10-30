@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { type KeyboardEvent, type PointerEvent, useEffect, useRef, useState } from 'react'
 
-import { ArrowUpRight } from '@/components/ui/Decor'
+import { ArrowLeft, ArrowRight, ArrowUpRight, Pause, Play } from '@/components/ui/Decor'
 import { usePageVisible, usePrefersReducedMotion } from '@/hooks/useMediaState'
 import type { Service } from '@/lib/content'
 import { pad } from '@/lib/format'
@@ -105,7 +105,15 @@ export default function ServicesCarousel({ services }: { services: readonly Serv
               aria-pressed={!autoplay}
               className="border border-ink/25 px-2.5 py-1 font-jet text-[10px] uppercase tracking-[.14em] transition-colors hover:border-primary hover:text-primary"
             >
-              {autoplay ? '❚❚ Pause' : '▶ Play'}
+              {autoplay ? (
+                <>
+                  <Pause /> Pause
+                </>
+              ) : (
+                <>
+                  <Play /> Play
+                </>
+              )}
             </button>
           </div>
           <div className="flex gap-1.5">
@@ -133,7 +141,7 @@ export default function ServicesCarousel({ services }: { services: readonly Serv
 
         <div className="mt-6 grid grid-cols-[minmax(0,1fr)] border border-ink bg-paper md:grid-cols-[4rem_minmax(0,1fr)_4rem]">
           <button type="button" onClick={() => go(active - 1)} className={`${arrow} hidden border-r border-ink md:grid`} aria-label="Previous service">
-            ←
+            <ArrowLeft />
           </button>
 
           {/* overflow-clip (not hidden): the track can't be scrolled by focus or anchors, only moved by transform.
@@ -192,23 +200,23 @@ export default function ServicesCarousel({ services }: { services: readonly Serv
           </div>
 
           <button type="button" onClick={() => go(active + 1)} className={`${arrow} hidden border-l border-ink md:grid`} aria-label="Next service">
-            →
+            <ArrowRight />
           </button>
 
           {/* Small screens: both arrows under the slide */}
           <div className="grid grid-cols-2 border-t border-ink md:hidden">
             <button type="button" onClick={() => go(active - 1)} className={`${arrow} border-r border-ink py-3`} aria-label="Previous service">
-              ←
+              <ArrowLeft />
             </button>
             <button type="button" onClick={() => go(active + 1)} className={`${arrow} py-3`} aria-label="Next service">
-              →
+              <ArrowRight />
             </button>
           </div>
         </div>
 
         {/* What's next, so the visitor knows there's more */}
         <button type="button" onClick={() => go(active + 1)} className="ss-chev-btn mt-4 font-jet text-[11px] uppercase tracking-[.16em] text-ash hover:text-primary">
-          Next: {services[(active + 1) % count].title} <span className="ss-chev">→</span>
+          Next: {services[(active + 1) % count].title} <ArrowRight className="ss-chev" />
         </button>
       </div>
     </section>

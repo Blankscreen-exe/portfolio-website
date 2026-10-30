@@ -243,12 +243,6 @@ export default config({
           endYear: text('End year'),
           description: markdown('Description'),
         }), { label: 'Education (not shown on the site)', itemLabel: (p) => p.fields.degree.value }),
-        upcomingSkills: fields.array(fields.object({
-          text: markdown('Text'),
-          prefix: text('Prefix'),
-          colorType: text('Colour type'),
-          isHighlight: fields.checkbox({ label: 'Highlight' }),
-        }), { label: 'Skills I am learning next (not shown on the site)', itemLabel: (p) => p.fields.text.value }),
         communities: fields.array(fields.object({
           title: text('Title'),
           description: longText('Description'),

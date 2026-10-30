@@ -301,16 +301,6 @@ const count = (label, a, b) => (a === b ? [] : [`${label}: ${a} legacy records, 
         ]
       }),
   ])
-
-  const skills = legacy('targetSkills')
-  verify('targetSkills → about.upcomingSkills', skills.length, [
-    () => count('skills', skills.length, about.upcomingSkills.length),
-    () =>
-      skills.flatMap((s, i) => {
-        const n = about.upcomingSkills[i]
-        return [...text(`skill ${i + 1} text`, s.text, n.text), ...field(`skill ${i + 1}`, [s.prefix, s.colorType, s.isHighlight], [n.prefix, n.colorType, n.isHighlight])]
-      }),
-  ])
 }
 
 {
@@ -356,10 +346,9 @@ const count = (label, a, b) => (a === b ? [] : [`${label}: ${a} legacy records, 
   ])
 }
 
-// Dropped on request: games are not part of the site
-{
-  const games = legacy('gamesList')
-  results.push({ dataset: 'gamesList (not migrated: dropped on request)', records: games.length, problems: [] })
+// Dropped on request: games and the "learning next" list are not part of the site
+for (const name of ['gamesList', 'targetSkills']) {
+  results.push({ dataset: `${name} (not migrated: dropped on request)`, records: legacy(name).length, problems: [] })
 }
 
 // Placeholder-only files: nothing real to migrate, so prove that's still the case

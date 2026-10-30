@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-import { ArrowUpRight } from '@/components/ui/Decor'
+import { ArrowLeft, ArrowRight, ArrowUpRight } from '@/components/ui/Decor'
 import Drawer from '@/components/ui/Drawer'
 import type { Award } from '@/lib/content'
 import { formatMonth, pad } from '@/lib/format'
@@ -67,7 +67,7 @@ export default function AwardsGrid({ awards }: { awards: readonly Award[] }) {
                 <span>
                   {kindLabel(a)} · {formatMonth(a.date)}
                 </span>
-                <span className="text-primary opacity-0 transition-opacity group-hover:opacity-100">details →</span>
+                <span className="text-primary opacity-0 transition-opacity group-hover:opacity-100">details <ArrowRight /></span>
               </div>
               <h3 className="ss-display ss-cond mt-3 text-xl leading-tight">{a.title}</h3>
               <p className="mt-2 line-clamp-4 text-sm text-ash">{a.description}</p>
@@ -92,10 +92,10 @@ export default function AwardsGrid({ awards }: { awards: readonly Award[] }) {
         footer={
           <div className="grid grid-cols-2">
             <button type="button" onClick={() => step(-1)} className="border-r border-ink px-5 py-4 text-left font-jet text-xs uppercase tracking-[.16em] transition-colors hover:bg-ink hover:text-stock">
-              ← Previous
+              <ArrowLeft /> Previous
             </button>
             <button type="button" onClick={() => step(1)} className="px-5 py-4 text-right font-jet text-xs uppercase tracking-[.16em] transition-colors hover:bg-primary hover:text-onprimary">
-              Next →
+              Next <ArrowRight />
             </button>
           </div>
         }

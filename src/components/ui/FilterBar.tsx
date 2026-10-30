@@ -1,5 +1,7 @@
 'use client'
 
+import { Search } from './Decor'
+
 type Props = {
   query: string
   onQuery: (value: string) => void
@@ -17,7 +19,7 @@ export default function FilterBar({ query, onQuery, placeholder, options, select
     <div className="border border-ink bg-paper" data-reveal="up">
       <label className={`flex items-center gap-3 px-5 py-3 ${options?.length ? 'border-b border-ink' : ''}`}>
         <span className="font-jet text-xs text-ash" aria-hidden="true">
-          ⌕
+          <Search />
         </span>
         <span className="sr-only">{label}</span>
         <input

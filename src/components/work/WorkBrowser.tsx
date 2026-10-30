@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 
+import { Search } from '@/components/ui/Decor'
 import { useQueryParams } from '@/hooks/useQueryParams'
 import type { Project } from '@/lib/content'
 import { matchesQuery } from '@/lib/projects'
@@ -43,7 +44,7 @@ export default function WorkBrowser({ projects }: { projects: Project[] }) {
         </div>
         <label className="flex flex-1 items-center gap-3 border-t border-ink px-5 py-3 md:border-t-0">
           <span className="font-jet text-xs text-ash" aria-hidden="true">
-            ⌕
+            <Search />
           </span>
           <span className="sr-only">Search projects</span>
           <input

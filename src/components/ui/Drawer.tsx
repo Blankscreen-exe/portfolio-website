@@ -3,6 +3,7 @@
 import { type ReactNode, useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { prefersReducedMotion } from '@/hooks/useOnceVisible'
+import { Cross } from './Decor'
 
 const FOCUSABLE = 'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])'
 
@@ -104,7 +105,7 @@ export default function Drawer({ open, onClose, label, title, children, footer }
             onClick={onClose}
             className="border-l border-ink px-5 py-4 font-jet text-xs uppercase tracking-[.16em] transition-colors hover:bg-ink hover:text-stock"
           >
-            Close ✕
+            Close <Cross />
           </button>
         </div>
         <div className="flex-1 overflow-y-auto">

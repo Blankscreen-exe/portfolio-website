@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import CtaBand from '@/components/ui/CtaBand'
-import { ArrowUpRight } from '@/components/ui/Decor'
+import { ArrowLeft, ArrowRight, ArrowUpRight } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
 import { Bar } from '@/components/ui/SectionHeading'
 import ProjectGallery from '@/components/work/ProjectGallery'
@@ -47,7 +47,7 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
       <section className="border-b border-ink" data-section="project">
         <div className="mx-auto max-w-7xl px-5 pb-12 pt-10 md:px-8">
           <Link href={routes.work} className="font-jet text-[11px] uppercase tracking-[.16em] text-ash hover:text-primary">
-            ← <Scramble text="[ work ]" /> / {name.toLowerCase()}
+            <ArrowLeft /> <Scramble text="[ work ]" /> / {name.toLowerCase()}
           </Link>
 
           <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-12">
@@ -126,12 +126,19 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
       </section>
 
       <nav className="grid grid-cols-1 border-b border-ink sm:grid-cols-2" aria-label="More projects">
-        {[
-          { p: prev, dir: '← Previous' },
-          { p: next, dir: 'Next →' },
-        ].map(({ p, dir }, i) => (
-          <Link key={dir} href={routes.project(p.slug)} className={`ss-wipe block px-5 py-8 md:px-8 ${i === 0 ? 'border-b border-ink sm:border-b-0 sm:border-r' : 'sm:text-right'}`}>
-            <span className="ss-dim font-jet text-[11px] uppercase tracking-[.16em]">{dir}</span>
+        {[prev, next].map((p, i) => (
+          <Link key={i} href={routes.project(p.slug)} className={`ss-wipe block px-5 py-8 md:px-8 ${i === 0 ? 'border-b border-ink sm:border-b-0 sm:border-r' : 'sm:text-right'}`}>
+            <span className="ss-dim font-jet text-[11px] uppercase tracking-[.16em]">
+              {i === 0 ? (
+                <>
+                  <ArrowLeft /> Previous
+                </>
+              ) : (
+                <>
+                  Next <ArrowRight />
+                </>
+              )}
+            </span>
             <span className="ss-display ss-cond mt-2 block text-3xl">{splitTitle(p.title).name}</span>
           </Link>
         ))}

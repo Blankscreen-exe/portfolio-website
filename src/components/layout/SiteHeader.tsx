@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 
-import { ArrowUpRight } from '@/components/ui/Decor'
+import { ArrowUpRight, HalfCircle } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
 import { prefersReducedMotion } from '@/hooks/useOnceVisible'
 import { routes } from '@/lib/routes'
@@ -129,7 +129,7 @@ export default function SiteHeader({ name, availability }: { name: string; avail
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
           >
-            ◐
+            <HalfCircle />
           </button>
           <Link
             href={routes.contact}

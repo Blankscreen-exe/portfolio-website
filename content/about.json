@@ -560,61 +560,6 @@
       "description": "I proved to be a diligent student and earned recognitions from my Professor Dr. Khurram Iqbal. My skills in Python Programming Language & MS Excel Spread Sheets were recognized as worthy of being nominated as a Teacher's Assisstant (working under Dr. Khurram Iqbal) for conducting lab sessions for the student's of Financial Mathematics.\nDuring my Bachelors, I was also engaged in some educational group projects related to Statistics, and Robotics as part of my studies. I worked on MS Excel, Python and Arduino Microprocessors. My other subjects were highly theoretical in mathematical applications.\nI also became a member of **Arts & Culture Society**, a student's club founded by University Alumni and patronized by Dr. Asim Ali and supervised by Dr. Khalid Iraqi (VC University of Karachi). In this Club I took part in activities related to literature review, event planning and promotion and as an IT support."
     }
   ],
-  "upcomingSkills": [
-    {
-      "text": "📌 Frameworks",
-      "prefix": "$",
-      "colorType": "info",
-      "isHighlight": false
-    },
-    {
-      "text": "[ ] Learning [Next.js](https://nextjs.org)",
-      "prefix": ">",
-      "colorType": "secondary",
-      "isHighlight": false
-    },
-    {
-      "text": "[ ] Learning [React-Native](.https://reactnative.dev/)",
-      "prefix": ">",
-      "colorType": "secondary",
-      "isHighlight": false
-    },
-    {
-      "prefix": "$",
-      "colorType": "secondary",
-      "isHighlight": false
-    },
-    {
-      "text": "📌 Other Skills and Technologies",
-      "prefix": "$",
-      "colorType": "info",
-      "isHighlight": false
-    },
-    {
-      "text": "Thinking of learning [Jenkins](https://www.jenkins.io/) or [AWS](https://aws.amazon.com/) (help me pick)",
-      "prefix": "~",
-      "colorType": "secondary",
-      "isHighlight": false
-    },
-    {
-      "text": "Business Communications (got any recommendatioins where to learn?)",
-      "prefix": "~",
-      "colorType": "secondary",
-      "isHighlight": false
-    },
-    {
-      "text": "Learning about [Teraform](https://www.terraform.io)",
-      "prefix": "~",
-      "colorType": "secondary",
-      "isHighlight": false
-    },
-    {
-      "text": "Learning about [Teamcity](https://www.jetbrains.com/teamcity/)",
-      "prefix": "~",
-      "colorType": "secondary",
-      "isHighlight": false
-    }
-  ],
   "communities": [
     {
       "title": "Dev In Trenches",

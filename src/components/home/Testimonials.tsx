@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
+import { ArrowLeft, ArrowRight } from '@/components/ui/Decor'
 import SectionHeading, { Bar } from '@/components/ui/SectionHeading'
 import type { Testimonial } from '@/lib/content'
 import { pad } from '@/lib/format'
@@ -46,10 +47,10 @@ export default function Testimonials({ items }: { items: readonly Testimonial[] 
               </span>
               <div className="flex">
                 <button type="button" onClick={() => go(-1)} className="border border-ink px-4 py-2 transition-colors hover:bg-ink hover:text-stock" aria-label="Previous testimonial">
-                  ←
+                  <ArrowLeft />
                 </button>
                 <button type="button" onClick={() => go(1)} className="-ml-px border border-ink bg-ink px-4 py-2 text-stock transition-colors hover:bg-primary hover:text-onprimary" aria-label="Next testimonial">
-                  →
+                  <ArrowRight />
                 </button>
               </div>
             </div>

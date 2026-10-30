@@ -2,6 +2,7 @@
 
 import { useId, useState } from 'react'
 import { pad } from '@/lib/format'
+import { Plus } from './Decor'
 import RichText from './RichText'
 
 export type AccordionItem = { title: string; body: string }
@@ -49,7 +50,7 @@ export default function Accordion({ items, initialOpen = -1, size = 'lg', number
                   </span>
                 </span>
                 <span className={`ss-acc-icon font-jet leading-none text-primary ${lg ? 'text-2xl' : 'text-xl'}`} aria-hidden="true">
-                  +
+                  <Plus />
                 </span>
               </button>
             </h3>

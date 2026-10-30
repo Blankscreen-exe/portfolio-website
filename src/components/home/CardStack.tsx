@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { type KeyboardEvent, type MouseEvent, useEffect, useRef, useState } from 'react'
 
-import { ArrowUpRight, RotateArrow } from '@/components/ui/Decor'
+import { ArrowUpRight, Check, RotateArrow } from '@/components/ui/Decor'
 import ProfilePhoto from '@/components/ui/ProfilePhoto'
 import { prefersReducedMotion } from '@/hooks/useOnceVisible'
 import type { Home } from '@/lib/content'
@@ -125,7 +125,9 @@ export default function CardStack({ industries, whyMe, delivered, role }: Props)
           <ul className="flex-1 space-y-4 px-4 py-5">
             {whyMe.map((item) => (
               <li key={item.title} className="flex gap-3">
-                <span className="grid h-5 w-5 shrink-0 place-items-center bg-primary text-[11px] font-bold text-onprimary">✓</span>
+                <span className="grid h-5 w-5 shrink-0 place-items-center bg-primary text-[11px] font-bold text-onprimary">
+                  <Check />
+                </span>
                 <div>
                   <div className="ss-display ss-cond text-xl leading-none">{item.title}</div>
                   <p className="mt-1 text-[13px] leading-snug text-ash">{item.text}</p>

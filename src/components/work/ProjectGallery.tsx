@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
+import { ArrowLeft, ArrowRight } from '@/components/ui/Decor'
 import { pad } from '@/lib/format'
 
 /** Large screenshot with previous / next controls and a thumbnail strip. */
@@ -20,10 +21,10 @@ export default function ProjectGallery({ images, name }: { images: string[]; nam
         {images.length > 1 && (
           <>
             <button type="button" onClick={() => step(-1)} className="absolute bottom-0 left-0 z-[3] border-r border-t border-ink bg-paper px-4 py-2 font-jet hover:bg-primary hover:text-onprimary" aria-label="Previous screenshot">
-              ←
+              <ArrowLeft />
             </button>
             <button type="button" onClick={() => step(1)} className="absolute bottom-0 right-0 z-[3] border-l border-t border-ink bg-ink px-4 py-2 font-jet text-stock hover:bg-primary hover:text-onprimary" aria-label="Next screenshot">
-              →
+              <ArrowRight />
             </button>
             <span className="absolute bottom-0 left-1/2 z-[3] -translate-x-1/2 border-x border-t border-ink bg-paper px-3 py-2 font-jet text-[11px]">
               {pad(shot + 1)} / {pad(images.length)}

@@ -6,7 +6,7 @@ import AwardsGrid from '@/components/about/AwardsGrid'
 import Dossier from '@/components/home/Dossier'
 import Accordion from '@/components/ui/Accordion'
 import CtaBand from '@/components/ui/CtaBand'
-import { ArrowUpRight } from '@/components/ui/Decor'
+import { ArrowUpRight, ChevronRight } from '@/components/ui/Decor'
 import PageHero from '@/components/ui/PageHero'
 import ProfilePhoto from '@/components/ui/ProfilePhoto'
 import SectionHeading, { Bar } from '@/components/ui/SectionHeading'
@@ -128,13 +128,13 @@ export default async function AboutPage() {
             </div>
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-jet text-xs font-bold uppercase tracking-[.16em]" data-reveal="up">
               <Link href={routes.books} className="text-primary hover:underline">
-                Books I read ▸
+                Books I read <ChevronRight />
               </Link>
               <Link href={routes.bookmarks} className="text-primary hover:underline">
-                Bookmarks ▸
+                Bookmarks <ChevronRight />
               </Link>
               <Link href={routes.writing} className="text-primary hover:underline">
-                My writing ▸
+                My writing <ChevronRight />
               </Link>
             </div>
           </div>

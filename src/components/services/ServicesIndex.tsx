@@ -2,6 +2,7 @@
 
 import type { MouseEvent } from 'react'
 
+import { CaretLeft } from '@/components/ui/Decor'
 import { pad } from '@/lib/format'
 import { goToService, serviceId, useActiveService } from './serviceNav'
 
@@ -32,7 +33,7 @@ export default function ServicesIndex({ titles }: { titles: string[] }) {
               <span className="ss-display ss-cond text-lg">{title}</span>
               {i === active && (
                 <span className="ml-auto font-jet text-[10px] text-primary" aria-hidden="true">
-                  ◀
+                  <CaretLeft />
                 </span>
               )}
             </a>

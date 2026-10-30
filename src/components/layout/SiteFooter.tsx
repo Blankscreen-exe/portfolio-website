@@ -38,7 +38,7 @@ export default function SiteFooter({ site }: { site: Site }) {
       links: external([
         { name: 'LinkedIn', href: social.linkedin },
         { name: 'GitHub', href: social.github },
-        { name: 'Medium', href: social.medium },
+        { name: 'Hashnode', href: social.hashnode },
         { name: 'Book a call', href: social.calendarBooking },
       ]),
     },

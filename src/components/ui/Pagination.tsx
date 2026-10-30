@@ -1,8 +1,8 @@
 'use client'
 
-import { ArrowLeft, ArrowRight } from '@/components/ui/Decor'
 import { pad } from '@/lib/format'
 import { pageWindow } from '@/lib/pagination'
+import { ArrowLeft, ArrowRight } from './Decor'
 
 type Props = {
   page: number
