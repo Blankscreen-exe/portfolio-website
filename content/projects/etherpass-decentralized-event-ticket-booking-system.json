@@ -18,13 +18,11 @@
     "Nest.js",
     "Turso DB"
   ],
-  "liveUrl": null,
-  "liveUrlNote": "",
-  "repoUrl": null,
+  "liveUrlNote": "Delivered under a client engagement. Source code and deployment access remain with the client.",
   "images": [
-    "/images/projects/etherpass-decentralized-event-ticket-booking-system/1.png",
-    "/images/projects/etherpass-decentralized-event-ticket-booking-system/2.png",
-    "/images/projects/etherpass-decentralized-event-ticket-booking-system/3.png",
-    "/images/projects/etherpass-decentralized-event-ticket-booking-system/4.png"
+    "/images/projects/etherpass-decentralized-event-ticket-booking-system/images/0.png",
+    "/images/projects/etherpass-decentralized-event-ticket-booking-system/images/1.png",
+    "/images/projects/etherpass-decentralized-event-ticket-booking-system/images/2.png",
+    "/images/projects/etherpass-decentralized-event-ticket-booking-system/images/3.png"
   ]
 }

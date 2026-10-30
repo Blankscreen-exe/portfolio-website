@@ -13,7 +13,7 @@
       "showInStrip": true
     },
     {
-      "value": "~5",
+      "value": "5+",
       "label": "Years Production Experience",
       "showInStrip": true
     },
@@ -21,16 +21,6 @@
       "value": "99%",
       "label": "Uptime on Maintained Systems",
       "showInStrip": true
-    },
-    {
-      "value": "10+",
-      "label": "Systems Stabilized or Refactored",
-      "showInStrip": false
-    },
-    {
-      "value": "4",
-      "label": "Engineering Communities Served",
-      "showInStrip": false
     }
   ],
   "services": [
@@ -79,6 +69,10 @@
     {
       "name": "Education",
       "built": "Business simulator"
+    },
+    {
+      "name": "Finance & Crypto",
+      "built": "Payment processing and web3 blockchain systems"
     }
   ],
   "whyMe": [

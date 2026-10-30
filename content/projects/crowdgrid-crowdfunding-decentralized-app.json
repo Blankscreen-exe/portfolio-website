@@ -1,7 +1,7 @@
 {
   "title": "CrowdGrid - Crowdfunding Decentralized App",
   "featured": false,
-  "kind": "side",
+  "kind": "client",
   "status": "finished",
   "openToContrib": false,
   "dateLabel": "Jan 2024",
@@ -16,18 +16,16 @@
     "Nest.js",
     "Turso DB"
   ],
-  "liveUrl": null,
-  "liveUrlNote": "",
-  "repoUrl": null,
+  "liveUrlNote": "Delivered under a client engagement. Source code and deployment access remain with the client.",
   "images": [
-    "/images/projects/crowdgrid-crowdfunding-decentralized-app/1.png",
-    "/images/projects/crowdgrid-crowdfunding-decentralized-app/2.png",
-    "/images/projects/crowdgrid-crowdfunding-decentralized-app/3.png",
-    "/images/projects/crowdgrid-crowdfunding-decentralized-app/4.png",
-    "/images/projects/crowdgrid-crowdfunding-decentralized-app/5.png",
-    "/images/projects/crowdgrid-crowdfunding-decentralized-app/6.png",
-    "/images/projects/crowdgrid-crowdfunding-decentralized-app/7.png",
-    "/images/projects/crowdgrid-crowdfunding-decentralized-app/8.png",
-    "/images/projects/crowdgrid-crowdfunding-decentralized-app/9.png"
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/images/0.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/images/1.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/images/2.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/images/3.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/images/4.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/images/5.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/images/6.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/images/7.png",
+    "/images/projects/crowdgrid-crowdfunding-decentralized-app/images/8.png"
   ]
 }
