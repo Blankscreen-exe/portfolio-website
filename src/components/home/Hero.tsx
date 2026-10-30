@@ -1,7 +1,6 @@
-import Link from 'next/link'
-
+import Button from '@/components/ui/Button'
 import CountUp from '@/components/ui/CountUp'
-import { ArrowUpRight, ChevronDown } from '@/components/ui/Decor'
+import { ChevronDown } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
 import type { Home, Site } from '@/lib/content'
 import { parseMetric } from '@/lib/format'
@@ -34,16 +33,16 @@ export default function Hero({ home, site }: { home: Home; site: Site }) {
             {home.heroIntro}
           </p>
           <div className="mt-8 flex flex-wrap gap-3" data-reveal="up" style={stagger(6)}>
-            <Link href="#contact" className="ss-magnet ss-chev-btn inline-block bg-ink px-6 py-3.5 font-jet text-xs font-bold uppercase tracking-[.14em] text-stock transition-[transform] duration-300">
-              Start a project <ArrowUpRight className="ss-chev" />
-            </Link>
-            <Link href={`${routes.home}#work`} className="ss-magnet ss-chev-btn inline-block border-2 border-ink px-6 py-3 font-jet text-xs font-bold uppercase tracking-[.14em] transition-colors duration-300 hover:bg-ink hover:text-stock">
-              See the work <ChevronDown className="ss-chev" />
-            </Link>
+            <Button href="#contact" variant="ink" attention="pop">
+              Start a project
+            </Button>
+            <Button href={`${routes.home}#work`} variant="outline" shadow icon={<ChevronDown className="ss-chev" />}>
+              See the work
+            </Button>
           </div>
         </div>
 
-        <CardStack industries={home.industries} whyMe={home.whyMe} delivered={metrics[0]} role={site.role} />
+        <CardStack industries={home.industries} whyMe={home.whyMe} delivered={metrics[0]} name={site.name} role={site.role} />
       </div>
 
       {/* Stats strip: 2 columns on mobile, 4 from md */}

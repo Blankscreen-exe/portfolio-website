@@ -13,13 +13,13 @@ import { stagger } from '@/lib/style'
 const CARD_NAMES = ['Who I am', "Industries I've built for", 'Why work with me']
 const BARCODE: [number, number][] = [[0, 2], [4, 1], [7, 4], [13, 1], [16, 2], [21, 1], [24, 5], [31, 1], [34, 2], [38, 4], [44, 1], [47, 2], [51, 1], [54, 5], [61, 1], [63, 1]]
 
-type Props = Pick<Home, 'industries' | 'whyMe'> & { delivered?: { value: string; label: string }; role: string }
+type Props = Pick<Home, 'industries' | 'whyMe'> & { delivered?: { value: string; label: string }; name: string; role: string }
 
 /**
  * Hero profile cards. Click / tap / Enter / Space sends the front card to the back:
  * it flies out (.fly), then takes the back slot while the others move forward.
  */
-export default function CardStack({ industries, whyMe, delivered, role }: Props) {
+export default function CardStack({ industries, whyMe, delivered, name, role }: Props) {
   // order[0] is the card in front; values are card indexes
   const [order, setOrder] = useState([0, 1, 2])
   const [flying, setFlying] = useState<number | null>(null)
@@ -74,12 +74,14 @@ export default function CardStack({ industries, whyMe, delivered, role }: Props)
             <span>ID card</span>
             <span>01/03</span>
           </div>
-          <ProfilePhoto eager />
+          <ProfilePhoto eager>
+            <span className="absolute bottom-3 left-0 bg-ink px-2.5 py-1 font-jet text-[11px] font-bold uppercase tracking-[.14em] text-stock">{name}</span>
+          </ProfilePhoto>
           <div className="ss-display ss-cond mt-4 text-[34px] leading-none">{title}</div>
           {subtitle.length > 0 && <div className="mt-1 font-jet text-xs text-ash">&amp; {subtitle.join(' & ')}</div>}
           <div className="mt-3 flex items-center justify-between border-t border-ink/15 pt-3">
             <span className="flex items-center gap-2 font-jet text-[11px] uppercase tracking-widest">
-              <span className="ss-blink inline-block h-2 w-2 bg-primary" />
+              <span className="ss-pulse inline-block h-2 w-2 bg-primary" />
               Available for work
             </span>
             <svg className="h-4 w-16 opacity-80" viewBox="0 0 64 16" fill="currentColor" aria-hidden="true">

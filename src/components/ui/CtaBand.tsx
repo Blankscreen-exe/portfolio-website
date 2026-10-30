@@ -1,7 +1,6 @@
-import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { routes } from '@/lib/routes'
-import { ArrowUpRight } from './Decor'
+import Button from './Button'
 import { Bar } from './SectionHeading'
 import Scramble from './Scramble'
 
@@ -39,12 +38,9 @@ export default function CtaBand({
           </p>
         </div>
         <div data-reveal="up">
-          <Link
-            href={routes.contactAbout(topic)}
-            className="ss-magnet ss-chev-btn inline-block whitespace-nowrap bg-primary px-8 py-5 font-jet text-sm font-bold uppercase tracking-[.16em] text-onprimary transition-[transform,filter] duration-300 hover:brightness-110"
-          >
-            Start a project <ArrowUpRight className="ss-chev" />
-          </Link>
+          <Button href={routes.contactAbout(topic)} size="lg" attention="brackets" magnet className="whitespace-nowrap">
+            Start a project
+          </Button>
         </div>
       </div>
     </section>

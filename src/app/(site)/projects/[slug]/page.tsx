@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
+import Button from '@/components/ui/Button'
 import CtaBand from '@/components/ui/CtaBand'
-import { ArrowLeft, ArrowRight, ArrowUpRight } from '@/components/ui/Decor'
+import { ArrowLeft, ArrowRight } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
 import { Bar } from '@/components/ui/SectionHeading'
 import ProjectGallery from '@/components/work/ProjectGallery'
@@ -73,14 +74,14 @@ export default async function ProjectPage(props: PageProps<'/projects/[slug]'>) 
 
             <div className="flex flex-col justify-end gap-3 lg:col-span-5" data-reveal="up" style={stagger(2)}>
               {project.liveUrl && (
-                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="ss-chev-btn bg-ink px-6 py-4 text-center font-jet text-xs font-bold uppercase tracking-[.16em] text-stock hover:opacity-90">
-                  Visit the live site <ArrowUpRight className="ss-chev" />
-                </a>
+                <Button href={project.liveUrl} external variant="ink" size="md" attention="pop" className="text-center">
+                  Visit the live site
+                </Button>
               )}
               {project.repoUrl && (
-                <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="ss-chev-btn border-2 border-ink px-6 py-3.5 text-center font-jet text-xs font-bold uppercase tracking-[.16em] hover:bg-ink hover:text-stock">
-                  View the code <ArrowUpRight className="ss-chev" />
-                </a>
+                <Button href={project.repoUrl} external variant="outline" size="md" className="text-center">
+                  View the code
+                </Button>
               )}
               {!project.liveUrl && project.liveUrlNote && <p className="border border-dashed border-ink px-4 py-3 font-jet text-[11px] text-ash">{project.liveUrlNote}</p>}
             </div>

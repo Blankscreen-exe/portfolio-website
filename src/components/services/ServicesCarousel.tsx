@@ -1,9 +1,9 @@
 'use client'
 
-import Link from 'next/link'
 import { type KeyboardEvent, type PointerEvent, useEffect, useRef, useState } from 'react'
 
-import { ArrowLeft, ArrowRight, ArrowUpRight, Pause, Play } from '@/components/ui/Decor'
+import Button from '@/components/ui/Button'
+import { ArrowLeft, ArrowRight, Pause, Play } from '@/components/ui/Decor'
 import { usePageVisible, usePrefersReducedMotion } from '@/hooks/useMediaState'
 import type { Service } from '@/lib/content'
 import { pad } from '@/lib/format'
@@ -186,12 +186,9 @@ export default function ServicesCarousel({ services }: { services: readonly Serv
                           </li>
                         ))}
                       </ul>
-                      <Link
-                        href={routes.contactAbout(s.contactTopic)}
-                        className="ss-chev-btn mt-8 inline-block bg-ink px-6 py-3.5 font-jet text-xs font-bold uppercase tracking-[.14em] text-stock hover:opacity-90"
-                      >
-                        Talk to me about this <ArrowUpRight className="ss-chev" />
-                      </Link>
+                      <Button href={routes.contactAbout(s.contactTopic)} variant="ink" attention="scramble" className="mt-8">
+                        Talk to me about this
+                      </Button>
                     </div>
                   </div>
                 </div>

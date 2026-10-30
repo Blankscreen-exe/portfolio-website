@@ -158,11 +158,55 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
 .ss-chev-btn:hover .ss-chev { transform: translateX(5px); }
 
 /* ---------- Ambient motion ---------- */
-.ss-scan { position: absolute; left: 0; right: 0; height: 2px; background: rgb(var(--color-primary)); box-shadow: 0 0 12px rgb(var(--color-primary)); animation: ss-scan 3.6s ease-in-out infinite; z-index: 3; }
-@keyframes ss-scan { 0%, 100% { top: 4% } 50% { top: 94% } }
+/* Attention cues for <Button attention="…">.
+   Hard shadow: its colour has to contrast with both the button and what's behind it.
+   Pop: presses into that shadow. Uses `translate`, because .ss-magnet drives `transform`. */
+.ss-shadow { --pop: rgb(var(--color-primary)); box-shadow: 6px 6px 0 var(--pop); }
+.ss-shadow.bg-primary { --pop: rgb(var(--ss-ink)); }
+.bg-ink .ss-shadow.bg-primary { --pop: rgb(var(--ss-stock)); }
+.ss-pop { animation: ss-pop 3s var(--ss-ease) infinite; }
+@keyframes ss-pop {
+  0%, 76%, 100% { translate: 0 0; box-shadow: 6px 6px 0 var(--pop); }
+  84% { translate: 6px 6px; box-shadow: 0 0 0 var(--pop); }
+}
+
+/* Brackets: crop marks at the corners pulse outward */
+.ss-brackets { position: relative; }
+.ss-brackets::before {
+  --c: rgb(var(--color-primary));
+  content: '';
+  position: absolute;
+  inset: -7px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--c), var(--c)) 0 0 / 14px 2px,
+    linear-gradient(var(--c), var(--c)) 0 0 / 2px 14px,
+    linear-gradient(var(--c), var(--c)) 100% 0 / 14px 2px,
+    linear-gradient(var(--c), var(--c)) 100% 0 / 2px 14px,
+    linear-gradient(var(--c), var(--c)) 0 100% / 14px 2px,
+    linear-gradient(var(--c), var(--c)) 0 100% / 2px 14px,
+    linear-gradient(var(--c), var(--c)) 100% 100% / 14px 2px,
+    linear-gradient(var(--c), var(--c)) 100% 100% / 2px 14px;
+  background-repeat: no-repeat;
+  animation: ss-brackets 1.8s ease-in-out infinite;
+}
+@keyframes ss-brackets { 50% { inset: -14px; opacity: .45; } }
+
+/* Profile photo: a thin bar along the bottom slowly fills and resets */
+.ss-tick { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgb(var(--color-primary)); transform: scaleX(0); transform-origin: left; animation: ss-tick 6s linear infinite; }
+@keyframes ss-tick { 92% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
 
 @keyframes ss-blink { 50% { opacity: 0 } }
 .ss-blink { animation: ss-blink 1.2s steps(2, start) infinite; }
+
+/* Every few seconds an arrow hops the way it points. Uses `translate`, so the hover slide (`transform`) still works. */
+.ss-nudge { animation: ss-nudge 4s var(--ss-ease) infinite; }
+@keyframes ss-nudge { 0%, 80%, 100% { translate: 0 0; } 88% { translate: 6px -6px; } }
+
+/* "Available" dot: a square ring keeps expanding out of it */
+.ss-pulse { position: relative; }
+.ss-pulse::after { content: ''; position: absolute; inset: 0; border: 1px solid rgb(var(--color-primary)); pointer-events: none; animation: ss-pulse 1.8s ease-out infinite; }
+@keyframes ss-pulse { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(3.5); } }
 
 /* Autoplay countdown: a bar that fills left to right (duration set inline). Full when animation is off. */
 .ss-fill { animation: ss-fill linear both; }
@@ -260,5 +304,4 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
   .js .ss-bar { background-size: 100% 100%; color: rgb(var(--ss-onprimary)); }
   .js .ss-shutter::after { display: none; }
   .js .ss-barcode rect { transform: none; }
-  .ss-scan { display: none; }
 }

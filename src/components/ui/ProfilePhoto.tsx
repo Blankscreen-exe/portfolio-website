@@ -1,11 +1,11 @@
 import Image from 'next/image'
+import type { ReactNode } from 'react'
 
-/** The profile photo used across the site: always grayscale, with the cyan shutter reveal and scan line. */
-export default function ProfilePhoto({ eager = false }: { eager?: boolean }) {
+/** The profile photo used across the site: always grayscale, with the cyan shutter reveal and status tick. `children` sit on top of it. */
+export default function ProfilePhoto({ eager = false, children }: { eager?: boolean; children?: ReactNode }) {
   return (
     <div className="ss-shutter" data-reveal="shutter">
       <div className="relative aspect-square border border-ink/15">
-        <div className="ss-scan" />
         <Image
           src="/profile_pic.png"
           alt="M. Hammad Hassan"
@@ -14,6 +14,8 @@ export default function ProfilePhoto({ eager = false }: { eager?: boolean }) {
           sizes="(min-width: 1024px) 400px, 360px"
           className="object-cover contrast-[1.05] grayscale"
         />
+        <div className="ss-tick" aria-hidden="true" />
+        {children}
       </div>
     </div>
   )

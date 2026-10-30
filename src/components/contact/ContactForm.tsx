@@ -4,7 +4,8 @@ import emailjs from '@emailjs/browser'
 import { Turnstile } from '@marsidev/react-turnstile'
 import { type ChangeEvent, type FormEvent, type ReactNode, useState } from 'react'
 
-import { ArrowUpRight, RotateArrow } from '@/components/ui/Decor'
+import Button from '@/components/ui/Button'
+import { RotateArrow } from '@/components/ui/Decor'
 import { useMediaQuery } from '@/hooks/useMediaState'
 import { useQueryParams } from '@/hooks/useQueryParams'
 import { emailJs, turnstileSiteKey } from '@/lib/integrations'
@@ -155,19 +156,16 @@ export default function ContactForm({ topics, linkedin }: { topics: readonly str
         {errors.captcha && !captchaPassed && <p className="mt-2 text-[11px] text-[#ff7a8a]">{errors.captcha}</p>}
       </div>
 
-      <button
+      <Button
         type="submit"
+        size="md"
         disabled={state === 'sending'}
-        className="ss-chev-btn -mt-px bg-primary py-4 text-xs font-bold uppercase tracking-[.18em] text-onprimary transition hover:brightness-110 disabled:opacity-60"
+        attention={state === 'sending' ? undefined : 'scramble'}
+        icon={state === 'sending' ? null : undefined}
+        className="-mt-px disabled:opacity-60"
       >
-        {state === 'sending' ? (
-          'Sending…'
-        ) : (
-          <>
-            Send message <ArrowUpRight className="ss-chev" />
-          </>
-        )}
-      </button>
+        {state === 'sending' ? 'Sending…' : 'Send message'}
+      </Button>
       {state === 'failed' && (
         <p className="mt-3 text-[12px] text-[#ff7a8a]" role="alert">
           Something went wrong sending that. Please try again

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import ContactPanel from '@/components/contact/ContactPanel'
 import CopyChannel from '@/components/contact/CopyChannel'
 import Accordion from '@/components/ui/Accordion'
+import Button from '@/components/ui/Button'
 import { ArrowUpRight } from '@/components/ui/Decor'
 import SectionHeading, { Bar } from '@/components/ui/SectionHeading'
 import { getFaq, getHome, getSite } from '@/lib/content'
@@ -46,19 +47,12 @@ export default async function ContactPage() {
             <CopyChannel name="Discord" value={site.discordUsername} />
           </div>
           {social.calendarBooking && (
-            <a
-              href={social.calendarBooking}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ss-chev-btn mt-4 flex items-center justify-between gap-6 bg-primary p-6 text-onprimary transition hover:brightness-110 md:px-8"
-              data-reveal="up"
-            >
+            <Button href={social.calendarBooking} external size="wide" icon={<ArrowUpRight className="ss-chev ss-nudge !h-7 !w-7" />} className="mt-4" data-reveal="up">
               <span>
                 <span className="ss-display ss-cond block text-3xl sm:text-4xl">Book a call</span>
-                <span className="mt-2 block font-jet text-xs">Pick a time that suits you</span>
+                <span className="mt-2 block text-xs font-normal normal-case">Pick a time that suits you</span>
               </span>
-              <ArrowUpRight className="ss-chev !h-7 !w-7" />
-            </a>
+            </Button>
           )}
         </div>
       </section>
@@ -87,15 +81,9 @@ export default async function ContactPage() {
                 If you&apos;ve learned from me or enjoyed working together, a recommendation on LinkedIn would mean the world to me.
               </p>
             </div>
-            <a
-              href={social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ss-chev-btn shrink-0 border-2 border-ink px-6 py-3.5 font-jet text-xs font-bold uppercase tracking-[.14em] hover:bg-ink hover:text-stock"
-              data-reveal="up"
-            >
-              Recommend me <ArrowUpRight className="ss-chev" />
-            </a>
+            <Button href={social.linkedin} external variant="outline" className="shrink-0" data-reveal="up">
+              Recommend me
+            </Button>
           </div>
         </section>
       )}

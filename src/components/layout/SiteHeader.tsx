@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 
+import Button from '@/components/ui/Button'
 import { ArrowUpRight, HalfCircle } from '@/components/ui/Decor'
 import Scramble from '@/components/ui/Scramble'
 import { prefersReducedMotion } from '@/hooks/useOnceVisible'
@@ -115,7 +116,7 @@ export default function SiteHeader({ name, availability }: { name: string; avail
             </Link>
           ))}
           <span className="ss-drop ml-auto hidden items-center gap-2 border-l border-ink/15 px-5 font-jet text-[11px] uppercase tracking-widest text-ash lg:flex" style={stagger(5)}>
-            <span className="ss-blink inline-block h-2 w-2 bg-primary" />
+            <span className={`${section ? 'ss-blink' : 'ss-pulse'} inline-block h-2 w-2 bg-primary`} />
             <Scramble text={section ?? availability} />
           </span>
         </nav>
@@ -164,9 +165,9 @@ export default function SiteHeader({ name, availability }: { name: string; avail
                 {item.name} <ArrowUpRight className="text-base" />
               </Link>
             ))}
-            <Link href={routes.contact} onClick={closeMenu} className="block bg-primary px-5 py-4 font-jet text-xs font-bold uppercase tracking-widest text-onprimary">
-              Start a project <ArrowUpRight />
-            </Link>
+            <Button href={routes.contact} onClick={closeMenu} size="md" attention="scramble" className="w-full text-left">
+              Start a project
+            </Button>
           </nav>
         )}
       </header>
