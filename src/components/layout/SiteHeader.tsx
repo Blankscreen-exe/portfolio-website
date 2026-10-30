@@ -69,9 +69,13 @@ export default function SiteHeader({ name, availability }: { name: string; avail
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     const raf = requestAnimationFrame(onScroll)
+    // Sections can rename themselves without a scroll (e.g. the services carousel advancing)
+    const relabel = new MutationObserver(onScroll)
+    relabel.observe(document.body, { subtree: true, attributes: true, attributeFilter: ['data-section'] })
     return () => {
       window.removeEventListener('scroll', onScroll)
       cancelAnimationFrame(raf)
+      relabel.disconnect()
     }
   }, [pathname])
 

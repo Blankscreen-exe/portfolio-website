@@ -129,13 +129,15 @@ export default function ServicesCarousel({ services }: { services: readonly Serv
           </div>
         </div>
 
-        <div className="mt-6 grid border border-ink bg-paper md:grid-cols-[4rem_1fr_4rem]">
+        <div className="mt-6 grid grid-cols-[minmax(0,1fr)] border border-ink bg-paper md:grid-cols-[4rem_minmax(0,1fr)_4rem]">
           <button type="button" onClick={() => go(active - 1)} className={`${arrow} hidden border-r border-ink md:grid`} aria-label="Previous service">
             ←
           </button>
 
-          {/* overflow-clip (not hidden): the track can't be scrolled by focus or anchors, only moved by transform */}
-          <div className="overflow-clip" onPointerDown={onPointerDown} onPointerUp={onPointerUp} onPointerCancel={() => (swipeStart.current = null)}>
+          {/* overflow-clip (not hidden): the track can't be scrolled by focus or anchors, only moved by transform.
+              Unlike `hidden`, `clip` doesn't let a grid item shrink below its content, so min-w-0 and the
+              minmax(0,1fr) column above are what keep the 7-slide-wide track from widening the grid. */}
+          <div className="min-w-0 overflow-clip" onPointerDown={onPointerDown} onPointerUp={onPointerUp} onPointerCancel={() => (swipeStart.current = null)}>
             <div className="flex transition-transform duration-700 ease-[cubic-bezier(.16,.84,.24,1)]" style={{ transform: `translateX(-${active * 100}%)` }}>
               {services.map((s, i) => (
                 <div
