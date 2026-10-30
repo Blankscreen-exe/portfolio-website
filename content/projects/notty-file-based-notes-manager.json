@@ -1,0 +1,25 @@
+{
+  "title": "Notty - File-Based Notes Manager",
+  "featured": false,
+  "kind": "side",
+  "status": "ongoing",
+  "openToContrib": true,
+  "dateLabel": "Jun 2026",
+  "sortOrder": 30,
+  "description": "Notty manages plain‑text and Markdown notes the simplest way possible: as ordinary files on disk. Your notes are Markdown or Plain Text files. Categories are folders. No database, no cloud, no account, no lock‑in. Close the app, open the folder in Explorer, and everything is right there. Fully offline, lightweight, no browser runtime.",
+  "tags": [
+    "C#",
+    ".NET 8",
+    "WPF",
+    "MVVM",
+    "AvalonEdit",
+    "SharpVectors"
+  ],
+  "liveUrl": "https://blankscreen-exe.github.io/Notty-Text-Editor/",
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/Notty-Text-Editor",
+  "images": [
+    "/images/projects/notty-file-based-notes-manager/1.png",
+    "/images/projects/notty-file-based-notes-manager/2.png"
+  ]
+}

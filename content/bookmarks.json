@@ -1,0 +1,3302 @@
+{
+  "items": [
+    {
+      "title": "Early",
+      "url": "https://www.early.tools/",
+      "description": "Early-stage startups & pre-launch tools, curated daily",
+      "category": "directory",
+      "tags": [
+        "startups",
+        "pre-launch",
+        "founders"
+      ],
+      "featured": false,
+      "icon": "https://www.early.tools/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "JetBrains Academy",
+      "url": "https://academy.jetbrains.com/",
+      "description": "Lots of great courses for both beignners and professionals",
+      "category": "courses",
+      "tags": [
+        "programming",
+        "AI",
+        "ML",
+        "Tooling"
+      ],
+      "featured": false,
+      "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Church Of Malware",
+      "url": "https://churchofmalware.org",
+      "description": "Registered nonprofit org for free off-sec research and security education",
+      "category": "library",
+      "tags": [
+        "malware",
+        "cyber security",
+        "Research",
+        "library"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "System Design Handbook",
+      "url": "https://www.systemdesignhandbook.com/",
+      "description": "20+ years of system design wisdom",
+      "category": "resource",
+      "tags": [
+        "system design",
+        "ML system design",
+        "interview prep"
+      ],
+      "featured": false,
+      "icon": "https://www.systemdesignhandbook.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Tech Interview Handbook",
+      "url": "https://www.techinterviewhandbook.org/",
+      "description": "Free curated interview preparation materials for busy people",
+      "category": "resource",
+      "tags": [
+        "system design",
+        "salary negotiation",
+        "algorithm",
+        "behaviour interview"
+      ],
+      "featured": false,
+      "icon": "https://www.techinterviewhandbook.org/img/favicon.png",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Awesome System Design Resources",
+      "url": "https://github.com/ashishps1/awesome-system-design-resources",
+      "description": "free resources to learn System Design concepts and prepare for interviews",
+      "category": "resource",
+      "tags": [
+        "system design",
+        "networks",
+        "database",
+        "architecture",
+        "Async Communication",
+        "API"
+      ],
+      "featured": false,
+      "icon": "https://github.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Bug Me Not",
+      "url": "https://bugmenot.com/",
+      "description": "Get free, shared logins from the BugMeNot community",
+      "category": "tool",
+      "tags": [
+        "shared logins",
+        "login evasion"
+      ],
+      "featured": false,
+      "icon": "https://bugmenot.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Z Library",
+      "url": "https://z-library.im/",
+      "description": "Free e-books",
+      "category": "library",
+      "tags": [
+        "multiple topics",
+        "learning resources"
+      ],
+      "featured": false,
+      "icon": "https://z-library.im/img/favicons/favicon-32x32.svg?v=2",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "The Linux Foundation",
+      "url": "https://training.linuxfoundation.org/",
+      "description": "Free and paid Linux Courses",
+      "category": "courses",
+      "tags": [
+        "linux",
+        "networking",
+        "cyber security",
+        "learning resources"
+      ],
+      "featured": false,
+      "icon": "https://www.google.com/s2/favicons?domain=training.linuxfoundation.org",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "zenk-security",
+      "url": "https://repo.zenk-security.com/",
+      "description": "A list of free cyber security resources",
+      "category": "docs",
+      "tags": [
+        "cyber-security",
+        "docs",
+        "learning resources"
+      ],
+      "featured": false,
+      "icon": "https://repo.zenk-security.com/images/favicon2.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "osintcabal",
+      "url": "https://osintcabal.org/",
+      "description": "A list of OSINT online-tools and guides.",
+      "category": "docs",
+      "tags": [
+        "cyber-security",
+        "osint",
+        "docs",
+        "online tools"
+      ],
+      "featured": false,
+      "icon": "https://osintcabal.org/favicons/apple-icon-152x152.png",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "0xinfection",
+      "url": "https://0xinfection.xyz/",
+      "description": "Ramblings of an infected geek on security, technology, and everything in between.",
+      "category": "docs",
+      "tags": [
+        "cyber-security",
+        "hacking",
+        "docs"
+      ],
+      "featured": false,
+      "icon": "https://0xinfection.xyz/favicon-32x32.png",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Hard Break",
+      "url": "https://www.hardbreak.wiki/",
+      "description": "HardBreak collects knowledge about Hardware Hacking / IoT hacking in one place.",
+      "category": "docs",
+      "tags": [
+        "cyber-security",
+        "hardware",
+        "docs"
+      ],
+      "featured": false,
+      "icon": "https://www.hardbreak.wiki/~gitbook/image?url=https%3A%2F%2F2343901342-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FiAi4u24KW445RkQwdeSM%252Fsites%252Fsite_JnjIO%252Ficon%252FqPs8nePKQ0pFeJzuzEON%252Flogo.png%3Falt%3Dmedia%26token%3D598587cb-6de6-4f23-86a6-0407600354b9&width=32&dpr=3&quality=100&sign=b467cfbe&sv=2",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "pico CTF",
+      "url": "https://picoctf.org/",
+      "description": "picoCTF gamifies learning hacking with capture-the-flag puzzles created by trusted computer security and privacy experts at Carnegie Mellon University.",
+      "category": "labs",
+      "tags": [
+        "cyber-security",
+        "CTF",
+        "labs"
+      ],
+      "featured": false,
+      "icon": "https://picoctf.org/favicon-32x32.png",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Refactoring Guru",
+      "url": "https://refactoring.guru/",
+      "description": "Refactoring.Guru makes it easy for you to discover everything you need to know about refactoring, design patterns, SOLID principles, and other smart programming topics.\n\nThis is one of the best resources to learn Design Patterns from",
+      "category": "guide",
+      "tags": [
+        "refactor",
+        "design-patterns",
+        "programming",
+        "reference",
+        "docs",
+        "design patterns"
+      ],
+      "featured": true,
+      "icon": "https://refactoring.guru/favicon.png",
+      "provider": "Refactoring Guru",
+      "rating": 5
+    },
+    {
+      "title": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/",
+      "description": "Comprehensive documentation for web technologies including HTML, CSS, and JavaScript",
+      "category": "documentation",
+      "tags": [
+        "web",
+        "javascript",
+        "html",
+        "css",
+        "reference",
+        "docs"
+      ],
+      "featured": true,
+      "icon": "https://developer.mozilla.org/favicon-48x48.png",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "CodePen",
+      "url": "https://codepen.io/",
+      "description": "Online code editor for HTML, CSS, and JavaScript",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "html",
+        "css",
+        "javascript",
+        "frontend"
+      ],
+      "featured": true,
+      "icon": "https://codepen.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "JSFiddle",
+      "url": "https://jsfiddle.net/",
+      "description": "Online code editor and playground for web development",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "javascript",
+        "html",
+        "css",
+        "playground"
+      ],
+      "featured": false,
+      "icon": "https://jsfiddle.net/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "StackBlitz",
+      "url": "https://stackblitz.com/",
+      "description": "Online IDE for full-stack web development",
+      "category": "tools",
+      "tags": [
+        "ide",
+        "editor",
+        "typescript",
+        "angular",
+        "react"
+      ],
+      "featured": true,
+      "icon": "https://stackblitz.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "CodeSandbox",
+      "url": "https://codesandbox.io/",
+      "description": "Online code editor and prototyping tool",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "react",
+        "vue",
+        "prototyping",
+        "ide"
+      ],
+      "featured": true,
+      "icon": "https://codesandbox.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Replit",
+      "url": "https://replit.com/",
+      "description": "Online IDE and coding platform",
+      "category": "tools",
+      "tags": [
+        "ide",
+        "editor",
+        "coding",
+        "online"
+      ],
+      "featured": false,
+      "icon": "https://replit.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Regex101",
+      "url": "https://regex101.com/",
+      "description": "Online regex tester and debugger with syntax highlighting",
+      "category": "utilities",
+      "tags": [
+        "regex",
+        "testing",
+        "debugging",
+        "pattern-matching"
+      ],
+      "featured": true,
+      "icon": "https://regex101.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Can I Use",
+      "url": "https://caniuse.com/",
+      "description": "Browser compatibility tables for web technologies",
+      "category": "utilities",
+      "tags": [
+        "browser",
+        "compatibility",
+        "css",
+        "javascript",
+        "html"
+      ],
+      "featured": true,
+      "icon": "https://caniuse.com/img/favicon-128.png",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "JSONLint",
+      "url": "https://jsonlint.com/",
+      "description": "JSON validator and formatter",
+      "category": "utilities",
+      "tags": [
+        "json",
+        "validator",
+        "formatter",
+        "debugging"
+      ],
+      "featured": false,
+      "icon": "https://jsonlint.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Base64 Encode/Decode",
+      "url": "https://www.base64encode.org/",
+      "description": "Online Base64 encoder and decoder",
+      "category": "utilities",
+      "tags": [
+        "base64",
+        "encoding",
+        "decoding",
+        "converter"
+      ],
+      "featured": false,
+      "icon": "https://www.base64encode.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Color Picker",
+      "url": "https://htmlcolorcodes.com/color-picker/",
+      "description": "HTML color picker and color code converter",
+      "category": "utilities",
+      "tags": [
+        "color",
+        "picker",
+        "hex",
+        "rgb",
+        "design"
+      ],
+      "featured": false,
+      "icon": "https://htmlcolorcodes.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Unicode Character Table",
+      "url": "https://unicode-table.com/",
+      "description": "Complete Unicode character table with search",
+      "category": "utilities",
+      "tags": [
+        "unicode",
+        "characters",
+        "symbols",
+        "reference"
+      ],
+      "featured": false,
+      "icon": "https://unicode-table.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Lorem Ipsum Generator",
+      "url": "https://www.lipsum.com/",
+      "description": "Classic Lorem Ipsum placeholder text generator",
+      "category": "utilities",
+      "tags": [
+        "lorem-ipsum",
+        "placeholder",
+        "text",
+        "generator"
+      ],
+      "featured": false,
+      "icon": "https://www.lipsum.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "URL Encoder/Decoder",
+      "url": "https://www.urlencoder.org/",
+      "description": "Online URL encoder and decoder tool",
+      "category": "utilities",
+      "tags": [
+        "url",
+        "encoding",
+        "decoding",
+        "converter"
+      ],
+      "featured": false,
+      "icon": "https://www.urlencoder.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Markdown Editor",
+      "url": "https://dillinger.io/",
+      "description": "Online markdown editor with live preview",
+      "category": "utilities",
+      "tags": [
+        "markdown",
+        "editor",
+        "preview",
+        "writing"
+      ],
+      "featured": false,
+      "icon": "https://dillinger.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Image Optimizer",
+      "url": "https://squoosh.app/",
+      "description": "Image compression and optimization tool",
+      "category": "utilities",
+      "tags": [
+        "images",
+        "compression",
+        "optimization",
+        "performance"
+      ],
+      "featured": true,
+      "icon": "https://squoosh.app/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "SVG Optimizer",
+      "url": "https://jakearchibald.github.io/svgomg/",
+      "description": "SVG optimization tool",
+      "category": "utilities",
+      "tags": [
+        "svg",
+        "optimization",
+        "graphics",
+        "compression"
+      ],
+      "featured": false,
+      "icon": "https://jakearchibald.github.io/svgomg/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/",
+      "description": "Free coding bootcamp with interactive lessons",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "tutorials",
+        "courses",
+        "free",
+        "coding"
+      ],
+      "featured": true,
+      "icon": "https://www.freecodecamp.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Codecademy",
+      "url": "https://www.codecademy.com/",
+      "description": "Interactive coding lessons and courses",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "courses",
+        "tutorials",
+        "interactive"
+      ],
+      "featured": true,
+      "icon": "https://www.codecademy.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "JavaScript.info",
+      "url": "https://javascript.info/",
+      "description": "Modern JavaScript tutorial from basics to advanced",
+      "category": "learning",
+      "tags": [
+        "javascript",
+        "tutorial",
+        "learning",
+        "reference"
+      ],
+      "featured": true,
+      "icon": "https://javascript.info/img/favicon/favicon.png",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "CSS-Tricks",
+      "url": "https://css-tricks.com/",
+      "description": "Web design and development blog focused on CSS",
+      "category": "learning",
+      "tags": [
+        "css",
+        "web-design",
+        "tutorials",
+        "articles"
+      ],
+      "featured": true,
+      "icon": "https://css-tricks.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/",
+      "description": "Web design and development articles and resources",
+      "category": "learning",
+      "tags": [
+        "web-design",
+        "articles",
+        "tutorials",
+        "ux",
+        "ui"
+      ],
+      "featured": false,
+      "icon": "https://www.smashingmagazine.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Coolors",
+      "url": "https://coolors.co/",
+      "description": "Color palette generator and inspiration",
+      "category": "design",
+      "tags": [
+        "color",
+        "palette",
+        "generator",
+        "design",
+        "ui"
+      ],
+      "featured": true,
+      "icon": "https://coolors.co/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Font Awesome",
+      "url": "https://fontawesome.com/",
+      "description": "Icon library and toolkit",
+      "category": "design",
+      "tags": [
+        "icons",
+        "font",
+        "ui",
+        "design"
+      ],
+      "featured": true,
+      "icon": "https://fontawesome.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Material Icons",
+      "url": "https://fonts.google.com/icons",
+      "description": "Google Material Design icon library",
+      "category": "design",
+      "tags": [
+        "icons",
+        "material-design",
+        "google",
+        "ui"
+      ],
+      "featured": false,
+      "icon": "https://fonts.google.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Heroicons",
+      "url": "https://heroicons.com/",
+      "description": "Beautiful hand-crafted SVG icons",
+      "category": "design",
+      "tags": [
+        "icons",
+        "svg",
+        "ui",
+        "design"
+      ],
+      "featured": false,
+      "icon": "https://heroicons.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Google Fonts",
+      "url": "https://fonts.google.com/",
+      "description": "Free web fonts library",
+      "category": "design",
+      "tags": [
+        "fonts",
+        "typography",
+        "web-fonts",
+        "design"
+      ],
+      "featured": true,
+      "icon": "https://fonts.google.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "RapidAPI",
+      "url": "https://rapidapi.com/",
+      "description": "API marketplace and testing platform",
+      "category": "apis",
+      "tags": [
+        "api",
+        "marketplace",
+        "testing",
+        "rest"
+      ],
+      "featured": true,
+      "icon": "https://rapidapi.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "JSONPlaceholder",
+      "url": "https://jsonplaceholder.typicode.com/",
+      "description": "Fake REST API for testing and prototyping",
+      "category": "apis",
+      "tags": [
+        "api",
+        "testing",
+        "mock",
+        "rest",
+        "json"
+      ],
+      "featured": true,
+      "icon": "https://jsonplaceholder.typicode.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Public APIs",
+      "url": "https://github.com/public-apis/public-apis",
+      "description": "Curated list of free APIs for software development",
+      "category": "apis",
+      "tags": [
+        "api",
+        "list",
+        "free",
+        "resources",
+        "github"
+      ],
+      "featured": true,
+      "icon": "https://github.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "HTTPie",
+      "url": "https://httpie.io/",
+      "description": "Command-line HTTP client for API testing",
+      "category": "apis",
+      "tags": [
+        "api",
+        "http",
+        "cli",
+        "testing",
+        "tools"
+      ],
+      "featured": false,
+      "icon": "https://httpie.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Reddit r/programming",
+      "url": "https://www.reddit.com/r/programming/",
+      "description": "Programming discussions and news",
+      "category": "community",
+      "tags": [
+        "reddit",
+        "discussion",
+        "news",
+        "programming"
+      ],
+      "featured": false,
+      "icon": "https://www.reddit.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "description": "Tech news and discussions",
+      "category": "community",
+      "tags": [
+        "news",
+        "tech",
+        "discussion",
+        "startups"
+      ],
+      "featured": true,
+      "icon": "https://news.ycombinator.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Discord Developer Communities",
+      "url": "https://discord.com/",
+      "description": "Chat platform with developer communities",
+      "category": "community",
+      "tags": [
+        "chat",
+        "community",
+        "discussion",
+        "collaboration"
+      ],
+      "featured": false,
+      "icon": "https://discord.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "GitHub Discussions",
+      "url": "https://github.com/",
+      "description": "Community discussions on GitHub repositories",
+      "category": "community",
+      "tags": [
+        "github",
+        "discussion",
+        "community",
+        "collaboration"
+      ],
+      "featured": false,
+      "icon": "https://github.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Google Lighthouse",
+      "url": "https://developers.google.com/web/tools/lighthouse",
+      "description": "Automated tool for improving web page quality",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "seo",
+        "accessibility",
+        "testing",
+        "audit"
+      ],
+      "featured": true,
+      "icon": "https://developers.google.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "WebPageTest",
+      "url": "https://www.webpagetest.org/",
+      "description": "Website performance testing tool",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "testing",
+        "speed",
+        "optimization"
+      ],
+      "featured": true,
+      "icon": "https://www.webpagetest.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "GTmetrix",
+      "url": "https://gtmetrix.com/",
+      "description": "Website speed and performance testing",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "speed",
+        "testing",
+        "optimization"
+      ],
+      "featured": false,
+      "icon": "https://gtmetrix.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "PageSpeed Insights",
+      "url": "https://pagespeed.web.dev/",
+      "description": "Google's page speed analysis tool",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "speed",
+        "google",
+        "testing"
+      ],
+      "featured": true,
+      "icon": "https://pagespeed.web.dev/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Bundlephobia",
+      "url": "https://bundlephobia.com/",
+      "description": "Find the cost of adding npm packages",
+      "category": "performance",
+      "tags": [
+        "npm",
+        "bundles",
+        "size",
+        "performance",
+        "packages"
+      ],
+      "featured": false,
+      "icon": "https://bundlephobia.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "OWASP",
+      "url": "https://owasp.org/",
+      "description": "Open Web Application Security Project",
+      "category": "security",
+      "tags": [
+        "security",
+        "web",
+        "vulnerabilities",
+        "best-practices",
+        "cyber security"
+      ],
+      "featured": true,
+      "icon": "https://owasp.org/favicon.ico",
+      "provider": "OWASP",
+      "rating": null
+    },
+    {
+      "title": "Have I Been Pwned",
+      "url": "https://haveibeenpwned.com/",
+      "description": "Check if your email has been compromised in a data breach",
+      "category": "security",
+      "tags": [
+        "security",
+        "privacy",
+        "data-breach",
+        "email"
+      ],
+      "featured": true,
+      "icon": "https://haveibeenpwned.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "SSL Labs",
+      "url": "https://www.ssllabs.com/ssltest/",
+      "description": "SSL server testing and analysis",
+      "category": "security",
+      "tags": [
+        "ssl",
+        "tls",
+        "security",
+        "certificates",
+        "testing"
+      ],
+      "featured": false,
+      "icon": "https://www.ssllabs.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "JSON Formatter",
+      "url": "https://jsonformatter.org/",
+      "description": "JSON formatter and validator",
+      "category": "utilities",
+      "tags": [
+        "json",
+        "formatter",
+        "validator",
+        "beautifier"
+      ],
+      "featured": false,
+      "icon": "https://jsonformatter.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Carbon",
+      "url": "https://carbon.now.sh/",
+      "description": "Create and share beautiful images of your source code",
+      "category": "utilities",
+      "tags": [
+        "code",
+        "images",
+        "screenshots",
+        "sharing"
+      ],
+      "featured": false,
+      "icon": "https://carbon.now.sh/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Frontend Masters",
+      "url": "https://frontendmasters.com/",
+      "description": "Advanced front-end development courses",
+      "category": "learning",
+      "tags": [
+        "courses",
+        "frontend",
+        "advanced",
+        "video"
+      ],
+      "featured": false,
+      "icon": "https://frontendmasters.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "UI Movement",
+      "url": "https://uimovement.com/",
+      "description": "UI design inspiration newsletter",
+      "category": "design",
+      "tags": [
+        "ui",
+        "inspiration",
+        "design",
+        "newsletter"
+      ],
+      "featured": false,
+      "icon": "https://uimovement.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Flaticon",
+      "url": "https://www.flaticon.com/",
+      "description": "Free icon database",
+      "category": "design",
+      "tags": [
+        "icons",
+        "free",
+        "database",
+        "ui"
+      ],
+      "featured": false,
+      "icon": "https://www.flaticon.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/",
+      "description": "Discover new products and tools",
+      "category": "community",
+      "tags": [
+        "products",
+        "tools",
+        "discovery",
+        "startups"
+      ],
+      "featured": false,
+      "icon": "https://www.producthunt.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Indie Hackers",
+      "url": "https://www.indiehackers.com/",
+      "description": "Community of independent developers and entrepreneurs",
+      "category": "community",
+      "tags": [
+        "entrepreneurship",
+        "startups",
+        "community",
+        "business"
+      ],
+      "featured": false,
+      "icon": "https://www.indiehackers.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Web.dev",
+      "url": "https://web.dev/",
+      "description": "Google's web development best practices and guides",
+      "category": "performance",
+      "tags": [
+        "web",
+        "performance",
+        "best-practices",
+        "google"
+      ],
+      "featured": true,
+      "icon": "https://web.dev/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Chrome DevTools",
+      "url": "https://developer.chrome.com/docs/devtools/",
+      "description": "Chrome browser developer tools documentation",
+      "category": "performance",
+      "tags": [
+        "devtools",
+        "debugging",
+        "chrome",
+        "browser"
+      ],
+      "featured": true,
+      "icon": "https://developer.chrome.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Snyk",
+      "url": "https://snyk.io/",
+      "description": "Security platform for finding and fixing vulnerabilities",
+      "category": "security",
+      "tags": [
+        "security",
+        "vulnerabilities",
+        "dependencies",
+        "scanning"
+      ],
+      "featured": false,
+      "icon": "https://snyk.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "npm audit",
+      "url": "https://docs.npmjs.com/cli/v8/commands/npm-audit",
+      "description": "npm package security audit tool",
+      "category": "security",
+      "tags": [
+        "security",
+        "npm",
+        "audit",
+        "vulnerabilities"
+      ],
+      "featured": false,
+      "icon": "https://www.npmjs.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Testing Library",
+      "url": "https://testing-library.com/",
+      "description": "Simple and complete testing utilities",
+      "category": "testing",
+      "tags": [
+        "testing",
+        "utilities",
+        "react",
+        "dom"
+      ],
+      "featured": false,
+      "icon": "https://testing-library.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Storybook",
+      "url": "https://storybook.js.org/",
+      "description": "Tool for building UI components in isolation",
+      "category": "testing",
+      "tags": [
+        "testing",
+        "components",
+        "ui",
+        "development"
+      ],
+      "featured": false,
+      "icon": "https://storybook.js.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Linear",
+      "url": "https://linear.app/",
+      "description": "Issue tracking and project management for software teams",
+      "category": "tools",
+      "tags": [
+        "project-management",
+        "issues",
+        "tracking",
+        "productivity"
+      ],
+      "featured": false,
+      "icon": "https://linear.app/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Minify",
+      "url": "https://www.minifier.org/",
+      "description": "Minify JavaScript and CSS code",
+      "category": "utilities",
+      "tags": [
+        "minify",
+        "javascript",
+        "css",
+        "optimization"
+      ],
+      "featured": false,
+      "icon": "https://www.minifier.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Diff Checker",
+      "url": "https://www.diffchecker.com/",
+      "description": "Compare text differences between two files",
+      "category": "utilities",
+      "tags": [
+        "diff",
+        "compare",
+        "text",
+        "files"
+      ],
+      "featured": false,
+      "icon": "https://www.diffchecker.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "QR Code Generator",
+      "url": "https://www.qr-code-generator.com/",
+      "description": "Free QR code generator and creator",
+      "category": "utilities",
+      "tags": [
+        "qr-code",
+        "generator",
+        "barcode",
+        "tools"
+      ],
+      "featured": false,
+      "icon": "https://www.qr-code-generator.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Khan Academy Computing",
+      "url": "https://www.khanacademy.org/computing/computer-programming",
+      "description": "Free programming courses and tutorials",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "courses",
+        "free",
+        "programming"
+      ],
+      "featured": false,
+      "icon": "https://www.khanacademy.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "The Odin Project",
+      "url": "https://www.theodinproject.com/",
+      "description": "Free full-stack web development curriculum",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "curriculum",
+        "free",
+        "full-stack"
+      ],
+      "featured": true,
+      "icon": "https://www.theodinproject.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "App Academy Open",
+      "url": "https://www.appacademy.io/course/app-academy-open",
+      "description": "Free full-stack web development bootcamp",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "bootcamp",
+        "free",
+        "full-stack"
+      ],
+      "featured": false,
+      "icon": "https://www.appacademy.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Egghead",
+      "url": "https://egghead.io/",
+      "description": "Bite-sized video courses for web developers",
+      "category": "learning",
+      "tags": [
+        "courses",
+        "video",
+        "tutorials",
+        "learning"
+      ],
+      "featured": false,
+      "icon": "https://egghead.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Scrimba",
+      "url": "https://scrimba.com/",
+      "description": "Interactive coding screencasts",
+      "category": "learning",
+      "tags": [
+        "learning",
+        "video",
+        "interactive",
+        "courses"
+      ],
+      "featured": false,
+      "icon": "https://scrimba.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Material Design",
+      "url": "https://material.io/design",
+      "description": "Google's Material Design guidelines and resources",
+      "category": "design",
+      "tags": [
+        "design",
+        "material",
+        "ui",
+        "guidelines",
+        "google"
+      ],
+      "featured": true,
+      "icon": "https://material.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "UI Design Daily",
+      "url": "https://www.uidesigndaily.com/",
+      "description": "Daily UI design inspiration and resources",
+      "category": "design",
+      "tags": [
+        "ui",
+        "design",
+        "inspiration",
+        "daily"
+      ],
+      "featured": false,
+      "icon": "https://www.uidesigndaily.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Awwwards",
+      "url": "https://www.awwwards.com/",
+      "description": "Awards for design, creativity and innovation on the internet",
+      "category": "design",
+      "tags": [
+        "design",
+        "awards",
+        "inspiration",
+        "web-design"
+      ],
+      "featured": false,
+      "icon": "https://www.awwwards.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "SiteInspire",
+      "url": "https://www.siteinspire.com/",
+      "description": "Web design inspiration showcase",
+      "category": "design",
+      "tags": [
+        "design",
+        "inspiration",
+        "web-design",
+        "showcase"
+      ],
+      "featured": false,
+      "icon": "https://www.siteinspire.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "REST Countries API",
+      "url": "https://restcountries.com/",
+      "description": "Free REST API for country information",
+      "category": "apis",
+      "tags": [
+        "api",
+        "rest",
+        "countries",
+        "free",
+        "data"
+      ],
+      "featured": false,
+      "icon": "https://restcountries.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "OpenWeatherMap API",
+      "url": "https://openweathermap.org/api",
+      "description": "Weather data API",
+      "category": "apis",
+      "tags": [
+        "api",
+        "weather",
+        "data",
+        "free"
+      ],
+      "featured": false,
+      "icon": "https://openweathermap.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "r/webdev",
+      "url": "https://www.reddit.com/r/webdev/",
+      "description": "Web development community on Reddit",
+      "category": "community",
+      "tags": [
+        "reddit",
+        "webdev",
+        "community",
+        "discussion"
+      ],
+      "featured": false,
+      "icon": "https://www.reddit.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "r/learnprogramming",
+      "url": "https://www.reddit.com/r/learnprogramming/",
+      "description": "Community for learning programming",
+      "category": "community",
+      "tags": [
+        "reddit",
+        "learning",
+        "programming",
+        "community"
+      ],
+      "featured": false,
+      "icon": "https://www.reddit.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "r/javascript",
+      "url": "https://www.reddit.com/r/javascript/",
+      "description": "JavaScript news and discussions",
+      "category": "community",
+      "tags": [
+        "reddit",
+        "javascript",
+        "news",
+        "discussion"
+      ],
+      "featured": false,
+      "icon": "https://www.reddit.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Lobsters",
+      "url": "https://lobste.rs/",
+      "description": "Technology link aggregator and discussion",
+      "category": "community",
+      "tags": [
+        "news",
+        "tech",
+        "discussion",
+        "aggregator"
+      ],
+      "featured": false,
+      "icon": "https://lobste.rs/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Calibre",
+      "url": "https://calibreapp.com/",
+      "description": "Website performance monitoring and optimization",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "monitoring",
+        "optimization",
+        "speed"
+      ],
+      "featured": false,
+      "icon": "https://calibreapp.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Web Vitals",
+      "url": "https://web.dev/vitals/",
+      "description": "Essential metrics for a healthy site",
+      "category": "performance",
+      "tags": [
+        "performance",
+        "metrics",
+        "web-vitals",
+        "optimization"
+      ],
+      "featured": true,
+      "icon": "https://web.dev/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "OWASP Top 10",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "description": "Top 10 most critical web application security risks",
+      "category": "security",
+      "tags": [
+        "security",
+        "owasp",
+        "vulnerabilities",
+        "best-practices"
+      ],
+      "featured": true,
+      "icon": "https://owasp.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Security Headers",
+      "url": "https://securityheaders.com/",
+      "description": "Analyze your website's security headers",
+      "category": "security",
+      "tags": [
+        "security",
+        "headers",
+        "analysis",
+        "testing"
+      ],
+      "featured": false,
+      "icon": "https://securityheaders.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "VirusTotal",
+      "url": "https://www.virustotal.com/",
+      "description": "Analyze suspicious files and URLs",
+      "category": "security",
+      "tags": [
+        "security",
+        "malware",
+        "scanning",
+        "analysis"
+      ],
+      "featured": false,
+      "icon": "https://www.virustotal.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Karma",
+      "url": "https://karma-runner.github.io/",
+      "description": "Spectacular test runner for JavaScript",
+      "category": "testing",
+      "tags": [
+        "testing",
+        "karma",
+        "test-runner",
+        "javascript"
+      ],
+      "featured": false,
+      "icon": "https://karma-runner.github.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "CyberChef",
+      "url": "https://gchq.github.io/CyberChef/",
+      "description": "All-in-one tool for encoding, decoding, encryption, compression, and data analysis",
+      "category": "security",
+      "tags": [
+        "encoding",
+        "crypto",
+        "forensics",
+        "analysis"
+      ],
+      "featured": true,
+      "icon": "https://gchq.github.io/CyberChef/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "JWT Decoder",
+      "url": "https://jwt.ms/",
+      "description": "Decode and inspect JSON Web Tokens",
+      "category": "security",
+      "tags": [
+        "jwt",
+        "auth",
+        "tokens"
+      ],
+      "featured": false,
+      "icon": "https://jwt.ms/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Burp Suite Community",
+      "url": "https://portswigger.net/burp/communitydownload",
+      "description": "Web vulnerability scanner and proxy",
+      "category": "security",
+      "tags": [
+        "pentesting",
+        "http",
+        "proxy"
+      ],
+      "featured": true,
+      "icon": "https://portswigger.net/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Amass",
+      "url": "https://amass-project.github.io/",
+      "description": "Attack surface mapping and asset discovery",
+      "category": "security",
+      "tags": [
+        "recon",
+        "osint",
+        "networking"
+      ],
+      "featured": false,
+      "icon": "https://amass-project.github.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Shodan",
+      "url": "https://www.shodan.io/",
+      "description": "Search engine for internet-connected devices",
+      "category": "security",
+      "tags": [
+        "osint",
+        "iot",
+        "search"
+      ],
+      "featured": true,
+      "icon": "https://www.shodan.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Censys",
+      "url": "https://search.censys.io/",
+      "description": "Search engine for hosts, certificates, and services",
+      "category": "security",
+      "tags": [
+        "certificates",
+        "osint",
+        "network"
+      ],
+      "featured": false,
+      "icon": "https://censys.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "VirusShare",
+      "url": "https://virusshare.com/",
+      "description": "Malware sample repository",
+      "category": "security",
+      "tags": [
+        "malware",
+        "analysis",
+        "research"
+      ],
+      "featured": false,
+      "icon": "https://virusshare.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Any.Run",
+      "url": "https://any.run/",
+      "description": "Interactive malware sandbox",
+      "category": "security",
+      "tags": [
+        "malware",
+        "sandbox",
+        "analysis"
+      ],
+      "featured": true,
+      "icon": "https://any.run/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "CrackStation",
+      "url": "https://crackstation.net/",
+      "description": "Hash cracking and lookup tool",
+      "category": "security",
+      "tags": [
+        "hash",
+        "passwords",
+        "crypto"
+      ],
+      "featured": false,
+      "icon": "https://crackstation.net/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Hashcat",
+      "url": "https://hashcat.net/hashcat/",
+      "description": "Advanced password recovery tool",
+      "category": "security",
+      "tags": [
+        "hash",
+        "passwords",
+        "gpu"
+      ],
+      "featured": false,
+      "icon": "https://hashcat.net/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "ngrok",
+      "url": "https://ngrok.com/",
+      "description": "Expose local servers securely to the internet",
+      "category": "tools",
+      "tags": [
+        "tunneling",
+        "http",
+        "dev"
+      ],
+      "featured": true,
+      "icon": "https://ngrok.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "LocalTunnel",
+      "url": "https://theboroer.github.io/localtunnel-www/",
+      "description": "Open local servers to the public internet",
+      "category": "tools",
+      "tags": [
+        "tunnel",
+        "dev",
+        "http"
+      ],
+      "featured": false,
+      "icon": "https://theboroer.github.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Requestly",
+      "url": "https://requestly.io/",
+      "description": "Intercept and modify HTTP requests",
+      "category": "tools",
+      "tags": [
+        "http",
+        "debugging",
+        "proxy"
+      ],
+      "featured": false,
+      "icon": "https://requestly.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "HTTP Toolkit",
+      "url": "https://httptoolkit.com/",
+      "description": "Intercept and inspect HTTP traffic",
+      "category": "tools",
+      "tags": [
+        "http",
+        "networking",
+        "debugging"
+      ],
+      "featured": false,
+      "icon": "https://httptoolkit.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Beeceptor",
+      "url": "https://beeceptor.com/",
+      "description": "Mock APIs and inspect HTTP requests",
+      "category": "apis",
+      "tags": [
+        "mock",
+        "api",
+        "http"
+      ],
+      "featured": false,
+      "icon": "https://beeceptor.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Mockoon",
+      "url": "https://mockoon.com/",
+      "description": "Local mock API server",
+      "category": "apis",
+      "tags": [
+        "mock",
+        "api",
+        "local"
+      ],
+      "featured": false,
+      "icon": "https://mockoon.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Swagger Editor",
+      "url": "https://editor.swagger.io/",
+      "description": "Design and test OpenAPI specifications",
+      "category": "apis",
+      "tags": [
+        "openapi",
+        "api",
+        "design"
+      ],
+      "featured": false,
+      "icon": "https://swagger.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "OpenAPI Generator",
+      "url": "https://openapi-generator.tech/",
+      "description": "Generate clients and servers from OpenAPI specs",
+      "category": "apis",
+      "tags": [
+        "openapi",
+        "codegen",
+        "api"
+      ],
+      "featured": false,
+      "icon": "https://openapi-generator.tech/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Stoplight",
+      "url": "https://stoplight.io/",
+      "description": "API design and governance platform",
+      "category": "apis",
+      "tags": [
+        "api",
+        "design",
+        "collaboration"
+      ],
+      "featured": false,
+      "icon": "https://stoplight.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "CodeMirror Playground",
+      "url": "https://codemirror.net/demo/",
+      "description": "In-browser code editor playground",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "playground",
+        "code"
+      ],
+      "featured": false,
+      "icon": "https://codemirror.net/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Monaco Editor Playground",
+      "url": "https://microsoft.github.io/monaco-editor/playground.html",
+      "description": "VS Code editor engine playground",
+      "category": "tools",
+      "tags": [
+        "editor",
+        "vscode",
+        "playground"
+      ],
+      "featured": false,
+      "icon": "https://microsoft.github.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "AST Explorer",
+      "url": "https://astexplorer.net/",
+      "description": "Explore abstract syntax trees for many languages",
+      "category": "tools",
+      "tags": [
+        "ast",
+        "parsing",
+        "analysis"
+      ],
+      "featured": true,
+      "icon": "https://astexplorer.net/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "JSON to CSV",
+      "url": "https://json-csv.com/",
+      "description": "Convert JSON data to CSV",
+      "category": "utilities",
+      "tags": [
+        "json",
+        "csv",
+        "converter"
+      ],
+      "featured": false,
+      "icon": "https://json-csv.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "CSVJSON",
+      "url": "https://csvjson.com/",
+      "description": "Convert CSV, JSON, TSV formats",
+      "category": "utilities",
+      "tags": [
+        "csv",
+        "json",
+        "converter"
+      ],
+      "featured": false,
+      "icon": "https://csvjson.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "SQL Formatter",
+      "url": "https://sqlformat.org/",
+      "description": "Format and beautify SQL queries",
+      "category": "databases",
+      "tags": [
+        "sql",
+        "formatter",
+        "queries"
+      ],
+      "featured": false,
+      "icon": "https://sqlformat.org/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Explain Analyze",
+      "url": "https://explain.depesz.com/",
+      "description": "Visualize PostgreSQL query plans",
+      "category": "databases",
+      "tags": [
+        "postgres",
+        "query",
+        "performance"
+      ],
+      "featured": false,
+      "icon": "https://explain.depesz.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Redash",
+      "url": "https://redash.io/",
+      "description": "Query and visualize data sources",
+      "category": "databases",
+      "tags": [
+        "sql",
+        "analytics",
+        "dashboards"
+      ],
+      "featured": false,
+      "icon": "https://redash.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Cronitor",
+      "url": "https://cronitor.io/",
+      "description": "Cron job monitoring and alerting",
+      "category": "devops",
+      "tags": [
+        "cron",
+        "monitoring",
+        "jobs"
+      ],
+      "featured": false,
+      "icon": "https://cronitor.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Healthchecks",
+      "url": "https://healthchecks.io/",
+      "description": "Monitor cron jobs and background tasks",
+      "category": "devops",
+      "tags": [
+        "cron",
+        "monitoring",
+        "alerts"
+      ],
+      "featured": false,
+      "icon": "https://healthchecks.io/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Draw.io",
+      "url": "https://app.diagrams.net/",
+      "description": "Create architecture and flow diagrams",
+      "category": "tools",
+      "tags": [
+        "diagrams",
+        "architecture",
+        "visual"
+      ],
+      "featured": true,
+      "icon": "https://app.diagrams.net/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "description": "Hand-drawn style diagrams",
+      "category": "tools",
+      "tags": [
+        "diagrams",
+        "whiteboard",
+        "design"
+      ],
+      "featured": true,
+      "icon": "https://excalidraw.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Code Time Analyzer",
+      "url": "https://wakatime.com/",
+      "description": "Track time spent coding",
+      "category": "productivity",
+      "tags": [
+        "time-tracking",
+        "metrics",
+        "coding"
+      ],
+      "featured": false,
+      "icon": "https://wakatime.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Overleaf",
+      "url": "https://www.overleaf.com/",
+      "description": "Collaborative LaTeX editor",
+      "category": "tools",
+      "tags": [
+        "latex",
+        "editor",
+        "collaboration"
+      ],
+      "featured": false,
+      "icon": "https://www.overleaf.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Glitch",
+      "url": "https://glitch.com/",
+      "description": "Build and deploy small web apps quickly",
+      "category": "tools",
+      "tags": [
+        "hosting",
+        "node",
+        "web"
+      ],
+      "featured": false,
+      "icon": "https://glitch.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Railway",
+      "url": "https://railway.app/",
+      "description": "Deploy databases and services easily",
+      "category": "devops",
+      "tags": [
+        "deployment",
+        "cloud",
+        "hosting"
+      ],
+      "featured": false,
+      "icon": "https://railway.app/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "Render",
+      "url": "https://render.com/",
+      "description": "Cloud hosting for web services",
+      "category": "devops",
+      "tags": [
+        "hosting",
+        "cloud",
+        "deploy"
+      ],
+      "featured": false,
+      "icon": "https://render.com/favicon.ico",
+      "provider": "",
+      "rating": null
+    },
+    {
+      "title": "AZ-104 Microsoft Azure Administrator Certification",
+      "url": "https://www.cybrary.it/course/az-104-microsoft-azure-administrator",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Azure"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Cybrary",
+      "rating": null
+    },
+    {
+      "title": "Agile Methodology",
+      "url": "https://www.guru99.com/agile-testing-course.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "agile",
+        "testing"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Agile Methodology: A beginners guide to agile method and SCRUM",
+      "url": "https://www.softwaretestinghelp.com/agile-scrum-methodology-for-development-and-testing/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "agile",
+        "SCRUM"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "softwaretestinghelp",
+      "rating": null
+    },
+    {
+      "title": "Agile Project Management",
+      "url": "https://www.coursera.org/learn/agile-project-management",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "project management",
+        "agile"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Google",
+      "rating": null
+    },
+    {
+      "title": "Apache Kafka Quick Start",
+      "url": "https://kafka.apache.org/quickstart",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Apache Kafka"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Apache Kafka",
+      "rating": null
+    },
+    {
+      "title": "Applied Data Science Lab",
+      "url": "https://www.wqu.edu/adsl",
+      "description": "Their course was very comprehensive and covered almost everything a data scientist should know. This course is a great choice for any beginner out there.",
+      "category": "learning",
+      "tags": [
+        "data science",
+        "machine learning"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "World Quant University",
+      "rating": 5
+    },
+    {
+      "title": "Artificial Intelligence roadmap",
+      "url": "https://i.am.ai/roadmap/#note",
+      "description": "Out of all the roadmaps out there this one really hits the nail. It contains tangible instructions on \"what to do\" unlike several other roadmaps which only state the obvious.\nI personally found it likable that they explicitly said that jumping directly to deep learning is a \"no go\".",
+      "category": "learning",
+      "tags": [
+        "roadmaps",
+        "artificial intelligence",
+        "machine learning",
+        "deep learning"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "i.am.ai",
+      "rating": 5
+    },
+    {
+      "title": "Awesome Ricing",
+      "url": "https://github.com/fosslife/awesome-ricing",
+      "description": "An extensive guide to ricing your linux distro. It seems to have everything wms, cli tools etc. It actually is an awesome repo.",
+      "category": "learning",
+      "tags": [
+        "rice"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "fosslife",
+      "rating": 5
+    },
+    {
+      "title": "Basics of BrainF*ck",
+      "url": "https://gist.github.com/roachhd/dce54bec8ba55fb17d3a",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "BrainF*ck",
+        "programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Katie",
+      "rating": null
+    },
+    {
+      "title": "Books By Agiliq",
+      "url": "https://books.agiliq.com/en/latest/README.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "python",
+        "django"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Agiliq",
+      "rating": 5
+    },
+    {
+      "title": "Build a Free Website with Wordpress",
+      "url": "https://www.coursera.org/projects/build-free-website-wordpress",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "wordpress",
+        "website design"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Coursera",
+      "rating": null
+    },
+    {
+      "title": "Building LLMs from the Ground Up",
+      "url": "https://magazine.sebastianraschka.com/p/building-llms-from-the-ground-up",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "AI",
+        "LLM",
+        "NLP",
+        "GPT"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Ahead Of AI",
+      "rating": null
+    },
+    {
+      "title": "Business Analytics with Excel: Elementary to Advanced",
+      "url": "https://www.coursera.org/learn/business-analytics-excel",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Business Analytics",
+        "Excel",
+        "Linear Programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "John Hopkins University",
+      "rating": null
+    },
+    {
+      "title": "CCNA Basics",
+      "url": "https://www.guru99.com/introduction-ccna.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Networking"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "CURL Cook Book",
+      "url": "https://catonmat.net/cookbooks/curl",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "CURL"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Catonmat",
+      "rating": null
+    },
+    {
+      "title": "Caching in Django with REDIS",
+      "url": "https://realpython.com/caching-in-django-with-redis/",
+      "description": "It explains everything there is to know about caching in django. Pretty much simplified to newbies to understand",
+      "category": "learning",
+      "tags": [
+        "redis",
+        "django",
+        "cache"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "RealPython",
+      "rating": 5
+    },
+    {
+      "title": "Celery + Redis + Django",
+      "url": "https://www.codingforentrepreneurs.com/blog/celery-redis-django/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "celery",
+        "redis",
+        "cache",
+        "django",
+        "cron"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "codingforentrepreneurs",
+      "rating": null
+    },
+    {
+      "title": "Cloudflare Learning Center",
+      "url": "https://www.cloudflare.com/learning/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "cloudflare",
+        "networking",
+        "security"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Cloudflare",
+      "rating": 5
+    },
+    {
+      "title": "Code Project",
+      "url": "https://www.codeproject.com",
+      "description": "This is a site where developers from around the world share their knowledge. Their are a plethora of resources/topics/code you can find here.",
+      "category": "learning",
+      "tags": [
+        "tutorials",
+        "knowledgebase"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "codeproject.com",
+      "rating": 5
+    },
+    {
+      "title": "Collection of Books By Al Sweigart",
+      "url": "https://inventwithpython.com/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "programming",
+        "python"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "inventwithpython",
+      "rating": null
+    },
+    {
+      "title": "CompTIA A+ Full Video Course for Beginners",
+      "url": "https://www.youtube.com/watch?v=Yi3L8ZCX8zc&list=PLc6LqxQFwub_rksUc1FnWB9rwO2rf7qoz",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "networking"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "BurningIceTech",
+      "rating": null
+    },
+    {
+      "title": "Crackmes",
+      "url": "https://crackmes.one",
+      "description": "A go-to place for software cracking practice",
+      "category": "learning",
+      "tags": [
+        "crack",
+        "reverse engineering"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "crackmes",
+      "rating": 5
+    },
+    {
+      "title": "Crow's Nest",
+      "url": "https://www.crow.rip/crows-nest",
+      "description": "Recommended to me by one hellova hacker friend of mine. She disappeared in the internet cables without a trace.",
+      "category": "learning",
+      "tags": [
+        "malware development",
+        "exploitation",
+        "black hat"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "cr-0w",
+      "rating": 5
+    },
+    {
+      "title": "Cybersecurity Tutorial",
+      "url": "https://www.golinuxcloud.com/kali-linux-bootable-usb/",
+      "description": "This is a text-based extensive walkthrough for different cybersecurity concepts.",
+      "category": "learning",
+      "tags": [
+        "cybersecurity"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "golinuxcloud",
+      "rating": null
+    },
+    {
+      "title": "Database Engineering Complete Course",
+      "url": "https://www.youtube.com/watch?v=iwRneX7GIGI",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "database",
+        "SQL"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Nerd's Lesson",
+      "rating": null
+    },
+    {
+      "title": "Deep Dive Into Modern Web Development",
+      "url": "https://fullstackopen.com/en/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "web dev",
+        "react.js",
+        "express.js",
+        "node.js",
+        "testing",
+        "graphQL",
+        "CI/CD",
+        "SQL"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "fullstackopen",
+      "rating": null
+    },
+    {
+      "title": "Design Patterns Video Tutorial",
+      "url": "https://www.youtube.com/playlist?list=PLF206E906175C7E07",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "design patterns"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Derek Banas",
+      "rating": null
+    },
+    {
+      "title": "Developer Roadmap",
+      "url": "https://roadmap.sh/",
+      "description": "This is the only stop for you if you are looking forward to a guided learning experience, You can find several roadmaps here, backend, frontend, devops, blockchain you name it. More are coming soon.",
+      "category": "learning",
+      "tags": [
+        "guidelines",
+        "roadmaps"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "roadmap",
+      "rating": 5
+    },
+    {
+      "title": "Django For Everybody",
+      "url": "https://www.dj4e.com/",
+      "description": "He starts with the very basics and then dives deep into Django. Awesome choice for beginners, but I would recommend that you understand python and a few things about backend frameworks before taking this course.",
+      "category": "learning",
+      "tags": [
+        "django",
+        "python"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Dr. Chuck",
+      "rating": 5
+    },
+    {
+      "title": "Docker Hands-on Labs",
+      "url": "https://hackmd.io/@pmanzoni/Bremen2020/%2F%40pmanzoni%2FBJcpeAcML",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "docker",
+        "networking",
+        "threading"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Peitro Manzoni",
+      "rating": null
+    },
+    {
+      "title": "Docker Networking Hands-on Lab",
+      "url": "https://training.play-with-docker.com/docker-networking-hol/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "docker",
+        "networking"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Docker",
+      "rating": 5
+    },
+    {
+      "title": "Ethical Hacking Tutorial",
+      "url": "https://www.guru99.com/ethical-hacking-tutorials.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "hacking"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Foundational C# Course with Microsoft",
+      "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "C#",
+        "programming"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "FreeCodeCamp",
+      "rating": 5
+    },
+    {
+      "title": "Functional Programming Slides",
+      "url": "https://tony-scialo.github.io/slides-functional-programing/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "functional programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "tony-scialo",
+      "rating": null
+    },
+    {
+      "title": "Getting Started with picoCTF",
+      "url": "https://picoctf.org/get_started.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "cyber security"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "picoCTF",
+      "rating": null
+    },
+    {
+      "title": "Git Book",
+      "url": "https://www.git-scm.com/book/en/v2",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "git"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Git",
+      "rating": null
+    },
+    {
+      "title": "Git Conventional Commits",
+      "url": "https://www.conventionalcommits.org/en/v1.0.0/",
+      "description": "This document defines some standards for writing your commit messages. It covers almost all aspects and scopes of what a commit message should contain.",
+      "category": "learning",
+      "tags": [
+        "git"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "conventional-commits",
+      "rating": 5
+    },
+    {
+      "title": "How To Do In Java",
+      "url": "https://howtodoinjava.com/",
+      "description": "It contains tutorials on java and its related technologies like Spring, Spring Boot, JUnit, Hibernate and also Interview preparation.",
+      "category": "learning",
+      "tags": [
+        "java",
+        "tutorials",
+        "spring",
+        "springboot",
+        "JUnit",
+        "Hibernate",
+        "interview"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "howtodoinjava.com",
+      "rating": null
+    },
+    {
+      "title": "How to get started with Milvus",
+      "url": "https://milvus.io/blog/how-to-get-started-with-milvus.md",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Vector Database"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Milvus",
+      "rating": null
+    },
+    {
+      "title": "IBM Trainin Center",
+      "url": "https://www.ibm.com/training/",
+      "description": "The cover a wide variety of topics including IT infrastructure, Automation, cloud, BI, AI, Asset Management, Supply chain, Security etc. A good place to learn a lot of things",
+      "category": "learning",
+      "tags": [
+        "Learning Platform"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "IBM",
+      "rating": 4
+    },
+    {
+      "title": "Introduction to Statistics",
+      "url": "https://www.coursera.org/learn/stanford-statistics",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "statistics"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Stanford",
+      "rating": null
+    },
+    {
+      "title": "JIRA Tutorial for beginners",
+      "url": "https://www.guru99.com/jira-tutorial-a-complete-guide-for-beginners.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "JIRA"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Jenkins Basics Tutorial",
+      "url": "https://www.guru99.com/jenkins-tutorial.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "jenkins"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "JetBrains Academy",
+      "url": "https://www.jetbrains.com/academy/#learn",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "programming",
+        "machine learning",
+        "game dev",
+        "data science",
+        "web dev",
+        "backend"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "JetBrains",
+      "rating": 5
+    },
+    {
+      "title": "Learn Assembly The Hard Way",
+      "url": "https://github.com/MahadMuhammad/Learn-Assembly-The-Hard-Way",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "assembly",
+        "low-level"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "MahadMuhammad",
+      "rating": null
+    },
+    {
+      "title": "Learn MongoDB",
+      "url": "https://learn.mongodb.com/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "mongoDB",
+        "NoSQL",
+        "database"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "MongoDB",
+      "rating": 5
+    },
+    {
+      "title": "Learn Python",
+      "url": "https://www.learnpython.org",
+      "description": "It is not only for learning python, but includes tutorials on several other languages as well.\nThink of it as a w3schools alternative.",
+      "category": "learning",
+      "tags": [
+        "languages",
+        "tutorials"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "ronreiter",
+      "rating": null
+    },
+    {
+      "title": "Learn Spring Boot",
+      "url": "https://www.baeldung.com/spring-boot",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "springboot",
+        "backend"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Baeldung",
+      "rating": null
+    },
+    {
+      "title": "Learn Three.js By Building 5 Projects",
+      "url": "https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "three.js"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "FreeCodeCamp",
+      "rating": null
+    },
+    {
+      "title": "Libhunt",
+      "url": "https://www.libhunt.com/",
+      "description": "A library for projects, Q/A, snippets and all sorts of cranky shenanigans. A treasurechest of code.",
+      "category": "learning",
+      "tags": [
+        "code",
+        "projects",
+        "newsfeed"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "libhunt.com",
+      "rating": 5
+    },
+    {
+      "title": "Linux Guide",
+      "url": "https://www.baeldung.com/linux/",
+      "description": "It contains information about linux OS and how to configure and modify it as well as how to manage it's resources",
+      "category": "learning",
+      "tags": [
+        "linux",
+        "administration",
+        "scripting"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Baeldung",
+      "rating": null
+    },
+    {
+      "title": "List of Free Learning Resources In Many Languages",
+      "url": "https://github.com/EbookFoundation/free-programming-books",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "computer science",
+        "software development"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "EbookFoundation",
+      "rating": null
+    },
+    {
+      "title": "Machine Learning Notes",
+      "url": "https://github.com/kassi-bertrand/machine-learning-notes/tree/main",
+      "description": "A very detailed and organized compilation of machine learning notes. This includes topics like MLP,CNN,RNN, the usaeg of PyTorch and Scikit-learn etc. All of the topics discussed come with a set of Jupyter Notebooks. Someone really put a lot of effort in this repo.",
+      "category": "learning",
+      "tags": [
+        "AI",
+        "ML",
+        "MLP",
+        "Data Science"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "kassi-bertrand",
+      "rating": 5
+    },
+    {
+      "title": "MalAPI",
+      "url": "https://malapi.io",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "malware developement"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "mrd0x",
+      "rating": null
+    },
+    {
+      "title": "NLP: Zero To Hero",
+      "url": "https://github.com/JUSTSUJAY/nlp-zero-to-hero/tree/main",
+      "description": "This is a set of tutorials for learning NLP. The repository claims to have a complete package for anyone looking forward to learn NLP.",
+      "category": "learning",
+      "tags": [
+        "NLP",
+        "ML",
+        "AI"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "JUSTSUJAY",
+      "rating": null
+    },
+    {
+      "title": "Network Technician Course",
+      "url": "https://skillsforall.com/career-path/network-technician?courseLang=en-US",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "networking"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "SkillsForAll",
+      "rating": null
+    },
+    {
+      "title": "Neural Networks: Zero To Hero",
+      "url": "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
+      "description": "This youtube playlist has a lot of materials related to neural networks. This guy is going from the basic concepts like back propagation, to building your own GPT model from scratch. There are lots of things going on in this playlist and they seem kind of unrelated to each other.",
+      "category": "learning",
+      "tags": [
+        "neural networks",
+        "NLP",
+        "GPT",
+        "AI",
+        "ML"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Andrej Karpathy",
+      "rating": 5
+    },
+    {
+      "title": "Neuromatch computational neuroscience course",
+      "url": "https://compneuro.neuromatch.io/tutorials/intro.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Machine Learning",
+        "Neuro Science",
+        "Mathematics"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Neuromatch",
+      "rating": null
+    },
+    {
+      "title": "Online Labs and Playground",
+      "url": "https://labex.io/tutorials/linux-online-linux-playground-372915",
+      "description": "They have several online in-browser labs to mess around with ranging from linux terminals tp C++ labs. It's in a virtual and isolated environment so you don't have to worry about breaking anything. Good for those who are just starting to learn about stuff without the hassle of setting up an environment dedicated to the technologies they want to use.\n\nThey also have skill trees, which can assist you in figuring out what to learn next in your career path.\n\nAdding icing on top, they have several project guidelines and tutorials as well which can get you some hand-on.",
+      "category": "learning",
+      "tags": [
+        "labs",
+        "playgrounds",
+        "tutorials",
+        "roadmaps"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "labex.io",
+      "rating": 5
+    },
+    {
+      "title": "OpenStax",
+      "url": "https://openstax.org",
+      "description": "They provide free educational resources for a variety of subjects.",
+      "category": "learning",
+      "tags": [
+        "resources",
+        "education",
+        "science"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "openstax.org",
+      "rating": 5
+    },
+    {
+      "title": "Operating System Course",
+      "url": "https://www.guru99.com/os-tutorial.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "operating system"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Operating Systems: Three Easy Pieces",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+      "description": "First of all it a FREE online book. Although I haven't read it in detail but I have crawled through the topics it discusses.\nI remember that learning about OS was very boring, especially when there was no code involved. After all, we don't understand unless there is some tangible mechanics to understand. Not only this book has got your back on tangible examples, but also contains comprehension questions, homework(which includes code) and projects.",
+      "category": "learning",
+      "tags": [
+        "OS",
+        "projects"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "University of Wisconsin-Madison",
+      "rating": 5
+    },
+    {
+      "title": "Operations Research By Solomon Getachew",
+      "url": "https://www.youtube.com/playlist?list=PLRE038tQcNiHT-ItY56Y230Nhu4jB97Wx",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "operations research",
+        "linear programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Solomon Getachew",
+      "rating": null
+    },
+    {
+      "title": "Operations Research by Yong Wang",
+      "url": "https://www.youtube.com/watch?v=WIWhQpR-CjY&list=PLgA4wLGrqI-ll9OSJmR5nU4lV4_aNTgKx",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "operations research",
+        " linear programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Binghamton University",
+      "rating": null
+    },
+    {
+      "title": "Play With Docker Classroom",
+      "url": "https://training.play-with-docker.com",
+      "description": "A sand-box environment for those learning docker. There are interactive labs and ton of content to learn from.",
+      "category": "learning",
+      "tags": [
+        "docker",
+        "devops"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Marcos Nils, Jonathan Leibiusky",
+      "rating": 5
+    },
+    {
+      "title": "Postgresql Tutorial",
+      "url": "https://www.postgresqltutorial.com/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "postgreSQL",
+        "database"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Postgresql",
+      "rating": null
+    },
+    {
+      "title": "Power Shell Utilities",
+      "url": "https://github.com/farag2/Utilities/tree/master",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "powershell",
+        "windows",
+        "batch",
+        "utilities"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "farag2",
+      "rating": null
+    },
+    {
+      "title": "Programming Zero Knowledge Proof: From Zero To Hero",
+      "url": "https://zkintro.com/articles/programming-zkps-from-zero-to-hero",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "zeroknowledge proof",
+        "group signatures"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "zkintro.com",
+      "rating": null
+    },
+    {
+      "title": "Programming in assembly language tutorial",
+      "url": "https://github.com/mschwartz/assembly-tutorial",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "assembly",
+        "low-level"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "mschwartz",
+      "rating": 5
+    },
+    {
+      "title": "Python For Everybody",
+      "url": "https://www.py4e.com/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "python",
+        "programming"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Dr. Chuck",
+      "rating": null
+    },
+    {
+      "title": "REST API Tutorial",
+      "url": "https://restfulapi.net/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "REST",
+        "RESTful",
+        "API"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Restfulapi",
+      "rating": null
+    },
+    {
+      "title": "React Hooks Simplified",
+      "url": "https://courses.webdevsimplified.com/react-hooks-simplified",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "React.js",
+        "Hooks"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Web Dev Simplified",
+      "rating": null
+    },
+    {
+      "title": "Reverse Engineering For Everyone",
+      "url": "https://0xinfection.github.io/reversing/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "reverse engineering",
+        "malware analysis"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "mytechnotalent",
+      "rating": null
+    },
+    {
+      "title": "SQL Academy",
+      "url": "https://sql-academy.org/en",
+      "description": "It is a good place to learn SQL from.",
+      "category": "learning",
+      "tags": [
+        "SQL",
+        "Database"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "SQL Academy",
+      "rating": 4
+    },
+    {
+      "title": "Software Engineering Tutorial",
+      "url": "https://www.guru99.com/software-engineering-tutorial.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "software engineering"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Guru99",
+      "rating": null
+    },
+    {
+      "title": "Spring Quick Start Guide",
+      "url": "https://spring.io/quickstart",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "spring",
+        "java"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Spring",
+      "rating": null
+    },
+    {
+      "title": "System Design Primer",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "system design"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "donnemartin",
+      "rating": null
+    },
+    {
+      "title": "Test Driven Development in Django",
+      "url": "https://test-driven-django-development.readthedocs.io/en/latest/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "python",
+        "TDD",
+        "django"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "PSF",
+      "rating": 4
+    },
+    {
+      "title": "The Complete PyQT6 Tutorial",
+      "url": "https://www.pythonguis.com/pyqt6-tutorial/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "pyQT6",
+        "python"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "pythonguis",
+      "rating": null
+    },
+    {
+      "title": "The Documentation System",
+      "url": "https://docs.divio.com/documentation-system/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "documentation"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Divio",
+      "rating": null
+    },
+    {
+      "title": "The Most Helpful PowerShell Cheat Sheet You’ll Ever Find",
+      "url": "https://www.stationx.net/powershell-cheat-sheet/",
+      "description": "They have a powershell command generator in there. You just type what you want to do, and it spits back the command. Nice isn't it? but the only downside of it, as I feel, is that they wrote it as a blog which kind of hides the amazing tool beneath a mass of text.",
+      "category": "learning",
+      "tags": [
+        "windows",
+        "powershell"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "stationx.net",
+      "rating": 4
+    },
+    {
+      "title": "Training Custom Object Detector",
+      "url": "https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "tensorfloww",
+        "object detection",
+        "computer vision"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "Tensorflow",
+      "rating": null
+    },
+    {
+      "title": "What is Microsoft Fabric? How to Build a Customer Segmentation Project",
+      "url": "https://www.freecodecamp.org/news/what-is-microsoft-fabric/",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "Microsoft Fabric"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "FreeCodeCamp",
+      "rating": null
+    },
+    {
+      "title": "flat assembler",
+      "url": "https://flatassembler.net",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "assembly"
+      ],
+      "featured": true,
+      "icon": null,
+      "provider": "Tomasz Grysztar",
+      "rating": 5
+    },
+    {
+      "title": "hackerone",
+      "url": "https://www.hackerone.com",
+      "description": "",
+      "category": "learning",
+      "tags": [
+        "cyber security"
+      ],
+      "featured": false,
+      "icon": null,
+      "provider": "hackerone",
+      "rating": null
+    }
+  ]
+}

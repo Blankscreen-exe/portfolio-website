@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Link tree options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: 3 188 207;
+      --stock: 220 225 225;
+      --paper: 241 243 242;
+      --ink: 18 21 21;
+      --ash: 76 84 84;
+      --ease: cubic-bezier(.16, .84, .24, 1);
+    }
+    * { box-sizing: border-box; }
+    html { background: rgb(var(--ink)); }
+    body { margin: 12px; min-height: calc(100vh - 24px); color: rgb(var(--ink)); font-family: Inter, system-ui, sans-serif; }
+    .grid-bg {
+      background-color: rgb(var(--stock));
+      background-image:
+        linear-gradient(rgb(var(--ink) / .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(var(--ink) / .07) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    main { max-width: 1216px; margin: 0 auto; padding: 56px 20px 80px; }
+    .label { font: 500 11px 'JetBrains Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--ash)); }
+    h1 { margin: 14px 0 0; font: 900 clamp(40px, 8vw, 72px)/.9 Archivo, system-ui, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+    .intro { max-width: 640px; margin: 20px 0 0; font-size: 18px; line-height: 1.55; color: rgb(var(--ash)); }
+
+    .options { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 56px 32px; margin-top: 48px; justify-items: center; }
+    .option { width: 100%; max-width: 360px; }
+    .opt-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+    .opt-letter { font: 700 12px 'JetBrains Mono', monospace; color: rgb(var(--primary)); }
+    .opt-name { font: 900 22px/1 Archivo, system-ui, sans-serif; font-stretch: 70%; text-transform: uppercase; }
+    .pick { padding: 2px 6px; background: rgb(var(--primary)); font: 700 9px 'JetBrains Mono', monospace; letter-spacing: .12em; }
+    .note { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: rgb(var(--ash)); }
+
+    .screen { position: relative; height: 720px; overflow: hidden auto; border: 2px solid rgb(var(--ink)); }
+    .screen.ink { background: rgb(var(--ink)); color: rgb(var(--stock)); }
+    .pad { padding: 20px; }
+
+    .display { font: 900 34px/.95 Archivo, system-ui, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+    .cond { font-stretch: 70%; }
+    .bar { padding: 0 .12em; background: rgb(var(--primary)); color: rgb(var(--ink)); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .mono { font: 400 12px 'JetBrains Mono', monospace; }
+    .dim { color: rgb(var(--ash)); }
+    .ink .dim { color: rgb(var(--stock) / .65); }
+    .section-label { font: 400 10px 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; color: rgb(var(--ash)); }
+    .avail { display: flex; align-items: center; gap: 8px; font: 400 11px 'JetBrains Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .dot { position: relative; display: inline-block; flex: none; width: 8px; height: 8px; background: rgb(var(--primary)); }
+    .dot::after { content: ''; position: absolute; inset: 0; border: 1px solid rgb(var(--primary)); animation: pulse 1.8s ease-out infinite; }
+    @keyframes pulse { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(3.5); } }
+    .photo { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; filter: grayscale(1) contrast(1.05); border: 1px solid rgb(var(--ink) / .15); }
+    .ico { display: inline-block; flex: none; width: 1.05em; height: 1.05em; vertical-align: -.15em; fill: none; stroke: currentColor; stroke-width: 1.75; }
+    .nudge { animation: nudge 4s var(--ease) infinite; }
+    @keyframes nudge { 0%, 80%, 100% { translate: 0 0; } 88% { translate: 5px -5px; } }
+
+    /* Shared row with the site's cyan wipe on hover */
+    .wipe { position: relative; isolation: isolate; color: inherit; cursor: pointer; text-align: left; text-decoration: none; font: inherit; }
+    .wipe::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgb(var(--primary)); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); }
+    .wipe:hover::before { transform: scaleX(1); }
+    .wipe:hover, .wipe:hover .dim, .wipe:hover .ico, .wipe:hover .num { color: rgb(var(--ink)); }
+
+    /* A: link stack */
+    .stack-head { display: flex; align-items: center; gap: 14px; }
+    .stack-head .photo { flex: none; width: 84px; }
+    .rows { border-top: 1px solid rgb(var(--ink)); }
+    .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; padding: 11px 14px; border: 0; border-bottom: 1px solid rgb(var(--ink)); background: rgb(var(--paper)); }
+    .row-name { display: block; font: 900 20px/1 Archivo, system-ui, sans-serif; font-stretch: 70%; text-transform: uppercase; }
+    .row-sub { display: block; margin-top: 3px; font: 400 11px 'JetBrains Mono', monospace; }
+    .row .ico { color: rgb(var(--primary)); }
+    .row.feature { padding-block: 16px; background: rgb(var(--primary)); color: rgb(var(--ink)); }
+    .row.feature .row-name { font-size: 26px; }
+    .row.feature .dim, .row.feature .ico { color: rgb(var(--ink)); }
+    .row.feature::before { background: rgb(255 255 255 / .25); }
+
+    /* B: bento */
+    .bento { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border: 1px solid rgb(var(--ink)); background: rgb(var(--ink)); }
+    .tile { display: flex; flex-direction: column; justify-content: space-between; gap: 18px; min-width: 0; min-height: 92px; padding: 12px; border: 0; background: rgb(var(--paper)); }
+    .tile-top { display: flex; justify-content: flex-end; }
+    .tile .ico { color: rgb(var(--primary)); }
+    .tile.wide { grid-column: 1 / -1; }
+    .tile.feature { min-height: 128px; background: rgb(var(--primary)); color: rgb(var(--ink)); }
+    .tile.feature .dim, .tile.feature .ico { color: rgb(var(--ink)); }
+    .tile.feature::before { background: rgb(255 255 255 / .25); }
+    .tile.feature .row-name { font-size: 34px; }
+
+    /* C: grouped spec table */
+    .spec-group { margin-top: 18px; }
+    .spec-rows { margin-top: 6px; border-top: 2px solid rgb(var(--ink)); }
+    .spec { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: center; gap: 8px; width: 100%; padding: 9px 4px; border: 0; border-bottom: 1px solid rgb(var(--ink) / .2); background: none; }
+    .num { font: 400 11px 'JetBrains Mono', monospace; color: rgb(var(--primary)); }
+    .spec-name { font: 700 12px 'JetBrains Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .spec .ico { color: rgb(var(--primary)); }
+    .spec.feature .spec-name { font-size: 13px; }
+    .spec.feature { background: rgb(var(--primary) / .18); }
+
+    /* D: poster */
+    .poster-link { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; width: 100%; padding: 6px 2px; border: 0; border-bottom: 1px solid rgb(var(--stock) / .22); background: none; }
+    .poster-name { font: 900 38px/.95 Archivo, system-ui, sans-serif; font-stretch: 70%; letter-spacing: -.02em; text-transform: uppercase; }
+    .poster-link .ico { font-size: 18px; color: rgb(var(--primary)); }
+    .poster-link.feature .poster-name { color: rgb(var(--primary)); }
+    .poster-link:hover .poster-name { color: rgb(var(--ink)); }
+
+    /* E: photo banner */
+    .banner { position: relative; }
+    .banner .photo { aspect-ratio: 4 / 3; object-position: center 22%; border: 0; border-bottom: 1px solid rgb(var(--ink)); }
+    .banner-tag { position: absolute; left: 0; bottom: 12px; padding: 6px 10px; background: rgb(var(--ink)); color: rgb(var(--stock)); font: 700 11px 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; }
+
+    .toast { position: sticky; bottom: 12px; width: max-content; max-width: calc(100% - 24px); margin: 12px auto 0; padding: 8px 12px; background: rgb(var(--primary)); color: rgb(var(--ink)); font: 700 11px 'JetBrains Mono', monospace; letter-spacing: .1em; text-transform: uppercase; opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body class="grid-bg">
+<main>
+  <div class="label">[ /linktree ]</div>
+  <h1>Link tree.</h1>
+  <p class="intro">Five layouts for the same links, at phone size. The links, their order and which one is highlighted would all be editable in Keystatic. Hover or tap to try them; Discord copies your username, and Portfolio and Business card are dead links here.</p>
+  <div class="options" id="options"></div>
+</main>
+
+<script>
+  const NAME = 'M. Hammad Hassan'
+  const PHOTO = '../../public/profile_pic.png'
+  const icon = (d, cls = '') => `<svg class="ico ${cls}" viewBox="0 0 12 12" aria-hidden="true"><path d="${d}" /></svg>`
+  const ARROW = 'M2 10 10 2M3.25 2H10v6.75'
+  const COPY = 'M4.25 4.25h6.25v6.25H4.25zM7.75 4.25V1.5H1.5v6.25h2.75'
+
+  // What the Keystatic list would hold
+  const LINKS = [
+    { title: 'Book a call', sub: 'Pick a time that suits you', href: 'https://cal.com/hammadai/general', group: 'Work with me', featured: true },
+    { title: 'Portfolio', sub: 'See what I have built', href: '#', group: 'Work with me' },
+    { title: 'Business card', sub: 'Save my contact details', href: '#', group: 'Work with me' },
+    { title: 'Email', sub: 'mhammad.hassan002@gmail.com', href: 'mailto:mhammad.hassan002@gmail.com', group: 'Find me' },
+    { title: 'LinkedIn', sub: 'Message me directly', href: 'https://www.linkedin.com/in/hammadai/', group: 'Find me' },
+    { title: 'GitHub', sub: 'See the code', href: 'https://github.com/Blankscreen-exe', group: 'Find me' },
+    { title: 'X', sub: "Let's talk on X", href: 'https://x.com/blankscreenexe', group: 'Find me' },
+    { title: 'Discord', sub: 'blankscreen.exe', copy: 'blankscreen.exe', group: 'Find me' },
+    { title: 'Hashnode', sub: 'Read what I write', href: 'https://hammadai.hashnode.dev/', group: 'Read' },
+  ]
+
+  // A link, or a button when the entry copies text instead
+  function item(link, cls, inner) {
+    if (link.copy) return `<button type="button" class="wipe ${cls}" data-copy="${link.copy}">${inner}</button>`
+    const external = link.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''
+    return `<a class="wipe ${cls}" href="${link.href}" ${external}>${inner}</a>`
+  }
+  const iconFor = (link) => icon(link.copy ? COPY : ARROW, link.featured ? 'nudge' : '')
+
+  const profileHead = (size = 84) => `
+    <div class="stack-head">
+      <img class="photo" style="width:${size}px" src="${PHOTO}" alt="" />
+      <div>
+        <div class="display cond" style="font-size:26px">${NAME}</div>
+        <div class="mono dim" style="margin-top:6px;font-size:11px">Product Engineer &amp; Technical Consultant</div>
+      </div>
+    </div>`
+
+  const stackRows = LINKS.map((l) => item(l, `row ${l.featured ? 'feature' : ''}`, `<span><span class="row-name">${l.title}</span><span class="row-sub dim">${l.sub}</span></span>${iconFor(l)}`)).join('')
+
+  const OPTIONS = [
+    {
+      letter: 'A', name: 'Link stack', pick: true,
+      note: 'One clear list, top to bottom, with your main link highlighted. The most familiar link tree layout, so nobody has to think.',
+      screen: 'grid-bg',
+      html: `<div class="pad">
+        ${profileHead()}
+        <div class="avail" style="margin:14px 0"><span class="dot"></span>Available for work</div>
+        <div class="rows">${stackRows}</div>
+      </div>`,
+    },
+    {
+      letter: 'B', name: 'Bento tiles',
+      note: 'A tile grid like your blog page. More links fit on one screen, but the descriptions get cut down to fit.',
+      screen: 'grid-bg',
+      html: `<div class="pad">
+        ${profileHead(72)}
+        <div class="avail" style="margin:14px 0"><span class="dot"></span>Available for work</div>
+        <div class="bento">${LINKS.map((l) => item(l, `tile ${l.featured ? 'feature wide' : ''} ${l.title === 'Email' || l.title === 'Hashnode' ? 'wide' : ''}`, `<span class="tile-top">${iconFor(l)}</span><span><span class="row-name">${l.title}</span>${l.featured || l.title === 'Email' ? `<span class="row-sub dim">${l.sub}</span>` : ''}</span>`)).join('')}</div>
+      </div>`,
+    },
+    {
+      letter: 'C', name: 'Grouped spec sheet',
+      note: 'Numbered rows under labelled groups, the most spec-sheet of the set and the best if the list grows. Needs a group field in Keystatic.',
+      screen: 'grid-bg',
+      html: (() => {
+        const groups = [...new Set(LINKS.map((l) => l.group))]
+        let n = 0
+        return `<div class="pad">
+          ${profileHead(72)}
+          <div class="avail" style="margin-top:14px"><span class="dot"></span>Available for work</div>
+          ${groups.map((g) => `<div class="spec-group">
+            <div class="section-label">[ ${g} ]</div>
+            <div class="spec-rows">${LINKS.filter((l) => l.group === g).map((l) => item(l, `spec ${l.featured ? 'feature' : ''}`, `<span class="num">${String(++n).padStart(2, '0')}</span><span class="spec-name">${l.title}</span>${iconFor(l)}`)).join('')}</div>
+          </div>`).join('')}
+        </div>`
+      })(),
+    },
+    {
+      letter: 'D', name: 'Poster',
+      note: 'Huge words on black, no descriptions. The boldest and the most distinctive, but the links explain themselves less.',
+      screen: 'ink',
+      html: `<div class="pad">
+        <div class="display" style="font-size:30px">M. Hammad <span class="bar">Hassan</span></div>
+        <div class="mono dim" style="margin:8px 0 14px;font-size:11px">Product Engineer &amp; Technical Consultant</div>
+        ${LINKS.map((l) => item(l, `poster-link ${l.featured ? 'feature' : ''}`, `<span class="poster-name">${l.title}</span>${iconFor(l)}`)).join('')}
+      </div>`,
+    },
+    {
+      letter: 'E', name: 'Photo banner',
+      note: 'Your photo across the top with the name tag, then the list. The most personal, but links start lower, so visitors scroll more.',
+      screen: 'grid-bg',
+      html: `<div class="banner"><img class="photo" src="${PHOTO}" alt="" /><span class="banner-tag">${NAME}</span></div>
+        <div class="pad">
+          <div class="display cond" style="font-size:28px">Product Engineer</div>
+          <div class="mono dim" style="margin-top:4px">&amp; Technical Consultant</div>
+          <div class="avail" style="margin:12px 0 14px"><span class="dot"></span>Available for work</div>
+          <div class="rows">${stackRows}</div>
+        </div>`,
+    },
+  ]
+
+  document.getElementById('options').innerHTML = OPTIONS.map((o) => `
+    <section class="option">
+      <div class="opt-head">
+        <span class="opt-letter">${o.letter}</span>
+        <span class="opt-name">${o.name}</span>
+        ${o.pick ? '<span class="pick">PICK</span>' : ''}
+      </div>
+      <div class="screen ${o.screen}">${o.html}<div class="toast" role="status"></div></div>
+      <p class="note">${o.note}</p>
+    </section>`).join('')
+
+  document.addEventListener('click', async (e) => {
+    if (e.target.closest('a[href="#"]')) e.preventDefault()
+    const button = e.target.closest('[data-copy]')
+    if (!button) return
+    const toast = button.closest('.screen').querySelector('.toast')
+    try {
+      await navigator.clipboard.writeText(button.dataset.copy)
+      toast.textContent = `Copied ${button.dataset.copy}`
+    } catch {
+      toast.textContent = button.dataset.copy
+    }
+    toast.classList.add('show')
+    clearTimeout(toast.timer)
+    toast.timer = setTimeout(() => toast.classList.remove('show'), 1800)
+  })
+</script>
+</body>
+</html>

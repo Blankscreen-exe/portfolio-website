@@ -1,102 +1,86 @@
-﻿# porfolio-website
+﻿# M. Hammad Hassan — portfolio
 
+Personal site of a product engineer and technical consultant. It's built to turn visitors
+(mostly non-technical clients) into conversations, so every page leads to one action:
+**Start a project**.
 
-## UI Components
-- [Daisy UI](https://daisyui.com/)
-- [Shards Dashboard Lite](https://designrevision.com/downloads/shards-dashboard-lite-react/)
-- [Chakra UI](https://chakra-ui.com/docs/components/card/usage)
-- [Berry Theme](https://github.com/codedthemes/berry-free-react-admin-template)
-- [Minimal Free](https://github.com/codedthemes/material-kit-react)
-- [Material UI 2 - creative tim](https://www.creative-tim.com/product/material-dashboard-react)
-- [Redux persist](https://medium.com/@xbstrxct/persisting-state-in-your-react-app-with-redux-persist-1e7dd877c58a)
-- [Redux persistor log rocket](https://blog.logrocket.com/persist-state-redux-persist-redux-toolkit-react/)
-- [TW elements](https://tw-elements.com/docs)
-- [Hero Icons](https://github.com/tailwindlabs/heroicons)
-- [how to use svgs in react](https://www.freecodecamp.org/news/how-to-import-svgs-in-react-and-vite/)
-- [LinearIcons](https://linearicons.com/free)
-- [how to use dark mode in tailwind](https://www.youtube.com/watch?v=WTchW0LdWL0)
-- [dev dojo tailwind buttons](https://devdojo.com/tailwindcss/buttons#_)
+**Stack:** Next.js 16 (App Router, static generation) · React 19 · TypeScript · Tailwind CSS ·
+Keystatic (git-based CMS) · Vitest + Testing Library · ESLint
 
-## Milestones
-
-- [x] React Bootstrap
-- [x] Redux
-- [ ] Redux Thunk
-- [x] Redux persistor
-- [x] React Router
-- [ ] Material UI
-
-## Sitemap
-```
-- ✅Home
-    |- About Me
-    |- Testimonials
-    |- Tech Stack
-    |- Awards (featured)
-    |- Blog (latest)
-    |- Projects (featured)
-    |- E-bizcard
-    |- CTA
-- About Me
-    |- About Me
-    |- Education
-    |- Hobby
-    |- Languages
-- Work Experience
-    |- History
-    |- Awards
-    |- Certificates Roll
-    |- Working on next
-- Projects
-- Services
-    |- Backend Developement
-    |- Frontend Developement
-    |- Data Science/Business Analytics
-    |- Mentor
-- Lists
-    |- Useful Resources
-    |- Games
-- Blog
-    |- Blog roll 
-    |- Buy Me a coffee
-- Contact
-    |- Form
-    |- Social Links
-    |- Discord server
-    |- CTA
+```bash
+npm install
+npm run dev        # http://localhost:3000 — content editor at /keystatic
+npm run check      # lint → typecheck → tests → production build (what CI runs)
 ```
 
-
-## colors
-```css
---primary-light: #0694a2;
---secondary-light: #c4c4c4;
---tertiary-light: #f1f5f9;
---contrast-light: #dc4c64;
-
-
---primary-dark: #30C3D2;
---secondary-dark: #8a8a8a;
---tertiary-dark: #4B5660;
---contrast-dark: #FC5E79;
+## How it's put together
 
 ```
-## components to use 
+content/                 All site content as JSON, edited through Keystatic (or by hand)
+public/images/           Images referenced from content
+legacy/data/             The pre-CMS JSON data, kept for reference (see legacy/README.md)
+scripts/                 verify-legacy-port.mjs: proves legacy/data was fully migrated
+keystatic.config.ts      Content model: collections (projects, posts) and singletons (pages)
+src/
+  app/
+    (site)/              Public pages, sharing the sheet layout
+      projects/[slug]/   One statically generated page per project
+    keystatic/, api/     The CMS admin UI and its API (dev only, or GitHub mode)
+    not-found.tsx, sitemap.ts, robots.ts
+  components/
+    ui/                  Reusable pieces: Accordion, Drawer, Pagination, FilterBar, RichText…
+    layout/              Site shell: header, footer, motion wiring
+    home/ work/ about/ blog/ lists/ services/ contact/   Page sections
+  hooks/                 useQueryParams (URL state), usePagedQuery, useOnceVisible
+  lib/
+    content.ts           The only module that reads content (server-side, typed)
+    pagination.ts, markdown.ts, facets.ts, format.ts, projects.ts   Pure, unit-tested logic
+```
 
-- https://tailwindcomponents.com/component/delivery-tracking
-- https://tailwindcomponents.com/component/tailwind-contact-form-2
-- https://tailwindcomponents.com/component/peaceful-mind
-- https://tailwindcomponents.com/component/boilerplates-card
-- https://tailwindcomponents.com/component/card-ai-power-analytics
-- https://tailwindcomponents.com/component/unordered-list-of-card-items-with-elevation-on-hover
-- https://tailwindcomponents.com/component/hover-button-scale-effect
-- https://tailwindcomponents.com/component/button-11
-- https://tailwindcomponents.com/component/tailwind-css-inbox-view-message
-- https://recharts.org/en-US/examples/CustomActiveShapePieChart
-- https://tailwindcomponents.com/component/alpinejs-animated-toggle
-- https://tailwindflex.com/@samuel33/hover-effect-card
+### Decisions worth knowing
 
-TODO:
-- [ ] voice note for language cards
-- [ ] dark mode button in nav bar
-- [ ] animated PDF download button for CTA card
+- **Static by default.** Every public page, including all project pages, is pre-rendered at
+  build time from the files in `content/`. Interactivity (filters, pagination, the card stack,
+  the drawer) is limited to small client components.
+- **Content as files, not a database.** Keystatic edits JSON in the repo, so every content change
+  is a reviewable commit. `src/lib/content.test.ts` guards the content itself (missing images,
+  services pointing at contact topics that don't exist, etc.).
+- **URL-backed list state.** Tabs, tags and page numbers live in the query string
+  (`/blog?tag=python&page=2`) so they survive refresh and can be shared. `useQueryParams` uses
+  `useSyncExternalStore` rather than `useSearchParams`, so static pages render their default
+  view on the server and hydrate without `<Suspense>` boundaries or mismatches.
+- **No HTML injection.** Rich text in the CMS is a small Markdown subset parsed into an AST
+  (`lib/markdown.ts`) and rendered as React elements, with link targets restricted.
+- **Accessible motion.** Animations (reveal on scroll, text scramble, card shuffle, sliding
+  accordion and drawer) respect `prefers-reduced-motion`; content stays visible without
+  JavaScript. The drawer traps focus and restores it; the accordion uses `aria-expanded`
+  and keeps closed panels `inert`.
+
+### Design system
+
+A "spec sheet" look: a hairline grid background, uppercase Archivo display type, JetBrains Mono
+labels, and the signature cyan used for accent bars. Tokens are RGB CSS variables in
+`src/app/globals.css` (light and dark), exposed to Tailwind as `stock`, `paper`, `ink`, `ash`
+and `primary`. Component-level effects are plain CSS classes prefixed `ss-`.
+
+## Editing content
+
+Run `npm run dev` and open **/keystatic**. Saving writes to `content/` and `public/images/`;
+commit the changes like any other.
+
+To edit on the live site instead, switch Keystatic to GitHub mode: set `KEYSTATIC_STORAGE=github`,
+open `/keystatic` locally once to create the GitHub App, and copy the generated
+`KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`, `KEYSTATIC_SECRET` and
+`NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG` to the host. Without that, the editor is disabled in
+production.
+
+## Environment variables
+
+All optional:
+
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Absolute URL for metadata, sitemap and robots.txt |
+| `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`, `…_SERVICE_ID`, `…_TEMPLATE_ID` | Contact form delivery (public identifiers) |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Cloudflare Turnstile spam check on the contact form |
+| `KEYSTATIC_STORAGE` + Keystatic GitHub vars | Enable the CMS on the deployed site (see above) |

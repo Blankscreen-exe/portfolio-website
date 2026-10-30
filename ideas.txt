@@ -1,0 +1,9 @@
+- link tree
+- digital business card
+- url for text summary of my profile for AI to fetch instead of scanning the whole site
+- introduce mini animations in places where we need attention such as "start a project button" could use a line of small tiny black boxes scrolling to right within the area of the cyan button. like below the button text or above and below both. whichever looks good and cleaner
+- disable keystatic when not on dev serve
+- 
+- 
+- 
+- 

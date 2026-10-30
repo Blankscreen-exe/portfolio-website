@@ -1,0 +1,15 @@
+{
+  "title": "Create a simple TCP & UDP clients in Python & Websocket",
+  "description": "Whipping up your own clients in any programming languages can be an extremely useful knowledge for a lot of purposes.",
+  "published": "2023-11-01",
+  "url": "https://medium.com/@hammad.ai/create-a-simple-tcp-udp-clients-in-python-56da716fb250",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*aoQs_dYFJ-dc_WgU",
+  "tags": [
+    "python",
+    "websocket",
+    "tcp",
+    "udp",
+    "client",
+    "networking"
+  ]
+}

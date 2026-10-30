@@ -1,0 +1,30 @@
+{
+  "title": "The Duck Council",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "",
+  "sortOrder": 13,
+  "description": "Describe a situation and what you're about to do, and a council of opinionated AI ducks judges it. Each duck has its own worldview and a blind spot, so they genuinely disagree: every verdict stamps onto a quest board as it streams in, with a final score from 0 to 100. A local FastAPI app that works with Claude Code, the Anthropic and OpenAI APIs, or offline models through Ollama.",
+  "tags": [
+    "OpenAI",
+    "Claude",
+    "Ollama",
+    "Python",
+    "FastAPI",
+    "SQLite",
+    "htmx",
+    "LLM"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/The-Duck-Council",
+  "images": [
+    "/images/projects/the-duck-council/1.png",
+    "/images/projects/the-duck-council/2.png",
+    "/images/projects/the-duck-council/3.png",
+    "/images/projects/the-duck-council/4.png",
+    "/images/projects/the-duck-council/5.png"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Go Bro On-Demand Service Booking Platform",
+  "featured": false,
+  "kind": "client",
+  "status": "ongoing",
+  "openToContrib": false,
+  "dateLabel": "Live and Ongoing",
+  "sortOrder": 7,
+  "description": "Go Bro is an on-demand service-booking platform where customers can request everyday help such as babysitting, plumbing, carpentry, and A/C repair, connecting them with providers for the service they need, when they need it.\n\nIt pairs a PHP/Laravel backend and MySQL database with a React Native mobile app (published on the Google Play Store) and Vite.js/Node.js tooling on the web side, delivering the booking experience across both mobile and web.",
+  "tags": [
+    "PHP",
+    "Laravel",
+    "React-native",
+    "Vite.js",
+    "Node.js",
+    "MySQL"
+  ],
+  "liveUrl": "https://play.google.com/store/apps/details?id=com.spcom.gobrocustomer",
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/go-bro-on-demand-service-booking-platform/1.png",
+    "/images/projects/go-bro-on-demand-service-booking-platform/2.png",
+    "/images/projects/go-bro-on-demand-service-booking-platform/3.png",
+    "/images/projects/go-bro-on-demand-service-booking-platform/4.png",
+    "/images/projects/go-bro-on-demand-service-booking-platform/5.png",
+    "/images/projects/go-bro-on-demand-service-booking-platform/6.png",
+    "/images/projects/go-bro-on-demand-service-booking-platform/7.png",
+    "/images/projects/go-bro-on-demand-service-booking-platform/8.png",
+    "/images/projects/go-bro-on-demand-service-booking-platform/9.png"
+  ]
+}

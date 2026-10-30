@@ -1,0 +1,35 @@
+{
+  "title": "Global Trading System - Automated Crypto Trading Platform",
+  "featured": true,
+  "kind": "client",
+  "status": "ongoing",
+  "openToContrib": false,
+  "dateLabel": "Live and Ongoing",
+  "sortOrder": 3,
+  "description": "Global Trading System (GTS) is an automated crypto-futures trading platform that turns your TradingView strategy signals into live trades on your exchange — no manual clicking required. Users connect their account, set their risk preferences, and GTS executes and tracks every position automatically.\n\nThe platform is built on a Python/Django backend with a JavaScript/Node.js and TailwindCSS frontend, backed by PostgreSQL and deployed on AWS, with Web3 integration as part of the crypto workflow. It continuously ingests incoming strategy signals and takes care of order execution and position tracking on the user's behalf.",
+  "tags": [
+    "Python",
+    "Django",
+    "JavaScript",
+    "Node.js",
+    "TailwindCSS",
+    "PostgreSQL",
+    "Web3",
+    "AWS",
+    "Crypto Trading"
+  ],
+  "liveUrl": "https://apitrade.nextlayer.live/",
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/global-trading-system-automated-crypto-trading-platform/1.png",
+    "/images/projects/global-trading-system-automated-crypto-trading-platform/2.png",
+    "/images/projects/global-trading-system-automated-crypto-trading-platform/3.png",
+    "/images/projects/global-trading-system-automated-crypto-trading-platform/4.png",
+    "/images/projects/global-trading-system-automated-crypto-trading-platform/5.png",
+    "/images/projects/global-trading-system-automated-crypto-trading-platform/6.png",
+    "/images/projects/global-trading-system-automated-crypto-trading-platform/7.png",
+    "/images/projects/global-trading-system-automated-crypto-trading-platform/8.png",
+    "/images/projects/global-trading-system-automated-crypto-trading-platform/9.png"
+  ]
+}

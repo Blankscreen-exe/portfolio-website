@@ -1,0 +1,19 @@
+{
+  "title": "Tkinter Mod Manager",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "May 2024",
+  "sortOrder": 24,
+  "description": "This is a simple mod manager built on Tkinter. The applet is named a mod manager because certain games let you add or remove mods by copying, pasting, or deleting files from one directory to another. Those mod files are often named in a non-human-friendly way (e.g. 1234567.mod), so while copying and pasting them between directories works, it becomes very hard to keep track of which files belong to which mod. This applet makes that task easy.\n\nIt is a lightweight desktop GUI tool written in Python with Tkinter, giving an approachable interface to what is otherwise tedious, error-prone manual file management.",
+  "tags": [
+    "Python",
+    "GUI",
+    "TKinter"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/tkinter-mod-manager",
+  "images": []
+}

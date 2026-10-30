@@ -1,0 +1,22 @@
+{
+  "title": "KIT",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Sept 2026",
+  "sortOrder": 18,
+  "description": "A personal toolbox for the terminal. One command, kit, lists every tool, shows its docs and runs it, from PowerShell, cmd, or a Linux/macOS shell. kit hub does the same from a dashboard in your browser.",
+  "tags": [
+    "python",
+    "TUI",
+    "Textual",
+    "Web"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/kit",
+  "images": [
+    "/images/projects/kit/1.png"
+  ]
+}

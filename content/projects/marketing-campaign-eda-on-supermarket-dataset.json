@@ -1,0 +1,26 @@
+{
+  "title": "Marketing Campaign EDA On Supermarket Dataset",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Jul 2022",
+  "sortOrder": 33,
+  "description": "This project is an exploratory data analysis of a supermarket's marketing campaign, aiming to surface trends and patterns in how the campaign performed and who it reached.\n\nThe analysis is carried out in Python, using Pandas and NumPy for data wrangling, Seaborn for visualisation, and Scikit-learn and TensorFlow for the modelling and analytical work.",
+  "tags": [
+    "Data Visualization",
+    "Data Analysis",
+    "Tensorflow",
+    "Scikitlearn",
+    "Seaborn",
+    "Pandas",
+    "Numpy",
+    "Python"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/Data-Mining-Lab",
+  "images": [
+    "/images/projects/marketing-campaign-eda-on-supermarket-dataset/1.png"
+  ]
+}

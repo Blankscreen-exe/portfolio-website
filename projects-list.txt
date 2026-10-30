@@ -1,0 +1,130 @@
+PROJECTS LIST
+=============
+
+1. Clinic AI Voice Agent for Scheduling, Intake & Specialist Routing
+   Description: A voice agent that can schedule appointments, intake patients, and route them to the appropriate specialist.
+   Tech Stack: Python, JavaScript, Node.js, TailwindCSS, PostgreSQL, LLM, OpenAI, VAPI, Twilio
+
+2. AI-Powered LinkedIn Automation & CRM Integration Platform
+   Description: A platform that automates LinkedIn interactions and integrates with your CRM system to streamline sales and marketing efforts.
+   Tech Stack: Python, Go Lang, JavaScript, FastAPI, Gin, Nest.js, Microservices, PostgreSQL, AWS, LLM, Web scraping
+
+3. Entrepreneur's Business Simulator
+   Description: A software designed to train young entrepreneurs in all aspects of business and financial management.
+   Tech Stack: Python, Django, JavaScript, Jinja2, PostgreSQL
+
+4. PractiCal Food Ordering System
+   Description: A food ordering system led by a nutritionist. It helps deliver your desired meal plan based on your dietary needs and more.
+   Tech Stack: PHP, Laravel, Next.js, Node.js, TailwindCSS, MySQL
+
+5. Go Bro On-Demand Service Booking Platform
+   Description: An on-demand service booking platform where customers can request services such as baby-sitting, plumbing, carpentry, A/C repair, etc.
+   Tech Stack: PHP, Laravel, React-native, Vite.js, Node.js, MySQL
+
+6. NFT Showroom
+   Description: A platform that showcases digital assets while providing a user-friendly and safe way for everyone to engage with the world of NFTs.
+   Tech Stack: Python, Django, Django Rest Framework, Solidity, Metamask, Web3.js, React-native, Vite.js, Node.js, PostgreSQL
+
+7. ATS System - Resume Parser Microservice
+   Description: An internal tool for a hiring agency that parses resumes and saves them to a database using an automated pipeline.
+   Tech Stack: Python, FastAPI, PostgreSQL, LLM, OpenAI, Machine Learning, Langchain, VectorDB, JavaScript, TailwindCSS
+
+8. LawnPro Software
+   Description: A Lawn Business Software prepacked with features to manage employees, payments, customers, and more.
+   Tech Stack: PHP, Laravel, React.js, Vite.js, Node.js, MySQL
+
+9. Minecraft Server Discovery & Auction Platform
+   Description: A platform that allows users to discover and auction Minecraft servers.
+   Tech Stack: Django, Python, JavaScript, PostgreSQL, Stripe
+
+10. The Duck Council
+    Description: A council to reflect on problems using the Rubber Duck Debugging method.
+    Tech Stack: Crew.ai, Python, Flask, React.js, Vite.js, MongoDB
+
+11. EtherPass - Decentralized Event Ticket Booking System
+    Description: A decentralized event ticket booking system that allows users to book tickets for events using their web3 wallet.
+    Tech Stack: Ethereum, Solidity, Truffle, Web3.js, React.js, Vite.js, Metamask, Nest.js, Turso DB
+
+12. Ebay Product Scraper
+    Description: A tool that scrapes products from eBay and saves them to a database.
+    Tech Stack: Django, Selenium, PostgreSQL, VectorDB, Python, JavaScript, TailwindCSS
+
+13. Crowdfunding Decentralized App
+    Description: A crowdfunding solution built entirely on web3.0. Host your projects for funding via crypto and withdraw funds whenever.
+    Tech Stack: React.js, Vite.js, Hedera Hashgraph, Metamask, Ethers.js, Nest.js, Turso DB
+
+14. ExpenTable
+    Description: An expendable timetable suitable for quick weekly planning. Simple yet loaded with features.
+    Tech Stack: React.js, Vite.js, Node.js
+
+15. Startup Showroom
+    Description: A startup directory where you can showcase your startup, engage with people, and get noticed.
+    Tech Stack: Next.js, Node.js, TypeScript, Sanity, TailwindCSS
+
+16. Cloud Munshi
+    Description: A Point-of-Sales (POS) software for those who want to keep track of their inventory and manage businesses.
+    Tech Stack: PHP, Yii, Next.js, Vite.js, MySQL
+
+17. Tkinter Mod Manager
+    Description: A simple mod manager built on Tkinter for games that support adding/removing mods via files. It makes it easy to keep track of which files belong to which mod.
+    Tech Stack: Python, GUI, TKinter
+
+18. Shortcut Keeper
+    Description: An icon grouper applet for Windows, inspired by the icon grouping feature in GNOME and Android desktops.
+    Tech Stack: Python, GUI, PySimpleGUI
+
+19. Jevil's Dilemma
+    Description: A web-based version of the tabletop party game Dilemma. Players choose an 'action' in response to scenario questions — no scores, no winners, just pure creativity.
+    Tech Stack: JavaScript, React.js, Node.js, Vite.js, Game
+
+20. Shell Show
+    Description: A CMD applet that can render images inside the terminal.
+    Tech Stack: Python, Pillow
+
+21. You vs The Void
+    Description: If you click on the void... it will click back.
+    Tech Stack: JavaScript, JQuery, CSS, HTML
+
+22. Triple Triad Card Maker
+    Description: A game card generator that takes in .png assets and compiles them into a printable game card.
+    Tech Stack: Python, OpenCV, Numpy, Game
+
+23. Docker Practice/Tutorial Repo
+    Description: A repo containing Docker-related experiments and tutorials documenting things tried with Docker.
+    Tech Stack: Docker, Python, Shell
+
+24. Screen Magnifier
+    Description: An app for magnifying a portion of the screen. Useful for enlarging part of the screen while presenting code and text.
+    Tech Stack: Python, OpenCV, PyQT, Pillow
+
+25. Python Dependency Report Generator
+    Description: Produces a .docx document listing all the dependencies used by a given Python environment.
+    Tech Stack: Python, python-docx
+
+26. Usagi Chan's Number Guessing Game
+    Description: A number guessing game where the player guesses if the next number will be larger or smaller, earning points or losing lives.
+    Tech Stack: JavaScript, Vite.js, React.js
+
+27. WebGL Fluid Simulation
+    Description: A small side project to simulate fluid effects on an HTML document using vanilla JS, HTML, and CSS.
+    Tech Stack: JavaScript, WebGL
+
+28. Marketing Campaign EDA On Supermarket Dataset
+    Description: An attempt to analyze and find trends in the marketing campaign of a supermarket.
+    Tech Stack: Data Visualization, Data Analysis, Tensorflow, Scikitlearn, Seaborn, Pandas, Numpy, Python
+
+29. Exploratory Data Analysis Of Pokemon Data - 2022 Submission for DataDNA Challenge
+    Description: A submission for the 2022 DataDNA competition hosted by OnyxData.
+    Tech Stack: PowerBI, SQL, Pandas, Numpy, Tensorflow, Scikitlearn, Python
+
+30. Exploratory Data Analysis Of Hate Crimes In USA (1991-2020)
+    Description: An exploratory data analysis exercise targeting hate crime records across the USA (1991-2020), extracting valuable insights.
+    Tech Stack: PowerBI, SQL, Pandas, Numpy, Tensorflow, Scikitlearn, Python
+
+31. TermaChat
+    Description: A CMD applet for peer-to-peer serverless communication.
+    Tech Stack: Python, Websockets, Multithreading
+
+32. The Save Stash
+    Description: A place to keep all game save files as trophies.
+    Tech Stack: JavaScript, HTML, CSS

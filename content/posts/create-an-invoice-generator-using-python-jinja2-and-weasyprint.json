@@ -1,0 +1,14 @@
+{
+  "title": "Create An Invoice Generator Using Python, Jinja2 & Weasyprint",
+  "description": "Whenever a client asks you to do a minor task as a freelance project, what do you do? You whip up an invoice which lists the tasks you are going to do for the client and the charges that are associated with each task. ",
+  "published": "2023-12-01",
+  "url": "https://medium.com/@hammad.ai/create-an-invoice-generator-using-python-jinja2-weasyprint-48ef1f450ac5",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*-PqEQRD9o4k2FYwq",
+  "tags": [
+    "python",
+    "html",
+    "css",
+    "factory pattern",
+    "projects"
+  ]
+}

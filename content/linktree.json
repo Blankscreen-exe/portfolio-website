@@ -1,0 +1,13 @@
+{
+  "items": [
+    { "title": "Book a call", "action": "link", "target": "https://cal.com/hammadai/general", "featured": true },
+    { "title": "Portfolio", "action": "link", "target": "/", "featured": false },
+    { "title": "Business card", "action": "link", "target": "/card", "featured": false },
+    { "title": "Email", "action": "copy", "target": "mhammad.hassan002@gmail.com", "featured": false },
+    { "title": "LinkedIn", "action": "link", "target": "https://www.linkedin.com/in/hammadai/", "featured": false },
+    { "title": "GitHub", "action": "link", "target": "https://github.com/Blankscreen-exe", "featured": false },
+    { "title": "X", "action": "link", "target": "https://x.com/blankscreenexe", "featured": false },
+    { "title": "Discord", "action": "copy", "target": "blankscreen.exe", "featured": false },
+    { "title": "Hashnode", "action": "link", "target": "https://hammadai.hashnode.dev/", "featured": false }
+  ]
+}

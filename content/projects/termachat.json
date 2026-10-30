@@ -1,0 +1,21 @@
+{
+  "title": "TermaChat",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Jan 2025",
+  "sortOrder": 36,
+  "description": "TermaChat is a command-line applet for peer-to-peer, serverless communication — letting two parties chat directly without routing their messages through a central server.\n\nIt is written in Python, using WebSockets for the connection and multithreading to handle sending and receiving messages concurrently.",
+  "tags": [
+    "Python",
+    "Websockets",
+    "Multithreading"
+  ],
+  "liveUrl": "https://github.com/Blankscreen-exe/TermaChat",
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/TermaChat",
+  "images": [
+    "/images/projects/termachat/1.png"
+  ]
+}

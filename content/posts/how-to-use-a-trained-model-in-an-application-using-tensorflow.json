@@ -1,0 +1,14 @@
+{
+  "title": "How To Use A Trained Model In An Application Using TensorFlow",
+  "description": "I will show you how to use any model inside your custom application using TensorFlow in Python. And we will use that to make an app with Tkinter.",
+  "published": "2023-07-01",
+  "url": "https://medium.com/@hammad.ai/how-to-use-a-trained-model-in-an-application-using-tensorflow-cd8b4024bb28",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*EY1uHzTyYmIG7qGcGkYrNQ.png",
+  "tags": [
+    "python",
+    "ml",
+    "kaggle",
+    "tensorflow",
+    "tkinter"
+  ]
+}

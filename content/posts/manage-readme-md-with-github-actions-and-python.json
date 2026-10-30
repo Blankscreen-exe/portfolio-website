@@ -1,0 +1,14 @@
+{
+  "title": "Manage README.md with Github Actions & Python",
+  "description": "We will add/remove text lines from our README file using Github Actions and Python string manipulation. We will do this by following a specific scenario.",
+  "published": "2023-08-01",
+  "url": "https://medium.com/@hammad.ai/manage-readme-md-with-github-actions-python-96222cb26b58",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:828/format:webp/1*y7TIlZIrwbCxi1HoHyt-kA.png",
+  "tags": [
+    "github",
+    "github actions",
+    "automation",
+    "ci/cd",
+    "python"
+  ]
+}

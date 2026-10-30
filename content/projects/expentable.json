@@ -1,0 +1,21 @@
+{
+  "title": "ExpenTable",
+  "featured": false,
+  "kind": "side",
+  "status": "ongoing",
+  "openToContrib": true,
+  "dateLabel": "",
+  "sortOrder": 17,
+  "description": "ExpenTable is an 'expendable' timetable built for quick weekly planning — simple to fill in, yet loaded with the small conveniences that make recurring scheduling pleasant to use.\n\nIt is a frontend-focused app built with React.js using Vite.js and Node.js tooling.",
+  "tags": [
+    "React.js",
+    "Vite.js",
+    "Node.js"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/ExpenTable",
+  "images": [
+    "/images/projects/expentable/1.png"
+  ]
+}

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Favicon options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: 3 188 207;
+      --stock: 220 225 225;
+      --paper: 241 243 242;
+      --ink: 18 21 21;
+      --ash: 76 84 84;
+    }
+    * { box-sizing: border-box; }
+    html { background: rgb(var(--ink)); }
+    body {
+      margin: 12px;
+      min-height: calc(100vh - 24px);
+      color: rgb(var(--ink));
+      font-family: Inter, system-ui, sans-serif;
+      background-color: rgb(var(--stock));
+      background-image:
+        linear-gradient(rgb(var(--ink) / .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(var(--ink) / .07) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    main { max-width: 1216px; margin: 0 auto; padding: 56px 20px 80px; }
+    .label { font: 500 11px 'JetBrains Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--ash)); }
+    h1 { margin: 14px 0 0; font: 900 clamp(40px, 8vw, 72px)/.9 Archivo, system-ui, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+    .intro { max-width: 640px; margin: 20px 0 0; font-size: 18px; line-height: 1.55; color: rgb(var(--ash)); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 1px; margin-top: 40px; border: 1px solid rgb(var(--ink)); background: rgb(var(--ink)); }
+    .card { display: flex; flex-direction: column; gap: 16px; min-width: 0; padding: 20px; background: rgb(var(--paper)); }
+    .head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .name { font: 900 22px/1 Archivo, system-ui, sans-serif; font-stretch: 70%; text-transform: uppercase; }
+    .num { font: 500 11px 'JetBrains Mono', monospace; color: rgb(var(--primary)); }
+    .pick { margin-left: 8px; padding: 2px 6px; background: rgb(var(--primary)); font: 700 9px 'JetBrains Mono', monospace; letter-spacing: .12em; vertical-align: 3px; }
+    .note { margin: 0; font-size: 14px; line-height: 1.5; color: rgb(var(--ash)); }
+
+    .sizes { display: flex; align-items: flex-end; gap: 16px; }
+    .size { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; font: 400 10px 'JetBrains Mono', monospace; color: rgb(var(--ash)); }
+    .size svg, .size img { display: block; }
+
+    /* Browser tab mock-ups */
+    .tabs { display: grid; gap: 1px; }
+    .tabbar { display: flex; align-items: flex-end; height: 38px; padding: 6px 8px 0; }
+    .tabbar.light { background: #dee1e6; }
+    .tabbar.dark { background: #202124; }
+    .tab { display: flex; align-items: center; gap: 8px; width: min(100%, 230px); height: 32px; padding: 0 12px; border-radius: 8px 8px 0 0; font: 400 12px Inter, system-ui, sans-serif; white-space: nowrap; overflow: hidden; }
+    .light .tab { background: #fff; color: #202124; }
+    .dark .tab { background: #35363a; color: #e8eaed; }
+    .tab svg, .tab img { flex: none; display: block; }
+
+    .try { align-self: flex-start; padding: 8px 12px; border: 2px solid rgb(var(--ink)); background: none; color: inherit; cursor: pointer; font: 700 11px 'JetBrains Mono', monospace; letter-spacing: .12em; text-transform: uppercase; }
+    .try:hover { background: rgb(var(--ink)); color: rgb(var(--stock)); }
+    .try[aria-pressed="true"] { border-color: rgb(var(--primary)); background: rgb(var(--primary)); color: rgb(var(--ink)); }
+  </style>
+</head>
+<body>
+<main>
+  <div class="label">[ favicon ]</div>
+  <h1>Pick an icon.</h1>
+  <p class="intro">Each is shown at real sizes and in light and dark browser tabs. Favicons mostly live at 16px, so judge them at the smallest size. "Try in this tab" puts one in this page's actual browser tab.</p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<script>
+  const CYAN = 'rgb(3 188 207)'
+  const INK = 'rgb(18 21 21)'
+  const PAPER = 'rgb(241 243 242)'
+  const STOCK = 'rgb(220 225 225)'
+
+  const H_BIG = 'M8 26V6h5.5v7.25h5V6H24v20h-5.5v-7.75h-5V26z'
+
+  const OPTIONS = [
+    {
+      num: '01', name: 'MH block',
+      note: 'Your header logo as it is. Instantly matches the site, but the two letters get tight at 16px.',
+      svg: `<rect width="32" height="32" fill="${CYAN}" /><path fill="${INK}" d="M3 24V8h4l2.5 6L12 8h4v16h-3.4v-8.5L10.6 20H8.4l-2-4.5V24zM18.5 24V8H22v6.25h3.5V8H29v16h-3.5v-6.75H22V24z" />`,
+    },
+    {
+      num: '02', name: 'H block', pick: true,
+      note: 'One bold letter on your cyan. The clearest at 16px, and it stands out in a row of tabs on both light and dark browsers.',
+      svg: `<rect width="32" height="32" fill="${CYAN}" /><path fill="${INK}" d="${H_BIG}" />`,
+    },
+    {
+      num: '03', name: 'Bracket H',
+      note: 'The [ brackets ] from your section labels around an H. Very on-brand, though the brackets get thin when small.',
+      svg: `<rect width="32" height="32" fill="${INK}" /><path fill="${CYAN}" d="M3 4h6v3H6.5v18H9v3H3zM29 4h-6v3h2.5v18H23v3h6z" /><path fill="${STOCK}" d="M11 23V9h3v5.5h4V9h3v14h-3v-6h-4v6z" />`,
+    },
+    {
+      num: '04', name: 'Grid cell',
+      note: 'Your signature grid with one cell filled in cyan. The most abstract: distinctive, but says nothing about your name.',
+      svg: `<rect width="32" height="32" fill="${PAPER}" /><rect x="11" y="11" width="10" height="10" fill="${CYAN}" /><path fill="none" stroke="${INK}" stroke-width="2" d="M1 1h30v30H1zM11 1v30M21 1v30M1 11h30M1 21h30" />`,
+    },
+    {
+      num: '05', name: 'Crop marks',
+      note: 'The corner brackets from your buttons around a cyan square. Looks like a target lock, and holds up well when small.',
+      svg: `<rect width="32" height="32" fill="${INK}" /><path fill="none" stroke="${CYAN}" stroke-width="3" d="M3 10V3h7M22 3h7v7M29 22v7h-7M10 29H3v-7" /><rect x="11" y="11" width="10" height="10" fill="${CYAN}" />`,
+    },
+    {
+      num: '06', name: 'Arrow',
+      note: 'The up-right arrow used all over your buttons, suggesting "go" and "build". Clean, though arrows are common as icons.',
+      svg: `<rect width="32" height="32" fill="${CYAN}" /><path fill="none" stroke="${INK}" stroke-width="5" d="M7 25 24 8M9 7h16v16" />`,
+    },
+    {
+      num: '07', name: 'Barcode',
+      note: 'The barcode from your footer and ID card, with one cyan bar. Memorable up close, but it turns to stripes at 16px.',
+      svg: `<rect width="32" height="32" fill="${PAPER}" /><path fill="${INK}" d="M3 5h3v22H3zM8 5h2v22H8zM12 5h4v22h-4zM24 5h2v22h-2zM28 5h1v22h-1z" /><rect x="18" y="5" width="4" height="22" fill="${CYAN}" />`,
+    },
+    {
+      num: '08', name: 'Hard shadow H',
+      note: 'An H on cyan with the solid offset shadow from your hero buttons. Most character, but the letter is smaller, and the ink shadow fades on dark tabs.',
+      svg: `<rect x="6" y="6" width="26" height="26" fill="${INK}" /><rect width="26" height="26" fill="${CYAN}" /><path fill="${INK}" d="M6 21V5h4.5v5.75h5V5H20v16h-4.5v-6.25h-5V21z" />`,
+    },
+  ]
+
+  const inline = (svg, size) => `<svg width="${size}" height="${size}" viewBox="0 0 32 32" aria-hidden="true">${svg}</svg>`
+  const dataUri = (svg) => `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">${svg}</svg>`)}`
+
+  const tabs = (icon) => `<div class="tabs">
+    <div class="tabbar light"><div class="tab">${icon}<span>M. Hammad Hassan</span></div></div>
+    <div class="tabbar dark"><div class="tab">${icon}<span>M. Hammad Hassan</span></div></div>
+  </div>`
+
+  const CURRENT = '../../public/logo.svg'
+  const sizeList = [96, 48, 32, 16]
+
+  const currentCard = `<article class="card">
+    <div class="head"><div class="name">Current</div><div class="num">NOW</div></div>
+    <div class="sizes">${sizeList.map((s) => `<div class="size"><img src="${CURRENT}" width="${s}" height="${s}" alt="" />${s}</div>`).join('')}</div>
+    ${tabs(`<img src="${CURRENT}" width="16" height="16" alt="" />`)}
+    <p class="note">Your current favicon, for comparison.</p>
+    <button type="button" class="try" data-icon="${CURRENT}" aria-pressed="false">Try in this tab</button>
+  </article>`
+
+  document.getElementById('grid').innerHTML = currentCard + OPTIONS.map((o) => `
+    <article class="card">
+      <div class="head">
+        <div class="name">${o.name}${o.pick ? '<span class="pick">PICK</span>' : ''}</div>
+        <div class="num">${o.num}</div>
+      </div>
+      <div class="sizes">${sizeList.map((s) => `<div class="size">${inline(o.svg, s)}${s}</div>`).join('')}</div>
+      ${tabs(inline(o.svg, 16))}
+      <p class="note">${o.note}</p>
+      <button type="button" class="try" data-icon="${dataUri(o.svg)}" aria-pressed="false">Try in this tab</button>
+    </article>`).join('')
+
+  const link = document.createElement('link')
+  link.rel = 'icon'
+  document.head.append(link)
+  const buttons = [...document.querySelectorAll('.try')]
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      link.href = button.dataset.icon
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === button)))
+    })
+  })
+  buttons[2].click()
+</script>
+</body>
+</html>

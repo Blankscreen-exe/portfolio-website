@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept 08 v2 — Spec Sheet (animated)</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Archivo', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    :root {
+      --stock: #DCE1E1;
+      --paper: #F1F3F2;
+      --ink: #121515;
+      --ash: #4C5454;
+      --line: rgba(18, 21, 21, .14);
+      --grid: rgba(18, 21, 21, .07);
+      --cyan: #03BCCF;
+      --frame: 12px;
+      --ease: cubic-bezier(.16, .84, .24, 1);
+      color-scheme: light;
+    }
+    :root.night {
+      --stock: #0D1112;
+      --paper: #141B1C;
+      --ink: #E2EBEB;
+      --ash: #8C9C9D;
+      --line: rgba(226, 235, 235, .16);
+      --grid: rgba(48, 195, 210, .08);
+      --cyan: #30C3D2;
+      color-scheme: dark;
+    }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #121515; color: var(--ink); font-family: Inter, sans-serif; }
+    ::selection { background: var(--cyan); color: #121515; }
+
+    .sheet {
+      margin: var(--frame); background-color: var(--stock); min-height: 100vh; position: relative;
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 48px 48px;
+      transition: background-color .5s ease, color .5s ease;
+    }
+    .paper { background: var(--paper); transition: background-color .5s ease; }
+    .ink-bg { background: var(--ink); color: var(--stock); transition: background-color .5s ease, color .5s ease; }
+    .b { border-color: var(--line); }
+    .b-ink { border-color: var(--ink); }
+    .ash { color: var(--ash); }
+    .cyan { color: var(--cyan); }
+    .bg-cyan { background: var(--cyan); color: #121515; }
+
+    .display { font-family: Archivo, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -.025em; line-height: .9; }
+    .cond { font-stretch: 70%; }
+    .label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ash); }
+
+    /* ─────────── ANIMATION SYSTEM ───────────
+       Elements with [data-reveal] get .in when they scroll into view.
+       All hidden states are scoped to html.js, so the page still works without JS. */
+
+    /* 1. Fade up */
+    /* uses the independent `translate` property so it never fights card tilt / shake transforms */
+    .js [data-reveal="up"] { opacity: 0; translate: 0 24px; transition: opacity .8s var(--ease), translate .8s var(--ease), transform .4s var(--ease); transition-delay: calc(var(--i, 0) * 90ms), calc(var(--i, 0) * 90ms), 0s; }
+    .js [data-reveal="up"].in { opacity: 1; translate: none; }
+
+    /* 2. Rack focus (headings) */
+    .js [data-reveal="focus"] { opacity: 0; }
+    .js [data-reveal="focus"].in { animation: focus-pull 1.3s var(--ease) both; animation-delay: calc(var(--i, 0) * 120ms); }
+    @keyframes focus-pull {
+      0% { opacity: 0; filter: blur(14px); letter-spacing: .06em; transform: scaleX(1.06); }
+      40% { opacity: .55; filter: blur(5px); }
+      65% { opacity: .9; filter: blur(1.5px); }
+      100% { opacity: 1; filter: blur(0); transform: none; }
+    }
+
+    /* 3. Cyan bars wipe in behind accent words once their heading is revealed */
+    .bar {
+      padding: 0 .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+      background: linear-gradient(var(--cyan), var(--cyan)) no-repeat left / 100% 100%; color: #121515;
+    }
+    .js .bar { background-size: 0% 100%; color: inherit; transition: background-size .7s var(--ease) .55s, color .3s ease .8s; }
+    .js .in .bar, .js .bar.in { background-size: 100% 100%; color: #121515; }
+
+    /* 4. Image reveal: a cyan shutter slides off */
+    .shutter { position: relative; overflow: hidden; }
+    .js .shutter::after { content: ''; position: absolute; inset: 0; background: var(--cyan); transform-origin: right; transition: transform 1s var(--ease) .2s; z-index: 2; }
+    .js .shutter.in::after { transform: scaleX(0); }
+
+    /* 5. Stagger children: rows slide in from the left */
+    .js [data-reveal="rows"] > * { opacity: 0; translate: -20px 0; transition: opacity .6s var(--ease), translate .6s var(--ease); }
+    .js [data-reveal="rows"].in > * { opacity: 1; translate: none; }
+    .js [data-reveal="rows"].in > *:nth-child(2) { transition-delay: .1s; }
+    .js [data-reveal="rows"].in > *:nth-child(3) { transition-delay: .2s; }
+    .js [data-reveal="rows"].in > *:nth-child(4) { transition-delay: .3s; }
+    .js [data-reveal="rows"].in > *:nth-child(5) { transition-delay: .4s; }
+
+    /* 6. Stamp thump */
+    .stamp { position: absolute; border: 2px solid var(--cyan); color: var(--cyan); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; padding: 5px 12px; transform: rotate(-8deg); }
+    .js .stamp { opacity: 0; }
+    .js .in .stamp { animation: thump .55s cubic-bezier(.3, 1.6, .5, 1) .5s both; }
+    @keyframes thump {
+      0% { opacity: 0; transform: scale(2.4) rotate(-22deg); }
+      60% { opacity: 1; transform: scale(.92) rotate(-7deg); }
+      100% { opacity: 1; transform: scale(1) rotate(-8deg); }
+    }
+    .js .in .shake { animation: shake .3s ease .78s; }
+    @keyframes shake { 25% { transform: translate(2px, 1px) } 50% { transform: translate(-2px, -1px) } 75% { transform: translate(1px, -1px) } }
+
+    /* 7. Load sequence: header cells drop in */
+    .js .drop { opacity: 0; transform: translateY(-100%); animation: drop .6s var(--ease) both; animation-delay: calc(var(--i, 0) * 70ms + .1s); }
+    @keyframes drop { to { opacity: 1; transform: none; } }
+
+    /* Service rows: cyan wipe on hover */
+    .wipe { position: relative; isolation: isolate; }
+    .wipe::before { content: ''; position: absolute; inset: 0; background: var(--cyan); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); z-index: -1; }
+    .wipe:hover::before { transform: scaleX(1); }
+    .wipe:hover, .wipe:hover .ash, .wipe:hover .cyan { color: #121515; }
+    .wipe .row-arrow { display: inline-block; transition: transform .45s var(--ease); }
+    .wipe:hover .row-arrow { transform: translate(4px, -4px); }
+
+    /* Viewfinder corners: brackets fly in from outside */
+    .finder { position: relative; }
+    .finder::before, .finder::after { content: ''; position: absolute; width: 18px; height: 18px; opacity: 0; transition: all .35s var(--ease); pointer-events: none; z-index: 3; }
+    .finder::before { top: -4px; left: -4px; border-top: 2px solid var(--ink); border-left: 2px solid var(--ink); }
+    .finder::after { bottom: -4px; right: -4px; border-bottom: 2px solid var(--ink); border-right: 2px solid var(--ink); }
+    .finder:hover::before { opacity: 1; top: 10px; left: 10px; }
+    .finder:hover::after { opacity: 1; bottom: 10px; right: 10px; }
+
+    /* Card spotlight + subtle tilt (set from JS) */
+    .spot { position: relative; overflow: hidden; transition: transform .4s var(--ease); transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); }
+    .spot > .glow { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
+      background: radial-gradient(320px circle at var(--x, 50%) var(--y, 50%), color-mix(in srgb, var(--cyan) 20%, transparent), transparent 65%); }
+    .spot:hover > .glow { opacity: 1; }
+
+    .shot { filter: grayscale(1) contrast(1.05); transition: filter .6s ease, transform .6s var(--ease); }
+    .group:hover .shot { filter: none; transform: scale(1.03); }
+    .hatch { background-image: repeating-linear-gradient(45deg, var(--line) 0 2px, transparent 2px 10px); }
+
+    /* Portrait scanline */
+    .scan { position: absolute; left: 0; right: 0; height: 2px; background: var(--cyan); box-shadow: 0 0 12px var(--cyan); animation: scan 3.6s ease-in-out infinite; z-index: 3; }
+    @keyframes scan { 0%, 100% { top: 4% } 50% { top: 94% } }
+
+    /* Chevron conveyor */
+    /* A repeating chevron mask over a cyan fill. The loop shifts the mask by exactly one
+       tile (20px), so it is seamless at any width and follows night mode via --cyan. */
+    .conveyor {
+      --chev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 24'%3E%3Cpath d='M0 0h9l12 12L9 24H0l12-12z'/%3E%3C/svg%3E");
+      background: var(--cyan);
+      -webkit-mask: var(--chev) 0 50% / 20px 16px repeat-x;
+              mask: var(--chev) 0 50% / 20px 16px repeat-x;
+      animation: convey .35s linear infinite;
+    }
+    @keyframes convey { to { -webkit-mask-position: 20px 50%; mask-position: 20px 50%; } }
+
+    /* Hover: chevrons inside buttons slide */
+    .chev-btn .chev { display: inline-block; transition: transform .3s var(--ease); }
+    .chev-btn:hover .chev { transform: translateX(5px); }
+
+    /* Process connector draws with scroll progress (set from JS) */
+    .connector { transform-origin: left; transform: scaleX(var(--p, 0)); }
+
+    /* Scroll progress bar */
+    #progress { transform-origin: left; transform: scaleX(0); }
+
+    /* Barcode bars grow in */
+    .js #barcode rect { transform: scaleY(0); transform-origin: bottom; transform-box: fill-box; transition: transform .5s var(--ease); }
+    .js #barcode.in rect { transform: scaleY(1); }
+
+    .punch { position: absolute; top: 24px; bottom: 24px; left: 14px; width: 14px;
+      background-image: radial-gradient(circle, var(--stock) 0 4px, transparent 4.5px); background-size: 14px 56px; background-repeat: repeat-y; }
+
+    @keyframes blink { 50% { opacity: 0 } }
+    .blink { animation: blink 1.2s steps(2, start) infinite; }
+
+    /* Night-mode switch: a cyan curtain sweeps across */
+    #curtain { position: fixed; inset: 0; background: var(--cyan); z-index: 100; transform: scaleX(0); transform-origin: left; pointer-events: none; }
+    #curtain.go { animation: curtain .7s var(--ease) both; }
+    @keyframes curtain { 0% { transform: scaleX(0); transform-origin: left; } 50% { transform: scaleX(1); transform-origin: left; } 50.1% { transform-origin: right; } 100% { transform: scaleX(0); transform-origin: right; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .js [data-reveal], .js [data-reveal="rows"] > *, .js .drop, .js .stamp { opacity: 1 !important; translate: none !important; }
+      .js .drop { transform: none !important; }
+      .js .bar { background-size: 100% 100%; color: #121515; }
+      .js .shutter::after { display: none; }
+      .js #barcode rect { transform: none; }
+      .scan { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div id="curtain"></div>
+<div class="sheet">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 grid grid-cols-[auto_1fr_auto] border-b b-ink" style="background: var(--stock); transition: background-color .5s;">
+    <a href="#" class="drop flex items-center gap-3 border-r b-ink px-5 py-3.5" style="--i:0">
+      <span class="grid h-7 w-7 place-items-center bg-cyan font-mono text-[11px] font-bold">MH</span>
+      <span class="display cond text-xl">Hammad Hassan</span>
+    </a>
+    <nav class="hidden items-stretch md:flex">
+      <a href="#work" class="drop flex items-center border-r b px-6 font-mono text-xs uppercase tracking-widest hover:bg-[var(--paper)]" style="--i:1">Work</a>
+      <a href="#services" class="drop flex items-center border-r b px-6 font-mono text-xs uppercase tracking-widest hover:bg-[var(--paper)]" style="--i:2">Services</a>
+      <a href="#about" class="drop flex items-center border-r b px-6 font-mono text-xs uppercase tracking-widest hover:bg-[var(--paper)]" style="--i:3">About</a>
+      <span class="drop ml-auto hidden items-center gap-2 border-l b px-5 font-mono text-[11px] uppercase tracking-widest ash lg:flex" style="--i:4">
+        <span class="blink inline-block h-2 w-2 bg-cyan"></span><span id="where">Taking new projects</span>
+      </span>
+    </nav>
+    <div class="col-start-3 flex items-stretch">
+      <button id="night" class="drop border-l b-ink px-4 font-mono text-[11px] uppercase tracking-widest hover:bg-[var(--paper)]" style="--i:5" title="Toggle night mode">◐</button>
+      <a href="#contact" class="drop chev-btn ink-bg flex items-center gap-1 px-5 font-mono text-xs font-bold uppercase tracking-widest" style="--i:6">Contact <span class="chev">↗</span></a>
+    </div>
+    <div id="progress" class="absolute bottom-[-2px] left-0 right-0 h-[3px] bg-cyan"></div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="border-b b-ink">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-16 md:px-8 lg:grid-cols-12 lg:pt-24">
+        <div class="lg:col-span-8">
+          <div class="label" data-reveal="up" data-scramble>[ Product engineer · Technical consultant ]</div>
+          <h1 class="display mt-6 text-[13vw] sm:text-7xl lg:text-[104px]">
+            <span class="block" data-reveal="focus" style="--i:1">I build software</span>
+            <span class="block" data-reveal="focus" style="--i:2">that <span class="bar">runs your</span><br /><span class="bar">business.</span></span>
+          </h1>
+          <p class="mt-8 max-w-xl text-lg leading-relaxed ash" data-reveal="up" style="--i:5">
+            Bring me an idea, a messy system or a job you want automated. I take care of the technical side from start to finish and keep you updated in plain language.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3" data-reveal="up" style="--i:6">
+            <a href="#contact" class="magnet chev-btn ink-bg inline-block px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[.14em]">Start a project <span class="chev">↗</span></a>
+            <a href="#work" class="magnet chev-btn inline-block border-2 b-ink px-6 py-3 font-mono text-xs font-bold uppercase tracking-[.14em] hover:bg-[var(--ink)] hover:text-[var(--stock)]">See the work <span class="chev">▾</span></a>
+          </div>
+        </div>
+
+        <figure class="group finder hidden self-end lg:col-span-4 lg:block" data-reveal="up" style="--i:3">
+          <div class="paper border b-ink p-3">
+            <div class="shutter" data-reveal="shutter">
+              <div class="relative">
+                <div class="scan"></div>
+                <div class="hatch shot grid aspect-[4/5] place-items-center border b"><span class="label">[ portrait ]</span></div>
+              </div>
+            </div>
+            <figcaption class="mt-3 flex justify-between font-mono text-[10px] uppercase tracking-widest ash"><span>Fig. 01</span><span data-scramble>M. Hammad Hassan</span></figcaption>
+          </div>
+        </figure>
+      </div>
+
+      <!-- spec strip with count-up -->
+      <div class="mx-auto max-w-7xl px-5 pb-14 md:px-8">
+        <div class="paper grid grid-cols-2 border b-ink md:grid-cols-4" data-reveal="rows">
+          <div class="border-b border-r b-ink px-5 py-4 md:border-b-0"><div class="display text-4xl"><span data-count="20">0</span>+</div><div class="label mt-1">projects launched</div></div>
+          <div class="border-b b-ink px-5 py-4 md:border-b-0 md:border-r"><div class="display text-4xl"><span data-count="50">0</span>+</div><div class="label mt-1">clients &amp; teams</div></div>
+          <div class="border-r b-ink px-5 py-4"><div class="display text-4xl">~<span data-count="5">0</span> yrs</div><div class="label mt-1">experience</div></div>
+          <div class="bg-cyan px-5 py-4"><div class="display text-4xl"><span data-count="99">0</span>%</div><div class="label mt-1" style="color:#121515">uptime kept</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- chevron conveyor -->
+    <div class="border-b b-ink py-2" aria-hidden="true">
+      <div class="conveyor h-4"></div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" data-section="01 / services" class="border-b b-ink scroll-mt-16">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <div class="label" data-reveal="up" data-scramble>[ 01 / services ]</div>
+        <h2 class="display mt-4 text-5xl sm:text-6xl" data-reveal="focus">How I can <span class="bar">help.</span></h2>
+        <div class="mt-12 border-t b-ink" data-reveal="rows">
+          <a href="#contact" class="wipe grid items-baseline gap-2 border-b b px-2 py-6 md:grid-cols-12">
+            <span class="font-mono text-xs ash md:col-span-1">A</span>
+            <h3 class="display cond text-3xl md:col-span-4">Build your app or website</h3>
+            <p class="ash md:col-span-6">From the first idea to launch day, and improving it once real people use it.</p>
+            <span class="text-right font-mono cyan md:col-span-1"><span class="row-arrow">↗</span></span>
+          </a>
+          <a href="#contact" class="wipe grid items-baseline gap-2 border-b b px-2 py-6 md:grid-cols-12">
+            <span class="font-mono text-xs ash md:col-span-1">B</span>
+            <h3 class="display cond text-3xl md:col-span-4">Put AI to work</h3>
+            <p class="ash md:col-span-6">Assistants that answer calls and book appointments, and tools that read and sort documents for you.</p>
+            <span class="text-right font-mono cyan md:col-span-1"><span class="row-arrow">↗</span></span>
+          </a>
+          <a href="#contact" class="wipe grid items-baseline gap-2 border-b b px-2 py-6 md:grid-cols-12">
+            <span class="font-mono text-xs ash md:col-span-1">C</span>
+            <h3 class="display cond text-3xl md:col-span-4">Fix what's broken</h3>
+            <p class="ash md:col-span-6">Make slow or unreliable software stable, clean and documented, so it stops being a headache.</p>
+            <span class="text-right font-mono cyan md:col-span-1"><span class="row-arrow">↗</span></span>
+          </a>
+          <a href="#contact" class="wipe grid items-baseline gap-2 border-b b px-2 py-6 md:grid-cols-12">
+            <span class="font-mono text-xs ash md:col-span-1">D</span>
+            <h3 class="display cond text-3xl md:col-span-4">Guide your team</h3>
+            <p class="ash md:col-span-6">Technical advice, workshops and mentoring.</p>
+            <span class="text-right font-mono cyan md:col-span-1"><span class="row-arrow">↗</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" data-section="02 / work" class="paper border-b b-ink scroll-mt-16">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div class="label" data-reveal="up" data-scramble>[ 02 / selected work ]</div>
+            <h2 class="display mt-4 text-5xl sm:text-6xl" data-reveal="focus">Built, <span class="bar">shipped.</span></h2>
+          </div>
+          <a href="#" class="chev-btn font-mono text-xs font-bold uppercase tracking-[.16em] cyan hover:underline" data-reveal="up">All projects <span class="chev">▸▸▸</span></a>
+        </div>
+
+        <a href="#" class="group spot finder tilt mt-12 grid border b-ink md:grid-cols-[1fr_1.15fr]" style="background: var(--stock);" data-reveal="up">
+          <span class="glow"></span>
+          <div class="relative flex flex-col justify-between p-7 sm:p-9">
+            <div>
+              <div class="flex items-center justify-between font-mono text-[10px] uppercase tracking-[.15em]">
+                <span class="bg-cyan flex items-center gap-2 px-2 py-0.5"><span class="blink inline-block h-1.5 w-1.5 bg-[#121515]"></span>Live</span>
+                <span class="ash">Healthcare · AI</span>
+              </div>
+              <h3 class="display mt-6 text-4xl sm:text-5xl">AI receptionist for clinics</h3>
+              <p class="mt-4 max-w-md ash">It answers the phone, books appointments, collects patient details and sends each patient to the right specialist.</p>
+              <dl class="mt-7 border-t b font-mono text-xs">
+                <div class="flex gap-4 border-b b py-2.5"><dt class="label w-24 shrink-0">For</dt><dd>Clinics &amp; specialist practices</dd></div>
+                <div class="flex gap-4 border-b b py-2.5"><dt class="label w-24 shrink-0">Handles</dt><dd>Booking · intake · routing, by voice</dd></div>
+              </dl>
+            </div>
+            <span class="chev-btn mt-8 font-mono text-[11px] font-bold uppercase tracking-[.2em] cyan">Read the story <span class="chev">↗</span></span>
+          </div>
+          <div class="shutter relative min-h-[260px] border-t b-ink md:border-l md:border-t-0" data-reveal="shutter">
+            <div class="shot hatch absolute inset-0 grid place-items-center"><span class="label">[ screenshot ]</span></div>
+          </div>
+        </a>
+
+        <div class="mt-4 grid gap-4 md:grid-cols-3">
+          <a href="#" class="group spot finder tilt flex flex-col border b-ink p-6" style="background: var(--stock); --i:0" data-reveal="up">
+            <span class="glow"></span>
+            <div class="relative flex justify-between font-mono text-[10px] uppercase tracking-[.15em] ash"><span>Sales</span><span class="cyan">open ↗</span></div>
+            <h3 class="display cond relative mt-8 text-3xl">LinkedIn outreach on autopilot</h3>
+            <p class="relative mt-3 text-sm ash">Handles LinkedIn conversations automatically and keeps sales records up to date.</p>
+          </a>
+          <a href="#" class="group spot finder tilt flex flex-col border b-ink p-6" style="background: var(--stock); --i:1" data-reveal="up">
+            <span class="glow"></span>
+            <div class="relative flex justify-between font-mono text-[10px] uppercase tracking-[.15em] ash"><span>Hiring</span><span class="cyan">open ↗</span></div>
+            <h3 class="display cond relative mt-8 text-3xl">Resumes, sorted for you</h3>
+            <p class="relative mt-3 text-sm ash">A hiring agency's tool that reads resumes and files them into a searchable database.</p>
+          </a>
+          <a href="#" class="group spot finder tilt flex flex-col border b-ink p-6" style="background: var(--stock); --i:2" data-reveal="up">
+            <span class="glow"></span>
+            <div class="relative flex justify-between font-mono text-[10px] uppercase tracking-[.15em] ash"><span>Education</span><span class="cyan">open ↗</span></div>
+            <h3 class="display cond relative mt-8 text-3xl">Business simulator</h3>
+            <p class="relative mt-3 text-sm ash">Teaches young entrepreneurs how to run a business and manage money.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" data-section="03 / how it works" class="border-b b-ink">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <div class="label" data-reveal="up" data-scramble>[ 03 / how it works ]</div>
+        <h2 class="display mt-4 text-5xl sm:text-6xl" data-reveal="focus">Three <span class="bar">steps.</span></h2>
+        <div class="relative mt-12">
+          <!-- connector line fills as you scroll through the section -->
+          <div class="absolute -top-3 left-0 right-0 hidden h-[3px] md:block" style="background: var(--line);"><div class="connector h-full bg-cyan"></div></div>
+          <ol class="grid border b-ink md:grid-cols-3" data-reveal="rows">
+            <li class="paper border-b b-ink p-7 md:border-b-0 md:border-r"><div class="display text-6xl cyan">01</div><h3 class="display cond mt-6 text-2xl">We talk</h3><p class="mt-2 text-sm ash">You tell me what you need. I ask questions until the goal is clear.</p></li>
+            <li class="paper border-b b-ink p-7 md:border-b-0 md:border-r"><div class="display text-6xl cyan">02</div><h3 class="display cond mt-6 text-2xl">I plan &amp; build</h3><p class="mt-2 text-sm ash">A clear plan first, then regular updates you can see and try.</p></li>
+            <li class="paper p-7"><div class="display text-6xl cyan">03</div><h3 class="display cond mt-6 text-2xl">We launch</h3><p class="mt-2 text-sm ash">It goes live, and I stay on to maintain and improve it.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" data-section="04 / about" class="border-b b-ink scroll-mt-16">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <div class="label" data-reveal="up" data-scramble>[ 04 / about ]</div>
+        <div class="shake paper relative mt-6 border b-ink py-10 pl-14 pr-8 md:pl-20 md:pr-12" data-reveal="up">
+          <div class="punch" aria-hidden="true"></div>
+          <span class="stamp right-8 top-8 hidden sm:block">Open to work</span>
+          <h2 class="display text-5xl sm:text-6xl">M. Hammad <span class="bar">Hassan</span></h2>
+          <div class="mt-8 grid gap-10 lg:grid-cols-2">
+            <div class="space-y-4 leading-relaxed ash">
+              <p>I'm a product engineer and technical consultant. For about five years I've built software for clients and teams in healthcare, sales, hiring, education and food delivery.</p>
+              <p>I take full ownership of the work, from understanding the problem to launch and upkeep. I write things down and explain decisions clearly, so you're never left guessing.</p>
+            </div>
+            <dl class="border-t b-ink font-mono text-xs" data-reveal="rows">
+              <div class="flex gap-4 border-b b py-3"><dt class="label w-28 shrink-0">Role</dt><dd>Product Engineer &amp; Consultant</dd></div>
+              <div class="flex gap-4 border-b b py-3"><dt class="label w-28 shrink-0">Currently</dt><dd>Siliconplex, since 2023</dd></div>
+              <div class="flex gap-4 border-b b py-3"><dt class="label w-28 shrink-0">Available for</dt><dd>Contract · Full-time · Consulting</dd></div>
+              <div class="flex gap-4 border-b b py-3"><dt class="label w-28 shrink-0">Also</dt><dd>Workshops, team lead, intern training</dd></div>
+              <div class="flex gap-4 py-3"><dt class="label w-28 shrink-0">Files</dt><dd><a href="#" class="chev-btn cyan font-bold hover:underline">Download CV <span class="chev">↗</span></a></dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" data-section="05 / contact" class="ink-bg scroll-mt-16">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:px-8 lg:grid-cols-2">
+        <div>
+          <div class="label" style="color: color-mix(in srgb, var(--stock) 60%, transparent);" data-reveal="up" data-scramble>[ 05 / contact ]</div>
+          <h2 class="display mt-4 text-6xl sm:text-7xl" data-reveal="focus">Let's <span class="bar">talk.</span></h2>
+          <p class="mt-6 max-w-md text-lg" style="color: color-mix(in srgb, var(--stock) 75%, transparent); --i:2" data-reveal="up">A sentence or two is enough, no technical details needed. I'll reply with next steps.</p>
+        </div>
+        <form id="form" class="grid gap-0 self-end font-mono text-sm" data-reveal="rows">
+          <label class="border px-4 py-3 focus-within:border-[var(--cyan)]" style="border-color: color-mix(in srgb, var(--stock) 35%, transparent);"><span class="block text-[10px] uppercase tracking-[.18em] opacity-60">Name</span><input class="w-full bg-transparent py-1 outline-none" /></label>
+          <label class="-mt-px border px-4 py-3" style="border-color: color-mix(in srgb, var(--stock) 35%, transparent);"><span class="block text-[10px] uppercase tracking-[.18em] opacity-60">Email</span><input type="email" class="w-full bg-transparent py-1 outline-none" /></label>
+          <label class="-mt-px border px-4 py-3" style="border-color: color-mix(in srgb, var(--stock) 35%, transparent);"><span class="block text-[10px] uppercase tracking-[.18em] opacity-60">What do you need?</span><textarea rows="3" class="w-full resize-none bg-transparent py-1 outline-none"></textarea></label>
+          <button id="send" type="button" class="chev-btn bg-cyan -mt-px py-4 text-xs font-bold uppercase tracking-[.18em] hover:brightness-110">Send message <span class="chev">↗</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t b-ink">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 py-12 md:flex-row md:items-end md:px-8">
+      <div>
+        <div class="label mb-3" data-scramble>[ end of sheet ]</div>
+        <div class="display text-4xl">Hammad Hassan</div>
+        <svg id="barcode" class="mt-4 h-8 w-56" viewBox="0 0 224 32" fill="currentColor" aria-hidden="true" data-reveal="barcode"></svg>
+      </div>
+      <div class="flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs uppercase tracking-[.14em]">
+        <a href="https://www.linkedin.com/in/hammadai/" class="hover:text-[var(--cyan)]">LinkedIn ↗</a>
+        <a href="https://github.com/Blankscreen-exe" class="hover:text-[var(--cyan)]">GitHub ↗</a>
+        <a href="https://medium.com/@hammad.ai" class="hover:text-[var(--cyan)]">Blog ↗</a>
+        <span class="ash">© 2026</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Barcode plate
+  const bc = document.getElementById('barcode');
+  let bx = 0, seed = 7, n = 0;
+  const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  while (bx < 224) {
+    const w = [1.5, 1.5, 3, 6][Math.floor(rnd() * 4)];
+    const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    r.setAttribute('x', bx); r.setAttribute('y', 0); r.setAttribute('width', w); r.setAttribute('height', 32);
+    r.style.transitionDelay = (n++ * 18) + 'ms';
+    bc.appendChild(r);
+    bx += w + 2 + Math.floor(rnd() * 3);
+  }
+
+  // Text scramble for [ labels ]
+  const GLYPHS = '▚▞░▒/\\_<>#*+=01';
+  function scramble(el) {
+    if (reduced || el.dataset.done) return;
+    el.dataset.done = 1;
+    const token = (el._token = (el._token || 0) + 1); // a newer scramble on the same element cancels this one
+    const final = el.dataset.text || el.textContent;
+    let frame = 0;
+    const total = 22;
+    const tick = () => {
+      if (token !== el._token) return;
+      el.textContent = final.split('').map((c, i) => {
+        if (c === ' ' || c === '[' || c === ']') return c;
+        return i < (frame / total) * final.length ? c : GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
+      }).join('');
+      if (frame++ < total) requestAnimationFrame(() => setTimeout(tick, 28));
+      else el.textContent = final;
+    };
+    tick();
+  }
+
+  // Count-up
+  function countUp(el) {
+    if (el.dataset.done) return;
+    el.dataset.done = 1;
+    const to = +el.dataset.count;
+    if (reduced) return (el.textContent = to);
+    const start = performance.now(), dur = 1300;
+    const step = (now) => {
+      const t = Math.min((now - start) / dur, 1);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - t, 3)));
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      el.classList.add('in');
+      if (el.hasAttribute('data-scramble')) scramble(el);
+      el.querySelectorAll('[data-count]').forEach(countUp);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('[data-reveal], [data-scramble]').forEach((el) => io.observe(el));
+
+  // Scroll progress, section readout in header, process connector
+  const progress = document.getElementById('progress');
+  const where = document.getElementById('where');
+  const sections = [...document.querySelectorAll('[data-section]')];
+  const process = document.getElementById('process');
+  const connector = process.querySelector('.connector');
+  let lastWhere = '';
+  function onScroll() {
+    const h = document.documentElement;
+    progress.style.transform = `scaleX(${h.scrollTop / (h.scrollHeight - h.clientHeight)})`;
+
+    let current = 'Taking new projects';
+    sections.forEach((s) => { if (s.getBoundingClientRect().top < innerHeight * 0.4) current = s.dataset.section; });
+    if (current !== lastWhere) { lastWhere = current; where.dataset.text = current; where.textContent = current; delete where.dataset.done; scramble(where); }
+
+    const r = process.getBoundingClientRect();
+    const p = Math.min(Math.max((innerHeight * 0.85 - r.top) / (r.height * 0.9), 0), 1);
+    connector.style.setProperty('--p', p);
+  }
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Cards: spotlight + gentle tilt
+  document.querySelectorAll('.spot').forEach((el) => {
+    el.addEventListener('mousemove', (e) => {
+      const r = el.getBoundingClientRect();
+      const x = e.clientX - r.left, y = e.clientY - r.top;
+      el.style.setProperty('--x', x + 'px');
+      el.style.setProperty('--y', y + 'px');
+      if (!reduced) {
+        el.style.setProperty('--ry', ((x / r.width - 0.5) * 4) + 'deg');
+        el.style.setProperty('--rx', ((0.5 - y / r.height) * 4) + 'deg');
+      }
+    });
+    el.addEventListener('mouseleave', () => { el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); });
+  });
+
+  // Magnetic buttons
+  if (!reduced) document.querySelectorAll('.magnet').forEach((el) => {
+    el.style.transition = 'transform .3s cubic-bezier(.16,.84,.24,1)';
+    el.addEventListener('mousemove', (e) => {
+      const r = el.getBoundingClientRect();
+      el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.18}px, ${(e.clientY - r.top - r.height / 2) * 0.3}px)`;
+    });
+    el.addEventListener('mouseleave', () => (el.style.transform = ''));
+  });
+
+  // Night mode with a cyan curtain sweep
+  const curtain = document.getElementById('curtain');
+  document.getElementById('night').addEventListener('click', () => {
+    if (reduced) return document.documentElement.classList.toggle('night');
+    curtain.classList.remove('go'); void curtain.offsetWidth; curtain.classList.add('go');
+    setTimeout(() => document.documentElement.classList.toggle('night'), 350);
+  });
+
+  // Fake send: button confirms
+  document.getElementById('send').addEventListener('click', (e) => {
+    const b = e.currentTarget;
+    b.innerHTML = 'Message sent ✓';
+    b.style.letterSpacing = '.3em';
+    setTimeout(() => { b.innerHTML = 'Send message <span class="chev">↗</span>'; b.style.letterSpacing = ''; }, 2200);
+  });
+</script>
+</body>
+</html>

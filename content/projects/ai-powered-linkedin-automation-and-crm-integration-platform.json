@@ -1,0 +1,32 @@
+{
+  "title": "AI-Powered LinkedIn Automation & CRM Integration Platform",
+  "featured": true,
+  "kind": "client",
+  "status": "ongoing",
+  "openToContrib": false,
+  "dateLabel": "Live and Ongoing",
+  "sortOrder": 5,
+  "description": "This platform automates LinkedIn interactions and integrates them with your CRM to streamline sales and marketing efforts, cutting down the manual work involved in prospecting and relationship management on the network.\n\nIt follows a microservices design built across Python (FastAPI) and Go (Gin) services with a Nest.js component, backed by PostgreSQL and deployed on AWS. LLMs support its automation and content features, while web-scraping pipelines gather the LinkedIn data that feeds the CRM integration.",
+  "tags": [
+    "Python",
+    "Go Lang",
+    "JavaScript",
+    "FastAPI",
+    "Gin",
+    "Nest.js",
+    "Microservices",
+    "PostgreSQL",
+    "AWS",
+    "LLM",
+    "Web scraping"
+  ],
+  "liveUrl": "https://amostechnologies.co.uk/",
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/ai-powered-linkedin-automation-and-crm-integration-platform/1.png",
+    "/images/projects/ai-powered-linkedin-automation-and-crm-integration-platform/2.png",
+    "/images/projects/ai-powered-linkedin-automation-and-crm-integration-platform/3.png",
+    "/images/projects/ai-powered-linkedin-automation-and-crm-integration-platform/4.png"
+  ]
+}

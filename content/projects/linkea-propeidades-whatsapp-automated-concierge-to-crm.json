@@ -1,0 +1,34 @@
+{
+  "title": "Linkea Propeidades - Whatsapp Automated Concierge to CRM",
+  "featured": true,
+  "kind": "client",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Apr 2026",
+  "sortOrder": 1,
+  "description": "Linkea Propiedades is an end-to-end solution for a real-estate agency in Spain, centred on a WhatsApp concierge that handles client inquiries and guides prospective buyers toward the properties that best match their preferences. It gives the agency a single automated point of contact that never sleeps.\n\nBehind the chat experience sits a complete CRM that keeps every lead and conversation organised. The system pairs a Python/Django backend and PostgreSQL with the Meta (WhatsApp) platform for messaging, uses OpenAI and Gemini models to understand and respond to client requests, leans on Airtable for operational data, and is hosted on AWS.",
+  "tags": [
+    "Python",
+    "Django",
+    "JavaScript",
+    "Meta",
+    "TailwindCSS",
+    "PostgreSQL",
+    "AWS",
+    "Airtable",
+    "Gemini",
+    "OpenAI"
+  ],
+  "liveUrl": "https://www.linkeapropiedades.com/",
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/linkea-propeidades-whatsapp-automated-concierge-to-crm/1.png",
+    "/images/projects/linkea-propeidades-whatsapp-automated-concierge-to-crm/2.png",
+    "/images/projects/linkea-propeidades-whatsapp-automated-concierge-to-crm/3.png",
+    "/images/projects/linkea-propeidades-whatsapp-automated-concierge-to-crm/4.png",
+    "/images/projects/linkea-propeidades-whatsapp-automated-concierge-to-crm/5.png",
+    "/images/projects/linkea-propeidades-whatsapp-automated-concierge-to-crm/6.png",
+    "/images/projects/linkea-propeidades-whatsapp-automated-concierge-to-crm/7.png"
+  ]
+}

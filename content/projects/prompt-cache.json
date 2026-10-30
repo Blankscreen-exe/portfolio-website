@@ -1,0 +1,21 @@
+{
+  "title": "Prompt Cache",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Sept 2026",
+  "sortOrder": 19,
+  "description": "Write, find and fill reusable AI prompts in seconds — from the terminal.\n\nMost prompting is assembly work: pasting the same standing context, the same instructions and one new piece of text into a chat window, over and over, then doing it again for the follow-up. prompt-cache keeps the fixed parts, pulls the changing part off your clipboard, and hands you the finished prompt ready to paste.",
+  "tags": [
+    "python",
+    "TUI",
+    "Textual"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/prompt-cache",
+  "images": [
+    "/images/projects/prompt-cache/1.png"
+  ]
+}

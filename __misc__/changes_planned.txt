@@ -1,0 +1,22 @@
+
+- add some more description for projects
+- use keystatic for content management
+- add blogs from dev in trenches, cyber sources and graylining
+
+===============================
+
+- navbar title "Hammad AI" should be changed to "Hire Me!" with URL directing to Linkedin profile
+- redo the testimonial slider. currently it works and is mobile responsive. we should hide the existing component and remake this section anew.
+- add featured projects slider in home
+- brain storm ideas on improving home page funnel
+- project card currently use symbols to define about the proojects and a key for those symbols is provided in the top. this is not user firendly. how can we make it better
+- improve projects page layout
+- remove dumb projects
+
+
+
+
+
+
+
+

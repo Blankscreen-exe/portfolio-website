@@ -1,0 +1,21 @@
+{
+  "title": "Docker Practice/Tutorial Repo",
+  "featured": false,
+  "kind": "side",
+  "status": "ongoing",
+  "openToContrib": true,
+  "dateLabel": "Oct 2023",
+  "sortOrder": 26,
+  "description": "This is a repository collecting various Docker experiments — the things I have tried with Docker, each written up as a tutorial explaining how it works and why.\n\nIt centres on Docker with supporting Python and Shell scripting, and doubles as a published, hands-on tutorial resource for others learning containerisation.",
+  "tags": [
+    "Docker",
+    "Python",
+    "Shell"
+  ],
+  "liveUrl": "https://blankscreen-exe.github.io/docker-practice/",
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/docker-practice",
+  "images": [
+    "/images/projects/docker-practice-tutorial-repo/1.png"
+  ]
+}

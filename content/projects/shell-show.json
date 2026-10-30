@@ -1,0 +1,20 @@
+{
+  "title": "Shell Show",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Oct 2024",
+  "sortOrder": 25,
+  "description": "Shell Show is a command-line applet that can render images directly inside the terminal, bringing picture output to an environment that normally only deals in text.\n\nIt is written in Python and uses the Pillow imaging library to read and process images before translating them into terminal-friendly output.",
+  "tags": [
+    "Python",
+    "Pillow"
+  ],
+  "liveUrl": "https://github.com/Blankscreen-exe/shell-show",
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/shell-show",
+  "images": [
+    "/images/projects/shell-show/1.png"
+  ]
+}

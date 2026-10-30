@@ -1,0 +1,33 @@
+{
+  "title": "ATS System - Resume Parser And Analytics System",
+  "featured": false,
+  "kind": "client",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "May 2024",
+  "sortOrder": 11,
+  "description": "ATS Resume Parser is an internal tool for a hiring agency that parses incoming resumes and saves them to a database through an automated pipeline, removing the manual data-entry burden from recruiters. Beyond parsing, it lets recruiters semantically search and match or rank candidates against the roles they are hiring for.\n\nIt is built on a Python/FastAPI backend with PostgreSQL and a JavaScript/TailwindCSS interface, and uses OpenAI LLMs orchestrated with LangChain together with a vector database — both to extract structured fields from resumes and to power the AI-driven candidate search.",
+  "tags": [
+    "Python",
+    "FastAPI",
+    "PostgreSQL",
+    "LLM",
+    "OpenAI",
+    "Machine Learning",
+    "Langchain",
+    "VectorDB",
+    "JavaScript",
+    "TailwindCSS"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/ats-system-resume-parser-and-analytics-system/1.png",
+    "/images/projects/ats-system-resume-parser-and-analytics-system/2.png",
+    "/images/projects/ats-system-resume-parser-and-analytics-system/3.png",
+    "/images/projects/ats-system-resume-parser-and-analytics-system/4.png",
+    "/images/projects/ats-system-resume-parser-and-analytics-system/5.png",
+    "/images/projects/ats-system-resume-parser-and-analytics-system/6.png"
+  ]
+}

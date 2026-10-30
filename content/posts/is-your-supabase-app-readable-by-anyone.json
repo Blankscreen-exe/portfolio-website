@@ -1,0 +1,14 @@
+{
+  "title": "Is your Supabase app readable by anyone?",
+  "description": "If your app runs on Supabase, there is a key sitting in your frontend code right now. Anyone who opens your site can find it in a few seconds. That part is fine. Supabase designed it that way. What is not fine is what that key can do if one setting is off, and in a lot of AI-built apps I look at, it is off ... welp! hold your cocktails folks, this is going to be wild.",
+  "published": "2026-10-30",
+  "url": "https://hammadai.hashnode.dev/is-your-supabase-app-readable-by-anyone",
+  "thumbnail": "https://cdn.hashnode.com/uploads/covers/65a4cfa110525cc9fed6b2d0/c102f8c3-ccc7-403d-bd50-fef4346bfba4.jpg",
+  "tags": [
+    "supabase",
+    "vibe coding",
+    "app security",
+    "startups",
+    "mvp"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "development": [
+    {
+      "question": "What happens when I bring you my project idea?",
+      "answer": "I keep it straightforward:\n\n1. You tell me your idea and I ask questions until I understand it.\n2. I break the work into milestones with time estimates.\n3. We adjust the plan together if needed.\n4. I start building and send you regular progress reports until it's done.\n\nSmall tasks skip the ceremony: there's no point making you wait for a plan to write a few tests.",
+      "featured": true
+    },
+    {
+      "question": "How long will it take?",
+      "answer": "It depends on the size of the project. Once I understand what you need, you get a milestone breakdown with time estimates before any work starts.",
+      "featured": true
+    },
+    {
+      "question": "How will we stay in touch, and how do I give feedback?",
+      "answer": "Whichever chat or video tool you're comfortable with. If everything's on track you get a daily progress report, and anything critical I raise straight away.",
+      "featured": true
+    },
+    {
+      "question": "What if I change my mind halfway through?",
+      "answer": "That's fine. We revisit the plan and estimates together, ideally in one meeting, and I carry on with the new direction. Changes late in the work can mean some rework, so the earlier we talk, the better.",
+      "featured": false
+    }
+  ],
+  "mentorship": [
+    {
+      "question": "How does mentorship work?",
+      "answer": "I learn your goals and put together a study plan tailored to you. We review it together, and it can change as we go. I've run workshops at university and as an IEEE Computer Society member, so this isn't new to me.",
+      "featured": false
+    },
+    {
+      "question": "Is it suitable for complete beginners?",
+      "answer": "Yes. Even without a CS degree, or coming from a completely different field, I can help you get into IT.",
+      "featured": false
+    },
+    {
+      "question": "What can you help me with?",
+      "answer": "Python and JavaScript ecosystems, plus AI and machine learning. I teach through real projects, since that's how I learned. I also help with interview prep and specific programming problems.",
+      "featured": false
+    },
+    {
+      "question": "Online or in person? One-to-one or in a group?",
+      "answer": "Whichever you prefer.",
+      "featured": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Python Dependency Report Generator",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Jul 2023",
+  "sortOrder": 28,
+  "description": "This tool produces a .docx document that lists out all of the dependencies a given Python environment uses, turning a project's package list into a shareable, formatted report.\n\nIt is a small Python utility built around the python-docx library, which it uses to generate the Word-format output.",
+  "tags": [
+    "Python",
+    "python-docx"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/python_dependency_report_generator",
+  "images": [
+    "/images/projects/python-dependency-report-generator/1.png"
+  ]
+}

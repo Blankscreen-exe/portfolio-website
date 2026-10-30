@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept 06 — Choose Your Path</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#03BCCF', 'primary-ink': '#027C89', ink: '#16191C' },
+          fontFamily: { sans: ['"DM Sans"', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    /* Signature grid: 56px cells, soft cyan, fading out down the page so it frames the hero */
+    body { background: #fff; }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(3,188,207,.16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(3,188,207,.16) 1px, transparent 1px);
+      background-size: 56px 56px;
+      background-position: center top;
+      -webkit-mask-image: linear-gradient(#000 55%, transparent);
+              mask-image: linear-gradient(#000 55%, transparent);
+    }
+    html { scroll-behavior: smooth; }
+    .path[aria-pressed="true"] { background: #03BCCF; border-color: #16191C; }
+    .path[aria-pressed="true"] .path-check { opacity: 1; }
+    .panel { display: none; }
+    .panel.active { display: block; animation: rise .35s ease; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .2s ease; }
+  </style>
+</head>
+<body class="font-sans text-ink antialiased">
+
+  <header class="border-b border-ink/10 bg-white">
+    <div class="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+      <a href="#" class="flex items-center gap-2 text-lg font-extrabold"><span class="grid h-8 w-8 place-items-center bg-primary text-sm">H</span>Hammad Hassan</a>
+      <nav class="hidden gap-8 text-[15px] font-medium text-ink/70 md:flex">
+        <a href="#work" class="hover:text-ink">Projects</a>
+        <a href="#faq" class="hover:text-ink">Questions</a>
+        <a href="#" class="hover:text-ink">About</a>
+      </nav>
+      <a href="#contact" class="border border-ink px-4 py-2 text-sm font-bold hover:bg-ink hover:text-white">Contact me</a>
+    </div>
+  </header>
+
+  <!-- HERO: one question -->
+  <section class="relative">
+    <div class="grid-bg absolute inset-0 -z-0"></div>
+    <div class="relative mx-auto max-w-5xl px-6 pb-16 pt-20 text-center md:pt-28">
+      <div class="mx-auto grid h-20 w-20 place-items-center border border-ink/15 bg-white text-xs text-ink/40">[ photo ]</div>
+      <h1 class="mx-auto mt-8 max-w-2xl text-4xl font-extrabold leading-tight tracking-tight md:text-6xl">
+        Hi, I'm Hammad.<br /><span class="text-primary-ink">What brings you here?</span>
+      </h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg text-ink/60">Pick the one that fits best and I'll show you what's relevant.</p>
+
+      <div class="mx-auto mt-12 grid max-w-4xl gap-3 text-left sm:grid-cols-2" role="group" aria-label="Choose what you need">
+        <button class="path group flex items-start gap-4 border border-ink/15 bg-white p-5 transition hover:border-ink" data-panel="build" aria-pressed="false">
+          <span class="text-3xl">🛠️</span>
+          <span class="flex-1"><span class="block text-lg font-bold">I need an app or website built</span><span class="mt-1 block text-sm text-ink/60">From an idea to a working product</span></span>
+          <span class="path-check text-xl font-bold opacity-0">✓</span>
+        </button>
+        <button class="path group flex items-start gap-4 border border-ink/15 bg-white p-5 transition hover:border-ink" data-panel="ai" aria-pressed="false">
+          <span class="text-3xl">🤖</span>
+          <span class="flex-1"><span class="block text-lg font-bold">I want AI to save my team time</span><span class="mt-1 block text-sm text-ink/60">Assistants, automation, smart tools</span></span>
+          <span class="path-check text-xl font-bold opacity-0">✓</span>
+        </button>
+        <button class="path group flex items-start gap-4 border border-ink/15 bg-white p-5 transition hover:border-ink" data-panel="fix" aria-pressed="false">
+          <span class="text-3xl">🩹</span>
+          <span class="flex-1"><span class="block text-lg font-bold">My current software needs help</span><span class="mt-1 block text-sm text-ink/60">Bugs, slowness, a project left half-done</span></span>
+          <span class="path-check text-xl font-bold opacity-0">✓</span>
+        </button>
+        <button class="path group flex items-start gap-4 border border-ink/15 bg-white p-5 transition hover:border-ink" data-panel="hire" aria-pressed="false">
+          <span class="text-3xl">💼</span>
+          <span class="flex-1"><span class="block text-lg font-bold">I'm hiring a developer</span><span class="mt-1 block text-sm text-ink/60">Full-time, contract or consulting</span></span>
+          <span class="path-check text-xl font-bold opacity-0">✓</span>
+        </button>
+      </div>
+      <p class="mt-6 text-sm text-ink/50">Not sure? <a href="#contact" class="font-semibold text-ink underline decoration-primary decoration-2 underline-offset-4">Just say hello</a> and we'll figure it out together.</p>
+    </div>
+  </section>
+
+  <!-- TAILORED PANELS -->
+  <section id="answer" class="mx-auto max-w-5xl px-6">
+    <div class="panel border border-ink" data-id="build">
+      <div class="grid md:grid-cols-5">
+        <div class="bg-primary p-8 md:col-span-2"><p class="text-sm font-bold uppercase tracking-wider">Building something new</p><h2 class="mt-3 text-3xl font-extrabold leading-tight">I'll take your idea all the way to launch.</h2></div>
+        <div class="p-8 md:col-span-3">
+          <ul class="space-y-3 text-ink/80">
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>We decide together what the first version needs, and what can wait.</li>
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>I design and build all of it: the screens, the database, payments, logins.</li>
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>You see progress regularly and can try it as it grows.</li>
+          </ul>
+          <div class="mt-6 border-t border-ink/10 pt-5 text-sm"><span class="font-bold">For example:</span> a booking app where customers request babysitters, plumbers or A/C repair on demand.</div>
+          <a href="#contact" data-prefill="I'd like to build an app or website: " class="prefill mt-6 inline-block bg-ink px-6 py-3 font-bold text-white hover:bg-primary hover:text-ink">Tell me your idea →</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel border border-ink" data-id="ai">
+      <div class="grid md:grid-cols-5">
+        <div class="bg-primary p-8 md:col-span-2"><p class="text-sm font-bold uppercase tracking-wider">Practical AI</p><h2 class="mt-3 text-3xl font-extrabold leading-tight">Let AI handle the repetitive work.</h2></div>
+        <div class="p-8 md:col-span-3">
+          <ul class="space-y-3 text-ink/80">
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>Phone and chat assistants that answer customers and book appointments.</li>
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>Tools that read documents like resumes and invoices and organize them for you.</li>
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>Automated outreach that keeps your customer lists up to date.</li>
+          </ul>
+          <div class="mt-6 border-t border-ink/10 pt-5 text-sm"><span class="font-bold">For example:</span> an AI receptionist that books clinic appointments and sends each patient to the right specialist.</div>
+          <a href="#contact" data-prefill="I'm interested in using AI for: " class="prefill mt-6 inline-block bg-ink px-6 py-3 font-bold text-white hover:bg-primary hover:text-ink">Explore AI for my business →</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel border border-ink" data-id="fix">
+      <div class="grid md:grid-cols-5">
+        <div class="bg-primary p-8 md:col-span-2"><p class="text-sm font-bold uppercase tracking-wider">Rescue &amp; repair</p><h2 class="mt-3 text-3xl font-extrabold leading-tight">I'll get your software back on its feet.</h2></div>
+        <div class="p-8 md:col-span-3">
+          <ul class="space-y-3 text-ink/80">
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>I find out what's actually wrong and explain it in plain words.</li>
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>I fix the urgent problems first, then clean up the rest step by step.</li>
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>I write documentation, so you're never stuck depending on one person again.</li>
+          </ul>
+          <div class="mt-6 grid grid-cols-2 border-t border-ink/10 pt-5 text-sm"><div><span class="text-2xl font-extrabold">10+</span><br />systems stabilized</div><div><span class="text-2xl font-extrabold">99%</span><br />uptime on systems I maintain</div></div>
+          <a href="#contact" data-prefill="My current software has a problem: " class="prefill mt-6 inline-block bg-ink px-6 py-3 font-bold text-white hover:bg-primary hover:text-ink">Describe the problem →</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel border border-ink" data-id="hire">
+      <div class="grid md:grid-cols-5">
+        <div class="bg-primary p-8 md:col-span-2"><p class="text-sm font-bold uppercase tracking-wider">For recruiters</p><h2 class="mt-3 text-3xl font-extrabold leading-tight">Open to full-time, contract and consulting roles.</h2></div>
+        <div class="p-8 md:col-span-3">
+          <ul class="space-y-3 text-ink/80">
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>About 5 years building production software, currently at Siliconplex.</li>
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>Strong in backend, full-stack and AI features. I've led a team of 5 and trained interns.</li>
+            <li class="flex gap-3"><span class="font-bold text-primary-ink">→</span>Comfortable owning features independently, from planning to production.</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#" class="border border-ink px-6 py-3 font-bold hover:bg-ink hover:text-white">Download CV</a>
+            <a href="https://www.linkedin.com/in/hammadai/" class="border border-ink px-6 py-3 font-bold hover:bg-ink hover:text-white">LinkedIn</a>
+            <a href="#contact" data-prefill="Hi Hammad, I'm hiring for a role: " class="prefill bg-ink px-6 py-3 font-bold text-white hover:bg-primary hover:text-ink">Get in touch →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="mx-auto max-w-5xl px-6 py-24">
+    <div class="grid grid-cols-2 border border-ink/10 md:grid-cols-4">
+      <div class="border-b border-r border-ink/10 p-6 md:border-b-0"><div class="text-4xl font-extrabold">20+</div><div class="mt-1 text-sm text-ink/60">projects launched</div></div>
+      <div class="border-b border-ink/10 p-6 md:border-b-0 md:border-r"><div class="text-4xl font-extrabold">50+</div><div class="mt-1 text-sm text-ink/60">clients &amp; teams</div></div>
+      <div class="border-r border-ink/10 p-6"><div class="text-4xl font-extrabold">~5</div><div class="mt-1 text-sm text-ink/60">years of experience</div></div>
+      <div class="p-6"><div class="text-4xl font-extrabold">4</div><div class="mt-1 text-sm text-ink/60">tech communities</div></div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="mx-auto max-w-5xl px-6 pb-24">
+    <div class="flex items-end justify-between">
+      <h2 class="text-3xl font-extrabold tracking-tight md:text-4xl">Recent projects</h2>
+      <a href="#" class="text-sm font-bold underline decoration-primary decoration-2 underline-offset-4">View all</a>
+    </div>
+    <div class="mt-8 grid gap-6 md:grid-cols-3">
+      <a href="#" class="group border border-ink/15 hover:border-ink"><div class="grid aspect-[4/3] place-items-center border-b border-ink/15 bg-primary/10 text-sm text-ink/40">[ image ]</div><div class="p-5"><h3 class="font-bold group-hover:text-primary-ink">AI clinic receptionist</h3><p class="mt-1 text-sm text-ink/60">Books appointments by phone and routes patients to specialists.</p></div></a>
+      <a href="#" class="group border border-ink/15 hover:border-ink"><div class="grid aspect-[4/3] place-items-center border-b border-ink/15 bg-primary/10 text-sm text-ink/40">[ image ]</div><div class="p-5"><h3 class="font-bold group-hover:text-primary-ink">On-demand services app</h3><p class="mt-1 text-sm text-ink/60">Customers book babysitters, plumbers and repair pros in a few taps.</p></div></a>
+      <a href="#" class="group border border-ink/15 hover:border-ink"><div class="grid aspect-[4/3] place-items-center border-b border-ink/15 bg-primary/10 text-sm text-ink/40">[ image ]</div><div class="p-5"><h3 class="font-bold group-hover:text-primary-ink">Lawn business manager</h3><p class="mt-1 text-sm text-ink/60">Manage staff, customers and payments for a landscaping company in one place.</p></div></a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="border-y border-ink/10 bg-[#F6FBFC]">
+    <div class="mx-auto max-w-3xl px-6 py-24">
+      <h2 class="text-center text-3xl font-extrabold tracking-tight md:text-4xl">Common questions</h2>
+      <div class="mt-10 divide-y divide-ink/10 border-y border-ink/10">
+        <details class="group py-5" open>
+          <summary class="flex cursor-pointer list-none items-center justify-between text-lg font-bold">Do I need to be technical to work with you?<span class="faq-icon text-2xl text-primary-ink">+</span></summary>
+          <p class="mt-3 text-ink/70">Not at all. You bring the business knowledge and I handle the technical side. I'll explain any decision you need to make in plain language.</p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-lg font-bold">How much will it cost?<span class="faq-icon text-2xl text-primary-ink">+</span></summary>
+          <p class="mt-3 text-ink/70">It depends on what you need. After a short conversation I'll send you a clear quote, with no surprises later.</p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-lg font-bold">How long does a project take?<span class="faq-icon text-2xl text-primary-ink">+</span></summary>
+          <p class="mt-3 text-ink/70">Small tools can take a few weeks and larger products longer. You'll get a plan with clear milestones before any work starts.</p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-lg font-bold">Can you take over a project someone else started?<span class="faq-icon text-2xl text-primary-ink">+</span></summary>
+          <p class="mt-3 text-ink/70">Yes. I've stabilized and cleaned up more than 10 existing systems. I'll review what's there and tell you honestly what's worth keeping.</p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-lg font-bold">What happens after launch?<span class="faq-icon text-2xl text-primary-ink">+</span></summary>
+          <p class="mt-3 text-ink/70">I can stay on to maintain, monitor and improve it, or hand it over with full documentation.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="mx-auto max-w-3xl px-6 py-24">
+    <h2 class="text-3xl font-extrabold tracking-tight md:text-5xl">Let's talk.</h2>
+    <p class="mt-3 text-lg text-ink/60">A sentence or two is enough. I'll get back to you.</p>
+    <form class="mt-8 grid gap-4">
+      <div class="grid gap-4 md:grid-cols-2">
+        <input class="border border-ink/20 px-4 py-3.5 outline-none focus:border-ink" placeholder="Your name" />
+        <input type="email" class="border border-ink/20 px-4 py-3.5 outline-none focus:border-ink" placeholder="Email address" />
+      </div>
+      <textarea id="msg" rows="4" class="resize-none border border-ink/20 px-4 py-3.5 outline-none focus:border-ink" placeholder="How can I help?"></textarea>
+      <button type="button" class="bg-primary py-4 text-lg font-bold hover:bg-ink hover:text-white">Send message</button>
+    </form>
+  </section>
+
+  <footer class="border-t border-ink/10">
+    <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-8 text-sm text-ink/60">
+      <span>© 2026 M. Hammad Hassan</span>
+      <div class="flex gap-6"><a href="https://www.linkedin.com/in/hammadai/" class="hover:text-ink">LinkedIn</a><a href="https://github.com/Blankscreen-exe" class="hover:text-ink">GitHub</a><a href="https://medium.com/@hammad.ai" class="hover:text-ink">Blog</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const paths = document.querySelectorAll('.path');
+    const panels = document.querySelectorAll('.panel');
+    paths.forEach((btn) => btn.addEventListener('click', () => {
+      paths.forEach((b) => b.setAttribute('aria-pressed', b === btn));
+      panels.forEach((p) => p.classList.toggle('active', p.dataset.id === btn.dataset.panel));
+      document.getElementById('answer').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }));
+    // Carry the chosen path into the contact form so visitors don't start from a blank box
+    document.querySelectorAll('.prefill').forEach((a) => a.addEventListener('click', () => {
+      document.getElementById('msg').value = a.dataset.prefill;
+    }));
+  </script>
+</body>
+</html>

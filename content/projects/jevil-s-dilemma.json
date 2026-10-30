@@ -1,0 +1,25 @@
+{
+  "title": "Jevil's Dilemma",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Sept 2025",
+  "sortOrder": 23,
+  "description": "A pixel-art take on the Dilemma party card game, hosted by Jevil from Deltarune.\n\nEach card puts you in an awkward situation with two choices. There are no right answers, but Jevil is keeping track: every pick nudges you across a Lawful ↔ Chaotic and Good ↔ Evil alignment chart, and at the end he gives you his reading of who you really are. Save the result as an image.",
+  "tags": [
+    "React.js",
+    "Node",
+    "TypeScript",
+    "PWA"
+  ],
+  "liveUrl": "https://jevils-dilemma.vercel.app/",
+  "liveUrlNote": "",
+  "repoUrl": "https://github.com/Blankscreen-exe/jevils-dilemma",
+  "images": [
+    "/images/projects/jevil-s-dilemma/1.png",
+    "/images/projects/jevil-s-dilemma/2.png",
+    "/images/projects/jevil-s-dilemma/3.png",
+    "/images/projects/jevil-s-dilemma/4.png"
+  ]
+}

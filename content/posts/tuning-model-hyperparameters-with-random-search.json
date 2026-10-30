@@ -1,0 +1,14 @@
+{
+  "title": "Tuning Model Hyperparameters With Random Search",
+  "description": "Random Search is a hyperparameter optimization technique in machine learning that randomly samples a defined number of hyperparameter combinations from specified distributions. By distributions, I mean sets or ranges of possible parameter values.",
+  "published": "2023-11-01",
+  "url": "https://medium.com/@hammad.ai/tuning-model-hyperparameters-with-random-search-f4c1cc88f528",
+  "thumbnail": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*M24XYSuRGHEWgOCN",
+  "tags": [
+    "python",
+    "randomsearchcv",
+    "data science",
+    "machine learning",
+    "hyperparameter tuning"
+  ]
+}

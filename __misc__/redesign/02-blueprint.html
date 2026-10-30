@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept 02 — Blueprint / Drafting Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: 'rgb(var(--primary) / <alpha-value>)',
+            sheet: 'rgb(var(--sheet) / <alpha-value>)',
+            line: 'rgb(var(--line) / <alpha-value>)',
+            text: 'rgb(var(--text) / <alpha-value>)',
+          },
+          fontFamily: {
+            cond: ['"IBM Plex Sans Condensed"', 'sans-serif'],
+            sans: ['"IBM Plex Sans"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    :root {
+      --primary: 3 188 207;
+      --sheet: 250 252 252;
+      --line: 3 140 155;
+      --text: 18 42 52;
+      --grid-minor: rgba(3, 188, 207, .10);
+      --grid-major: rgba(3, 188, 207, .22);
+    }
+    .dark {
+      /* "Blueprint" mode: the cyan becomes the paper's ink on deep navy */
+      --primary: 48 195 210;
+      --sheet: 9 33 48;
+      --line: 120 220 230;
+      --text: 220 244 247;
+      --grid-minor: rgba(48, 195, 210, .10);
+      --grid-major: rgba(48, 195, 210, .24);
+    }
+    /* Signature grid as engineering paper: 10px minor, 100px major (same rhythm as the current site) */
+    body {
+      background-color: rgb(var(--sheet));
+      background-image:
+        linear-gradient(var(--grid-major) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+        linear-gradient(var(--grid-minor) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+      background-size: 100px 100px, 100px 100px, 10px 10px, 10px 10px;
+      transition: background-color .4s ease;
+    }
+    /* Dimension line: |<———— label ————>| */
+    .dim { position: relative; height: 1px; background: rgb(var(--line)); }
+    .dim::before, .dim::after { content: ''; position: absolute; top: -5px; width: 1px; height: 11px; background: rgb(var(--line)); }
+    .dim::before { left: 0 } .dim::after { right: 0 }
+    .dim > span { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 0 .5rem; background: rgb(var(--sheet)); }
+    /* Registration crosshair */
+    .reg { width: 22px; height: 22px; position: absolute; }
+    .reg::before, .reg::after { content: ''; position: absolute; background: rgb(var(--line)); }
+    .reg::before { left: 50%; top: 0; bottom: 0; width: 1px }
+    .reg::after { top: 50%; left: 0; right: 0; height: 1px }
+    .cell:hover { background: rgb(var(--primary) / .08); }
+    .cell:hover .cell-arrow { transform: translate(3px, -3px); }
+    .cell-arrow { transition: transform .2s ease; }
+  </style>
+</head>
+<body class="font-sans text-text antialiased">
+
+  <!-- Drawing frame -->
+  <div class="relative mx-auto my-6 max-w-[1280px] border border-line/70 md:my-10">
+    <!-- Coordinate ticks (top) -->
+    <div class="hidden grid-cols-6 border-b border-line/70 font-mono text-[10px] text-line md:grid">
+      <span class="border-r border-line/40 py-1 text-center">A</span><span class="border-r border-line/40 py-1 text-center">B</span><span class="border-r border-line/40 py-1 text-center">C</span><span class="border-r border-line/40 py-1 text-center">D</span><span class="border-r border-line/40 py-1 text-center">E</span><span class="py-1 text-center">F</span>
+    </div>
+
+    <!-- NAV as a header strip -->
+    <header class="sticky top-0 z-40 grid grid-cols-2 border-b border-line/70 bg-sheet/90 backdrop-blur md:grid-cols-12">
+      <a href="#" class="col-span-1 flex items-center gap-3 border-r border-line/70 px-5 py-4 md:col-span-3">
+        <svg width="28" height="28" viewBox="0 0 28 28" class="text-primary"><rect x="1" y="1" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M1 14h26M14 1v26" stroke="currentColor" stroke-width=".75" stroke-dasharray="2 2"/><circle cx="14" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="font-cond text-lg font-semibold tracking-wide">M.HAMMAD.HASSAN</span>
+      </a>
+      <nav class="hidden items-stretch font-mono text-xs uppercase md:col-span-7 md:flex">
+        <a href="#work" class="flex flex-1 items-center justify-center border-r border-line/40 hover:bg-primary/10">01 Work</a>
+        <a href="#services" class="flex flex-1 items-center justify-center border-r border-line/40 hover:bg-primary/10">02 Services</a>
+        <a href="#xp" class="flex flex-1 items-center justify-center border-r border-line/40 hover:bg-primary/10">03 Experience</a>
+        <a href="#" class="flex flex-1 items-center justify-center border-r border-line/70 hover:bg-primary/10">04 Blog</a>
+      </nav>
+      <div class="flex items-stretch justify-end md:col-span-2">
+        <button id="mode" class="flex flex-1 items-center justify-center gap-2 border-r border-line/70 px-3 font-mono text-[11px] uppercase hover:bg-primary/10" title="Toggle blueprint mode">
+          <span class="h-2.5 w-2.5 border border-line bg-primary"></span><span id="mode-label">Blueprint</span>
+        </button>
+        <a href="#contact" class="flex items-center bg-primary px-4 font-mono text-xs font-semibold uppercase text-[rgb(9,33,48)] hover:brightness-110">Contact</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative grid border-b border-line/70 md:grid-cols-12">
+      <span class="reg left-3 top-3"></span><span class="reg right-3 top-3 hidden md:block"></span>
+
+      <div class="px-6 py-16 md:col-span-8 md:border-r md:border-line/70 md:px-12 md:py-24">
+        <p class="font-mono text-xs uppercase tracking-widest text-line">Sheet 01 / Scale 1:1 / Rev. 2026</p>
+        <h1 class="mt-6 font-cond text-5xl font-bold uppercase leading-[0.95] sm:text-7xl lg:text-[96px]">
+          Product<br />Engineer <span class="text-primary">&amp;</span><br />Technical<br />Consultant
+        </h1>
+
+        <div class="mt-10 max-w-xl">
+          <div class="dim font-mono text-[11px] uppercase text-line"><span>idea → shipped product</span></div>
+        </div>
+
+        <p class="mt-10 max-w-xl text-lg leading-relaxed text-text/80">
+          I help teams turn ideas into shipped products. I own features end to end, from the user problem and design through backend, integrations and long-term maintainability.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-0">
+          <a href="#work" class="border border-line bg-primary px-6 py-3 font-mono text-sm font-semibold uppercase text-[rgb(9,33,48)] hover:brightness-110">View drawings ↗</a>
+          <a href="#contact" class="-ml-px border border-line px-6 py-3 font-mono text-sm uppercase hover:bg-primary/10">Start a project</a>
+        </div>
+      </div>
+
+      <!-- Schematic / callouts -->
+      <div class="relative hidden md:col-span-4 md:block">
+        <svg viewBox="0 0 400 520" class="h-full w-full text-line" fill="none" stroke="currentColor">
+          <rect x="80" y="70" width="240" height="300" stroke-width="1.5"/>
+          <rect x="100" y="90" width="200" height="200" stroke-dasharray="4 4"/>
+          <text x="200" y="195" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="currentColor" stroke="none">[ PORTRAIT ]</text>
+          <line x1="100" y1="310" x2="300" y2="310"/><line x1="100" y1="330" x2="250" y2="330"/><line x1="100" y1="350" x2="200" y2="350"/>
+          <!-- dims -->
+          <line x1="80" y1="40" x2="320" y2="40"/><line x1="80" y1="34" x2="80" y2="46"/><line x1="320" y1="34" x2="320" y2="46"/>
+          <text x="200" y="34" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="currentColor" stroke="none">~5 YRS</text>
+          <line x1="350" y1="70" x2="350" y2="370"/><line x1="344" y1="70" x2="356" y2="70"/><line x1="344" y1="370" x2="356" y2="370"/>
+          <text x="362" y="224" font-family="IBM Plex Mono" font-size="10" fill="currentColor" stroke="none" transform="rotate(90 362 224)">20+ SYSTEMS</text>
+          <!-- callouts -->
+          <circle cx="60" cy="430" r="13" fill="rgb(var(--primary))" stroke="none"/><text x="60" y="434" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="rgb(9,33,48)" stroke="none">1</text>
+          <path d="M73 430 H140 L160 330" />
+          <text x="40" y="470" font-family="IBM Plex Mono" font-size="10" fill="currentColor" stroke="none">BACKEND · APIs · AI</text>
+          <circle cx="340" cy="450" r="13" stroke-width="1.5"/><text x="340" y="454" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="currentColor" stroke="none">2</text>
+          <path d="M327 450 H270 L250 350" />
+          <text x="230" y="490" font-family="IBM Plex Mono" font-size="10" fill="currentColor" stroke="none">OPEN TO WORK</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- METRICS — a spec table -->
+    <section class="grid grid-cols-2 border-b border-line/70 md:grid-cols-6">
+      <div class="cell border-b border-r border-line/40 p-5 md:border-b-0"><div class="font-mono text-[10px] uppercase text-line">M-01</div><div class="mt-2 font-cond text-4xl font-bold">20+</div><div class="mt-1 text-xs text-text/70">Production systems delivered</div></div>
+      <div class="cell border-b border-line/40 p-5 md:border-b-0 md:border-r"><div class="font-mono text-[10px] uppercase text-line">M-02</div><div class="mt-2 font-cond text-4xl font-bold">~5</div><div class="mt-1 text-xs text-text/70">Years of production experience</div></div>
+      <div class="cell border-b border-r border-line/40 p-5 md:border-b-0"><div class="font-mono text-[10px] uppercase text-line">M-03</div><div class="mt-2 font-cond text-4xl font-bold">10+</div><div class="mt-1 text-xs text-text/70">Systems stabilized or refactored</div></div>
+      <div class="cell border-b border-line/40 p-5 md:border-b-0 md:border-r"><div class="font-mono text-[10px] uppercase text-line">M-04</div><div class="mt-2 font-cond text-4xl font-bold">4</div><div class="mt-1 text-xs text-text/70">Engineering communities served</div></div>
+      <div class="cell border-r border-line/40 p-5"><div class="font-mono text-[10px] uppercase text-line">M-05</div><div class="mt-2 font-cond text-4xl font-bold text-primary">99%</div><div class="mt-1 text-xs text-text/70">Uptime on maintained systems</div></div>
+      <div class="cell p-5"><div class="font-mono text-[10px] uppercase text-line">M-06</div><div class="mt-2 font-cond text-4xl font-bold">50+</div><div class="mt-1 text-xs text-text/70">Clients &amp; teams supported</div></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="border-b border-line/70">
+      <div class="flex items-baseline justify-between border-b border-line/40 px-6 py-5 md:px-12">
+        <h2 class="font-cond text-3xl font-bold uppercase md:text-4xl">Section A–A <span class="text-primary">/</span> Services</h2>
+        <span class="hidden font-mono text-xs uppercase text-line md:block">Detail 02</span>
+      </div>
+      <div class="grid md:grid-cols-5">
+        <a href="#" class="cell group border-b border-line/40 p-6 md:border-b-0 md:border-r">
+          <div class="flex items-start justify-between"><span class="grid h-8 w-8 place-items-center rounded-full border border-line font-mono text-xs">A1</span><span class="cell-arrow font-mono text-primary">↗</span></div>
+          <h3 class="mt-10 font-cond text-xl font-semibold uppercase">Backend &amp; APIs</h3>
+          <p class="mt-2 text-sm text-text/70">Django, FastAPI, Gin, Express, Laravel. Services built to last.</p>
+        </a>
+        <a href="#" class="cell group border-b border-line/40 p-6 md:border-b-0 md:border-r">
+          <div class="flex items-start justify-between"><span class="grid h-8 w-8 place-items-center rounded-full border border-line font-mono text-xs">A2</span><span class="cell-arrow font-mono text-primary">↗</span></div>
+          <h3 class="mt-10 font-cond text-xl font-semibold uppercase">Full-stack products</h3>
+          <p class="mt-2 text-sm text-text/70">React and Next.js front ends on solid back ends, shipped and iterated.</p>
+        </a>
+        <a href="#" class="cell group border-b border-line/40 p-6 md:border-b-0 md:border-r">
+          <div class="flex items-start justify-between"><span class="grid h-8 w-8 place-items-center rounded-full border border-line font-mono text-xs">A3</span><span class="cell-arrow font-mono text-primary">↗</span></div>
+          <h3 class="mt-10 font-cond text-xl font-semibold uppercase">AI &amp; ML</h3>
+          <p class="mt-2 text-sm text-text/70">LLM agents, voice AI, RAG and classic ML pipelines.</p>
+        </a>
+        <a href="#" class="cell group border-b border-line/40 p-6 md:border-b-0 md:border-r">
+          <div class="flex items-start justify-between"><span class="grid h-8 w-8 place-items-center rounded-full border border-line font-mono text-xs">A4</span><span class="cell-arrow font-mono text-primary">↗</span></div>
+          <h3 class="mt-10 font-cond text-xl font-semibold uppercase">Consulting</h3>
+          <p class="mt-2 text-sm text-text/70">Code stabilization, refactors, documentation and deployment.</p>
+        </a>
+        <a href="#" class="cell group p-6">
+          <div class="flex items-start justify-between"><span class="grid h-8 w-8 place-items-center rounded-full border border-line font-mono text-xs">A5</span><span class="cell-arrow font-mono text-primary">↗</span></div>
+          <h3 class="mt-10 font-cond text-xl font-semibold uppercase">Mentorship</h3>
+          <p class="mt-2 text-sm text-text/70">Workshops and intern training in backend and Web3.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- PROJECTS — drawing index -->
+    <section id="work" class="border-b border-line/70">
+      <div class="flex items-baseline justify-between border-b border-line/40 px-6 py-5 md:px-12">
+        <h2 class="font-cond text-3xl font-bold uppercase md:text-4xl">Section B–B <span class="text-primary">/</span> Drawings</h2>
+        <span class="hidden font-mono text-xs uppercase text-line md:block">12 sheets on file</span>
+      </div>
+      <div class="grid md:grid-cols-2">
+        <a href="#" class="cell group relative border-b border-line/40 md:border-r">
+          <div class="relative m-6 aspect-[16/10] border border-dashed border-line/70">
+            <span class="absolute inset-0 grid place-items-center font-mono text-xs uppercase text-line">[ screenshot ]</span>
+            <span class="absolute -left-px -top-px bg-primary px-2 py-0.5 font-mono text-[10px] font-semibold uppercase text-[rgb(9,33,48)]">DWG-001</span>
+          </div>
+          <div class="flex items-end justify-between gap-6 px-6 pb-6">
+            <div><h3 class="font-cond text-2xl font-semibold uppercase">Clinic AI Voice Agent</h3><p class="mt-1 text-sm text-text/70">Scheduling, intake and routing patients to specialists.</p></div>
+            <span class="cell-arrow font-mono text-xl text-primary">↗</span>
+          </div>
+          <div class="border-t border-line/40 px-6 py-2 font-mono text-[11px] uppercase text-line">Python · OpenAI · VAPI · Twilio · PostgreSQL</div>
+        </a>
+        <a href="#" class="cell group relative border-b border-line/40">
+          <div class="relative m-6 aspect-[16/10] border border-dashed border-line/70">
+            <span class="absolute inset-0 grid place-items-center font-mono text-xs uppercase text-line">[ screenshot ]</span>
+            <span class="absolute -left-px -top-px bg-primary px-2 py-0.5 font-mono text-[10px] font-semibold uppercase text-[rgb(9,33,48)]">DWG-002</span>
+          </div>
+          <div class="flex items-end justify-between gap-6 px-6 pb-6">
+            <div><h3 class="font-cond text-2xl font-semibold uppercase">LinkedIn Automation &amp; CRM</h3><p class="mt-1 text-sm text-text/70">AI outreach with CRM sync, built as microservices.</p></div>
+            <span class="cell-arrow font-mono text-xl text-primary">↗</span>
+          </div>
+          <div class="border-t border-line/40 px-6 py-2 font-mono text-[11px] uppercase text-line">Go · FastAPI · Nest.js · AWS · LLM</div>
+        </a>
+      </div>
+      <!-- index table for the rest -->
+      <table class="w-full font-mono text-sm">
+        <thead class="text-[10px] uppercase text-line">
+          <tr class="border-b border-line/40"><th class="px-6 py-2 text-left font-medium md:px-12">No.</th><th class="py-2 text-left font-medium">Title</th><th class="hidden py-2 text-left font-medium md:table-cell">Stack</th><th class="px-6 py-2 text-right font-medium md:px-12">Open</th></tr>
+        </thead>
+        <tbody>
+          <tr class="cell group cursor-pointer border-b border-line/30"><td class="px-6 py-3 text-line md:px-12">003</td><td class="py-3">Entrepreneur's Business Simulator</td><td class="hidden py-3 text-text/60 md:table-cell">Django · PostgreSQL</td><td class="px-6 py-3 text-right text-primary md:px-12"><span class="cell-arrow inline-block">↗</span></td></tr>
+          <tr class="cell group cursor-pointer border-b border-line/30"><td class="px-6 py-3 text-line md:px-12">004</td><td class="py-3">ATS Resume Parser</td><td class="hidden py-3 text-text/60 md:table-cell">FastAPI · LangChain · VectorDB</td><td class="px-6 py-3 text-right text-primary md:px-12"><span class="cell-arrow inline-block">↗</span></td></tr>
+          <tr class="cell group cursor-pointer border-b border-line/30"><td class="px-6 py-3 text-line md:px-12">005</td><td class="py-3">NFT Showroom</td><td class="hidden py-3 text-text/60 md:table-cell">DRF · Solidity · Web3.js</td><td class="px-6 py-3 text-right text-primary md:px-12"><span class="cell-arrow inline-block">↗</span></td></tr>
+          <tr class="cell group cursor-pointer border-b border-line/30"><td class="px-6 py-3 text-line md:px-12">006</td><td class="py-3">The Duck Council</td><td class="hidden py-3 text-text/60 md:table-cell">CrewAI · Flask · React</td><td class="px-6 py-3 text-right text-primary md:px-12"><span class="cell-arrow inline-block">↗</span></td></tr>
+          <tr class="cell group cursor-pointer"><td class="px-6 py-3 text-line md:px-12">007</td><td class="py-3">EtherPass: Decentralized Ticketing</td><td class="hidden py-3 text-text/60 md:table-cell">Solidity · Truffle · Nest.js</td><td class="px-6 py-3 text-right text-primary md:px-12"><span class="cell-arrow inline-block">↗</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- EXPERIENCE — revision history -->
+    <section id="xp" class="border-b border-line/70">
+      <div class="flex items-baseline justify-between border-b border-line/40 px-6 py-5 md:px-12">
+        <h2 class="font-cond text-3xl font-bold uppercase md:text-4xl">Revision history</h2>
+        <span class="hidden font-mono text-xs uppercase text-line md:block">Detail 03</span>
+      </div>
+      <div class="divide-y divide-line/30">
+        <div class="cell grid gap-2 px-6 py-6 md:grid-cols-12 md:px-12">
+          <div class="font-mono text-xs uppercase text-primary md:col-span-1">Rev C</div>
+          <div class="font-mono text-xs uppercase text-line md:col-span-2">2023 → now</div>
+          <div class="md:col-span-9"><h3 class="font-cond text-xl font-semibold uppercase">Siliconplex · Associate Software Developer</h3><p class="mt-1 text-sm text-text/70">Business simulator, NFT showroom, smart contracts, deployments, documentation, workshops and intern training.</p></div>
+        </div>
+        <div class="cell grid gap-2 px-6 py-6 md:grid-cols-12 md:px-12">
+          <div class="font-mono text-xs uppercase text-line md:col-span-1">Rev B</div>
+          <div class="font-mono text-xs uppercase text-line md:col-span-2">2022</div>
+          <div class="md:col-span-9"><h3 class="font-cond text-xl font-semibold uppercase">Pump Jack Dataworks · Software Dev &amp; Data Miner</h3><p class="mt-1 text-sm text-text/70">Led a team of 5 on MERN backends, plus ML that scores table-tennis players from ball tracking.</p></div>
+        </div>
+        <div class="cell grid gap-2 px-6 py-6 md:grid-cols-12 md:px-12">
+          <div class="font-mono text-xs uppercase text-line md:col-span-1">Rev A</div>
+          <div class="font-mono text-xs uppercase text-line md:col-span-2">2022</div>
+          <div class="md:col-span-9"><h3 class="font-cond text-xl font-semibold uppercase">The Sparks Foundation · Data Science Intern</h3><p class="mt-1 text-sm text-text/70">PowerBI, TensorFlow and statistical analysis of business datasets.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + TITLE BLOCK -->
+    <section id="contact" class="grid md:grid-cols-12">
+      <div class="px-6 py-16 md:col-span-7 md:border-r md:border-line/70 md:px-12">
+        <p class="font-mono text-xs uppercase tracking-widest text-line">Request for proposal</p>
+        <h2 class="mt-4 font-cond text-5xl font-bold uppercase leading-none md:text-6xl">Let's draw up<br /><span class="text-primary">your next build.</span></h2>
+        <form class="mt-10 grid max-w-lg gap-0">
+          <label class="border border-line/70 px-4 py-2"><span class="block font-mono text-[10px] uppercase text-line">Name</span><input class="w-full bg-transparent py-1 outline-none" /></label>
+          <label class="-mt-px border border-line/70 px-4 py-2"><span class="block font-mono text-[10px] uppercase text-line">Email</span><input class="w-full bg-transparent py-1 outline-none" /></label>
+          <label class="-mt-px border border-line/70 px-4 py-2"><span class="block font-mono text-[10px] uppercase text-line">Project brief</span><textarea rows="3" class="w-full resize-none bg-transparent py-1 outline-none"></textarea></label>
+          <button type="button" class="-mt-px border border-line bg-primary py-3 font-mono text-sm font-semibold uppercase text-[rgb(9,33,48)] hover:brightness-110">Submit for review →</button>
+        </form>
+      </div>
+      <!-- title block -->
+      <div class="flex flex-col justify-end md:col-span-5">
+        <table class="w-full border-t border-line/70 font-mono text-xs md:border-t-0">
+          <tr class="border-b border-line/40"><td class="w-1/3 border-r border-line/40 px-4 py-2 uppercase text-line">Project</td><td class="px-4 py-2">Portfolio of M. Hammad Hassan</td></tr>
+          <tr class="border-b border-line/40"><td class="border-r border-line/40 px-4 py-2 uppercase text-line">Drawn by</td><td class="px-4 py-2">M. Hammad Hassan</td></tr>
+          <tr class="border-b border-line/40"><td class="border-r border-line/40 px-4 py-2 uppercase text-line">Links</td><td class="px-4 py-2"><a href="https://www.linkedin.com/in/hammadai/" class="hover:text-primary">LinkedIn</a> · <a href="https://github.com/Blankscreen-exe" class="hover:text-primary">GitHub</a> · <a href="https://medium.com/@hammad.ai" class="hover:text-primary">Medium</a></td></tr>
+          <tr class="border-b border-line/40"><td class="border-r border-line/40 px-4 py-2 uppercase text-line">Status</td><td class="px-4 py-2"><span class="mr-2 inline-block h-2 w-2 bg-primary"></span>Open to opportunities</td></tr>
+          <tr><td class="border-r border-line/40 px-4 py-2 uppercase text-line">Sheet</td><td class="px-4 py-2 font-cond text-2xl font-bold">01 / 01</td></tr>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const btn = document.getElementById('mode');
+    const label = document.getElementById('mode-label');
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      label.textContent = document.documentElement.classList.contains('dark') ? 'Drafting' : 'Blueprint';
+    });
+  </script>
+</body>
+</html>

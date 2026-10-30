@@ -1,0 +1,36 @@
+{
+  "title": "Clinic AI Voice Agent for Scheduling, Intake & Specialist Routing",
+  "featured": false,
+  "kind": "client",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Live and Ongoing",
+  "sortOrder": 4,
+  "description": "This is an AI voice agent for a medical clinic that can schedule appointments, carry out patient intake, and route callers to the appropriate specialist. It takes on the routine phone work that would otherwise tie up front-desk staff, letting patients simply call in and speak naturally with the agent.\n\nIt combines a Python backend and PostgreSQL with a JavaScript/Node.js and TailwindCSS interface, and uses an OpenAI-based LLM for the conversation. VAPI and Twilio provide the real-time voice and telephony layer that powers the live phone calls.",
+  "tags": [
+    "Python",
+    "JavaScript",
+    "Node.js",
+    "TailwindCSS",
+    "PostgreSQL",
+    "LLM",
+    "OpenAI",
+    "VAPI",
+    "Twilio"
+  ],
+  "liveUrl": null,
+  "liveUrlNote": "Deployed privately for the client's clinic, so there is no public demo.",
+  "repoUrl": null,
+  "images": [
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/1.png",
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/2.png",
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/3.png",
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/4.png",
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/5.png",
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/6.png",
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/7.png",
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/8.png",
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/9.png",
+    "/images/projects/clinic-ai-voice-agent-for-scheduling-intake-and-specialist-routing/10.png"
+  ]
+}
