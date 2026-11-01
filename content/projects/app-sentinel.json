@@ -1,0 +1,34 @@
+{
+  "title": "App Sentinel",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Oct 2026",
+  "sortOrder": 0,
+  "description": "An agentic mobile-application security assessment platform. You give it an Android APK you own or are authorized to assess; it analyzes the app, maps the backend it talks to, and — only within an authorized scope — runs safe, evidence-based checks against that backend, producing findings it can prove.\n\nIt is built around one idea:\nThe LLM proposes. Deterministic code decides and proves.\n\nThe AI reasons about what to test next, but a plain, testable scope gate authorizes every action and a separate verifier judges the real result. The model can't grant itself permission, and it can't be talked out of the rules by a prompt injection hidden in an app — because the security decisions never read the model's output.\n\n⚠️ Local, single-operator prototype. Only assess applications and backends you own or are explicitly authorized to test. A completed assessment does not mean an app is secure.",
+  "tags": [
+    "Python",
+    "FastAPI",
+    "Pydantic",
+    "python-multipart",
+    "PostgreSQL",
+    "SQLAlchemy",
+    "Procrastinate",
+    "Jinja2",
+    "androguard",
+    "JADX",
+    "Claude Code",
+    "Node.js",
+    "Docker"
+  ],
+  "liveUrlNote": "Run this locally",
+  "repoUrl": "https://github.com/Blankscreen-exe/app-sentinel/tree",
+  "images": [
+    "/images/projects/app-sentinel/images/0.png",
+    "/images/projects/app-sentinel/images/1.png",
+    "/images/projects/app-sentinel/images/2.png",
+    "/images/projects/app-sentinel/images/3.png",
+    "/images/projects/app-sentinel/images/4.png"
+  ]
+}

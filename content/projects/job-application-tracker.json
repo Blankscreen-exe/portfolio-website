@@ -1,0 +1,32 @@
+{
+  "title": "Job Application Tracker",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Oct 2026",
+  "sortOrder": 0,
+  "description": "A local-only app for keeping track of the companies you're interested in and the jobs you've applied to. It runs in your browser, keeps everything in one file on your computer, and needs nothing but Python 3.10+.\n\nFeatures quick entry, a tidy company panel, a log per company, reference management, Interview brief, Dashboard, Calendar, Reminders, Resume management, Writing email, Follow-ups and more.",
+  "tags": [
+    "Python",
+    "HTML",
+    "SQLite",
+    "JavaScript"
+  ],
+  "liveUrlNote": "Run this locally",
+  "repoUrl": "https://github.com/Blankscreen-exe/job-application-tracker",
+  "images": [
+    "/images/projects/job-application-tracker/images/0.png",
+    "/images/projects/job-application-tracker/images/1.png",
+    "/images/projects/job-application-tracker/images/2.png",
+    "/images/projects/job-application-tracker/images/3.png",
+    "/images/projects/job-application-tracker/images/4.png",
+    "/images/projects/job-application-tracker/images/5.png",
+    "/images/projects/job-application-tracker/images/6.png",
+    "/images/projects/job-application-tracker/images/7.png",
+    "/images/projects/job-application-tracker/images/8.png",
+    "/images/projects/job-application-tracker/images/9.png",
+    "/images/projects/job-application-tracker/images/10.png",
+    "/images/projects/job-application-tracker/images/11.png"
+  ]
+}

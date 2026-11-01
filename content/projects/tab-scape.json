@@ -1,0 +1,36 @@
+{
+  "title": "TabScape",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Oct 2026",
+  "sortOrder": 0,
+  "description": "A themeable new tab page for Chrome, Edge, Brave and Firefox, with 17 themes and 26 widgets.\n\nEach theme brings its own look, background effects (rain, stars, a neon grid, CRT scanlines…) and sometimes its own features (XP and gold, a breathing guide, Minesweeper…). Widgets can be dragged and resized, and every theme has an accent colour you can change. Your to-dos, notes and links stay the same whatever theme you use.",
+  "tags": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "browser extension"
+  ],
+  "repoUrl": "https://github.com/Blankscreen-exe/tabscape",
+  "images": [
+    "/images/projects/tab-scape/images/0.png",
+    "/images/projects/tab-scape/images/1.png",
+    "/images/projects/tab-scape/images/2.png",
+    "/images/projects/tab-scape/images/3.png",
+    "/images/projects/tab-scape/images/4.png",
+    "/images/projects/tab-scape/images/5.png",
+    "/images/projects/tab-scape/images/6.png",
+    "/images/projects/tab-scape/images/7.png",
+    "/images/projects/tab-scape/images/8.png",
+    "/images/projects/tab-scape/images/9.png",
+    "/images/projects/tab-scape/images/10.png",
+    "/images/projects/tab-scape/images/11.png",
+    "/images/projects/tab-scape/images/12.png",
+    "/images/projects/tab-scape/images/13.png",
+    "/images/projects/tab-scape/images/14.png",
+    "/images/projects/tab-scape/images/15.png",
+    "/images/projects/tab-scape/images/16.png"
+  ]
+}

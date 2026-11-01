@@ -1,4 +1,6 @@
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+// VERCEL_PROJECT_PRODUCTION_URL is set by Vercel on every deployment, without the protocol
+const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? (vercelUrl ? `https://${vercelUrl}` : 'http://localhost:3000')
 
 // Every internal URL in one place, so links never drift from the app/ folder structure.
 export const routes = {

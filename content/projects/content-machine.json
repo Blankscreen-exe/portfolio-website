@@ -15,14 +15,13 @@
     "JavaScript",
     "TailwindCSS"
   ],
-  "liveUrl": null,
-  "liveUrlNote": "",
+  "liveUrlNote": "Run this locally",
   "repoUrl": "https://github.com/Blankscreen-exe/content-machine",
   "images": [
-    "/images/projects/content-machine/1.png",
-    "/images/projects/content-machine/2.png",
-    "/images/projects/content-machine/3.png",
-    "/images/projects/content-machine/4.png",
-    "/images/projects/content-machine/5.png"
+    "/images/projects/content-machine/images/0.png",
+    "/images/projects/content-machine/images/1.png",
+    "/images/projects/content-machine/images/2.png",
+    "/images/projects/content-machine/images/3.png",
+    "/images/projects/content-machine/images/4.png"
   ]
 }
