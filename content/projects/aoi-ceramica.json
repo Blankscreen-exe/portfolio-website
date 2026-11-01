@@ -1,0 +1,31 @@
+{
+  "title": "Aoi Ceramica",
+  "featured": false,
+  "kind": "client",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Jan 2026",
+  "sortOrder": 0,
+  "description": "Aoi Cerámica is a crowdfunding site for a cultural bridge between Mexico and Japan, built around the story of Daniel, a Mexican neurodivergent ceramic artist and storyteller in clay. Daniel is travelling to Japan to study kintsugi, the art of repairing broken pottery with gold, where fractures are illuminated rather than hidden.\n\nVisitors can explore the gallery, read Daniel's story and see exactly how funds will be used. Supporters choose a reward tier from $1 to $15, gaining access to a private community, live streams and digital guides, plus a vote on which pieces get made and which places get visited.",
+  "tags": [
+    "Wordpress",
+    "PHP",
+    "Elementor",
+    "WooCommerce",
+    "Stripe",
+    "MySQL",
+    "JavaScript"
+  ],
+  "liveUrlNote": "Site was hosted on aoiceramic.com but then later it got taken down sometime in July",
+  "images": [
+    "/images/projects/aoi-ceramica/images/0.png",
+    "/images/projects/aoi-ceramica/images/1.png",
+    "/images/projects/aoi-ceramica/images/2.png",
+    "/images/projects/aoi-ceramica/images/3.png",
+    "/images/projects/aoi-ceramica/images/4.png",
+    "/images/projects/aoi-ceramica/images/5.png",
+    "/images/projects/aoi-ceramica/images/6.png",
+    "/images/projects/aoi-ceramica/images/7.png",
+    "/images/projects/aoi-ceramica/images/8.png"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Duel Masters Online Game Platform",
+  "featured": false,
+  "kind": "side",
+  "status": "ongoing",
+  "openToContrib": true,
+  "dateLabel": "Oct 2026",
+  "sortOrder": 0,
+  "description": "A self-hosted, two-player, browser-based Duel Masters site: player accounts, a deck builder, a lobby with quick match, computer opponents, ratings and match history, and an admin panel.\nContains 2500+ Duel Masters cards in a maintained database and features a powerful deck builder. Games can either restricted by rules which the players set such as \"single civilization only\" or \"No Bombazar Dragon\". These rules are populated by the Admin and can be picked before creating a game in the lobby.\nChat has two types i.e. in-game chat which is ephemeral and runs during a game and then there is a lobby chat which is completely public.",
+  "tags": [
+    "Golang",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Next.js"
+  ],
+  "liveUrlNote": "Self hosted setup. Host it yourself and play",
+  "repoUrl": "https://github.com/Blankscreen-exe/duel-masters-game-platform",
+  "images": [
+    "/images/projects/duel-masters-online-game-platform/images/0.png",
+    "/images/projects/duel-masters-online-game-platform/images/1.png",
+    "/images/projects/duel-masters-online-game-platform/images/2.png",
+    "/images/projects/duel-masters-online-game-platform/images/3.png",
+    "/images/projects/duel-masters-online-game-platform/images/4.png",
+    "/images/projects/duel-masters-online-game-platform/images/5.png",
+    "/images/projects/duel-masters-online-game-platform/images/6.png",
+    "/images/projects/duel-masters-online-game-platform/images/7.png"
+  ]
+}

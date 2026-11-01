@@ -1,0 +1,29 @@
+{
+  "title": "Attendance",
+  "featured": false,
+  "kind": "side",
+  "status": "ongoing",
+  "openToContrib": true,
+  "dateLabel": "Oct 2026",
+  "sortOrder": 0,
+  "description": "Full HR suites do attendance, payroll, recruitment and a dozen other things, and they are heavy to set up and to use. This project does one job: it records when people work, and shows whether the agreed hours were done.\n\nEmployees sign in and press one button. They cannot type in a time.\nThe admin sees who is in, reviews any week or month, decides requests, and sets schedules, holidays and leave.\nIt runs on one small server, as a single container with a SQLite file, or against PostgreSQL if you prefer.",
+  "tags": [
+    "Python",
+    "Django",
+    "PostgreSQL",
+    "PWA",
+    "Django Templates"
+  ],
+  "liveUrlNote": "Self host this",
+  "repoUrl": "https://github.com/Blankscreen-exe/attendance-tool",
+  "images": [
+    "/images/projects/attendance/images/0.png",
+    "/images/projects/attendance/images/1.png",
+    "/images/projects/attendance/images/2.png",
+    "/images/projects/attendance/images/3.png",
+    "/images/projects/attendance/images/4.png",
+    "/images/projects/attendance/images/5.png",
+    "/images/projects/attendance/images/6.png",
+    "/images/projects/attendance/images/7.png"
+  ]
+}
