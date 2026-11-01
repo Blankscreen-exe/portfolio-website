@@ -10,6 +10,8 @@ type Props = {
   label?: string
   /** Pre-selects "What do you need?" on the contact form */
   topic?: string
+  /** Button text */
+  action?: string
 }
 
 /** Closing call to action at the bottom of every inner page. */
@@ -22,6 +24,7 @@ export default function CtaBand({
   text = 'Tell me about it. A sentence or two is enough, no technical details needed.',
   label = '[ next step ]',
   topic,
+  action = 'Start a project',
 }: Props) {
   return (
     <section className="bg-ink text-stock transition-colors duration-500" data-section="next step">
@@ -39,7 +42,7 @@ export default function CtaBand({
         </div>
         <div data-reveal="up">
           <Button href={routes.contactAbout(topic)} size="lg" attention="brackets" magnet className="whitespace-nowrap">
-            Start a project
+            {action}
           </Button>
         </div>
       </div>

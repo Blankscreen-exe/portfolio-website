@@ -7,6 +7,7 @@ import Dossier from '@/components/home/Dossier'
 import Accordion from '@/components/ui/Accordion'
 import CtaBand from '@/components/ui/CtaBand'
 import { ArrowUpRight, ChevronRight } from '@/components/ui/Decor'
+import LevelMeter from '@/components/ui/LevelMeter'
 import PageHero from '@/components/ui/PageHero'
 import ProfilePhoto from '@/components/ui/ProfilePhoto'
 import SectionHeading, { Bar } from '@/components/ui/SectionHeading'
@@ -124,7 +125,14 @@ export default async function AboutPage() {
               How I <Bar>talk.</Bar>
             </SectionHeading>
             <div className="mt-10">
-              <Accordion size="sm" items={about.languages.map((l) => ({ title: l.title, body: l.body }))} />
+              <Accordion
+                size="sm"
+                items={about.languages.map((l, i) => ({
+                  title: l.title,
+                  body: l.body,
+                  meta: <LevelMeter level={l.level} label={l.levelLabel} wave={l.levelWave} index={i} />,
+                }))}
+              />
             </div>
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-jet text-xs font-bold uppercase tracking-[.16em]" data-reveal="up">
               <Link href={routes.books} className="text-primary hover:underline">
@@ -135,6 +143,9 @@ export default async function AboutPage() {
               </Link>
               <Link href={routes.writing} className="text-primary hover:underline">
                 My writing <ChevronRight />
+              </Link>
+              <Link href={routes.sketches} className="text-primary hover:underline">
+                My sketches <ChevronRight />
               </Link>
             </div>
           </div>

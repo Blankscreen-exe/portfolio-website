@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo: language proficiency loader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Tokens copied from src/app/globals.css */
+  :root {
+    --color-primary: 3 188 207;
+    --ss-stock: 220 225 225;
+    --ss-paper: 241 243 242;
+    --ss-ink: 18 21 21;
+    --ss-ash: 76 84 84;
+    --ss-frame: 18 21 21;
+    --ss-onprimary: 18 21 21;
+    --ss-ease: cubic-bezier(.16, .84, .24, 1);
+    --font-archivo: 'Archivo';
+    --font-jet: 'JetBrains Mono';
+    --font-inter: 'Inter';
+  }
+  :root[data-theme="dark"] {
+    --color-primary: 48 195 210;
+    --ss-stock: 13 17 18;
+    --ss-paper: 20 27 28;
+    --ss-ink: 226 235 235;
+    --ss-ash: 140 156 157;
+    --ss-frame: 6 8 9;
+  }
+
+  * { box-sizing: border-box; }
+  html { background: rgb(var(--ss-frame)); }
+  body { margin: 0; }
+  button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+  h3 { margin: 0; font: inherit; }
+  p { margin: 0 0 1em; }
+  p:last-child { margin-bottom: 0; }
+
+  .sheet {
+    margin: 12px;
+    min-height: calc(100vh - 24px);
+    color: rgb(var(--ss-ink));
+    font-family: var(--font-inter), system-ui, sans-serif;
+    background-color: rgb(var(--ss-stock));
+    background-image:
+      linear-gradient(rgb(var(--ss-ink) / .07) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--ss-ink) / .07) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Demo controls: not part of the design */
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 14px 20px; border-bottom: 1px solid rgb(var(--ss-ink)); background: rgb(var(--ss-paper)); font: 11px var(--font-jet), monospace; letter-spacing: .14em; text-transform: uppercase; }
+  .controls strong { margin-right: auto; }
+  .controls button { border: 1px solid rgb(var(--ss-ink)); padding: 7px 11px; letter-spacing: inherit; text-transform: inherit; }
+  .controls button:hover { background: rgb(var(--ss-stock)); }
+  .controls button[aria-pressed="true"] { background: rgb(var(--color-primary)); color: rgb(var(--ss-onprimary)); }
+
+  .stage { max-width: 600px; margin: 0 auto; padding: 72px 20px; transition: max-width .4s var(--ss-ease); }
+  .stage[data-width="phone"] { max-width: 348px; padding-inline: 20px; }
+
+  /* Section heading, as rendered by SectionHeading */
+  .label { font: 11px var(--font-jet), monospace; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--ss-ash)); }
+  .heading { margin: 14px 0 40px; font-family: var(--font-archivo), sans-serif; font-weight: 900; font-size: clamp(36px, 8vw, 48px); text-transform: uppercase; letter-spacing: -.025em; line-height: .9; }
+  .bar { padding: 0 .12em; background: rgb(var(--color-primary)); color: rgb(var(--ss-onprimary)); }
+
+  /* Accordion, as in components/ui/Accordion.tsx with size="sm" */
+  .acc-list { border-top: 1px solid rgb(var(--ss-ink)); container-type: inline-size; }
+  .acc { border-bottom: 1px solid rgb(var(--ss-ink) / .15); }
+  .acc-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ss-ease); }
+  .acc[data-open] .acc-panel { grid-template-rows: 1fr; }
+  .acc-panel > div { overflow: hidden; min-height: 0; }
+  .acc-body { padding-bottom: 20px; line-height: 1.625; color: rgb(var(--ss-ash)); opacity: 0; translate: 0 -8px; transition: opacity .35s ease, translate .5s var(--ss-ease); }
+  .acc[data-open] .acc-body { opacity: 1; translate: none; transition-delay: .08s; }
+  .acc-body strong { color: rgb(var(--ss-ink)); }
+  .acc-icon { color: rgb(var(--color-primary)); font: 20px/1 var(--font-jet), monospace; display: inline-block; transition: transform .45s var(--ss-ease); }
+  .acc[data-open] .acc-icon { transform: rotate(45deg); }
+
+  /* ---------- The new part ---------- */
+  /* Fixed first column so every loader lines up, whatever the language name's length */
+  .lang-row { display: grid; grid-template-columns: 6.5rem auto 1fr auto; align-items: center; column-gap: 14px; width: 100%; padding: 16px 0; text-align: left; }
+  .lang-title { font-family: var(--font-archivo), sans-serif; font-weight: 900; font-stretch: 70%; font-size: 20px; text-transform: uppercase; letter-spacing: -.025em; line-height: .9; transition: color .2s; }
+  .lang-row:hover .lang-title, .acc[data-open] .lang-title { color: rgb(var(--color-primary)); }
+
+  .ss-level { display: flex; gap: 3px; }
+  .ss-level i { display: block; width: 7px; height: 18px; background: rgb(var(--ss-ink) / .15); }
+  .ss-level i.on { background: rgb(var(--color-primary)); }
+  .play .ss-level i.on { animation: seg-on .5s steps(1) both; animation-delay: calc(var(--n) * 70ms + var(--row) * 120ms); }
+  @keyframes seg-on { from { background: rgb(var(--ss-ink) / .15); } to { background: rgb(var(--color-primary)); } }
+
+  .ss-level-text { font: 10px var(--font-jet), monospace; letter-spacing: .14em; text-transform: uppercase; color: rgb(var(--ss-ash)); white-space: nowrap; }
+
+  @container (max-width: 400px) {
+    .lang-row { grid-template-columns: 5.25rem auto 1fr auto; column-gap: 10px; }
+    .ss-level { gap: 2px; }
+    .ss-level i { width: 5px; height: 16px; }
+    .ss-level-text { font-size: 9px; letter-spacing: .1em; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .play .ss-level i.on { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="controls">
+    <strong>Demo</strong>
+    <button type="button" id="replay">Replay</button>
+    <button type="button" id="theme" aria-pressed="false">Dark</button>
+    <button type="button" id="width" aria-pressed="false">Phone width</button>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="label">[ languages ]</div>
+    <div class="heading">How I <span class="bar">talk.</span></div>
+    <div class="acc-list play" id="langs"></div>
+  </div>
+</div>
+
+<script>
+  // Levels are placeholders: edit `level` (out of 10) and `text` here to try other values.
+  const SEGMENTS = 10
+  const LANGUAGES = [
+    { title: 'English', level: 9, text: 'Proficient', body: '<p>I am proficient in written and verbal English communications. I read research papers, books, write blog posts and code in English too, on a daily basis.</p><p>You will find my accent smooth and my words clear when you are talking to me.</p>' },
+    { title: 'German', level: 2, text: 'Beginner', body: '<p>I learned a little bit of German, from various sources including Duolingo and a good native German friend of mine.</p><p>Bisher kann ich in einem Restaurant nur Essen bestellen, Leute begrüßen und normale Dinge des Alltags sagen.</p>' },
+    { title: 'Japanese', level: 3, text: 'Beginner', body: '<p>I know a little bit of written and verbal Japanese communications. I can tell you about myself, orderfood, describe my day, and more.</p><p>I learned it with my brother who was planning to go to Japan.</p>' },
+    { title: 'Code', level: 10, text: 'Fluent', body: "<p>Yes ... I can talk to machines using a language called <strong>binary</strong>. Those 0s and 1s start making sense once you get the hang of it.</p><p>Don't worry, I'm fluent in Python, JS, C#, and the hottest frameworks you can imagine!</p>" },
+  ]
+
+  const list = document.getElementById('langs')
+  list.innerHTML = LANGUAGES.map((l, row) => {
+    const segments = Array.from({ length: SEGMENTS }, (_, n) =>
+      `<i class="${n < l.level ? 'on' : ''}" style="--n:${n};--row:${row}"></i>`).join('')
+    return `<div class="acc">
+      <h3><button type="button" class="lang-row" aria-expanded="false">
+        <span class="lang-title">${l.title}</span>
+        <span class="ss-level" aria-hidden="true">${segments}</span>
+        <span class="ss-level-text">${l.text}</span>
+        <span class="acc-icon" aria-hidden="true">+</span>
+      </button></h3>
+      <div class="acc-panel"><div><div class="acc-body">${l.body}</div></div></div>
+    </div>`
+  }).join('')
+
+  // One item open at a time, like the site's accordion
+  list.addEventListener('click', (e) => {
+    const button = e.target.closest('.lang-row')
+    if (!button) return
+    const item = button.closest('.acc')
+    const opening = !item.hasAttribute('data-open')
+    list.querySelectorAll('.acc').forEach((a) => {
+      a.removeAttribute('data-open')
+      a.querySelector('.lang-row').setAttribute('aria-expanded', 'false')
+    })
+    if (opening) {
+      item.setAttribute('data-open', '')
+      button.setAttribute('aria-expanded', 'true')
+    }
+  })
+
+  document.getElementById('replay').addEventListener('click', () => {
+    list.classList.remove('play')
+    void list.offsetWidth
+    list.classList.add('play')
+  })
+  document.getElementById('theme').addEventListener('click', (e) => {
+    const dark = document.documentElement.dataset.theme !== 'dark'
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+    e.currentTarget.setAttribute('aria-pressed', dark)
+  })
+  document.getElementById('width').addEventListener('click', (e) => {
+    const stage = document.getElementById('stage')
+    const phone = stage.dataset.width !== 'phone'
+    stage.dataset.width = phone ? 'phone' : 'column'
+    e.currentTarget.setAttribute('aria-pressed', phone)
+  })
+</script>
+</body>
+</html>

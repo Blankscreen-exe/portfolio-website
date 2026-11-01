@@ -17,6 +17,7 @@ export const routes = {
   contactAbout: (topic?: string) => (topic ? `/contacts?topic=${encodeURIComponent(topic)}` : '/contacts'),
   books: '/lists/books',
   bookmarks: '/lists/bookmarks',
+  sketches: '/sketches',
   llms: '/llms.txt',
   card: '/card',
   linktree: '/linktree',

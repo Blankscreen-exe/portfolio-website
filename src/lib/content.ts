@@ -32,6 +32,14 @@ export const getPosts = cache(async () => {
 })
 export type Post = Awaited<ReturnType<typeof getPosts>>[number]
 
+export const getSketches = cache(async () => {
+  const entries = await reader.collections.sketches.all()
+  return entries
+    .map(({ slug, entry }) => ({ slug, ...entry }))
+    .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0) || (b.date ?? '').localeCompare(a.date ?? ''))
+})
+export type Sketch = Awaited<ReturnType<typeof getSketches>>[number]
+
 // ---------- Singletons
 
 export const getSite = cache(() => required('site', reader.singletons.site.read()))
