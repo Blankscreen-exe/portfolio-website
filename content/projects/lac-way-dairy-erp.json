@@ -1,0 +1,42 @@
+{
+  "title": "LacWay Dairy ERP",
+  "featured": false,
+  "kind": "client",
+  "status": "ongoing",
+  "openToContrib": false,
+  "dateLabel": "Oct 2026",
+  "sortOrder": 0,
+  "description": "Every dairy loses milk solids somewhere between the farm truck and the finished cheese, but most can't say where, or what it costs them. LacWay answers both. Plants enter their day as easily as filling in a spreadsheet, and LacWay shows exactly how much fat and protein was lost, and at which stage. It also shows what each kilogram of product really costs. Maintenance and production planning live in the same place, so teams stop juggling separate spreadsheets. If data is missing, LacWay says what's missing and never guesses. Managers get numbers they can trust and act on.",
+  "tags": [
+    "Node.js",
+    "JavaScript",
+    "Tailwind",
+    "Next.js",
+    "Nest.js",
+    "PostgreSQL",
+    "BullMQ"
+  ],
+  "liveUrl": "https://lacway.com/",
+  "images": [
+    "/images/projects/lac-way-dairy-erp/images/0.png",
+    "/images/projects/lac-way-dairy-erp/images/1.png",
+    "/images/projects/lac-way-dairy-erp/images/2.png",
+    "/images/projects/lac-way-dairy-erp/images/3.png",
+    "/images/projects/lac-way-dairy-erp/images/4.png",
+    "/images/projects/lac-way-dairy-erp/images/5.png",
+    "/images/projects/lac-way-dairy-erp/images/6.png",
+    "/images/projects/lac-way-dairy-erp/images/7.png",
+    "/images/projects/lac-way-dairy-erp/images/8.png",
+    "/images/projects/lac-way-dairy-erp/images/9.png",
+    "/images/projects/lac-way-dairy-erp/images/10.png",
+    "/images/projects/lac-way-dairy-erp/images/11.png",
+    "/images/projects/lac-way-dairy-erp/images/12.png",
+    "/images/projects/lac-way-dairy-erp/images/13.png",
+    "/images/projects/lac-way-dairy-erp/images/14.png",
+    "/images/projects/lac-way-dairy-erp/images/15.png",
+    "/images/projects/lac-way-dairy-erp/images/16.png",
+    "/images/projects/lac-way-dairy-erp/images/17.png",
+    "/images/projects/lac-way-dairy-erp/images/18.png",
+    "/images/projects/lac-way-dairy-erp/images/19.png"
+  ]
+}
