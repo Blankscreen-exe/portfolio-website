@@ -1,11 +1,16 @@
 'use client'
 
-import { useId, useState } from 'react'
+import { useId, useState, type ReactNode } from 'react'
 import { pad } from '@/lib/format'
 import { Plus } from './Decor'
 import RichText from './RichText'
 
-export type AccordionItem = { title: string; body: string }
+export type AccordionItem = {
+  title: string
+  body: string
+  /** Shown after the title. Titles get a minimum width so these line up down the list. */
+  meta?: ReactNode
+}
 
 type Props = {
   items: AccordionItem[]
@@ -41,15 +46,16 @@ export default function Accordion({ items, initialOpen = -1, size = 'lg', number
                 aria-expanded={open}
                 aria-controls={panelId}
                 onClick={() => setOpenIndex(open ? -1 : i)}
-                className={`group flex w-full items-start justify-between gap-6 text-left ${lg ? 'py-5' : 'py-4'}`}
+                className={`group flex w-full justify-between text-left ${item.meta ? 'items-center gap-3' : 'items-start gap-6'} ${lg ? 'py-5' : 'py-4'}`}
               >
-                <span className="flex gap-4">
+                <span className={`flex ${item.meta ? 'min-w-0 items-center gap-2.5 sm:gap-3.5' : 'gap-4'}`}>
                   {numbered && <span className="pt-1 font-jet text-xs text-ash">{pad(i + 1)}</span>}
-                  <span className={`ss-display ss-cond transition-colors group-hover:text-primary ${lg ? 'text-2xl' : 'text-xl'} ${open ? 'text-primary' : ''}`}>
+                  <span className={`ss-display ss-cond transition-colors group-hover:text-primary ${lg ? 'text-2xl' : 'text-xl'} ${open ? 'text-primary' : ''} ${item.meta ? 'min-w-[5.25rem] sm:min-w-[6.5rem]' : ''}`}>
                     {item.title}
                   </span>
+                  {item.meta}
                 </span>
-                <span className={`ss-acc-icon font-jet leading-none text-primary ${lg ? 'text-2xl' : 'text-xl'}`} aria-hidden="true">
+                <span className={`ss-acc-icon shrink-0 font-jet leading-none text-primary ${lg ? 'text-2xl' : 'text-xl'}`} aria-hidden="true">
                   <Plus />
                 </span>
               </button>

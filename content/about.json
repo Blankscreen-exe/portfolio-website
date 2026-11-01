@@ -589,45 +589,57 @@
   "hobbies": [
     {
       "title": "Develop Hobby Projects",
-      "body": "I develop **hobby projects** whenever I have free time. As for ideas, I have no shortage of them. I like to try out new ideas and experiement with known or unknown technologies. I am fearless when it comes to technologies that don't come with a documentation.\n\nMy personal projects are filled with all kinds of weirdness and awesome shenanigans. Check them out at your earliest!",
+      "body": "I like building things, that is why building software is a job I am happy to do. Sometimes I get wacky ideas and intrusive thoughts win me over and I end up with a side project ... which may or may not be weird. Expect anything and check them out at your earliest [here](/projects?show=side)!",
       "value": 400
     },
     {
-      "title": "Writing blog on medium.com",
-      "body": "I write **blog articles** on [medium.com](#). I write about the *projects* that I have built, Some difficult-to-grasp *Data Science* and *Machine Learning* concepts and stuff that helps a developer in their daily lives.\n\nI have been writing all kinds of thigns in the past, essays, reviews, academic resources for my university students, poems ... you name it. Maybe that is why writing is one of my forte.",
+      "title": "Writing blogs",
+      "body": "Writing is a past time I will never get tired of. For some it is a way to express themselves, for me it is looking beyond the mind through the letters placed on paper.\nI used to write on [medium.com](https://medium.com/@hammad.ai) but I have started to write anew on [hashnode.com](https://hammadai.hashnode.dev/) from now on.\nCheck out [my philosophy on writing here](https://hammadai.hashnode.dev/page/my-content-philosophy)",
       "value": 335
     },
     {
       "title": "Helping coding enthusiasts worldwide",
-      "body": "Just like writing and making weird projects are my hobbies, I also have a habit of **helping young enthusiasts** who want to pursue *Computer Science* or some specific niche in this domain. I have successfully mentored several people online (on personal basis ofc). My audience is spread across the world!\n\nI have mentored people for becoming market ready as a developer, interview prep, portfolio projects, skill learning and a lot of other things that I probably can't remember.\n\nReach out to me if you need some technical assisstance or guidance. I will gladly help you out.",
+      "body": "Just like writing and making weird projects are my hobbies, I also have a habit of **helping young enthusiasts** who want to pursue *Computer Science* or some specific niche in this domain. I have successfully mentored several people online (all of this is on a personal basis though). My audience is spread across the world!\n\nI have mentored people for becoming market ready as a developer, interview prep, portfolio projects, skill learning and a lot of other things that I probably can't remember.\n\nReach out to me if you need some technical assisstance or guidance. I will gladly help you out.",
       "value": 274
     },
     {
-      "title": "Reading research papers on IEEE XPlore",
-      "body": "Reading and writing often come in a single package whenever hobbies are talked about. And I just love **reading research papers** as much as I love writing. Honestly speaking I'd go anywhere as long as they have good reading material but recently my go-to place have been **IEEE Xplore**.\n\nBut if you are thinking that I read only the sciency stuff, then nope. I also read about all kinds of fiction, novels, biography etc.",
+      "title": "Reading research papers",
+      "body": "Reading and writing often come in a single package whenever hobbies are talked about. And I just love **reading research papers** as much as I love writing. Honestly speaking I'd go anywhere as long as they have good reading material but recently my go-to place have been **IEEE Xplore** but maybe you can suggest me a good spot too.\n\nBut if you are thinking that I read only the sciency stuff, then nope. I also read about all kinds of fiction, novels, biography etc.",
       "value": 235
     },
     {
-      "title": "Sketching portraits, scenery and anime OCs",
-      "body": "I didn't go to any art school, just self taught myself to draw and here I am, **sketching** realistic faces of famous characters and **drawing** OCs.\n\nAlthough I haven't yet but I think I will make a separate page on this website for my drawings. but till then, you can ping me if you want to witness my potential as an artist (*you won't be dissappointed and I take my word seriously*)",
+      "title": "Sketching portraits and scenery",
+      "body": "I didn't go to any art school, just self taught myself to draw and here I am, **sketching** realistic faces of famous characters and **drawing** OCs.\n\nWitness my potential as an artist on [my sketches page](/sketches) (*you won't be disappointed and I take my word seriously*)",
       "value": 310
     }
   ],
   "languages": [
     {
       "title": "English",
-      "body": "I am proficient in written and verbal English communications. I read research papers, books, write blog posts and code in English too, on a daily basis.\n\nYou will find my accent smooth and my words clear when you are talking to me."
+      "level": 9,
+      "levelLabel": "Proficient",
+      "levelWave": false,
+      "body": "English is the language I work in. Every day I use it to read research papers and books, write blog posts and code.\n\nWhen we talk, you'll find my accent smooth and my words clear, so nothing gets lost along the way."
     },
     {
       "title": "German",
-      "body": "I learned a little bit of German, from various sources including Duolingo and a good native German friend of mine.\n\nBisher kann ich in einem Restaurant nur Essen bestellen, Leute begrüßen und normale Dinge des Alltags sagen."
+      "level": 2,
+      "levelLabel": "Beginner",
+      "levelWave": false,
+      "body": "I picked up my German from Duolingo, a few other sources and a good friend who's a native speaker.\n\nBisher kann ich im Restaurant Essen bestellen, Leute begrüßen und einfache Dinge des Alltags sagen."
     },
     {
       "title": "Japanese",
-      "body": "I know a little bit of written and verbal Japanese communications. I can tell you about myself, orderfood, describe my day, and more.\n\nI learned it with my brother who was planning to go to Japan."
+      "level": 3,
+      "levelLabel": "Beginner",
+      "levelWave": false,
+      "body": "I know a little written and spoken Japanese: enough to introduce myself, order food, describe my day and a bit more.\n\nI learned it with my brother, who was planning to go to Japan."
     },
     {
       "title": "Code",
+      "level": 10,
+      "levelLabel": "Extremely fluent",
+      "levelWave": true,
       "body": "Yes ... I can talk to machines using a language called **binary**. Those 0s and 1s start making sense once you get the hang of it.\n\nDon't worry, I'm fluent in Python, JS, C#, and the hottest frameworks you can imagine!"
     }
   ]

@@ -1,5 +1,7 @@
 import { collection, config, fields, singleton } from '@keystatic/core'
 
+import { sketchCategories } from './src/lib/sketches'
+
 /**
  * Content model for the site. Everything lives as JSON under /content and images under
  * /public/images, so content changes are plain git commits.
@@ -29,12 +31,34 @@ export default config({
       Work: ['projects'],
       Writing: ['posts'],
       Pages: ['home', 'services', 'about', 'faq', 'testimonials', 'linktree'],
-      Shelf: ['books', 'bookmarks'],
+      Shelf: ['books', 'bookmarks', 'sketches'],
       Settings: ['site'],
     },
   },
 
   collections: {
+    sketches: collection({
+      label: 'Sketches',
+      slugField: 'title',
+      path: 'content/sketches/*',
+      format: json,
+      columns: ['category', 'date'],
+      schema: {
+        title: fields.slug({ name: { label: 'Title' } }),
+        image: fields.image({
+          label: 'Drawing',
+          description: 'A scan or photo, ideally at least 1600px on the long side.',
+          directory: 'public/images/sketches',
+          publicPath: '/images/sketches/',
+          validation: { isRequired: true },
+        }),
+        alt: text('Image description', 'What the drawing shows, for screen readers. The title is used if this is empty.'),
+        category: fields.select({ label: 'Category', options: sketchCategories, defaultValue: 'portrait' }),
+        date: fields.date({ label: 'Date', description: 'Optional. Only the year is shown.' }),
+        sortOrder: fields.integer({ label: 'Sort order', description: 'Lower numbers come first; ties show the newest first', defaultValue: 0 }),
+      },
+    }),
+
     projects: collection({
       label: 'Projects',
       slugField: 'title',
@@ -270,7 +294,18 @@ export default config({
         hobbies: fields.array(fields.object({ title: text('Title'), body: markdown('Text'), value: fields.integer({ label: 'Weight', description: 'Relative amount of time spent (used by the old chart)' }) }), {
           label: 'Off the clock', itemLabel: (p) => p.fields.title.value,
         }),
-        languages: fields.array(fields.object({ title: text('Language'), body: markdown('Text') }), {
+        languages: fields.array(fields.object({
+          title: text('Language'),
+          level: fields.integer({
+            label: 'Proficiency',
+            description: 'How many of the 10 boxes are filled (0 to 10). Phones show 5 boxes, scaled to match.',
+            defaultValue: 5,
+            validation: { isRequired: true, min: 0, max: 10 },
+          }),
+          levelLabel: text('Proficiency label', 'Small text after the boxes, e.g. Beginner, Proficient, Fluent'),
+          levelWave: fields.checkbox({ label: 'Make the label wave', description: 'Letters bob up and down, in bolder primary colour text', defaultValue: false }),
+          body: markdown('Text'),
+        }), {
           label: 'Languages', itemLabel: (p) => p.fields.title.value,
         }),
       },
