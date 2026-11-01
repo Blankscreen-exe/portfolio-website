@@ -1,7 +1,7 @@
 {
   "title": "Minecraft Server Discovery & Auction Platform",
   "featured": false,
-  "kind": "side",
+  "kind": "client",
   "status": "ongoing",
   "openToContrib": true,
   "dateLabel": "May 2025",
@@ -14,10 +14,8 @@
     "PostgreSQL",
     "Stripe"
   ],
-  "liveUrl": null,
-  "liveUrlNote": "",
-  "repoUrl": null,
+  "liveUrlNote": "The website was up at https://minecraft-server.up.railway.app but client discontinued it sometime later",
   "images": [
-    "/images/projects/minecraft-server-discovery-and-auction-platform/1.png"
+    "/images/projects/minecraft-server-discovery-and-auction-platform/images/0.png"
   ]
 }
