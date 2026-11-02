@@ -306,6 +306,21 @@ html { scroll-behavior: smooth; background-color: rgb(var(--ss-frame)); }
 .ss-acc-panel > div { overflow: hidden; min-height: 0; }
 .ss-acc-body { opacity: 0; translate: 0 -8px; transition: opacity .35s ease, translate .5s var(--ss-ease); }
 .ss-acc[data-open] .ss-acc-body { opacity: 1; translate: none; transition-delay: .08s; }
+
+/* Segmented loader (components/ui/LevelMeter.tsx): boxes light up in turn once revealed */
+.ss-level { display: flex; gap: 3px; }
+.ss-level > span { display: block; width: 7px; height: 18px; background: rgb(var(--ss-ink) / .15); }
+.ss-level > span[data-on] { background: rgb(var(--color-primary)); }
+/* Phones show 5 of the 10 boxes. Keeping these positions means any level above 0 fills at least
+   one box, and only a full 10 fills all five (9 shows 4, 3 shows 1). */
+@media (max-width: 639.98px) {
+  .ss-level > span:is(:nth-child(2), :nth-child(3), :nth-child(5), :nth-child(7), :nth-child(9)) { display: none; }
+}
+.js [data-in] .ss-level > span[data-on] { animation: ss-level-on .5s steps(1) both; animation-delay: calc(var(--n) * 70ms + var(--row) * 120ms); }
+@keyframes ss-level-on { from { background: rgb(var(--ss-ink) / .15); } to { background: rgb(var(--color-primary)); } }
+/* Label letters bob in turn, so a wave travels along the word */
+.ss-wave > span { display: inline-block; white-space: pre; animation: ss-wave .8s ease-in-out infinite alternate; animation-delay: calc(var(--i) * 90ms - 3s); }
+@keyframes ss-wave { from { transform: translateY(1.5px); } to { transform: translateY(-1.5px); } }
 .ss-rich > * + * { margin-top: .75rem; }
 .ss-rich ol { list-style: decimal; padding-left: 1.25rem; }
 .ss-rich ul { list-style: square; padding-left: 1.25rem; }

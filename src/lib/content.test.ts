@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest'
 
 import nextConfig from '../../next.config'
 
-import { getAbout, getFaq, getHome, getLinktree, getPosts, getProjects, getServices, getTestimonials } from './content'
+import { getAbout, getFaq, getHome, getLinktree, getPosts, getProjects, getServices, getSketches, getTestimonials } from './content'
 import { routes } from './routes'
 
 // Content-integrity checks: catch broken references before they reach the live site
@@ -15,6 +15,11 @@ const publicFile = (src: string) => path.join(process.cwd(), 'public', src)
 describe('content', () => {
   it('every project image exists in /public', async () => {
     const missing = (await getProjects()).flatMap((p) => p.images.filter((src) => !existsSync(publicFile(src))).map((src) => `${p.slug}: ${src}`))
+    expect(missing).toEqual([])
+  })
+
+  it('every sketch image exists in /public', async () => {
+    const missing = (await getSketches()).filter((s) => !existsSync(publicFile(s.image))).map((s) => s.slug)
     expect(missing).toEqual([])
   })
 

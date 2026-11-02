@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { Search } from '@/components/ui/Decor'
 import { useQueryParams } from '@/hooks/useQueryParams'
@@ -13,12 +13,19 @@ const TABS = [
   { key: 'side', label: 'Side projects', test: (p: Project) => p.kind === 'side' },
   { key: 'all', label: 'Everything', test: () => true },
 ] as const
+const DEFAULT_TAB = TABS[2]
 
 /** Tabs (kept in the URL as ?show=) + free-text search over the project grid. */
 export default function WorkBrowser({ projects }: { projects: Project[] }) {
   const [params, update] = useQueryParams()
-  const tab = TABS.find((t) => t.key === params.get('show')) ?? TABS[0]
+  const tab = TABS.find((t) => t.key === params.get('show')) ?? DEFAULT_TAB
   const [query, setQuery] = useState('')
+
+  // Reads the live URL: `params` is still empty during the hydration render, so checking it
+  // here would overwrite a shared ?show=client link.
+  useEffect(() => {
+    if (!new URLSearchParams(window.location.search).has('show')) update({ show: DEFAULT_TAB.key })
+  }, [update])
 
   const results = useMemo(() => projects.filter(tab.test).filter((p) => matchesQuery(p, query)), [projects, tab, query])
 
@@ -34,7 +41,7 @@ export default function WorkBrowser({ projects }: { projects: Project[] }) {
                 type="button"
                 role="tab"
                 aria-selected={active}
-                onClick={() => update({ show: t.key === 'client' ? null : t.key })}
+                onClick={() => update({ show: t.key })}
                 className={`whitespace-nowrap border-r border-ink px-5 py-4 font-jet text-xs uppercase tracking-[.14em] transition-colors ${active ? 'bg-primary text-onprimary' : 'hover:bg-stock'}`}
               >
                 {t.label} <span className="opacity-60">({projects.filter(t.test).length})</span>
