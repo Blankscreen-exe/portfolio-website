@@ -14,12 +14,12 @@
     },
     {
       "value": "5+",
-      "label": "Years Production Experience",
+      "label": "Industries Served",
       "showInStrip": true
     },
     {
-      "value": "99%",
-      "label": "Uptime on Maintained Systems",
+      "value": "95%",
+      "label": "Automation Success Rate",
       "showInStrip": true
     }
   ],
