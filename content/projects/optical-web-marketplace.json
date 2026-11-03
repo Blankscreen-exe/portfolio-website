@@ -1,0 +1,33 @@
+{
+  "title": "Optical Web Marketplace",
+  "featured": false,
+  "kind": "client",
+  "status": "finished",
+  "openToContrib": false,
+  "dateLabel": "Aug 2026",
+  "sortOrder": 0,
+  "description": "Visão na Web — Brazil's trusted marketplace for eyewear\n\nBuying glasses online shouldn't feel like a gamble. Visão na Web brings Brazil's optical shops into one marketplace where every seller is verified, every price is fair and every purchase is protected.\n\nShoppers browse a curated showcase of frames and sunglasses. They pay securely through Mercado Pago and track each order from checkout to doorstep.\n\nOpticians grow without the overhead. They can sync their existing stock straight from their ERP, or join our Full-Service program and sell from a professionally managed catalog with pricing guardrails, so there's no inventory risk and no guesswork.\n\nBehind the scenes, operators get a complete command center. It covers seller onboarding, automatic order splitting across stores, commissions and payouts, shipping, fiscal compliance, and AI-assisted customer support.\n\nThe result is a single platform where customers shop with confidence, opticians reach the whole country, and the marketplace runs itself.",
+  "tags": [
+    "Next.js",
+    "Nest.js",
+    "JavaScript",
+    "TypeScript",
+    "Node.js"
+  ],
+  "liveUrl": "https://www.visaonaweb.com.br/",
+  "images": [
+    "/images/projects/optical-web-marketplace/images/0.png",
+    "/images/projects/optical-web-marketplace/images/1.png",
+    "/images/projects/optical-web-marketplace/images/2.png",
+    "/images/projects/optical-web-marketplace/images/3.png",
+    "/images/projects/optical-web-marketplace/images/4.png",
+    "/images/projects/optical-web-marketplace/images/5.png",
+    "/images/projects/optical-web-marketplace/images/6.png",
+    "/images/projects/optical-web-marketplace/images/7.png",
+    "/images/projects/optical-web-marketplace/images/8.png",
+    "/images/projects/optical-web-marketplace/images/9.png",
+    "/images/projects/optical-web-marketplace/images/10.png",
+    "/images/projects/optical-web-marketplace/images/11.png",
+    "/images/projects/optical-web-marketplace/images/12.png"
+  ]
+}
