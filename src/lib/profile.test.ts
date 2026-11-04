@@ -15,7 +15,7 @@ const home = {
   heroIntro: 'I build things.',
   aboutParagraphs: ['First paragraph.'],
   metrics: [
-    { label: 'Systems', value: '15+', showInStrip: true },
+    { label: 'Systems', value: '20+', showInStrip: true },
     { label: 'Hidden', value: '1', showInStrip: false },
   ],
   aboutFacts: [{ label: 'Role', value: 'Engineer' }],
