@@ -122,6 +122,7 @@ export default config({
         name: text('Name'),
         role: text('Role'),
         availability: text('Availability', 'Shown in the header when not inside a section'),
+        bio: longText('Short bio', 'Only used in /llms.txt (the summary for AI tools). Not shown anywhere on the site.'),
         email: text('Email', 'Shown beside the contact form'),
         discordUsername: text('Discord username', 'Copied by the Discord card on the Contact page'),
         social: fields.object({

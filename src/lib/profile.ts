@@ -49,6 +49,7 @@ export function buildLlmsTxt({ site, home, services, projects, faq }: ProfileCon
   return [
     `# ${site.name}`,
     `> ${site.role}. ${home.heroIntro}`,
+    site.bio,
     `Availability: ${site.availability}. Site: ${siteUrl}`,
     section('About', home.aboutParagraphs, '\n\n'),
     section('At a glance', [

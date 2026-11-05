@@ -34,6 +34,11 @@ describe('llms.txt', () => {
     expect(text.startsWith('# Jane Doe\n\n> Engineer. I build things.')).toBe(true)
   })
 
+  it('puts the bio right after the summary, and leaves it out when empty', () => {
+    expect(buildLlmsTxt({ site: { ...site, bio: 'A short bio.' }, home, services, projects, faq })).toContain('I build things.\n\nA short bio.\n\nAvailability:')
+    expect(text).toContain('I build things.\n\nAvailability:')
+  })
+
   it('lists projects with absolute links and their first sentence', () => {
     expect(text).toContain(`- [AMOS](${siteUrl}/projects/amos): A CRM. (Client work · Live · Go)`)
   })
