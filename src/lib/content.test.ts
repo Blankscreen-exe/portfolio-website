@@ -80,6 +80,14 @@ describe('content', () => {
     expect(blocked).toEqual([])
   })
 
+  it('lists only posts marked "Include in list", which is the default', async () => {
+    const dir = path.join(process.cwd(), 'content/posts')
+    const listed = readdirSync(dir)
+      .filter((f) => JSON.parse(readFileSync(path.join(dir, f), 'utf8')).includeInList !== false)
+      .map((f) => path.basename(f, '.json'))
+    expect((await getPosts()).map((p) => p.slug).sort()).toEqual(listed.sort())
+  })
+
   it('posts are sorted newest first', async () => {
     const dates = (await getPosts()).map((p) => p.published ?? '')
     expect(dates).toEqual([...dates].sort().reverse())

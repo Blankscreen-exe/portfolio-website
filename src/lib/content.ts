@@ -27,6 +27,7 @@ export const getProject = async (slug: string) => (await getProjects()).find((p)
 export const getPosts = cache(async () => {
   const entries = await reader.collections.posts.all()
   return entries
+    .filter(({ entry }) => entry.includeInList)
     .map(({ slug, entry }) => ({ slug, ...entry }))
     .sort((a, b) => (b.published ?? '').localeCompare(a.published ?? ''))
 })

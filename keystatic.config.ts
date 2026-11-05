@@ -101,9 +101,10 @@ export default config({
       slugField: 'title',
       path: 'content/posts/*',
       format: json,
-      columns: ['published'],
+      columns: ['published', 'includeInList'],
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
+        includeInList: fields.checkbox({ label: 'Include in list', description: 'Show this post on the Writing page', defaultValue: true }),
         description: longText('Description'),
         published: fields.date({ label: 'Published', validation: { isRequired: true } }),
         url: fields.url({ label: 'Article URL', validation: { isRequired: true } }),
