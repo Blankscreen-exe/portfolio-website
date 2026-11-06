@@ -11,9 +11,7 @@
         "founders"
       ],
       "featured": false,
-      "icon": "https://www.early.tools/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.early.tools/favicon.ico"
     },
     {
       "title": "JetBrains Academy",
@@ -27,9 +25,7 @@
         "Tooling"
       ],
       "featured": false,
-      "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico"
     },
     {
       "title": "Church Of Malware",
@@ -42,10 +38,7 @@
         "Research",
         "library"
       ],
-      "featured": false,
-      "icon": null,
-      "provider": "",
-      "rating": null
+      "featured": false
     },
     {
       "title": "System Design Handbook",
@@ -58,9 +51,7 @@
         "interview prep"
       ],
       "featured": false,
-      "icon": "https://www.systemdesignhandbook.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.systemdesignhandbook.com/favicon.ico"
     },
     {
       "title": "Tech Interview Handbook",
@@ -74,9 +65,7 @@
         "behaviour interview"
       ],
       "featured": false,
-      "icon": "https://www.techinterviewhandbook.org/img/favicon.png",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.techinterviewhandbook.org/img/favicon.png"
     },
     {
       "title": "Awesome System Design Resources",
@@ -92,9 +81,7 @@
         "API"
       ],
       "featured": false,
-      "icon": "https://github.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://github.com/favicon.ico"
     },
     {
       "title": "Bug Me Not",
@@ -106,9 +93,7 @@
         "login evasion"
       ],
       "featured": false,
-      "icon": "https://bugmenot.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://bugmenot.com/favicon.ico"
     },
     {
       "title": "Z Library",
@@ -120,9 +105,7 @@
         "learning resources"
       ],
       "featured": false,
-      "icon": "https://z-library.im/img/favicons/favicon-32x32.svg?v=2",
-      "provider": "",
-      "rating": null
+      "icon": "https://z-library.im/img/favicons/favicon-32x32.svg?v=2"
     },
     {
       "title": "The Linux Foundation",
@@ -136,9 +119,7 @@
         "learning resources"
       ],
       "featured": false,
-      "icon": "https://www.google.com/s2/favicons?domain=training.linuxfoundation.org",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.google.com/s2/favicons?domain=training.linuxfoundation.org"
     },
     {
       "title": "zenk-security",
@@ -151,9 +132,7 @@
         "learning resources"
       ],
       "featured": false,
-      "icon": "https://repo.zenk-security.com/images/favicon2.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://repo.zenk-security.com/images/favicon2.ico"
     },
     {
       "title": "osintcabal",
@@ -167,9 +146,7 @@
         "online tools"
       ],
       "featured": false,
-      "icon": "https://osintcabal.org/favicons/apple-icon-152x152.png",
-      "provider": "",
-      "rating": null
+      "icon": "https://osintcabal.org/favicons/apple-icon-152x152.png"
     },
     {
       "title": "0xinfection",
@@ -182,9 +159,7 @@
         "docs"
       ],
       "featured": false,
-      "icon": "https://0xinfection.xyz/favicon-32x32.png",
-      "provider": "",
-      "rating": null
+      "icon": "https://0xinfection.xyz/favicon-32x32.png"
     },
     {
       "title": "Hard Break",
@@ -197,9 +172,7 @@
         "docs"
       ],
       "featured": false,
-      "icon": "https://www.hardbreak.wiki/~gitbook/image?url=https%3A%2F%2F2343901342-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FiAi4u24KW445RkQwdeSM%252Fsites%252Fsite_JnjIO%252Ficon%252FqPs8nePKQ0pFeJzuzEON%252Flogo.png%3Falt%3Dmedia%26token%3D598587cb-6de6-4f23-86a6-0407600354b9&width=32&dpr=3&quality=100&sign=b467cfbe&sv=2",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.hardbreak.wiki/~gitbook/image?url=https%3A%2F%2F2343901342-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FiAi4u24KW445RkQwdeSM%252Fsites%252Fsite_JnjIO%252Ficon%252FqPs8nePKQ0pFeJzuzEON%252Flogo.png%3Falt%3Dmedia%26token%3D598587cb-6de6-4f23-86a6-0407600354b9&width=32&dpr=3&quality=100&sign=b467cfbe&sv=2"
     },
     {
       "title": "pico CTF",
@@ -212,9 +185,7 @@
         "labs"
       ],
       "featured": false,
-      "icon": "https://picoctf.org/favicon-32x32.png",
-      "provider": "",
-      "rating": null
+      "icon": "https://picoctf.org/favicon-32x32.png"
     },
     {
       "title": "Refactoring Guru",
@@ -248,9 +219,7 @@
         "docs"
       ],
       "featured": true,
-      "icon": "https://developer.mozilla.org/favicon-48x48.png",
-      "provider": "",
-      "rating": null
+      "icon": "https://developer.mozilla.org/favicon-48x48.png"
     },
     {
       "title": "CodePen",
@@ -265,9 +234,7 @@
         "frontend"
       ],
       "featured": true,
-      "icon": "https://codepen.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://codepen.io/favicon.ico"
     },
     {
       "title": "JSFiddle",
@@ -282,9 +249,7 @@
         "playground"
       ],
       "featured": false,
-      "icon": "https://jsfiddle.net/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://jsfiddle.net/favicon.ico"
     },
     {
       "title": "StackBlitz",
@@ -299,9 +264,7 @@
         "react"
       ],
       "featured": true,
-      "icon": "https://stackblitz.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://stackblitz.com/favicon.ico"
     },
     {
       "title": "CodeSandbox",
@@ -316,9 +279,7 @@
         "ide"
       ],
       "featured": true,
-      "icon": "https://codesandbox.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://codesandbox.io/favicon.ico"
     },
     {
       "title": "Replit",
@@ -332,9 +293,7 @@
         "online"
       ],
       "featured": false,
-      "icon": "https://replit.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://replit.com/favicon.ico"
     },
     {
       "title": "Regex101",
@@ -348,9 +307,7 @@
         "pattern-matching"
       ],
       "featured": true,
-      "icon": "https://regex101.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://regex101.com/favicon.ico"
     },
     {
       "title": "Can I Use",
@@ -365,9 +322,7 @@
         "html"
       ],
       "featured": true,
-      "icon": "https://caniuse.com/img/favicon-128.png",
-      "provider": "",
-      "rating": null
+      "icon": "https://caniuse.com/img/favicon-128.png"
     },
     {
       "title": "JSONLint",
@@ -381,9 +336,7 @@
         "debugging"
       ],
       "featured": false,
-      "icon": "https://jsonlint.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://jsonlint.com/favicon.ico"
     },
     {
       "title": "Base64 Encode/Decode",
@@ -397,9 +350,7 @@
         "converter"
       ],
       "featured": false,
-      "icon": "https://www.base64encode.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.base64encode.org/favicon.ico"
     },
     {
       "title": "Color Picker",
@@ -414,9 +365,7 @@
         "design"
       ],
       "featured": false,
-      "icon": "https://htmlcolorcodes.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://htmlcolorcodes.com/favicon.ico"
     },
     {
       "title": "Unicode Character Table",
@@ -430,9 +379,7 @@
         "reference"
       ],
       "featured": false,
-      "icon": "https://unicode-table.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://unicode-table.com/favicon.ico"
     },
     {
       "title": "Lorem Ipsum Generator",
@@ -446,9 +393,7 @@
         "generator"
       ],
       "featured": false,
-      "icon": "https://www.lipsum.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.lipsum.com/favicon.ico"
     },
     {
       "title": "URL Encoder/Decoder",
@@ -462,9 +407,7 @@
         "converter"
       ],
       "featured": false,
-      "icon": "https://www.urlencoder.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.urlencoder.org/favicon.ico"
     },
     {
       "title": "Markdown Editor",
@@ -478,9 +421,7 @@
         "writing"
       ],
       "featured": false,
-      "icon": "https://dillinger.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://dillinger.io/favicon.ico"
     },
     {
       "title": "Image Optimizer",
@@ -494,9 +435,7 @@
         "performance"
       ],
       "featured": true,
-      "icon": "https://squoosh.app/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://squoosh.app/favicon.ico"
     },
     {
       "title": "SVG Optimizer",
@@ -510,9 +449,7 @@
         "compression"
       ],
       "featured": false,
-      "icon": "https://jakearchibald.github.io/svgomg/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://jakearchibald.github.io/svgomg/favicon.ico"
     },
     {
       "title": "freeCodeCamp",
@@ -527,9 +464,7 @@
         "coding"
       ],
       "featured": true,
-      "icon": "https://www.freecodecamp.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.freecodecamp.org/favicon.ico"
     },
     {
       "title": "Codecademy",
@@ -543,9 +478,7 @@
         "interactive"
       ],
       "featured": true,
-      "icon": "https://www.codecademy.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.codecademy.com/favicon.ico"
     },
     {
       "title": "JavaScript.info",
@@ -559,9 +492,7 @@
         "reference"
       ],
       "featured": true,
-      "icon": "https://javascript.info/img/favicon/favicon.png",
-      "provider": "",
-      "rating": null
+      "icon": "https://javascript.info/img/favicon/favicon.png"
     },
     {
       "title": "CSS-Tricks",
@@ -575,9 +506,7 @@
         "articles"
       ],
       "featured": true,
-      "icon": "https://css-tricks.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://css-tricks.com/favicon.ico"
     },
     {
       "title": "Smashing Magazine",
@@ -592,9 +521,7 @@
         "ui"
       ],
       "featured": false,
-      "icon": "https://www.smashingmagazine.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.smashingmagazine.com/favicon.ico"
     },
     {
       "title": "Coolors",
@@ -609,9 +536,7 @@
         "ui"
       ],
       "featured": true,
-      "icon": "https://coolors.co/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://coolors.co/favicon.ico"
     },
     {
       "title": "Font Awesome",
@@ -625,9 +550,7 @@
         "design"
       ],
       "featured": true,
-      "icon": "https://fontawesome.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://fontawesome.com/favicon.ico"
     },
     {
       "title": "Material Icons",
@@ -641,9 +564,7 @@
         "ui"
       ],
       "featured": false,
-      "icon": "https://fonts.google.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://fonts.google.com/favicon.ico"
     },
     {
       "title": "Heroicons",
@@ -657,9 +578,7 @@
         "design"
       ],
       "featured": false,
-      "icon": "https://heroicons.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://heroicons.com/favicon.ico"
     },
     {
       "title": "Google Fonts",
@@ -673,9 +592,7 @@
         "design"
       ],
       "featured": true,
-      "icon": "https://fonts.google.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://fonts.google.com/favicon.ico"
     },
     {
       "title": "RapidAPI",
@@ -689,9 +606,7 @@
         "rest"
       ],
       "featured": true,
-      "icon": "https://rapidapi.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://rapidapi.com/favicon.ico"
     },
     {
       "title": "JSONPlaceholder",
@@ -706,9 +621,7 @@
         "json"
       ],
       "featured": true,
-      "icon": "https://jsonplaceholder.typicode.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://jsonplaceholder.typicode.com/favicon.ico"
     },
     {
       "title": "Public APIs",
@@ -723,9 +636,7 @@
         "github"
       ],
       "featured": true,
-      "icon": "https://github.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://github.com/favicon.ico"
     },
     {
       "title": "HTTPie",
@@ -740,9 +651,7 @@
         "tools"
       ],
       "featured": false,
-      "icon": "https://httpie.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://httpie.io/favicon.ico"
     },
     {
       "title": "Reddit r/programming",
@@ -756,9 +665,7 @@
         "programming"
       ],
       "featured": false,
-      "icon": "https://www.reddit.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.reddit.com/favicon.ico"
     },
     {
       "title": "Hacker News",
@@ -772,9 +679,7 @@
         "startups"
       ],
       "featured": true,
-      "icon": "https://news.ycombinator.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://news.ycombinator.com/favicon.ico"
     },
     {
       "title": "Discord Developer Communities",
@@ -788,9 +693,7 @@
         "collaboration"
       ],
       "featured": false,
-      "icon": "https://discord.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://discord.com/favicon.ico"
     },
     {
       "title": "GitHub Discussions",
@@ -804,9 +707,7 @@
         "collaboration"
       ],
       "featured": false,
-      "icon": "https://github.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://github.com/favicon.ico"
     },
     {
       "title": "Google Lighthouse",
@@ -821,9 +722,7 @@
         "audit"
       ],
       "featured": true,
-      "icon": "https://developers.google.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://developers.google.com/favicon.ico"
     },
     {
       "title": "WebPageTest",
@@ -837,9 +736,7 @@
         "optimization"
       ],
       "featured": true,
-      "icon": "https://www.webpagetest.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.webpagetest.org/favicon.ico"
     },
     {
       "title": "GTmetrix",
@@ -853,9 +750,7 @@
         "optimization"
       ],
       "featured": false,
-      "icon": "https://gtmetrix.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://gtmetrix.com/favicon.ico"
     },
     {
       "title": "PageSpeed Insights",
@@ -869,9 +764,7 @@
         "testing"
       ],
       "featured": true,
-      "icon": "https://pagespeed.web.dev/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://pagespeed.web.dev/favicon.ico"
     },
     {
       "title": "Bundlephobia",
@@ -886,9 +779,7 @@
         "packages"
       ],
       "featured": false,
-      "icon": "https://bundlephobia.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://bundlephobia.com/favicon.ico"
     },
     {
       "title": "OWASP",
@@ -904,8 +795,7 @@
       ],
       "featured": true,
       "icon": "https://owasp.org/favicon.ico",
-      "provider": "OWASP",
-      "rating": null
+      "provider": "OWASP"
     },
     {
       "title": "Have I Been Pwned",
@@ -919,9 +809,7 @@
         "email"
       ],
       "featured": true,
-      "icon": "https://haveibeenpwned.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://haveibeenpwned.com/favicon.ico"
     },
     {
       "title": "SSL Labs",
@@ -936,9 +824,7 @@
         "testing"
       ],
       "featured": false,
-      "icon": "https://www.ssllabs.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.ssllabs.com/favicon.ico"
     },
     {
       "title": "JSON Formatter",
@@ -952,9 +838,7 @@
         "beautifier"
       ],
       "featured": false,
-      "icon": "https://jsonformatter.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://jsonformatter.org/favicon.ico"
     },
     {
       "title": "Carbon",
@@ -968,9 +852,7 @@
         "sharing"
       ],
       "featured": false,
-      "icon": "https://carbon.now.sh/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://carbon.now.sh/favicon.ico"
     },
     {
       "title": "Frontend Masters",
@@ -984,9 +866,7 @@
         "video"
       ],
       "featured": false,
-      "icon": "https://frontendmasters.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://frontendmasters.com/favicon.ico"
     },
     {
       "title": "UI Movement",
@@ -1000,9 +880,7 @@
         "newsletter"
       ],
       "featured": false,
-      "icon": "https://uimovement.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://uimovement.com/favicon.ico"
     },
     {
       "title": "Flaticon",
@@ -1016,9 +894,7 @@
         "ui"
       ],
       "featured": false,
-      "icon": "https://www.flaticon.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.flaticon.com/favicon.ico"
     },
     {
       "title": "Product Hunt",
@@ -1032,9 +908,7 @@
         "startups"
       ],
       "featured": false,
-      "icon": "https://www.producthunt.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.producthunt.com/favicon.ico"
     },
     {
       "title": "Indie Hackers",
@@ -1048,9 +922,7 @@
         "business"
       ],
       "featured": false,
-      "icon": "https://www.indiehackers.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.indiehackers.com/favicon.ico"
     },
     {
       "title": "Web.dev",
@@ -1064,9 +936,7 @@
         "google"
       ],
       "featured": true,
-      "icon": "https://web.dev/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://web.dev/favicon.ico"
     },
     {
       "title": "Chrome DevTools",
@@ -1080,9 +950,7 @@
         "browser"
       ],
       "featured": true,
-      "icon": "https://developer.chrome.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://developer.chrome.com/favicon.ico"
     },
     {
       "title": "Snyk",
@@ -1096,9 +964,7 @@
         "scanning"
       ],
       "featured": false,
-      "icon": "https://snyk.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://snyk.io/favicon.ico"
     },
     {
       "title": "npm audit",
@@ -1112,9 +978,7 @@
         "vulnerabilities"
       ],
       "featured": false,
-      "icon": "https://www.npmjs.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.npmjs.com/favicon.ico"
     },
     {
       "title": "Testing Library",
@@ -1128,9 +992,7 @@
         "dom"
       ],
       "featured": false,
-      "icon": "https://testing-library.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://testing-library.com/favicon.ico"
     },
     {
       "title": "Storybook",
@@ -1144,9 +1006,7 @@
         "development"
       ],
       "featured": false,
-      "icon": "https://storybook.js.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://storybook.js.org/favicon.ico"
     },
     {
       "title": "Linear",
@@ -1160,9 +1020,7 @@
         "productivity"
       ],
       "featured": false,
-      "icon": "https://linear.app/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://linear.app/favicon.ico"
     },
     {
       "title": "Minify",
@@ -1176,9 +1034,7 @@
         "optimization"
       ],
       "featured": false,
-      "icon": "https://www.minifier.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.minifier.org/favicon.ico"
     },
     {
       "title": "Diff Checker",
@@ -1192,9 +1048,7 @@
         "files"
       ],
       "featured": false,
-      "icon": "https://www.diffchecker.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.diffchecker.com/favicon.ico"
     },
     {
       "title": "QR Code Generator",
@@ -1208,9 +1062,7 @@
         "tools"
       ],
       "featured": false,
-      "icon": "https://www.qr-code-generator.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.qr-code-generator.com/favicon.ico"
     },
     {
       "title": "Khan Academy Computing",
@@ -1224,9 +1076,7 @@
         "programming"
       ],
       "featured": false,
-      "icon": "https://www.khanacademy.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.khanacademy.org/favicon.ico"
     },
     {
       "title": "The Odin Project",
@@ -1240,9 +1090,7 @@
         "full-stack"
       ],
       "featured": true,
-      "icon": "https://www.theodinproject.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.theodinproject.com/favicon.ico"
     },
     {
       "title": "App Academy Open",
@@ -1256,9 +1104,7 @@
         "full-stack"
       ],
       "featured": false,
-      "icon": "https://www.appacademy.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.appacademy.io/favicon.ico"
     },
     {
       "title": "Egghead",
@@ -1272,9 +1118,7 @@
         "learning"
       ],
       "featured": false,
-      "icon": "https://egghead.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://egghead.io/favicon.ico"
     },
     {
       "title": "Scrimba",
@@ -1288,9 +1132,7 @@
         "courses"
       ],
       "featured": false,
-      "icon": "https://scrimba.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://scrimba.com/favicon.ico"
     },
     {
       "title": "Material Design",
@@ -1305,9 +1147,7 @@
         "google"
       ],
       "featured": true,
-      "icon": "https://material.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://material.io/favicon.ico"
     },
     {
       "title": "UI Design Daily",
@@ -1321,9 +1161,7 @@
         "daily"
       ],
       "featured": false,
-      "icon": "https://www.uidesigndaily.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.uidesigndaily.com/favicon.ico"
     },
     {
       "title": "Awwwards",
@@ -1337,9 +1175,7 @@
         "web-design"
       ],
       "featured": false,
-      "icon": "https://www.awwwards.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.awwwards.com/favicon.ico"
     },
     {
       "title": "SiteInspire",
@@ -1353,9 +1189,7 @@
         "showcase"
       ],
       "featured": false,
-      "icon": "https://www.siteinspire.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.siteinspire.com/favicon.ico"
     },
     {
       "title": "REST Countries API",
@@ -1370,9 +1204,7 @@
         "data"
       ],
       "featured": false,
-      "icon": "https://restcountries.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://restcountries.com/favicon.ico"
     },
     {
       "title": "OpenWeatherMap API",
@@ -1386,9 +1218,7 @@
         "free"
       ],
       "featured": false,
-      "icon": "https://openweathermap.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://openweathermap.org/favicon.ico"
     },
     {
       "title": "r/webdev",
@@ -1402,9 +1232,7 @@
         "discussion"
       ],
       "featured": false,
-      "icon": "https://www.reddit.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.reddit.com/favicon.ico"
     },
     {
       "title": "r/learnprogramming",
@@ -1418,9 +1246,7 @@
         "community"
       ],
       "featured": false,
-      "icon": "https://www.reddit.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.reddit.com/favicon.ico"
     },
     {
       "title": "r/javascript",
@@ -1434,9 +1260,7 @@
         "discussion"
       ],
       "featured": false,
-      "icon": "https://www.reddit.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.reddit.com/favicon.ico"
     },
     {
       "title": "Lobsters",
@@ -1450,9 +1274,7 @@
         "aggregator"
       ],
       "featured": false,
-      "icon": "https://lobste.rs/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://lobste.rs/favicon.ico"
     },
     {
       "title": "Calibre",
@@ -1466,9 +1288,7 @@
         "speed"
       ],
       "featured": false,
-      "icon": "https://calibreapp.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://calibreapp.com/favicon.ico"
     },
     {
       "title": "Web Vitals",
@@ -1482,9 +1302,7 @@
         "optimization"
       ],
       "featured": true,
-      "icon": "https://web.dev/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://web.dev/favicon.ico"
     },
     {
       "title": "OWASP Top 10",
@@ -1498,9 +1316,7 @@
         "best-practices"
       ],
       "featured": true,
-      "icon": "https://owasp.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://owasp.org/favicon.ico"
     },
     {
       "title": "Security Headers",
@@ -1514,9 +1330,7 @@
         "testing"
       ],
       "featured": false,
-      "icon": "https://securityheaders.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://securityheaders.com/favicon.ico"
     },
     {
       "title": "VirusTotal",
@@ -1530,9 +1344,7 @@
         "analysis"
       ],
       "featured": false,
-      "icon": "https://www.virustotal.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.virustotal.com/favicon.ico"
     },
     {
       "title": "Karma",
@@ -1546,9 +1358,7 @@
         "javascript"
       ],
       "featured": false,
-      "icon": "https://karma-runner.github.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://karma-runner.github.io/favicon.ico"
     },
     {
       "title": "CyberChef",
@@ -1562,9 +1372,7 @@
         "analysis"
       ],
       "featured": true,
-      "icon": "https://gchq.github.io/CyberChef/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://gchq.github.io/CyberChef/favicon.ico"
     },
     {
       "title": "JWT Decoder",
@@ -1577,9 +1385,7 @@
         "tokens"
       ],
       "featured": false,
-      "icon": "https://jwt.ms/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://jwt.ms/favicon.ico"
     },
     {
       "title": "Burp Suite Community",
@@ -1592,9 +1398,7 @@
         "proxy"
       ],
       "featured": true,
-      "icon": "https://portswigger.net/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://portswigger.net/favicon.ico"
     },
     {
       "title": "Amass",
@@ -1607,9 +1411,7 @@
         "networking"
       ],
       "featured": false,
-      "icon": "https://amass-project.github.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://amass-project.github.io/favicon.ico"
     },
     {
       "title": "Shodan",
@@ -1622,9 +1424,7 @@
         "search"
       ],
       "featured": true,
-      "icon": "https://www.shodan.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.shodan.io/favicon.ico"
     },
     {
       "title": "Censys",
@@ -1637,9 +1437,7 @@
         "network"
       ],
       "featured": false,
-      "icon": "https://censys.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://censys.io/favicon.ico"
     },
     {
       "title": "VirusShare",
@@ -1652,9 +1450,7 @@
         "research"
       ],
       "featured": false,
-      "icon": "https://virusshare.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://virusshare.com/favicon.ico"
     },
     {
       "title": "Any.Run",
@@ -1667,9 +1463,7 @@
         "analysis"
       ],
       "featured": true,
-      "icon": "https://any.run/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://any.run/favicon.ico"
     },
     {
       "title": "CrackStation",
@@ -1682,9 +1476,7 @@
         "crypto"
       ],
       "featured": false,
-      "icon": "https://crackstation.net/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://crackstation.net/favicon.ico"
     },
     {
       "title": "Hashcat",
@@ -1697,9 +1489,7 @@
         "gpu"
       ],
       "featured": false,
-      "icon": "https://hashcat.net/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://hashcat.net/favicon.ico"
     },
     {
       "title": "ngrok",
@@ -1712,9 +1502,7 @@
         "dev"
       ],
       "featured": true,
-      "icon": "https://ngrok.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://ngrok.com/favicon.ico"
     },
     {
       "title": "LocalTunnel",
@@ -1727,9 +1515,7 @@
         "http"
       ],
       "featured": false,
-      "icon": "https://theboroer.github.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://theboroer.github.io/favicon.ico"
     },
     {
       "title": "Requestly",
@@ -1742,9 +1528,7 @@
         "proxy"
       ],
       "featured": false,
-      "icon": "https://requestly.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://requestly.io/favicon.ico"
     },
     {
       "title": "HTTP Toolkit",
@@ -1757,9 +1541,7 @@
         "debugging"
       ],
       "featured": false,
-      "icon": "https://httptoolkit.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://httptoolkit.com/favicon.ico"
     },
     {
       "title": "Beeceptor",
@@ -1772,9 +1554,7 @@
         "http"
       ],
       "featured": false,
-      "icon": "https://beeceptor.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://beeceptor.com/favicon.ico"
     },
     {
       "title": "Mockoon",
@@ -1787,9 +1567,7 @@
         "local"
       ],
       "featured": false,
-      "icon": "https://mockoon.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://mockoon.com/favicon.ico"
     },
     {
       "title": "Swagger Editor",
@@ -1802,9 +1580,7 @@
         "design"
       ],
       "featured": false,
-      "icon": "https://swagger.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://swagger.io/favicon.ico"
     },
     {
       "title": "OpenAPI Generator",
@@ -1817,9 +1593,7 @@
         "api"
       ],
       "featured": false,
-      "icon": "https://openapi-generator.tech/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://openapi-generator.tech/favicon.ico"
     },
     {
       "title": "Stoplight",
@@ -1832,9 +1606,7 @@
         "collaboration"
       ],
       "featured": false,
-      "icon": "https://stoplight.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://stoplight.io/favicon.ico"
     },
     {
       "title": "CodeMirror Playground",
@@ -1847,9 +1619,7 @@
         "code"
       ],
       "featured": false,
-      "icon": "https://codemirror.net/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://codemirror.net/favicon.ico"
     },
     {
       "title": "Monaco Editor Playground",
@@ -1862,9 +1632,7 @@
         "playground"
       ],
       "featured": false,
-      "icon": "https://microsoft.github.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://microsoft.github.io/favicon.ico"
     },
     {
       "title": "AST Explorer",
@@ -1877,9 +1645,7 @@
         "analysis"
       ],
       "featured": true,
-      "icon": "https://astexplorer.net/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://astexplorer.net/favicon.ico"
     },
     {
       "title": "JSON to CSV",
@@ -1892,9 +1658,7 @@
         "converter"
       ],
       "featured": false,
-      "icon": "https://json-csv.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://json-csv.com/favicon.ico"
     },
     {
       "title": "CSVJSON",
@@ -1907,9 +1671,7 @@
         "converter"
       ],
       "featured": false,
-      "icon": "https://csvjson.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://csvjson.com/favicon.ico"
     },
     {
       "title": "SQL Formatter",
@@ -1922,9 +1684,7 @@
         "queries"
       ],
       "featured": false,
-      "icon": "https://sqlformat.org/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://sqlformat.org/favicon.ico"
     },
     {
       "title": "Explain Analyze",
@@ -1937,9 +1697,7 @@
         "performance"
       ],
       "featured": false,
-      "icon": "https://explain.depesz.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://explain.depesz.com/favicon.ico"
     },
     {
       "title": "Redash",
@@ -1952,9 +1710,7 @@
         "dashboards"
       ],
       "featured": false,
-      "icon": "https://redash.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://redash.io/favicon.ico"
     },
     {
       "title": "Cronitor",
@@ -1967,9 +1723,7 @@
         "jobs"
       ],
       "featured": false,
-      "icon": "https://cronitor.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://cronitor.io/favicon.ico"
     },
     {
       "title": "Healthchecks",
@@ -1982,9 +1736,7 @@
         "alerts"
       ],
       "featured": false,
-      "icon": "https://healthchecks.io/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://healthchecks.io/favicon.ico"
     },
     {
       "title": "Draw.io",
@@ -1997,9 +1749,7 @@
         "visual"
       ],
       "featured": true,
-      "icon": "https://app.diagrams.net/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://app.diagrams.net/favicon.ico"
     },
     {
       "title": "Excalidraw",
@@ -2012,9 +1762,7 @@
         "design"
       ],
       "featured": true,
-      "icon": "https://excalidraw.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://excalidraw.com/favicon.ico"
     },
     {
       "title": "Code Time Analyzer",
@@ -2027,9 +1775,7 @@
         "coding"
       ],
       "featured": false,
-      "icon": "https://wakatime.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://wakatime.com/favicon.ico"
     },
     {
       "title": "Overleaf",
@@ -2042,9 +1788,7 @@
         "collaboration"
       ],
       "featured": false,
-      "icon": "https://www.overleaf.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://www.overleaf.com/favicon.ico"
     },
     {
       "title": "Glitch",
@@ -2057,9 +1801,7 @@
         "web"
       ],
       "featured": false,
-      "icon": "https://glitch.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://glitch.com/favicon.ico"
     },
     {
       "title": "Railway",
@@ -2072,9 +1814,7 @@
         "hosting"
       ],
       "featured": false,
-      "icon": "https://railway.app/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://railway.app/favicon.ico"
     },
     {
       "title": "Render",
@@ -2087,77 +1827,60 @@
         "deploy"
       ],
       "featured": false,
-      "icon": "https://render.com/favicon.ico",
-      "provider": "",
-      "rating": null
+      "icon": "https://render.com/favicon.ico"
     },
     {
       "title": "AZ-104 Microsoft Azure Administrator Certification",
       "url": "https://www.cybrary.it/course/az-104-microsoft-azure-administrator",
-      "description": "",
       "category": "learning",
       "tags": [
         "Azure"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Cybrary",
-      "rating": null
+      "provider": "Cybrary"
     },
     {
       "title": "Agile Methodology",
       "url": "https://www.guru99.com/agile-testing-course.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "agile",
         "testing"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Guru99",
-      "rating": null
+      "provider": "Guru99"
     },
     {
       "title": "Agile Methodology: A beginners guide to agile method and SCRUM",
       "url": "https://www.softwaretestinghelp.com/agile-scrum-methodology-for-development-and-testing/",
-      "description": "",
       "category": "learning",
       "tags": [
         "agile",
         "SCRUM"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "softwaretestinghelp",
-      "rating": null
+      "provider": "softwaretestinghelp"
     },
     {
       "title": "Agile Project Management",
       "url": "https://www.coursera.org/learn/agile-project-management",
-      "description": "",
       "category": "learning",
       "tags": [
         "project management",
         "agile"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Google",
-      "rating": null
+      "provider": "Google"
     },
     {
       "title": "Apache Kafka Quick Start",
       "url": "https://kafka.apache.org/quickstart",
-      "description": "",
       "category": "learning",
       "tags": [
         "Apache Kafka"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Apache Kafka",
-      "rating": null
+      "provider": "Apache Kafka"
     },
     {
       "title": "Applied Data Science Lab",
@@ -2169,7 +1892,6 @@
         "machine learning"
       ],
       "featured": true,
-      "icon": null,
       "provider": "World Quant University",
       "rating": 5
     },
@@ -2185,7 +1907,6 @@
         "deep learning"
       ],
       "featured": true,
-      "icon": null,
       "provider": "i.am.ai",
       "rating": 5
     },
@@ -2198,56 +1919,46 @@
         "rice"
       ],
       "featured": true,
-      "icon": null,
       "provider": "fosslife",
       "rating": 5
     },
     {
       "title": "Basics of BrainF*ck",
       "url": "https://gist.github.com/roachhd/dce54bec8ba55fb17d3a",
-      "description": "",
       "category": "learning",
       "tags": [
         "BrainF*ck",
         "programming"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Katie",
-      "rating": null
+      "provider": "Katie"
     },
     {
       "title": "Books By Agiliq",
       "url": "https://books.agiliq.com/en/latest/README.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "python",
         "django"
       ],
       "featured": true,
-      "icon": null,
       "provider": "Agiliq",
       "rating": 5
     },
     {
       "title": "Build a Free Website with Wordpress",
       "url": "https://www.coursera.org/projects/build-free-website-wordpress",
-      "description": "",
       "category": "learning",
       "tags": [
         "wordpress",
         "website design"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Coursera",
-      "rating": null
+      "provider": "Coursera"
     },
     {
       "title": "Building LLMs from the Ground Up",
       "url": "https://magazine.sebastianraschka.com/p/building-llms-from-the-ground-up",
-      "description": "",
       "category": "learning",
       "tags": [
         "AI",
@@ -2256,14 +1967,11 @@
         "GPT"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Ahead Of AI",
-      "rating": null
+      "provider": "Ahead Of AI"
     },
     {
       "title": "Business Analytics with Excel: Elementary to Advanced",
       "url": "https://www.coursera.org/learn/business-analytics-excel",
-      "description": "",
       "category": "learning",
       "tags": [
         "Business Analytics",
@@ -2271,35 +1979,27 @@
         "Linear Programming"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "John Hopkins University",
-      "rating": null
+      "provider": "John Hopkins University"
     },
     {
       "title": "CCNA Basics",
       "url": "https://www.guru99.com/introduction-ccna.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "Networking"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Guru99",
-      "rating": null
+      "provider": "Guru99"
     },
     {
       "title": "CURL Cook Book",
       "url": "https://catonmat.net/cookbooks/curl",
-      "description": "",
       "category": "learning",
       "tags": [
         "CURL"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Catonmat",
-      "rating": null
+      "provider": "Catonmat"
     },
     {
       "title": "Caching in Django with REDIS",
@@ -2312,14 +2012,12 @@
         "cache"
       ],
       "featured": true,
-      "icon": null,
       "provider": "RealPython",
       "rating": 5
     },
     {
       "title": "Celery + Redis + Django",
       "url": "https://www.codingforentrepreneurs.com/blog/celery-redis-django/",
-      "description": "",
       "category": "learning",
       "tags": [
         "celery",
@@ -2329,14 +2027,11 @@
         "cron"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "codingforentrepreneurs",
-      "rating": null
+      "provider": "codingforentrepreneurs"
     },
     {
       "title": "Cloudflare Learning Center",
       "url": "https://www.cloudflare.com/learning/",
-      "description": "",
       "category": "learning",
       "tags": [
         "cloudflare",
@@ -2344,7 +2039,6 @@
         "security"
       ],
       "featured": true,
-      "icon": null,
       "provider": "Cloudflare",
       "rating": 5
     },
@@ -2358,36 +2052,29 @@
         "knowledgebase"
       ],
       "featured": true,
-      "icon": null,
       "provider": "codeproject.com",
       "rating": 5
     },
     {
       "title": "Collection of Books By Al Sweigart",
       "url": "https://inventwithpython.com/",
-      "description": "",
       "category": "learning",
       "tags": [
         "programming",
         "python"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "inventwithpython",
-      "rating": null
+      "provider": "inventwithpython"
     },
     {
       "title": "CompTIA A+ Full Video Course for Beginners",
       "url": "https://www.youtube.com/watch?v=Yi3L8ZCX8zc&list=PLc6LqxQFwub_rksUc1FnWB9rwO2rf7qoz",
-      "description": "",
       "category": "learning",
       "tags": [
         "networking"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "BurningIceTech",
-      "rating": null
+      "provider": "BurningIceTech"
     },
     {
       "title": "Crackmes",
@@ -2399,7 +2086,6 @@
         "reverse engineering"
       ],
       "featured": true,
-      "icon": null,
       "provider": "crackmes",
       "rating": 5
     },
@@ -2414,7 +2100,6 @@
         "black hat"
       ],
       "featured": true,
-      "icon": null,
       "provider": "cr-0w",
       "rating": 5
     },
@@ -2427,28 +2112,22 @@
         "cybersecurity"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "golinuxcloud",
-      "rating": null
+      "provider": "golinuxcloud"
     },
     {
       "title": "Database Engineering Complete Course",
       "url": "https://www.youtube.com/watch?v=iwRneX7GIGI",
-      "description": "",
       "category": "learning",
       "tags": [
         "database",
         "SQL"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Nerd's Lesson",
-      "rating": null
+      "provider": "Nerd's Lesson"
     },
     {
       "title": "Deep Dive Into Modern Web Development",
       "url": "https://fullstackopen.com/en/",
-      "description": "",
       "category": "learning",
       "tags": [
         "web dev",
@@ -2461,22 +2140,17 @@
         "SQL"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "fullstackopen",
-      "rating": null
+      "provider": "fullstackopen"
     },
     {
       "title": "Design Patterns Video Tutorial",
       "url": "https://www.youtube.com/playlist?list=PLF206E906175C7E07",
-      "description": "",
       "category": "learning",
       "tags": [
         "design patterns"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Derek Banas",
-      "rating": null
+      "provider": "Derek Banas"
     },
     {
       "title": "Developer Roadmap",
@@ -2488,7 +2162,6 @@
         "roadmaps"
       ],
       "featured": true,
-      "icon": null,
       "provider": "roadmap",
       "rating": 5
     },
@@ -2502,14 +2175,12 @@
         "python"
       ],
       "featured": true,
-      "icon": null,
       "provider": "Dr. Chuck",
       "rating": 5
     },
     {
       "title": "Docker Hands-on Labs",
       "url": "https://hackmd.io/@pmanzoni/Bremen2020/%2F%40pmanzoni%2FBJcpeAcML",
-      "description": "",
       "category": "learning",
       "tags": [
         "docker",
@@ -2517,89 +2188,71 @@
         "threading"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Peitro Manzoni",
-      "rating": null
+      "provider": "Peitro Manzoni"
     },
     {
       "title": "Docker Networking Hands-on Lab",
       "url": "https://training.play-with-docker.com/docker-networking-hol/",
-      "description": "",
       "category": "learning",
       "tags": [
         "docker",
         "networking"
       ],
       "featured": true,
-      "icon": null,
       "provider": "Docker",
       "rating": 5
     },
     {
       "title": "Ethical Hacking Tutorial",
       "url": "https://www.guru99.com/ethical-hacking-tutorials.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "hacking"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Guru99",
-      "rating": null
+      "provider": "Guru99"
     },
     {
       "title": "Foundational C# Course with Microsoft",
       "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
-      "description": "",
       "category": "learning",
       "tags": [
         "C#",
         "programming"
       ],
       "featured": true,
-      "icon": null,
       "provider": "FreeCodeCamp",
       "rating": 5
     },
     {
       "title": "Functional Programming Slides",
       "url": "https://tony-scialo.github.io/slides-functional-programing/",
-      "description": "",
       "category": "learning",
       "tags": [
         "functional programming"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "tony-scialo",
-      "rating": null
+      "provider": "tony-scialo"
     },
     {
       "title": "Getting Started with picoCTF",
       "url": "https://picoctf.org/get_started.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "cyber security"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "picoCTF",
-      "rating": null
+      "provider": "picoCTF"
     },
     {
       "title": "Git Book",
       "url": "https://www.git-scm.com/book/en/v2",
-      "description": "",
       "category": "learning",
       "tags": [
         "git"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Git",
-      "rating": null
+      "provider": "Git"
     },
     {
       "title": "Git Conventional Commits",
@@ -2610,7 +2263,6 @@
         "git"
       ],
       "featured": true,
-      "icon": null,
       "provider": "conventional-commits",
       "rating": 5
     },
@@ -2629,22 +2281,17 @@
         "interview"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "howtodoinjava.com",
-      "rating": null
+      "provider": "howtodoinjava.com"
     },
     {
       "title": "How to get started with Milvus",
       "url": "https://milvus.io/blog/how-to-get-started-with-milvus.md",
-      "description": "",
       "category": "learning",
       "tags": [
         "Vector Database"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Milvus",
-      "rating": null
+      "provider": "Milvus"
     },
     {
       "title": "IBM Trainin Center",
@@ -2655,53 +2302,42 @@
         "Learning Platform"
       ],
       "featured": false,
-      "icon": null,
       "provider": "IBM",
       "rating": 4
     },
     {
       "title": "Introduction to Statistics",
       "url": "https://www.coursera.org/learn/stanford-statistics",
-      "description": "",
       "category": "learning",
       "tags": [
         "statistics"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Stanford",
-      "rating": null
+      "provider": "Stanford"
     },
     {
       "title": "JIRA Tutorial for beginners",
       "url": "https://www.guru99.com/jira-tutorial-a-complete-guide-for-beginners.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "JIRA"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Guru99",
-      "rating": null
+      "provider": "Guru99"
     },
     {
       "title": "Jenkins Basics Tutorial",
       "url": "https://www.guru99.com/jenkins-tutorial.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "jenkins"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Guru99",
-      "rating": null
+      "provider": "Guru99"
     },
     {
       "title": "JetBrains Academy",
       "url": "https://www.jetbrains.com/academy/#learn",
-      "description": "",
       "category": "learning",
       "tags": [
         "programming",
@@ -2712,28 +2348,23 @@
         "backend"
       ],
       "featured": true,
-      "icon": null,
       "provider": "JetBrains",
       "rating": 5
     },
     {
       "title": "Learn Assembly The Hard Way",
       "url": "https://github.com/MahadMuhammad/Learn-Assembly-The-Hard-Way",
-      "description": "",
       "category": "learning",
       "tags": [
         "assembly",
         "low-level"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "MahadMuhammad",
-      "rating": null
+      "provider": "MahadMuhammad"
     },
     {
       "title": "Learn MongoDB",
       "url": "https://learn.mongodb.com/",
-      "description": "",
       "category": "learning",
       "tags": [
         "mongoDB",
@@ -2741,7 +2372,6 @@
         "database"
       ],
       "featured": true,
-      "icon": null,
       "provider": "MongoDB",
       "rating": 5
     },
@@ -2755,36 +2385,28 @@
         "tutorials"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "ronreiter",
-      "rating": null
+      "provider": "ronreiter"
     },
     {
       "title": "Learn Spring Boot",
       "url": "https://www.baeldung.com/spring-boot",
-      "description": "",
       "category": "learning",
       "tags": [
         "springboot",
         "backend"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Baeldung",
-      "rating": null
+      "provider": "Baeldung"
     },
     {
       "title": "Learn Three.js By Building 5 Projects",
       "url": "https://www.freecodecamp.org/news/learn-threejs-by-building-five-projects/",
-      "description": "",
       "category": "learning",
       "tags": [
         "three.js"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "FreeCodeCamp",
-      "rating": null
+      "provider": "FreeCodeCamp"
     },
     {
       "title": "Libhunt",
@@ -2797,7 +2419,6 @@
         "newsfeed"
       ],
       "featured": true,
-      "icon": null,
       "provider": "libhunt.com",
       "rating": 5
     },
@@ -2812,23 +2433,18 @@
         "scripting"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Baeldung",
-      "rating": null
+      "provider": "Baeldung"
     },
     {
       "title": "List of Free Learning Resources In Many Languages",
       "url": "https://github.com/EbookFoundation/free-programming-books",
-      "description": "",
       "category": "learning",
       "tags": [
         "computer science",
         "software development"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "EbookFoundation",
-      "rating": null
+      "provider": "EbookFoundation"
     },
     {
       "title": "Machine Learning Notes",
@@ -2842,22 +2458,18 @@
         "Data Science"
       ],
       "featured": true,
-      "icon": null,
       "provider": "kassi-bertrand",
       "rating": 5
     },
     {
       "title": "MalAPI",
       "url": "https://malapi.io",
-      "description": "",
       "category": "learning",
       "tags": [
         "malware developement"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "mrd0x",
-      "rating": null
+      "provider": "mrd0x"
     },
     {
       "title": "NLP: Zero To Hero",
@@ -2870,22 +2482,17 @@
         "AI"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "JUSTSUJAY",
-      "rating": null
+      "provider": "JUSTSUJAY"
     },
     {
       "title": "Network Technician Course",
       "url": "https://skillsforall.com/career-path/network-technician?courseLang=en-US",
-      "description": "",
       "category": "learning",
       "tags": [
         "networking"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "SkillsForAll",
-      "rating": null
+      "provider": "SkillsForAll"
     },
     {
       "title": "Neural Networks: Zero To Hero",
@@ -2900,14 +2507,12 @@
         "ML"
       ],
       "featured": true,
-      "icon": null,
       "provider": "Andrej Karpathy",
       "rating": 5
     },
     {
       "title": "Neuromatch computational neuroscience course",
       "url": "https://compneuro.neuromatch.io/tutorials/intro.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "Machine Learning",
@@ -2915,9 +2520,7 @@
         "Mathematics"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Neuromatch",
-      "rating": null
+      "provider": "Neuromatch"
     },
     {
       "title": "Online Labs and Playground",
@@ -2931,7 +2534,6 @@
         "roadmaps"
       ],
       "featured": true,
-      "icon": null,
       "provider": "labex.io",
       "rating": 5
     },
@@ -2946,22 +2548,18 @@
         "science"
       ],
       "featured": true,
-      "icon": null,
       "provider": "openstax.org",
       "rating": 5
     },
     {
       "title": "Operating System Course",
       "url": "https://www.guru99.com/os-tutorial.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "operating system"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Guru99",
-      "rating": null
+      "provider": "Guru99"
     },
     {
       "title": "Operating Systems: Three Easy Pieces",
@@ -2973,37 +2571,30 @@
         "projects"
       ],
       "featured": true,
-      "icon": null,
       "provider": "University of Wisconsin-Madison",
       "rating": 5
     },
     {
       "title": "Operations Research By Solomon Getachew",
       "url": "https://www.youtube.com/playlist?list=PLRE038tQcNiHT-ItY56Y230Nhu4jB97Wx",
-      "description": "",
       "category": "learning",
       "tags": [
         "operations research",
         "linear programming"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Solomon Getachew",
-      "rating": null
+      "provider": "Solomon Getachew"
     },
     {
       "title": "Operations Research by Yong Wang",
       "url": "https://www.youtube.com/watch?v=WIWhQpR-CjY&list=PLgA4wLGrqI-ll9OSJmR5nU4lV4_aNTgKx",
-      "description": "",
       "category": "learning",
       "tags": [
         "operations research",
         " linear programming"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Binghamton University",
-      "rating": null
+      "provider": "Binghamton University"
     },
     {
       "title": "Play With Docker Classroom",
@@ -3015,28 +2606,23 @@
         "devops"
       ],
       "featured": true,
-      "icon": null,
       "provider": "Marcos Nils, Jonathan Leibiusky",
       "rating": 5
     },
     {
       "title": "Postgresql Tutorial",
       "url": "https://www.postgresqltutorial.com/",
-      "description": "",
       "category": "learning",
       "tags": [
         "postgreSQL",
         "database"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Postgresql",
-      "rating": null
+      "provider": "Postgresql"
     },
     {
       "title": "Power Shell Utilities",
       "url": "https://github.com/farag2/Utilities/tree/master",
-      "description": "",
       "category": "learning",
       "tags": [
         "powershell",
@@ -3045,56 +2631,45 @@
         "utilities"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "farag2",
-      "rating": null
+      "provider": "farag2"
     },
     {
       "title": "Programming Zero Knowledge Proof: From Zero To Hero",
       "url": "https://zkintro.com/articles/programming-zkps-from-zero-to-hero",
-      "description": "",
       "category": "learning",
       "tags": [
         "zeroknowledge proof",
         "group signatures"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "zkintro.com",
-      "rating": null
+      "provider": "zkintro.com"
     },
     {
       "title": "Programming in assembly language tutorial",
       "url": "https://github.com/mschwartz/assembly-tutorial",
-      "description": "",
       "category": "learning",
       "tags": [
         "assembly",
         "low-level"
       ],
       "featured": true,
-      "icon": null,
       "provider": "mschwartz",
       "rating": 5
     },
     {
       "title": "Python For Everybody",
       "url": "https://www.py4e.com/",
-      "description": "",
       "category": "learning",
       "tags": [
         "python",
         "programming"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Dr. Chuck",
-      "rating": null
+      "provider": "Dr. Chuck"
     },
     {
       "title": "REST API Tutorial",
       "url": "https://restfulapi.net/",
-      "description": "",
       "category": "learning",
       "tags": [
         "REST",
@@ -3102,37 +2677,29 @@
         "API"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Restfulapi",
-      "rating": null
+      "provider": "Restfulapi"
     },
     {
       "title": "React Hooks Simplified",
       "url": "https://courses.webdevsimplified.com/react-hooks-simplified",
-      "description": "",
       "category": "learning",
       "tags": [
         "React.js",
         "Hooks"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Web Dev Simplified",
-      "rating": null
+      "provider": "Web Dev Simplified"
     },
     {
       "title": "Reverse Engineering For Everyone",
       "url": "https://0xinfection.github.io/reversing/",
-      "description": "",
       "category": "learning",
       "tags": [
         "reverse engineering",
         "malware analysis"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "mytechnotalent",
-      "rating": null
+      "provider": "mytechnotalent"
     },
     {
       "title": "SQL Academy",
@@ -3144,54 +2711,43 @@
         "Database"
       ],
       "featured": false,
-      "icon": null,
       "provider": "SQL Academy",
       "rating": 4
     },
     {
       "title": "Software Engineering Tutorial",
       "url": "https://www.guru99.com/software-engineering-tutorial.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "software engineering"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Guru99",
-      "rating": null
+      "provider": "Guru99"
     },
     {
       "title": "Spring Quick Start Guide",
       "url": "https://spring.io/quickstart",
-      "description": "",
       "category": "learning",
       "tags": [
         "spring",
         "java"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Spring",
-      "rating": null
+      "provider": "Spring"
     },
     {
       "title": "System Design Primer",
       "url": "https://github.com/donnemartin/system-design-primer",
-      "description": "",
       "category": "learning",
       "tags": [
         "system design"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "donnemartin",
-      "rating": null
+      "provider": "donnemartin"
     },
     {
       "title": "Test Driven Development in Django",
       "url": "https://test-driven-django-development.readthedocs.io/en/latest/",
-      "description": "",
       "category": "learning",
       "tags": [
         "python",
@@ -3199,36 +2755,29 @@
         "django"
       ],
       "featured": false,
-      "icon": null,
       "provider": "PSF",
       "rating": 4
     },
     {
       "title": "The Complete PyQT6 Tutorial",
       "url": "https://www.pythonguis.com/pyqt6-tutorial/",
-      "description": "",
       "category": "learning",
       "tags": [
         "pyQT6",
         "python"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "pythonguis",
-      "rating": null
+      "provider": "pythonguis"
     },
     {
       "title": "The Documentation System",
       "url": "https://docs.divio.com/documentation-system/",
-      "description": "",
       "category": "learning",
       "tags": [
         "documentation"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Divio",
-      "rating": null
+      "provider": "Divio"
     },
     {
       "title": "The Most Helpful PowerShell Cheat Sheet You’ll Ever Find",
@@ -3240,14 +2789,12 @@
         "powershell"
       ],
       "featured": false,
-      "icon": null,
       "provider": "stationx.net",
       "rating": 4
     },
     {
       "title": "Training Custom Object Detector",
       "url": "https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html",
-      "description": "",
       "category": "learning",
       "tags": [
         "tensorfloww",
@@ -3255,48 +2802,53 @@
         "computer vision"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "Tensorflow",
-      "rating": null
+      "provider": "Tensorflow"
     },
     {
       "title": "What is Microsoft Fabric? How to Build a Customer Segmentation Project",
       "url": "https://www.freecodecamp.org/news/what-is-microsoft-fabric/",
-      "description": "",
       "category": "learning",
       "tags": [
         "Microsoft Fabric"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "FreeCodeCamp",
-      "rating": null
+      "provider": "FreeCodeCamp"
     },
     {
       "title": "flat assembler",
       "url": "https://flatassembler.net",
-      "description": "",
       "category": "learning",
       "tags": [
         "assembly"
       ],
       "featured": true,
-      "icon": null,
       "provider": "Tomasz Grysztar",
       "rating": 5
     },
     {
       "title": "hackerone",
       "url": "https://www.hackerone.com",
-      "description": "",
       "category": "learning",
       "tags": [
         "cyber security"
       ],
       "featured": false,
-      "icon": null,
-      "provider": "hackerone",
-      "rating": null
+      "provider": "hackerone"
+    },
+    {
+      "title": "*sshhole",
+      "url": "https://sshhole.com/",
+      "description": "Security vulnerability on openssh on musl linux explained",
+      "category": "Cyber Security",
+      "tags": [
+        "Cyber Security",
+        "ssh",
+        "Linux"
+      ],
+      "featured": false,
+      "icon": "https://sshhole.com/favicon.ico",
+      "provider": "ozgun kultekin at wakefield",
+      "rating": 5
     }
   ]
 }
