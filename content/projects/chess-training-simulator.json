@@ -1,0 +1,24 @@
+{
+  "title": "Chess Training Simulator",
+  "featured": false,
+  "kind": "side",
+  "status": "finished",
+  "openToContrib": true,
+  "dateLabel": "Nov 2026",
+  "sortOrder": 0,
+  "description": "A desktop chess trainer where Claude coaches you from your own Claude Code, through a local MCP server. Stockfish plays and judges every move: puzzles, openings, game reviews and spaced practice.",
+  "tags": [
+    "React.js",
+    "TailwindCSS",
+    "Electron.js",
+    "MCP",
+    "TypeScript",
+    "JavaScript"
+  ],
+  "repoUrl": "https://github.com/Blankscreen-exe/chess-training-simulator",
+  "images": [
+    "/images/projects/chess-training-simulator/images/0.png",
+    "/images/projects/chess-training-simulator/images/1.png",
+    "/images/projects/chess-training-simulator/images/2.png"
+  ]
+}
