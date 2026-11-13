@@ -1,0 +1,14 @@
+{
+  "title": "An AI only thinks while it is answering",
+  "includeInList": true,
+  "description": "There is a gap in how an LLM works, and that gap is exploited by prompt injectors. Understanding this is neccessary in order to safeguard your own AI agents which you are freely running in the wild.",
+  "published": "2026-11-13",
+  "url": "https://hammadai.hashnode.dev/an-ai-only-thinks-while-it-is-answering",
+  "thumbnail": "https://cdn.hashnode.com/uploads/covers/65a4cfa110525cc9fed6b2d0/847599c0-fee5-4f4c-aebc-3b502cfffda3.jpg",
+  "tags": [
+    "LLM",
+    "AI",
+    "jail break",
+    "prompt injection"
+  ]
+}
